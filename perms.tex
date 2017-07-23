@@ -502,7 +502,7 @@ Let $\sigma=(134)$, $\tau=(23)(145)$, $\rho=(56)(78)$, and $\alpha=(12)(145)$ in
 \end{inparaenum}
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 
 
 \begin{enumerate}
@@ -522,7 +522,7 @@ Let $\sigma=(134)$, $\tau=(23)(145)$, $\rho=(56)(78)$, and $\alpha=(12)(145)$ in
 Prove Lemma \ref{evenodd}.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Let $\sigma=(a_1a_2\cdots a_k)\in S_n$.  Then $\sigma=(a_1a_k)(a_1a_{k-1})\cdots (a_1a_3)(a_1a_2)$, so is a product of $k-1$ transpositions.  Thus, $\sigma$ is even if $k-1$ is even, that is, if $k$ is odd, and odd if $k-1$ is odd, that is, if $k$ is even.
 \end{solution}
 
@@ -530,14 +530,14 @@ Let $\sigma=(a_1a_2\cdots a_k)\in S_n$.  Then $\sigma=(a_1a_k)(a_1a_{k-1})\cdots
 Prove that $A_n$ is a subgroup of $S_n$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Since $e\in A_n$, $A_n\neq \emptyset$.  Next, let $\sigma, \tau \in A_n$.  Then $\sigma$ can be written as a product of $k$ transpositions and $\tau$ can be written as $\tau=\tau_1\tau_2\cdots \tau_m$, where $k$ and $m$ are even and the $\tau_i$ are transpositions. Since each $\tau_i$ is a transposition, each $\tau_i$ is its own inverse; so $$\tau^{-1}=(\tau_m)^{-1}(\tau_{m-1})^{-1}\cdots \tau_1^{-1}=\tau_m^{-1}\tau_{m-1}^{-1}\cdots \tau_1^{-1}.$$ Thus, $\sigma \tau^{-1}$ is a product of $k+m$ transpositions; since $k$ and $m$ are even, $k+m$ is even, and so $\sigma \tau^{-1}\in A_n$.  Thus, $A_n\leq S_n$, by the Two-Step Subgroup Test.
 \end{solution}
 
 \begin{exercise} Prove or disprove: The set of all odd permutations in $S_n$ is a subgroup of $S_n$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 This set is \textit{not} a subgroup of $S_n$ because, for instance, it doesn't contain $e$.
 \end{solution}
 
@@ -550,7 +550,7 @@ Let $n$ be an integer greater than 2. $m \in \{1,2,\ldots,n\}$, and let $H=\{\si
 \end{enumerate}
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 \begin{enumerate}
 \item Since $e\in H$, $H\neq \emptyset$.  Next, let $\sigma, \tau\in H$.  Since $\tau(m)=m$ and $\tau$ is a bijection, $\tau^{-1}(m)=m$.  So $\sigma \tau^{-1}(m)=\sigma(\tau^{-1}(m))=\sigma(m)=m$.  So $\sigma \tau^{-1}\in H$; therefore, $H\leq S_n$, by the Two-Step Subgroup Test.
 \item $S_{n-1}$.
@@ -561,7 +561,7 @@ Let $n$ be an integer greater than 2. $m \in \{1,2,\ldots,n\}$, and let $H=\{\si
 Write $rfr^2frfr$ in $D_5$ in standard form.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 In $D_5$, $frfr=(fr)^2=e$ and $rf=fr^{-1}$, so $$rfr^2frfr=rfr^2=fr^{-1}r^2=fr.$$
 \end{solution}
 
@@ -570,7 +570,7 @@ In $D_5$, $frfr=(fr)^2=e$ and $rf=fr^{-1}$, so $$rfr^2frfr=rfr^2=fr^{-1}r^2=fr.$
 Prove or disprove: $D_6\simeq S_6$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 $|D_6|=2(6)=12$ while $|S_6|=720$, so $D_6\not\simeq S_6$.
 \end{solution}
 
@@ -584,14 +584,14 @@ Which elements of $D_4$ (if any)
     in standard form.}
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 We know $o(fr^i)=2$ for every $i$, and $o(e)=1$.  Moreover, since $4$ is even, $r^{4/2}=r^2$ has order 2. Finally, $o(r)=o(r^{-1})=4$. So (a) the elements of order 2 in $D_4$ are $f$, $fr$, $fr^2$, $fr^3$, and $r^2$, and (b) $D_4$ contains no elements of order 3.
 \end{solution}
 
 \begin{exercise} Let $n$ be an even integer that's greater than or equal to 4. Prove that $r^{n/2}\in Z(D_n)$: that is, prove that $r^{n/2}$ commutes with every element of $D_n$. (Do NOT simply refer to the last statement in Theorem \ref{diords}; that is the statement you are proving here.)
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Clearly, $r^{n/2}$ commutes with every $r^k$ for $0\leq k\leq n$.  Moreover, by the first statement of Theorem \ref{diords}, $$r^{n/2}f=f(r^{n/2})^{-1}=fr^{n-n/2}=fr^{n/2}.$$  So $r^{n/2}$ commutes with $f$.  It clearly follows that $r^{n/2}\in Z(D_n)$.
 \end{solution}
 

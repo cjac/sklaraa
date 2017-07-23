@@ -388,7 +388,7 @@ homomorphism from $G$ to some group $G'$. \end{thm}
     $G$, then $H$ is normal in $G$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Since $(G:H)=2$, there are exactly two left
     cosets of $H$ in $G$.  One of these left cosets is
     $H$; since the left cosets of $H$ partition $G$,
@@ -404,7 +404,7 @@ Let $H=\{A\in GL(n,\fatr)\,:\,\det A=\pm 1\}$.  Prove that $H\unlhd GL(n,\fatr)$
 
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Consider the function $\phi \,:\,GL(n, \fatr)\to \fatr^*$ defined by
 $\phi(A)=|\det A|$. The map $\phi$ is a
 homomorphism, since if $A,B\in GL(n,\fatr)$, then
@@ -421,7 +421,7 @@ normal subgroup of $G$.
 \begin{exercise} Let $G=\Z_6\times \Z_{14}$ and let $H=\<2\>\times \<4\>\leq G$.  Since $G$ is abelian, $H\unlhd G$.  Find the order of the factor group $|G/H|$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Note that $|G|=6(14)=84$, and since $\<2\>=\{2,4,0\}$ and $\<4\>=\{4,8,12,2,6,10,0\}$, $|H|=3(7)=21$. So $|G/H|=|G|/|H|=84/21=4$.
 \end{solution}
 
@@ -444,7 +444,7 @@ Consider the subgroup $\<18\>$ of $\Z$.
 \end{exercise}
 
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Note that in $\Z$, $\<18\>=18\Z$, so we may denote $\<18\>$ by $18\Z$ throughout this problem.
 
 \begin{enumerate}
@@ -471,7 +471,7 @@ Find the order of some $(\Z_n \times \Z_m )/\<(a,b)\>$.
 Explain how you know that the set $G/H$ is a group under left coset multiplication, while the set $S_3/K$ is not.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 
 Since $G$ is abelian, $H$ is normal in $G$, so $G/H$ is a group under left coset multiplication.  Since $K$ isn't normal in $S_3$ (for instance, $(12)K=\{(23),(13)\}$ while $K(12)=\{(12),(13)\}$), $S_3/K$ isn't a group under left coset multiplication.
 \end{solution}
@@ -490,7 +490,7 @@ Since $G$ is abelian, $H$ is normal in $G$, so $G/H$ is a group under left coset
 \end{exercise}
 
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 
 \begin{enumerate}
 \item Note that $H=\{e,r^2\}$. By the last statement in Theorem \ref{diords}, $r^2$ commutes with every element of $D_4$; moreover, $e$ clearly commutes with every element of $D_4$. Hence, $H\subseteq Z(D_4)$, and so by Theorem \ref{znorm}, $H\unlhd D_4$.
@@ -525,16 +525,16 @@ rH&rH&H&frH&fH\\ \hline fH&fH&frH&H&rH\\ \hline frH&frH&fH&rH&H
 Let $G$ be an abelian group and let $N\unlhd G$. Prove that $G/N$ is abelian.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Let $aN, bN\in G/N$.  Then $(aN)(bN)=abN=baN=(bN)(aN)$ (the first and last equalities follow from the definition of left coset multiplication, and the second equality holds because $G$ is abelian).  So $G/N$ is abelian.
 \end{solution}
 
 \begin{exercise} Let $N$ be a normal subgroup of group $G$, with finite index $m$.  Let $a\in G$. Prove that $a^m\in N$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Since $m=(G:N)$, $|G/N|=m$.  The element
 $aN\in G/N$ has an order, call it $d$, that must divide $|G/N|=m$.
 So $m=dk$ for some $k\in \Z$.  Then
 $(aN)^m=(aN)^{dk}=((aN)^d)^k=N^k=N$. Since $(aN)^m=a^mN$, we thus
-have $a^mN=N$, implying that $a^m\in N$, as desired.\end{solution}
+have $a^mN=N$, implying that $a^m\in N$, as desired.\end{solution} 

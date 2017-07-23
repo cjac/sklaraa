@@ -239,7 +239,7 @@ For each of the following, write Y if the given ``operation" is a well-defined b
 
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 \begin{enumerate}
 \item Y
 \item N; for instance, $10*1=\log_{10}0.1=-1\not\in\fatr^+$.
@@ -254,7 +254,7 @@ For each of the following, write Y if the given ``operation" is a well-defined b
 Define $*$ on $\fatq$ by $p*q=pq+1$. Prove or disprove that $*$ is (a) commutative; (b) associative.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 \begin{enumerate}
 \item Let $p,q\in \fatq$.  Then $p*q=pq+1=qp+1$ (since multiplication is commutative on $\fatq$), which equals $q*p$.  So $*$ is commutative.
 \item  $*$ is not associative: for instance, $1,2,3\in \fatq$ and $1*(2*3)=1*7=8$, while $(1*2)*3=3*3=10\neq 8$.
@@ -265,7 +265,7 @@ Define $*$ on $\fatq$ by $p*q=pq+1$. Prove or disprove that $*$ is (a) commutati
 Prove that matrix multiplication is not commutative on $\M_2(\fatr)$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Let $$A=\left[
           \begin{array}{cc}
             1 & 0 \\
@@ -296,7 +296,7 @@ Prove or disprove each of the following statements.
 
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 \begin{enumerate}
 \item Let $x, y\in 2\Z$. Then there exist $a,b\in \Z$ such that $x=2a$ and $y=2b$.  Then $$x+y=2a+2b=2(a+b)\in 2\Z.$$ So $2\Z$ is closed under addition.
 \item Since, for instance, $2,3\in S$ but $2(3)=6\not\in S$, $S$ isn't closed under multiplication.
@@ -340,7 +340,7 @@ Prove or disprove each of the following statements.
 {\small \copyright Bill Griffith. Reprinted with permission.}
              \end{center}
 
- \begin{solution}[print=true]
+ \begin{solution}[print=false]
  Let $u,v\in H$.  To show $u*v\in H$, we need to show that $(u*v)*(u*v)=u*v$. Now,
  \begin{align*}
 (u*v)*(u*v)&=u*(v*u)*v &&\text{(since $*$ is associative)}\\
@@ -984,7 +984,7 @@ uncountable; abelian%; noncyclic
 \end{enumerate}
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 
 
 \noindent
@@ -999,7 +999,7 @@ uncountable; abelian%; noncyclic
 Let $G$ be the set of all functions from $\Z$ to $\fatr$.  Prove that pointwise multiplication on $G$ is commutative. (\textbf{Note.} To prove that two functions, $h$ and $j$, sharing the same domain $D$ are equal, you need to show that $h(x)=j(x)$ for every $x\in D$.)
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Let $f,g\in G$.  Then for every $x\in \Z$,
 $$(fg)(x)=f(x)g(x)=g(x)f(x),$$
 since $f(x), g(x)\in \fatr$ and multiplication of real numbers is commutative. Since $g(x)f(x)=(gf)(x)$,
@@ -1017,7 +1017,7 @@ Decide which of the following binary structures are groups.  For each, if the bi
 \end{enumerate}
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 \begin{enumerate}
 \item $\fatq$ isn't a group under multiplication since $0\in \fatq$ has no inverse.
 \item
@@ -1037,7 +1037,7 @@ Thus, $\M_2(\fatr)$ is a group under addition.
 Give an example of an abelian group containing 711 elements.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 $\Z_{711}$. (Other answers are possible.)
 \end{solution}
 
@@ -1047,7 +1047,7 @@ $\Z_{711}$. (Other answers are possible.)
 Let $n\in \Z$.   Prove that $n\Z$ is a group under the usual addition of integers. \textbf{Note:} You may use the fact that $\<n\Z,+\>$ is a binary structure if you provide a reference for this fact.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 We know from Theorem \ref{nz} that $\<n\Z,+\>$ is a binary structure.
 
 \begin{enumerate}
@@ -1074,7 +1074,7 @@ We know from Theorem \ref{nz} that $\<n\Z,+\>$ is a binary structure.
 \end{exercise}
 
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 We know from Theorem \ref{glsl} that $\<SL(n,\fatr),\cdot\>$ is a binary structure.
 
 \begin{enumerate}
@@ -1104,7 +1104,7 @@ Thus, our proof is complete.
 \end{enumerate}
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 \begin{enumerate}
 \item $11, 1, -4$. (Other answers are possible.)
 \item  $\Z_5=\{0,1,2,3,4\}$
@@ -1119,7 +1119,7 @@ Let $G$ be a group with identity element $e$.  Prove that if every element of $G
 
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Let $a,b\in G$.  Then
 \begin{align*}ab&=(ab)^{-1}&&\text{(since $ab$
 is its own inverse)}\\
@@ -1134,7 +1134,7 @@ Let $G$ be a group.  The subset $$Z(G):=\{z \in G\,:\, zg=gz \mbox{ for all }g\i
 Prove that $Z(G)$ is closed in $G$. %NOTE: This is actually proved in the chapter on Factor Groups.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Let $z_1, z_2\in Z(G)$.  Let $z=z_1z_2$; we want to
 show that $z$ is in $H$: that is, we want to show that for every $g\in G$,
 $zg=gz$.  But for every $g\in G$,

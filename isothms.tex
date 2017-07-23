@@ -310,7 +310,7 @@ f(1/4)=0\}.$$  Prove that $F/N$ is a group that's
 isomorphic to $\fatr$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Define $\Phi:F\rightarrow \fatr$ by
 $\Phi(f)=f\left(\frac{1}{4}\right)$, for every $f\in F$. We have
 that $\Phi$ is a homomorphism, since for every $f, g\in F$,
@@ -329,7 +329,7 @@ f\left(\frac{1}{4}\right)=0 \Leftrightarrow f\in N;$$ so $\Ker
 $\fatr^+$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Define $\Phi: \fatr^* \rightarrow \fatr^+$ by
 $\Phi(x)=|x|$. We know that $\Phi$ is a homomorphism, since
 $\Phi(xy)=|xy|=|x||y|=\Phi(x)\Phi(y)$, for every $x,y\in \fatr^*$.
@@ -344,7 +344,7 @@ $\fatr^*/N \cong \fatr^+$, by the First Isomorphism Theorem.
 $GL(n,\fatr)/H$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 Define $\Phi:GL(n,\fatr)\to \fatr^+$ by
 $\Phi(A)=|\det A|$.  We have that $\Phi$ is an epimorphism since for
 all $A,B\in GL(n,\fatr)$, $$\Phi(AB)=|\det AB|=|\det A \det B|=|\det
@@ -360,9 +360,9 @@ $N$ and $N'$.  Prove or disprove: If $G/N\simeq G'/N'$ then $G\simeq
 G'$.
 \end{exercise}
 
-\begin{solution}[print=true]
+\begin{solution}[print=false]
 The statement is false.  Indeed, using the preceding two problems, we see that $\fatr^*/\{1,-1\}$ and $GL(2,\fatr)/H$,
 where $H=\{A\in GL(2,\fatr):\det A =\pm 1\}$, are both isomorphic
 to $\fatr^+$, hence are isomorphic to each other. But we know that
 $\fatr^* \not\simeq GL(2,\fatr)$.\end{solution}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
