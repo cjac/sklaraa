@@ -1,0 +1,327 @@
+\chapter{Subgroups}\label{subgps}
+
+\section{Introduction to subgroups}
+
+Sometimes groups are too complicated to understand directly.  One method that can be used to identify a group's structure is to study its \textit{subgroups}.
+
+\begin{df}{Definitions and notation} A \textit{subgroup} of a group $G$ is a subset of $G$ that
+is also a group under $G$'s operation. If $H$ is a subgroup of
+$G$, we write $H \leq G$; if $H\cont G$ is not a subgroup of
+$G$, we write $H\not\leq G$.\end{df}
+
+ \warn{Do not confuse sub\textbf{groups} with sub\textbf{sets}!
+All subgroups of a group $G$ are, by definition, subsets of
+$G$, but not all subsets of $G$ are subgroups of $G$ (see
+Example \ref{subsetvsubgp1}, Parts 2--5, below). Whether or not
+a subset of $G$ is a subgroup of $G$ depends on the operation
+of $G$.}
+
+
+\begin{example}{subsetvsubgp1}\
+
+\begin{enumerate}
+\item
+Consider the subset $\Z$ of the group $\fatq$, assuming that $\fatq$ is equipped with the usual addition of real numbers (as we indicated above that we would assume, by default).  Since we already know that $\Z$ is a group under this operation, $\Z$ is not just a subset but in fact a subgroup of $\fatq$ (under addition).
+
+\item
+Instead, consider the subset $\fatq^+$ of the group $\fatq$.  This
+subset is \underline{not} a group under $\fatq$'s operation $+$,
+since it does not contain an identity element for $+$.  Therefore,
+$\fatq^+$ is a subset but not a subgroup of $\fatq$.
+
+\item Let $I$ be the subset $$I=\fatr-\fatq=\{x\in \fatr: x
+    \mbox{ is irrational}\}$$ of the group $\fatr$. The set
+    $I$ is \underline{not} a group under $\fatr$'s
+    operation $+$ since it is not closed under addition:
+    for instance, $\pi, -\pi \in I$, but
+    $\pi+(-\pi)=0\not\in I$.  So $I$ is a subset but not a
+    subgroup of $\fatr$.
+
+\item Consider the subset $\Z^+$ of the group $\fatr^+$.
+The set $\Z^+$ is closed under multiplication, multiplication is
+associative on $\Z^+$, and $\Z^+$ does contain an identity element
+(namely, 1).  However, most elements of $\Z^+$ do not have inverses
+in $\Z^+$ under multiplication: for instance, the inverse of $3$
+would have to be $1/3$, but $1/3\not\in \Z^+$.  Therefore, $\Z^+$ is
+a subset but not a subgroup of $\fatr^+$.
+
+\item Consider the subset $GL(n,\fatr)$ of $\M_n(\fatr)$.  We know that $GL(n,\fatr)$ is a group, so it might be tempting to say that it is a subgroup of $\M_n(\fatr)$; to be a subgroup of $\M_n(\fatr)$, $GL(n,\fatr)$ must be a group under $\M_n(\fatr)$'s operation, which is matrix addition.  While $GL(n,\fatr)$ is a group under matrix multiplication, it is not a group under matrix addition: for instance, it is not closed under matrix addition, since $I_n, -I_n\in GL(n,\fatr)$ but $I_n+(-I_n)$ is the matrix consisting of all zeros, which is not in $GL(n,\fatr)$. So $GL(n,\fatr)$ is a subset but not a subgroup of $\M_n(\fatr)$.
+
+\item Consider the subset $H=\{0,2\}$ of $\Z_4$.  The subset $H$ is closed under addition modulo 4 ($0+0=0$, $0+2=2+0=2$, $2+2=0$), addition modulo 4 is always associative, $H$ contains an identity element (namely, 0) under addition modulo 4, and both 0 and 2 have inverses in $\Z_4$ under this operation (0 and 2 are each their own inverses).  Thus, $H$ \textbf{is} a subgroup of $\Z_4$.
+\item Let $G$ be a group.  Then $\{e_G\}$ and $G$ are clearly both subgroups of $G$.\end{enumerate}
+\end{example}
+
+\begin{df}{Definitions} Let $G$ be a group. The subgroups $\{e_G\}$ and $G$ of
+$G$ are called the \textit{trivial subgroup} and the \textit{improper
+subgroup} of $G$, respectively. Not surprisingly, if $H\leq G$
+and $H\neq \{e_G\}$, $H$ is called a \textit{nontrivial} subgroup
+of $G$, and if $H\leq G$ and $H\neq G$, $H$ is called a \textit{proper subgroup} of $G$.\footnote{Sometimes the notation $H<G$
+is used to indicated that $H$ is a proper subgroup of $G$, but
+sometimes it is simply used to mean that $H$ is a
+subgroup---proper or improper---of $G$.}\end{df}
+
+
+Note that in the cases above, we saw subsets of groups fail to be subgroups because
+they were not closed under the groups' operations; because they did not contain identity elements; or because they didn't contain an
+inverse for each of their elements. None, however, failed  because the relevant group's operation was not associative on them.
+This is not a coincidence: rather, since any element of a subset of a group $G$ also lives in $G$, any associative operation on $G$ is of
+ necessity associative on any closed subset of $G$. Therefore, when we are checking to see if $H\cont G$ is a subgroup of group $G$, we need only check for
+ closure, an identity element, and inverses.
+\begin{lem}\label{subsame} Let $G$ be a group. \begin{enumerate}
+\item
+If $H$ is a subgroup of $G$ then the identity element $e_H$ of $H$
+is $e_G$, the identity element of $G$.
+\item If $H$ is a subgroup of $G$ and $a\in H$ has inverse $a^{-1}$ in $G$, then $a$'s inverse in $H$ is also $a^{-1}$.
+\end{enumerate}\end{lem}
+
+\begin{proof} For Part 1:  Since $e_H$ is in both $H$ and $G$, by the definition
+    of $e_H$, we have
+    $e_He_H=e_H$, and by the definition of $e_G$ we have $e_Ge_H=e_H$. So $e_He_H=e_Ge_H$, and thus by right
+    cancellation, $e_H=e_G$.
+
+    Next, for Part 2, let $b$ be the inverse of $a$ in $H$. Then using Part 1 of this lemma and the definition of an inverse, $ab=e_H=e_G=aa^{-1}$.  By left cancellation, then, we have that $b=a^{-1}$.
+    \end{proof}
+
+\begin{cor}Let $H\subseteq G$.  If the identity element of $G$ is not in $H$, then $H\not\leq G$.\end{cor}
+
+\section{Proving that a subset of a group is or isn't a subgroup}
+
+Using Lemma \ref{subsame} and the argument preceding it, we
+have the following.
+\begin{thm}\label{subgp} A subset $H$ of a group $G$ is a subgroup of $G$ if and only if
+\begin{enumerate}
+\item $H$ is closed under $G$'s operation;
+\item The identity element of $G$ is in $H$; and
+\item For each $a\in H$, $a$'s inverse in $G$ is contained in $H$. \end{enumerate}
+\end{thm}
+
+\begin{example}{subsetvsubgp2} For each of the following, prove that the given subset $H$ of group $G$ is or is not a subgroup of $G$.
+\begin{enumerate}
+\item $H=3\Z$, $G=\Z$.
+\item $H=\{0,1,2,3\}$, $G=\Z_6$;
+\item $H=\fatr^*$, $G=\fatr$;
+\item $H=\{(0,x,y,z):x,y,z\in \fatr\}$, $G=\fatr^4$. \end{enumerate}
+\end{example}
+
+\begin{example}
+Generalizing Part 1 of the above theorem, we have $n\Z\leq \Z$ for every $n\in \Z^+$. \red{The proof of this is left as an exercise for the reader.}\end{example}
+
+\begin{example}{FHKL} Consider the group $\<F,+\>$, where $F$ is the set of all functions from $\fatr$ to $\fatr$ and $+$ is pointwise addition. Which of the following are subgroups of $F$?
+\begin{enumerate}
+\item[] $H=\{f\in F: f(5)=0\}$;
+\item[] $K=\{f\in F: f \mbox{ is continuous}\}$;
+\item[] $L=\{f\in F: f \mbox{ is differentiable}\}$.
+\end{enumerate}
+Are any of $H$, $K$, and $L$ subgroups of one another? \end{example}
+
+ In fact, we can narrow down the number of facts we need to
+check to prove a subset $H\cont G$ is a subgroup of $G$ to only
+two.
+
+\begin{thm}\label{twostep} \textbf{Two-Step Subgroup Test.} Let $G$ be
+a group and $H\cont G$.  Then $H$ is a subgroup of $G$ if
+\begin{center}
+\begin{tabular}{ll}
+1.& $H\neq \emptyset$; and\\
+2.& For each $a,b\in H$, $ab^{-1}\in H$.
+\end{tabular}
+\end{center}
+\end{thm}
+
+\begin{proof} Assume that the above two properties hold.   Since $H\neq
+\emptyset$, there exists an $x\in G$ such that $x\in H$.  Then
+$e_G=xx^{-1}$ is in $H$, by the second property. Next, for every
+$a\in H$ we have $a^{-1}=e_Ga^{-1}\in H$ (again by the second
+property). Finally, if $a,b\in H$ then we've already shown
+$b^{-1}\in H$; so $ab=a(b^{-1})^{-1}\in H$, yet again by the second
+property.  Thus, $H\leq G$.\end{proof}
+
+\begin{example}{}\
+ \begin{enumerate}\item Use the Two-Step Subgroup Test to prove that $3\Z$ is a subgroup of $\Z$.
+\item Use the Two-Step Subgroup Test to prove that $SL(n,\fatr)$ is a subgroup of $GL(n,\fatr)$. \end{enumerate}
+\end{example}
+
+\begin{df} Note that if $H$ is a subgroup of a group $G$ and $K$ is a subset of $H$, then $K$ is a subgroup of
+  $H$ if and only if it's a subgroup of $G$.\end{df}
+
+
+It can be useful to look at how subgroups of a group relate to one
+another.  One way of doing this is to consider \textit{subgroup
+lattices} (also known as \textit{subgroup diagrams}.  To draw a
+subgroup lattice for a group $G$, we list all the subgroups of $G$,
+writing a subgroup $K$ below a subgroup $H$, and connecting them
+with a line, if $K$ is a subgroup of $H$.
+
+\begin{example}{} Consider the group $\Z_8$. We will see later that the subgroups of $\Z_8$ are $\{0\}$, $\{0,2,4,6\}$, $\{0,4\}$ and $\Z_8$ itself.  So $\Z_8$ has the following subgroup lattice.
+
+$$\xymatrix{&\Z_8 \ar@{-}[d]&\\ &\{0,2,4,6\}\ar@{-}[d]&\\ &\{0,4\} \ar@{-}[d]&\\ &\{0\} &} $$
+\end{example}
+
+
+\begin{example}{} Referring to Example \ref{FHKL}, draw the portion of the subgroup lattice for $F$ that shows the relationships between itself and its proper subgroups $H$, $K$, and $L$. \end{example}
+
+
+\begin{example}{} Indicate the subgroup relationships between the following groups:
+$\Z$, $12\Z$, $\fatq^+$, $\fatr$, $6\Z$, $\fatr^+$, $3\Z$, $G=\<\{\pi^n:n\in \Z\},\cdot\,\>$
+and
+$J=\<\{6^n:n\in \Z\},\cdot\,\>. $
+\end{example}
+
+ We end with a theorem about homomorphisms and subgroups
+that leads us to another group invariant.
+\begin{thm}\label{imsubgp} Let $G$ and $G'$ be groups, let $\phi$ a homomorphism from $G$ to $G'$, and let $H$ a subgroup of $G$.  Then $\phi(H)$ is a subgroup of $G'$.
+\end{thm}
+
+\begin{proof} \red{This proof is left as an exercise for the reader.}\end{proof}
+
+\begin{cor}\label{} If $G\simeq G'$ and $G$ contains exactly $n$ subgroups ($n\in \Z^+$), then so does $G'$.
+\end{cor}
+
+
+This is another way of, for instance, distinguishing between the groups $\Z_4$ and the Klein 4-group $Z_2^2$.
+
+
+\begin{example}{} By inspection, $\Z_4$ has subgroup lattice
+$$\xymatrix{\Z_4 \ar@{-}[d]\\ \{0,2\}\ar@{-}[d]\\ \{0\}} $$ and $\Z_2^2$ has subgroup lattice
+$$\xymatrix{&\Z_2^2 \ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr]&\\ \{(0,0),(1,0)\}\ar@{-}[dr]&\{(0,0),(1,1)\}\ar@{-}[d]&\{(0,0),(0,1)\}\ar@{-}[dl]\\ &\{(0,0)\}. &}$$
+Since $\Z_4$ contains exactly 3 subgroups and $\Z_2^2$ exactly 5, we have
+that $\Z_4\not\simeq V$. \end{example}
+
+
+\pagebreak
+\section{Exercises}
+
+
+\begin{exercise}[ID=4A]
+\tf Throughout, let $G$ and $G'$ be  groups.
+
+\begin{enumerate}
+
+\item Every group contains at least two distinct subgroups.
+
+\item If $H$ is a proper subgroup of group $G$ and $G$ is finite, then we must have $|H|<|G|$.
+
+\item $7\Z$ is a subgroup of $14\Z$.
+
+\item A group $G$ may have two distinct proper subgroups which are isomorphic (to one another).
+
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+
+\begin{inparaenum}[(a)]
+\item F \hfill \item T \hfill \item F \hfill  \item T
+\end{inparaenum}
+
+\end{solution}
+
+
+\begin{exercise}[ID=4B]
+Give specific, precise examples of the following groups $G$ with subgroups $H$:
+\begin{enumerate}
+\item A group $G$ with a proper subgroup $H$ of $G$ such that $|H|=|G|$.
+\item A group $G$ of order 12 containing a subgroup $H$ with $|H|=3$.
+\item A nonabelian group $G$ containing a nontrivial abelian subgroup $H$.
+\item A finite subgroup $H$ of an infinite group $G$.
+\end{enumerate}
+
+\end{exercise}
+
+\begin{solution}[print=true]
+(Other answers are possible.)
+
+
+\begin{enumerate}
+\item $G=\Z$, $H=2\Z$
+\item $G=\Z_{12}$, $H=\{0,4,8\}$
+\item $G=GL(2,\fatr)$, $H=\{\pm I_2\}$
+\item $G=\fatr^*, H=\{\pm 1\}$.
+\end{enumerate}
+
+
+\end{solution}
+
+\begin{exercise}
+Let $n\in \Z^+$.
+\begin{enumerate}
+\item Prove that $n\Z \leq \Z$.
+\item Prove that the set $H=\{A\in \M_n(\fatr)\,:\,\det A=\pm 1\}$ is a subgroup of $GL(n,\fatr)$.
+\end{enumerate}
+(\textbf{Note:} Your proofs do not need to be long to be correct!)
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item We know that $n\Z\subseteq \Z$ and that $n\Z$ is a group under addition, the group operation in $\Z$.  Therefore, $n\Z\leq \Z$.
+\item Clearly, $H$ is a nonempty subset of $GL(n,\fatr)$ (for instance, $I_n\in H$).  Next, let $A,B\in H$.
+Then $$\det(AB^{-1})=(\det A)(\det (B^{-1}))=(\pm 1)\left(\frac{1}{\pm 1}\right)=\pm 1,$$ so $AB^{-1}\in H$.  Thus, $H\leq GL(n,\fatr)$ by the Two-Step Subgroup Test.
+\end{enumerate}
+\end{solution}
+
+
+\begin{exercise}
+For each group $G$ and subset $H$, decide whether or not $H$ is a subgroup of $G$. In the cases in which $H$ is \underline{not} a subgroup of $G$, provide a proof. (\textbf{Note.} Your proofs do not need to be long to be correct!)
+\begin{enumerate}
+\item $G=\Z$, $H=\fatr$
+\item $G=\Z_{15}$, $H=\{0,5,10\}$
+\item $G=\Z_{15}$, $H=\{0,4,8,12\}$
+\item $G=\fatc$, $H=\fatr^*$
+\item $G=\fatc^*$, $H=\{1,i,-1,-i\}$
+\item $G=\M_n(\fatr)$, $H=GL(n,\fatr)$
+\item $G=GL(n,\fatr)$, $H=\{A\in \M_n(\fatr)\,:\,\det A = -1\}$
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item $H\not\subseteq G$, so $H\not\leq G$.
+\item $H\leq G$.
+\item $H$ is a subset of $G$ but isn't closed under $+_{15}$: for instance $12+_{15}4=1\not\in H$.  So $H\not\leq G$.
+\item $H$ is a subset of $G$, but the identity element, 0, of $G$ isn't in $H$, so $H\not\leq G$.
+\item $H\leq G$.
+\item $H$ is a subset of $G$, but the identity element, $\0$, of $G$ isn't in $H$, so $H\not\leq G$.
+\item $H$ is a subset of $G$, but the identity element, $I_n$, of $G$ isn't in $H$, since $\det I_n=1$.  Thus, $H\not\leq G$.
+\end{enumerate}
+\end{solution}
+
+
+\begin{comment}
+\begin{exercise}[ID=4C]
+
+\begin{enumerate}
+\item
+Draw the subgroup lattices for the groups $\Z_2 \times \Z_3$ and $\Z_2 \times \Z_4$. (Identify each subgroup in the following lattices explicitly, either by listing its elements within set brackets, or by otherwise identifying it using precise mathematical notation.)
+
+\item Would it be reasonable for me to ask you to draw the complete subgroup lattice for $\Z$?  If so, draw it; otherwise, explain why that's an unreasonable request. \textbf{Make sure any sentences you write are grammatically correct.}
+
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+\end{solution}
+
+\end{comment}
+
+\begin{exercise}
+ Let $G$ and $G'$ be groups, let $\phi$ a homomorphism from $G$ to $G'$, and let $H$ a subgroup of $G$.  Then $\phi(H)$ is a subgroup of $G'$.
+ \end{exercise}
+
+\begin{solution}[print=true]
+Let $x,y\in \phi(H)$.  Then $x=\phi(a)$ and $y=\phi(b)$ for some $a,b\in H$.  So $xy=\phi(a)\phi(b)=\phi(ab)$ (since $\phi$ is a homomorphism).  Since $H\leq G$, $ab\in H$.  Thus, $xy\in \phi(H)$.  Next, $e_G\in H$, so $e_{G'}=\phi(e_G)\in \phi(H)$. Finally, since $H\leq G$ and $a\in H$, $a^{-1}\in H$; so $x^{-1}=\phi(a)^{-1}=\phi(a^{-1}) \in \phi(H)$. Thus, $\phi(H)\leq G'$.
+
+\end{solution}
+
+\begin{exercise}[ID=4D, subtitle=(Extra Credit)]
+Recall that an element $u$ of a binary structure is said to be an \textit{idempotent} if $u^2=u$.  Let $G$ be an abelian group, and let $U$ be the set of all idempotents of $G$.  Prove that $U$ is a subgroup of $G$.
+\end{exercise}
+
+\begin{solution}[print=true]
+Clearly, $e\in H$, so $H\neq \emptyset$.  Next, let $u,v\in H$. Then
+\begin{align*}(uv^{-1})^2&=(uv^{-1})(uv^{-1})&&\\
+&=u^2(v^{-1})^2 &&\text{(since the group operation is assoc. and comm.)}\\
+&=u^2(v^2)^{-1} &&\text{(using the rules for exponents)}\\
+&=uv^{-1}&&\text{(since $u,v\in H$).}
+\end{align*}
+Thus, $uv^{-1}\in H$, and so $H \leq G$ by the Two-Step Subgroup Test. \end{solution}
+

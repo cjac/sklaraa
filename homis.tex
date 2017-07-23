@@ -1,0 +1,550 @@
+\chapter{Homorphisms and Isomorphisms}\label{homoiso}
+
+\section{Groups of small order}
+
+Let's start exploring groups in order of increasing, well, order. Before we do this, it will be helpful to introduce the notion of a \textit{group table} (also known as a {\it Cayley table}\footnote{Named after the British mathematician Arthur Cayley.}) for a finite group.  Given a finite group $G$, list its elements in some fixed order, say, $a_1, a_2, \ldots, a_n$, and then construct its group table by creating an array with exactly one row and exactly one column corresponding to each group element.  We then put in the row $i$ and column $j$ the element $a_ia_j$ of $G$.  Note that a single group can have group tables that look different from one another, since reordering a group's elements will change its table.
+
+
+\begin{example}{}
+Consider the group $\Z_4$ under addition modulo 4.  Ordering the elements of $\Z_4$ as $1,2,3,4$, we have the following group table for $\<\Z_4,+\>$:
+
+\bigskip
+\hspace{137pt}
+\renewcommand{\arraystretch}{1.3}
+$\begin{array}{c||c|c|c|c}
++&0&1&2&3\\ \hline\hline 0&0&1&2&3\\ \hline
+1&1&2&3&0\\ \hline 2&2&3&0&1\\ \hline 3&3&0&1&2\\
+
+\end{array}$
+
+\vspace{-9pt}
+\hspace{250pt}
+\end{example}
+
+
+Now, clearly, there is no group of order 0 (do you see why?).  Is there a group of order 1?  Well, suppose $\<G,*\>$ is such a group. Since $G$ must contain an identity element $e$, we must have $G=\{e\}$, and since $e$ is $G$'s identity element, we must have $e*e=e$.  Clearly, in this case, the three group axioms hold.  So $G$ is a valid group, without much going on in it.
+
+\begin{df}{Definition} If $G$ is a group with $|G|=1$, then $G$ is called the
+\textit{trivial group}\footnote{ A good question to ask here is
+why it's called ``the" trivial group, rather than ``a" trivial
+group.  Indeed, there are infinitely many groups of order 1!
+(Do you see why?) But it turns out that all of these groups are
+\textbf{structurally} the same. Hence mathematicians end up
+thinking of them as various instantiations of one group, rather
+than separate groups. We will discuss this in more depth
+shortly, when we introduce the idea of \textit{isomorphism}.}.
+\end{df}
+
+
+Next suppose that group $\Gdot$ has order 2.  Then $G$ must contain an identity element, $e$, and a non-identity element, $a$.  Since $e$ is its own inverse, and inverses are unique, $a$ must be its own inverse as well.  So $G$ must have the following table.
+\bigskip
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+$\begin{array}{c||c|c}
+*&e&a\\ \hline\hline e&e&a\\ \hline
+a&a&e\\
+\end{array}$
+\end{center}
+
+\bigskip
+
+It is straightforward to show that such a structure does satisfy all the group axioms (the only one we really need to check is associativity).
+
+Now, what if group $\Gdot$ has order 3?  Note that \textbf{you can't have any entry appear more than once in the same row or same column} (excluding of course the labels outside the grid we're filling in), given Theorem \ref{uniquesols}. Is there only one way of filling in the table for a group of order 3? (Hint: consider what element must be the second row, third column entry.)
+
+\bigskip
+\begin{center}
+%\begin{tabular}{lr}
+\renewcommand{\arraystretch}{1.3}
+$\begin{array}{c||c|c|c}
+*&e&a&b\\ \hline \hline e&&&\\ \hline
+a&&&\\ \hline b&&&\\
+\end{array}$
+%&
+%\renewcommand{\arraystretch}{1.3}
+%$\begin{array}{c||c|c|c|c}
+%*&e&a&b&c\\ \hline \hline e&&&&\\ \hline
+%a&&&&\\ \hline b&&&&\\ \hline c&&&&\\
+%\end{array}$\\
+%\end{tabular}
+\end{center}
+\bigskip
+
+Finally, what if group $\Gdot$ has order 4?  It turns out in this case there are \textbf{two} valid ways of filling in a group table!
+%Hint: the group tables for $\Z_4$ and $\Z_2 \times \Z_2$, under the obvious operations, are structurally distinct.
+
+\medskip
+What we have been doing here is really getting into the idea of the
+\textbf{structure} of groups, and when we can consider groups to be
+essentially ``the same" or fundamentally ``different."  We approach
+this more formally via the concepts of homomorphism and isomorphism.
+
+\bigskip
+\section{Introduction to homomorphisms and isomorphisms}
+
+\begin{df}{Definitions} Let $\<S,*\>$ and $\<S',*'\>$ be binary structures.  A
+function $\phi$ from $S$ to $S'$ is a \textit{homomorphism} if
+$$\phi(a* b)=\phi(a)*'\phi(b)$$ for all $a,b\in S$. An \textit{isomorphism} is a homomorphism that is also a bijection.\end{df}
+
+Intuitively, you can think of a homomorphism $\phi$ as a
+``structure-preserving" map: if you multiply and then apply $\phi$,
+you get the same result as when you first apply $\phi$ and then
+multiply. Isomorphisms, then, are both structure-preserving and
+cardinality-preserving.
+
+
+\begin{df}{Note} We may omit the $*$ and $*'$, as per our group conventions, but we include them here to emphasize that the operations in the structures may be distinct from one another.  When we omit them and write $\phi(st)=\phi(s)\phi(t)$, then it is the writers' and readers' responsibility to keep in mind that $s$ and $t$ are being operated together using the operation in $S$, while $\phi(s)$ and $\phi(t)$ are being operated together using the operation in $S'$.\end{df}
+
+\begin{df}{Remark} There may be more than one homomorphism
+[isomorphism] from one binary structure to another (see Example
+\ref{homos}). \end{df}
+
+
+
+\begin{example}{homos}
+For each of the following, decide whether or not the given function
+$\phi$ from one binary structure to another is a homomorphism, and,
+if so, if it is an isomorphism. Prove or disprove your answers!  For
+Parts 6 and 7, $C^0$ is the set of all continuous functions from
+$\fatr$ to $\fatr$; $C^1$ is the set of all differentiable functions
+from $\fatr$ to $\fatr$ whose derivatives are continuous; and each
+$+$ indicates pointwise addition on $C^0$ and $C^1$. (Note that
+$C^1$ and $C^0$ are not groups, since elements of them will not have
+inverses unless they are bijections.)
+
+\begin{enumerate}
+\item $\phi:\<\Z,+\>\to \<\Z,+\>$ defined by $\phi(x)=x$; %Iso (inverse is itself)
+\item $\phi:\<\Z,+\>\to \<\Z,+\>$ defined by $\phi(x)=-x$; %Iso (inverse is itself)
+\item $\phi:\<\Z,+\>\to \<\Z,+\>$ defined by $\phi(x)=2x$; %Homo but not iso (not onto)
+\item $\phi:\<\fatr,+\>\to \<\fatr^+,\cdot\,\>$ defined by $\phi(x)=e^x$; %Iso (inverse is \psi(x)=\ln x)
+\item $\phi:\<\fatr,+\>\to \<\fatr^*,\cdot\,\>$ defined by $\phi(x)=e^x$; %Homo but not  iso (not onto)
+\item $\phi:\<C^1,+\>\to \<C^0,+\>$ defined by $\phi(f)=f'$ (the derivative of
+$f$); %Homo but not iso (not 1-1)
+\item[7.] $\phi:\<C^0,+\>\to \<\fatr,+\>$ defined by $\phi(f)=\displaystyle{\int_0^1 f(x)\, dx}$.  %Homo but not  iso (not 1-1: e.g., f(x)=2x and
+%f(x)=3x^2 both get sent to 1
+\end{enumerate}
+\end{example}
+
+\begin{example}{} Let $\Gdot$ be a group and let $a\in G$.  Then the
+function $c_a$ from $G$ to $G$ defined by $c_a(x)=axa^{-1}$ (for
+all $x\in G$) is a homomorphism.  Indeed, let $x,y\in G$. Then
+\begin{align*} c_a(xy)&=a(xy)a^{-1}\\ &=(ax)e(ya^{-1})\\
+&=(ax)(a^{-1}a)(ya^{-1})\\ &=(axa^{-1})(aya^{-1})\\
+&=c_a(x)c_a(y).\end{align*}  The homomorphism $c_a$ is called
+\textit{conjugation by $a$}.\footnote{Homomorphisms from a group $G$ to
+itself are called \textit{automorphisms}. Thus, conjugation by any
+element $a$ in $G$ is an automorphism of $G$. (Beware: Some texts
+refer to the function $x\mapsto a^{-1}xa$ as ``conjugation by
+$a$." Either version of conjugation by $a$ in group $G$ is an
+automorphism of $G$.) }
+\end{example}
+
+  We end with a theorem stating basic facts about
+homomorphisms from one group to another. (\textbf{Note.} This doesn't apply to arbitrary binary structures, which may or may not even have identity elements.)
+
+\begin{thm}\label{homoprops} Let $\<G,\cdot\>$ and $\<G',\cdot'\>$ be groups with identity elements $e$ and $e'$, respectively, and let $\phi$ be a homomorphism from $G$ to $G'$. Then:
+\begin{enumerate}
+\item $\phi(e)=e'$; and
+\item For every $a\in G$, $\phi(a)^{-1}=\phi(a^{-1})$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}  For Part 1, note that
+\begin{align*}
+\phi(e)\cdot'e'&=\phi(e)&&\text{(by definition of $e'$)}\\
+&=\phi(e\cdot e) &&\text{(by definition of $e$)}\\
+&=\phi(e)\cdot'\phi(e) &&\text{(since $\phi$ is a homomorphism).}
+\end{align*}
+Thus, by left
+cancellation, $e'=\phi(e)$. \red{The proof of Part 2 is left as an exercise for the reader.} \end{proof}
+
+\section{Isomorphic groups}
+
+One of the key ideas we've discussed in determining whether binary
+structures are essentially ``the same" or ``different." We approach
+this rigorously using the concept of \textit{isomorphic} groups.
+
+\begin{df}{Definitions and notation} We say that two groups  $G$ and $G'$ (or binary
+structures $S$ and $S'$) are \textit{isomorphic}, and write
+$G\simeq G'$, if there exists an isomorphism from $G$ to $G'$.
+We say that $G$ is \textit{isomorphic to $G'$  via $\phi$} if
+$\phi$ is an isomorphism from $G$ to $G'$. If there exists no
+isomorphism from $G$ and $G'$, then we say that $G$ and $G'$
+are \textit{nonisomorphic}, and write $G\not\simeq G'$.\end{df}
+
+\warn{Just because a particular map (even an
+``obvious" one) from group $G$ to group $G'$ is not an isomorphism,
+we do not know that $G$ and $G'$ are not isomorphic!  For instance,
+the map $\phi: \Z\to \Z$ defined by $\phi(x)=2x$ for all $x$ is \textbf{not}
+an isomorphism (since it's not onto), but $\Z$ \textbf{is} isomorphic to itself, as we will see in Part 1 of Theorem \ref{groupisoequiv}.}
+
+
+Isomorphic groups have \textbf{the same structure} as far as
+algebraists are concerned. Again, picture two houses that are
+identical except for the colors they are painted.  Though they
+differ in some ways (one house is red while the other is
+green), they are structurally identical.  Isomorphic groups
+have identical structures, though the elements of one group may
+differ greatly from those of the other. Returning to the house
+analogy: if two houses are structurally identical, we can learn
+many things about one house by looking at the other (e.g., how
+many bathrooms it has, whether it has a basement, etc.).
+Similarly, suppose we know a great deal about group $G$ and are
+given a new group, $G'$.  If we prove that $G'$ is isomorphic
+to $G$, then we can likely deduce information about $G'$ from
+the information we know about $G$.
+
+\begin{thm}\label{groupisoequiv} Let $\<G,\cdot\>$, $\<G',\cdot'\>$, and $\<G'',\cdot''\>$ be groups.
+
+\begin{enumerate}
+\item Group $G$ is isomorphic to itself.
+\item If $\phi$ is an isomorphism from $G$ to group $G'$, then there exists an isomorphism from $G'$ to $G$. Hence, $G\simeq G'$ if and only if $G'\simeq G$.
+\item If $G\simeq G'$ and $G'\simeq G''$, then $G\simeq G''$.
+\end{enumerate}
+\end{thm}
+
+
+\begin{proof} For Part 1: The identity map $1_G:G\to G$ defined by
+$1_G(a)=a$ for all $a\in G$ is clearly an isomorphism.
+
+For Part 2: Since $\phi$ is an isomorphism, it's a bijection, hence
+has inverse $\phi^{-1}$.  From Theorem \ref{invbij}, we know that
+$\phi^{-1}$ must also be a bijection (in this case, from $G'$ to
+$G$).  So it suffices to show that $\phi^{-1}$ is a homomorphism.
+Let $a,b\in G'$.  We want to show that
+$\phi^{-1}(a\cdot'b)=\phi^{-1}(a)\cdot\phi^{-1}(b)$.  Since $\phi$ is 1-1, it suffices to show that $$\phi(\phi^{-1}(a\cdot'b))=\phi(\phi^{-1}(a)\cdot\phi^{-1}(b)).$$
+Notice, we have
+$\phi(\phi^{-1}(a\cdot'b))=a\cdot'b$; further, we have
+$$\phi(\phi^{-1}(a)\cdot\phi^{-1}(b))=\phi(\phi^{-1}(a))\cdot'\phi(\phi^{-1}(b))=a\cdot'b.$$
+This shows that
+$\phi^{-1}(a\cdot'b)=\phi^{-1}(a)\cdot\phi^{-1}(b)$, as desired.
+
+For Part 3: Since $G\simeq G'$ and $G'\simeq G''$, there exist
+isomorphisms $\phi:G\to G'$ and $\psi:G'\to G''$.  Define
+$\theta:G\to G''$ by $\theta=\psi \circ \phi$.  Since $\phi$ and
+$\psi$ are both bijections, $\theta$ is a bijection (Theorem
+\ref{compbij}).  Next, let $a,b\in G$.  The \begin{align*}
+\theta(a\cdot b)&=\psi(\phi(a\cdot b))&&\text{(by definition of $\theta$)}\\
+&=\psi(\phi(a)\cdot'\phi(b))&&\text{(since $\phi$ is a homomorphism)}\\
+&=\psi(\phi(a))\cdot''\psi(\phi(b))&&\text{(since $\psi$ is a homomorphism)}\\
+&=\theta(a)\cdot''\theta(b)&&\text{(by definition of $\theta$)}.
+\end{align*}
+Thus, $\theta$ is a homomorphism, and hence, since it is also a bijection, an isomorphism.\end{proof}
+
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{threeparttable}
+\begin{tabular}{|l|}
+\hline
+To show that given groups $G$ and $G'$ are isomorphic, we must do three things:\\
+1. \textbf{Define} a function $\phi$ from $G$ to $G'$ (or from $G'$ to $G$, as we have Theorem \ref{groupisoequiv});\\
+2. Prove that $\phi$ is a homomorphism; and\\
+3. Prove that $\phi$ is a bijection.\tnote{*}\\
+\hline
+\end{tabular}
+\begin{tablenotes}
+\item[*]\small Remember, you can show that $\phi$ is a bijection by proving that it's one-to-one and onto, \textbf{or} by  showing that it has an inverse.
+    \end{tablenotes}
+\end{threeparttable}
+\end{center}
+
+
+\bigskip
+\warn{\begin{center}Do \textbf{NOT} try to prove that a function $\phi$ is an isomorphism  WITHOUT DEFINING $\phi$!\end{center}}
+
+
+We know provide some terminology that will be helpful for our study of the structures of groups.
+
+\begin{df}{Definition} Given a certain property (or properties), we say there
+is a \textit{unique group} with that property (or properties) \textit{up to isomorphism} if any two groups sharing that property (or
+properties) are isomorphic to one another.\end{df}
+
+This may seem a little abstruse at the moment, but seeing examples will help illuminate the concept.
+
+\begin{example}{}\
+
+\begin{enumerate}
+\item If $G$ and $G'$are groups with $|G|=|G'|=1$, then $G\simeq G'$, since the map from $G$ to $G'$ sending $G$'s identity (and sole) element to $G'$'s identity
+(and sole) element is clearly an isomorphism.  This is why we can mildly abuse terminology and call any group of order 1 \textit{the} trivial group instead of \textit{a} trivial group: $G$ and
+$G'$ may technically be different groups, but structurally they are identical, so we can consider them to be more or less ``the same."  Thus, there is a unique group of order 1, up to isomorphism.
+
+\item Let $G$ be a group with $|G|=2$.  Then $G$ must consist of an identity element $e$ and a nonidentity element $a$, and have the following group table. Compare the group tables of $G$ and the specific two-element group $\Z_2$.
+
+\begin{center}
+\begin{tabular}
+{lr}
+\renewcommand{\arraystretch}{1.3}
+$\begin{array}{c||c|c}
+*&e&a\\ \hline\hline e&e&a\\ \hline
+a&a&e\\
+\end{array}$
+&
+\renewcommand{\arraystretch}{1.3}
+$\begin{array}{c||c|c}
++&0&1\\ \hline\hline
+0&0&1\\
+\hline
+1&1&0\\
+\end{array}$
+\end{tabular}
+\end{center}
+Note that the first table looks exactly like the second table if we
+replace $*$ with $+$, each $e$ with $0$, and each $a$ with $1$. This
+shows that groups $G$ and $\Z_2$ have identical structures; more
+precisely, it shows that the function $\phi$ from $G$ to $\Z_2$
+defined by $\phi(e)=0$ and $\phi(a)=1$ is an isomorphism.  Since any
+group of order 2 is isomorphic to $\Z_2$, using Theorem
+\ref{groupisoequiv} we see that there is a unique group of order 2,
+up to isomorphism.
+
+\item A similar argument shows that there is a unique group of order 3 up to isomorphism: specifically, any group of order 3 is isomorphic to $\Z_3$.
+
+\item We will see later, in Example \ref{4nonunique}, that there is \textit{not} a unique group of order 4 up to isomorphism: that is, there are two nonisomorphic groups of order 4. \end{enumerate}
+\end{example}
+
+
+\begin{example}{} The groups $\<\fatr,+\>$ and $\<\fatr^+, \cdot\>$ are isomorphic.  %We explored this in Ex ref{homos}
+
+\begin{proof}  Define $\phi:\fatr\to \fatr^+$ by $\phi(x)=e^x$.  Our map
+$\phi$ is a homomorphism since for every $x,y\in \fatr$, we have
+$$\phi(x+y)=e^{x+y}=e^xe^y=\phi(x)\phi(y).$$ Moreover, $\phi$ is a
+bijection, since it has inverse function $\ln x: \fatr^+\to \fatr$.
+Hence, $\fatr \simeq \fatr^+$ via isomorphism $\phi$.\end{proof} \end{example}
+
+
+\begin{example}{} Let $n\in \Z^+$.  Then the groups $\<n\Z,+\>$ and $\<\Z,+\>$ are isomorphic.  \red{The proof of this is left as an exercise for the reader.} \end{example}
+
+We have now seen examples in which we have proved that two groups
+are isomorphic. How, though, do we prove that two groups are \textbf{not} isomorphic?  It is usually wildly impractical, if not
+impossible, to check that no function from one group to the other is
+an isomorphism. For instance, it turns out that $\fatr^*$ is not
+isomorphic to $GL(2,\fatr)$ (see Example \ref{rgl}), but there are
+infinitely many bijections from $\fatr^*$ to $GL(2,\fatr)$---it is
+impossible to check that each one is not an isomorphism. Instead, we
+use \textit{group invariants}.
+
+\begin{df}{Definition} A group property $P$ is called a \textit{group invariant}
+if it is preserved under isomorphism.\end{df}
+
+ Group invariants are \textbf{structural} properties. Some examples of group invariants are:
+\begin{enumerate}
+\item Cardinality (since any isomorphism between groups is a bijection);
+\item Abelianness \red{(the proof that this is a group invariant is left as an exercise for the reader);}
+\item Number of elements which are their own inverses (proven by an argument similar to that in Example \ref{4nonunique}).
+\end{enumerate}
+
+ A \underline{nonexample} of a group invariant is the property of being a subset of $\fatr$.
+
+
+\begin{example}{rgl} The group $\fatr$ cannot be isomorphic to the group $GL(2,\fatr)$ since the former group is abelian and the latter nonabelian.\end{example}
+
+
+\begin{example}{} The groups $\fatr$ and $\fatq$ cannot be isomorphic since the former group is uncountable and the latter countable.\end{example}
+
+
+Sometimes we must resort to trickier methods in order to decide whether or not two groups are isomorphic.
+
+
+\begin{example}{zq} The groups $\Z$ and $\fatq$ are not isomorphic.  We use contradiction to prove this. Suppose that $\Z$ and $\fatq$ are isomorphic via isomorphism
+$\phi :\fatq \to \Z$.  Let $a\in \fatq$.  Then $a/2 \in \fatq$ with
+$a/2 + a/2 =a$.  Then $$\phi(a/2)+\phi(a/2)=
+\phi(a/2+a/2)=\phi(a);$$ since $\phi(a/2)$ is in $\Z$, $\phi(a)$
+must be evenly divisible by 2. But $a$ was arbitrary in $\fatq$ and
+$\phi$ is onto, so this means every element of $\Z$ must be evenly
+divisible by 2, which is clearly false. Thus, $\Z\not\simeq \fatq$.
+\end{example}
+
+
+\begin{example}{4nonunique}
+The groups $\Z_4$ and $V=\Z_2^2$ are not isomorphic.  Why?  Well, they are both abelian of order 4, so we cannot use cardinality or commutativity to prove they are nonisomorphic. The gist of our argument will be to note that every element in $V$ is its own inverse; so if $V$ and $\Z_4$ are isomorphic (hence structurally identical) we must have that every element of $\Z_4$ is also its own inverse, which doesn't hold (e.g., in $\Z_4$, $3+3=2$, not $0$).
+
+    A rigorous proof of the fact that $V$ and $\Z_4$ are not isomorphic is as follows: For now, denote the usual operation on $V$ by $*$.  Suppose that $V$ and $\Z_4$ are isomorphic, via isomorphism $\phi$ from $V$ to $\Z_4$. Then since $\phi$ is onto, there exists an element $a\in V$ such that $\phi(a)=3$.  Then
+    \begin{align*}
+    3+3&=\phi(a)+\phi(a)&&\text{ (by definition of $a$)}\\
+    &=\phi(a*a) &&\text{(since $\phi$ is a homomorphism)}\\
+    &=\phi((0,0)) &&\text{ (since every element of $V$ is its own inverse)}\\
+    &=0, &&
+    \end{align*}
+   since $\phi$ is a homomorphism, so sends identity element to identity element. But this is a contradiction, since $3+3=2\neq 0$ in $\Z_4$.  Thus, $V\not\simeq \Z_4$.
+\end{example}
+
+
+\pagebreak
+\section{Exercises}
+
+
+\begin{exercise}[ID=3A]
+\tf Throughout, let $G$ and $G'$ be  groups.
+
+\begin{enumerate}
+\item If there exists a homomorphism $\phi\,:\,G\to G'$, then $G$ and $G'$ must be isomorphic groups.
+
+\item There is an integer $n\geq 2$ such that $\Z\simeq \Z_n$.
+
+\item If $|G|=|G'|=3$, then we must have $G\simeq G'$.
+
+\item If $|G|=|G'|=4$, then we must have $G\simeq G'$.
+\end{enumerate}
+\end{exercise}
+
+
+\begin{solution}[print=true]
+\begin{inparaenum}[(a)]
+\item F \hfill \item F \hfill \item  T \hfill \item F
+\end{inparaenum}
+\end{solution}
+
+\begin{exercise}For each of the following functions, prove or
+    disprove that the function is (i) a homomorphism; (ii)
+    an isomorphism. (Remember to work with the default operation on each of these groups!)
+\begin{enumerate}
+\item The function $f:\Z\to\Z$ defined by $f(n)=2n$.
+\item The function $g:\fatr\to\fatr$ defined by $g(x)=x^2$.
+\item The function $h:\fatq^*\to\fatq^*$ defined by
+    $h(x)=x^2$.
+\end{enumerate}
+
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+
+\item \begin{enumerate}
+\item
+The function $f$ is a homomorphism, since for every $a,b \in
+    \Z,$ we have
+$$f(a+b)=2(a+b)=2a+2b=f(a)+f(b).$$ \item The function $f$ isn't a bijection, since it isn't onto: for instance, there is
+no element $a$ in $\Z$ such that $f(a)=3$. Thus, $f$ is not an
+isomorphism.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item The function $g$ isn't a homomorphism: for instance, we have $$g(2+3)=g(5)=25\neq 13=4+9=g(2)+g(3).$$ \item Since it isn't a homomorphism, it isn't an isomorphism.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item  The function $h$ is a homomorphism, since for every $a,b \in
+    \fatq,$ we have
+$$h(ab)=(ab)^2=a^2b^2=h(a)h(b).$$ \item The function $h$ isn't onto: its range is the set of nonnegative rational
+numbers, not all of $\fatq$. Thus, $h$ is not an isomorphism.
+  \end{enumerate}
+
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+Define $d : GL(n,\fatr)\to \fatr^*$ by $d(A)=\det A$.  Prove/disprove that $d$ is:
+
+  \begin{enumerate}
+\item a homomorphism
+\item 1-1
+\item onto
+\item an isomorphism.
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+
+\begin{enumerate}
+
+\item The function $d$ is a homomorphism, since for every $A,B \in
+    GL(n,\fatr),$ we have
+$$d(AB)=\det(AB)=(\det A)(\det B)=d(A)d(B).$$
+
+\item $d$ isn't 1-1: For instance, $d(I_2)=d(-I_2)$.
+
+\item $d$ is onto: Let $a\in \fatr^*$. Then the matrix
+$$A:=\begin{bmatrix}
+a & 0 & 0 & \cdots & 0 \\
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 1 \end{bmatrix}$$ is in $GL(n,\fatr)$, with $d(A)=a$.
+
+\item Since $d$ isn't 1-1, it isn't  an
+isomorphism.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}[ID=3B]
+Complete the group tables for $\Z_4$ and $\Z_8^{\times}$. Use the group tables to decide whether or not $\Z_4$ and $\Z_8^{\times}$ are isomorphic to one another. (You do not need to provide a proof.)
+\end{exercise}
+
+\begin{solution}[print=true]
+The group tables of $\Z_4$ and $\Z_8^{\times}$ are, respectively,
+
+\renewcommand{\arraystretch}{1.3}
+$$\begin{array}{c||c|c|c|c}
++&0&1&2&3\\ \hline\hline 0&0&1&2&3\\ \hline
+1&1&2&3&0\\ \hline 2&2&3&0&1\\ \hline 3&3&0&1&2\\
+\end{array} \quad \mbox{and} \quad
+%\renewcommand{\arraystretch}{1.3}
+\begin{array}{c||c|c|c|c}
+\cdot_8&1&3&5&7\\ \hline\hline 1&1&3&5&7\\ \hline 3&3&1&7&5\\
+\hline 5&5&7&1&3 \\ \hline 7&7&5&3&1\\
+\end{array}.$$
+\medskip
+We can see from the group table for $\Z_8^{\times}$ that every element of that group is its own inverse; that is not the case in $\Z_4$.  Thus, $\Z_4\not\simeq\Z_8^{\times}$.
+
+\end{solution}
+
+\begin{exercise}[ID=3C]
+Let $n\in \Z^+$. Prove that $\<n\Z,+\> \simeq \<\Z,+\>$.
+\end{exercise}
+
+\begin{solution}[print=true]
+Define $\phi\,:\,\Z \rightarrow n\Z$
+    by $\phi(x)=nx$, for all $x\in \Z$.  Clearly, $\phi$
+    is a bijection. Moreover, for all $x,y\in \Z$,
+$$\phi(x+y)=n(x+y)=nx+ny=\phi(x)+\phi(y);$$ so $\phi$ is a
+homomorphism.  Thus, $\phi$ is an isomorphism, and hence
+$$\<\Z, +\>\simeq \<n\Z, +\>.$$
+\end{solution}
+
+\begin{exercise}[ID=3D]
+
+\begin{enumerate}
+\item  Let $G$ and $G'$ be groups, where $G$ is abelian and  $G\simeq G'$. Prove that $G'$ is abelian.
+
+\item Give an example of groups $G$ and $G'$, where $G$ is abelian and there exists a homomorphism from $G$ to $G'$, but $G'$ is NOT abelian.
+    \end{enumerate}
+
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item Since $G\simeq G'$, there exists some isomorphism $\phi:G\to G'$.  Let $x,y\in G'$.  Since $\phi$ is onto, there exist $a,b\in G$ such that $\phi(a)=x$ and $\phi(b)=y$.  So \begin{align*}
+    xy&=\phi(a)\phi(b)&&\\
+    &=\phi(ab)&&\text{(since $\phi$ is a homomorphism)}\\
+    &=\phi(ba) &&\text{(since $G$ is abelian)}\\
+    &=\phi(b)\phi(a)\\
+    &=yx.\end{align*} Thus, $G'$ is abelian.
+\item Let $G=\{I_2\}$ (under multiplication) and let $G'=GL(2,\fatr)$. Then the map $\phi: G\to G'$ defined by $\phi(I_2)=I_2$ is clearly a homomorphism, but note that $G$ is abelian while $G'$ is not.
+\end{enumerate}
+
+\end{solution}
+
+\begin{exercise}[ID=3E,subtitle=(Extra Credit)]
+ Let $\<G,\cdot\>$ and $\<G',\cdot'\>$ be groups with identity elements $e$ and $e'$, respectively, and let $\phi$ be a homomorphism from $G$ to $G'$. Let $a\in G$. Prove that $\phi(a)^{-1}=\phi(a^{-1})$.
+
+\end{exercise}
+
+\begin{solution}[print=true]
+
+\begin{df}{Note}
+We  omit the group operations in this solution in order to increase familiarity with the convention.\end{df}
+
+We want to show that $\phi(a)^{-1}=\phi(a^{-1})$.
+    Notice that
+\begin{align*}
+\phi(a^{-1})\phi(a)&=\phi(a^{-1}a)&&\text{(since $\phi$ is a homomorphism)}\\
+&=\phi(e)&&\text{(by definition of $a^{-1}$)}\\
+&=e'&& \text{(since $\phi(e)$ is the identity element of
+$G'$)}\\
+&=\phi(a)^{-1}\phi(a)&&\text{(by definition of $\phi(a)^{-1}$)}.
+\end{align*}
+Thus, $\phi(a^{-1})=\phi(a)^{-1}$, by right cancellation.
+\end{solution} 

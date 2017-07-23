@@ -1,0 +1,597 @@
+\chapter{Permutation Groups and Dihedral Groups}\label{perm}%\footnote{See Section 8 in \cite{F}.}
+
+We have already been introduced to two important classes of
+nonabelian groups: namely, the matrix groups $GL(n,\fatr)$ and
+$SL(n,\fatr)$ for $n\geq 2$. We now consider a more general class of
+(mostly) nonabelian groups: permutation groups.
+
+\section{Introduction to permutation groups}
+
+\begin{df}{Definitions} A \textit{permutation} on a set $A$ is a bijection from $A$
+to $A$. We say a permutation $\sigma$ on $A$ \textit{fixes} $a\in
+A$ if $\sigma(a)=a$.\end{df}
+
+
+\begin{example}{stperm} Let $A$ be the set $A=\{\Delta, \star, \$\}$.  Then the functions $\sigma : A\to A$ defined by $$\sigma(\Delta)=\star,
+\quad \sigma(\star)=\Delta, \quad \mbox{and } \sigma(\$)=\$ $$
+and $\tau : A\to A$ defined by $$\tau(\Delta)=\$, \quad
+\tau(\star)=\Delta, \quad \mbox{and } \tau(\$)=\star $$ are
+both permutations on $A$. \end{example}
+
+
+\begin{df}{Definitions and notation} Composition of permutations on a set $A$ is often called
+\textit{permutation multiplication}, and if $\sigma$ and $\tau$
+are permutations on a set $A$, we usually omit the composition
+symbol and write $\sigma \circ \tau$ simply as $\sigma \tau$.\end{df}
+
+\warn{For us, if $\sigma$ and $\tau$ are permutations on a set $A$, then applying $\sigma \tau$ to $A$ means first applying $\tau$ and \underline{then} applying  $\sigma$.  This is due to the conventional right-to-left reading of function compositions.}
+
+
+That is, if $a\in A$, by $\sigma \tau(a)$ we mean $\sigma(\tau(a))$. (Some other books/mathematicians do not use this convention, and read permutation multiplication from left-to-right.
+Make sure to always know what convention your particular author or colleague is using!)
+
+
+\begin{example}{} Let $A$, $\sigma$, and $\tau$ be as in Example \ref{stperm}.
+Then $\sigma \tau$ is the function from $A$ to $A$ defined by $$\sigma \tau(\Delta)=\$, \quad \sigma \tau(\star)=\star, \quad \mbox{and } \sigma \tau(\$)=\Delta,$$ while $\tau \sigma$ is
+the function from $A$ to $A$ defined by $$\tau \sigma (\Delta)=\Delta, \quad \tau \sigma (\star)=\$, \quad \mbox{and } \tau \sigma(\$)=\star $$.
+\end{example}
+
+\begin{df}{Definition} Given a set $A$, we let $S_A$ be the set of all
+permutations on $A$.\end{df}
+
+
+\begin{thm}\label{sym}
+Given a set $A$:
+\begin{enumerate}
+\item[$\bullet$] $S_A$ is a group under permutation multiplication.
+\item[$\bullet$] If $A$ has finite cardinality $n$, then $|S_A|=n!$ (if $|A|=\infty$ then $|S_A|$ is also $\infty$).
+\item[$\bullet$] $S_A$ is abelian if $|A|=1$ or $2$, and nonabelian otherwise.
+\end{enumerate}
+\end{thm}
+
+\begin{proof} Let $\sigma, \tau \in S_A$. Since a composition of
+bijections is a bijection (see Theorem \ref{compbij}), $\sigma
+\tau$ is a bijection from $A$ to $A$, hence is in $S_A$. So
+$S_A$ is closed under composition.
+\begin{enumerate}
+\item[$\G_1$:] Function composition is always associative.
+\item[$\G_2$:] The identity function $1_A : A\to A$ defined by
+    $$1_A(a)=a \mbox{ for all $a\in A$}$$ clearly acts as an
+    identity element in $S_A$. Henceforth, we will denote $1_A$
+    by $e$.
+\item[$\G_3$:] Let $\sigma \in S_A$.  Since $\sigma$ is a
+    bijection, $\sigma$ has an inverse function $\sigma^{-1}$
+    that is also a bijection from $A$ to $A$ (Theorem
+    \ref{invbij}). Since $\sigma^{-1}\in S_A$ with $\sigma
+    \sigma^{-1}= \sigma^{-1} \sigma=1_A$, every element of
+    $S_A$ has an inverse element in $S_A$.
+\end{enumerate}
+So $S_A$ is a group.\end{proof}
+
+Clearly $|S_A|=\infty$ when $|A|=\infty$, and a straightforward
+combinatorial argument yields that when $|A|=n \in \Z^+$, we have
+$|S_A|=n!$. Finally, if $|A|=1$ or $2$, then $|S_A|=1!=1$ or
+$|S_A|=2!=2$ so $S_A$ must be abelian (as it's a group of order 1 or
+2). On the other hand, suppose $|A|>2$. Then $A$ contains at least
+three distinct elements, say $x$, $y$, and $z$. Let $\sigma$ be the
+permutation of $A$ swapping $x$ and $y$ and fixing every other
+element of $A$, and let $\tau$ be the permutation of $A$ swapping
+$y$ and $z$ and fixing every other element of $A$.  Then $\sigma
+\tau(x)=y$ while $\tau \sigma(x)=z$, so $\sigma \tau \neq \tau
+\sigma$, and hence $S_A$ is nonabelian.
+ We will in the future use language provided by the following
+definition:
+
+\begin{df}{Definition} A group is said to be a \textit{permutation group} if it is
+a subgroup of $S_A$ for some set $A$.\end{df}
+
+\begin{df}{Remark} Notice
+that if $A$ and $B$ are sets, then $|A|=|B|$ if and only if
+$S_A\simeq S_B$.\end{df}
+
+ Thus, for any set $B$ with $|B|=n \in \Z^+$, we have $S_B\simeq
+S_A$, where $A=\{1,2,\ldots,n\}$. Since we are concerned in this
+course primarily with group structures which are invariant under
+isomorphism, we may focus now on groups of permutations on the set
+$\{1,2,\ldots, n\}$ ($n\in \Z^+$).\footnote{We can, in fact,  define $S_0$, the set of all permutations on the empty set. One can show, using the fact that a function is a relation on a Cartesian product of sets, that $S_0$ is the trivial group. However, this will not be relevant in this text.}
+
+\section{Symmetric groups}
+
+\begin{df}{Definition and notation} When $A=\{1,2,\ldots, n\}$ ($n\in \Z^+$), we call $S_A$
+the \textit{symmetric group on $n$ letters} and denote it by
+$S_n$.\end{df}
+
+\begin{df}{Remark} Throughout this course, if we are discussing a
+group $S_n$, you should assume $n\in \Z^+$.\end{df}
+
+
+It is important for us to be able to easily describe specific elements of $S_n$.  It would be cumbersome to describe, for instance, an element of $S_3$ by saying it swaps $1$ and $2$ and fixes $3$; imagine how much more cumbersome it could be to describe an element of, say, $S_{100}$!  One can somewhat concisely describe a permutation $\sigma$ of $S_n$ by listing out the elements $1,2,\ldots,n$ and writing the element $\sigma(i)$ below each $i$ for $i=1,2,\ldots, n$.
+For instance, if $\sigma$ sends $1$ to $2$, we'd write the number $2$ below the number $1$.  The convention is to enclose these two rows of numbers in a single set of parentheses, as in the following example.
+
+
+\begin{example}{nocommute} We can denote the element $\sigma$ of $S_3$ that swaps $1$ and $2$ and fixes $3$ by
+$$\sigma = \left(\begin{array}{ccc}1&2&3\\ 2&1&3 \end{array}\right),$$ and the element $\tau$ of $S_3$ that sends $1$ to $3$, $2$ to $1$, and $3$ to $2$ by
+$$\tau =\left(\begin{array}{ccc}1&2&3\\ 3&1&2 \end{array}\right).$$ Then $$\sigma\tau = \left(\begin{array}{ccc}1&2&3\\ 3&2&1 \end{array}\right) \mbox{\quad and \quad}
+\tau\sigma = \left(\begin{array}{ccc}1&2&3\\ 1&3&2 \end{array}\right) . $$
+\end{example}
+
+ But even this notation is unnecessarily cumbersome. Instead, we
+use \textit{cycle notation}.
+
+\begin{df}{Definitions and notation} A permutation $\sigma$ in $S_n$ is called a \textit{$k$-cycle} or a \textit{cycle of length $k$} (or, less
+specifically, a \textit{cycle}) if there exist elements $a_1,
+a_2,\ldots, a_k$ in $\{1,2,\ldots,n\}$ such that
+\begin{center}
+\begin{tabular}{l}$\sigma(a_i)=a_{i+1}$ for each $i=1,2,\ldots, k-1$;\\
+$\sigma(a_k)=a_1$; and\\
+$\sigma(x)=x$ for every other element of $\{1,2,\ldots, n\}$.\end{tabular}\end{center}
+We use the \textit{cycle notation} $\sigma = (a_1 a_2 \cdots a_k)$ to describe such a cycle. A $2$-cycle is often called a \textit{transposition}.\end{df}
+
+
+\begin{example}{tr} The permutation $\tau$ in $S_3$ that sends $1$ to $3$, $2$ to $1$, and $3$ to $2$ is a cycle. It can be denoted by $\tau =(132)$.
+Similarly, the cycle $\rho$ in $S_3$ swapping $1$ and $3$ can be denoted by $\rho=(13)$. On the other hand, the permutation in $S_4$ that swaps $1$ with $2$ and $3$ with $4$ is
+\underline{not} a cycle. \end{example}
+
+\begin{df}{Remark} Given a $k$-cycle $\sigma=(a_1 a_2\cdots a_k)$, there are $k$ different expressions for $\sigma$.  Indeed, we have
+$$\sigma=(a_1 a_2\cdots a_k)=(a_2 a_3 \cdots a_k a_1)=(a_3 a_4 \cdots a_k a_1 a_2)=\cdots = (a_k a_1 \cdots a_{k-1}).$$\end{df}
+
+\begin{example}{} The permutation $\tau$ described in Example \ref{tr} can also be written as $(321)$ and as $(213)$. \end{example}
+
+ However, by convention, we usually ``start" a cycle $\sigma$
+with the smallest of the numbers that $\sigma$ doesn't fix: e.g.,
+we'd write $\sigma=(213)$ as $(132)$.
+
+\begin{df}{Definitions} Two cycles $\sigma=(a_1 a_2 \cdots a_k)$ and $\tau=(b_1
+b_2 \cdots b_m)$ are said to be \textit{disjoint} if $a_i \neq
+b_j$ for all $i$ and $j$. Cycles $\sigma_1$,
+$\sigma_2$, $\ldots$, $\sigma_m$ are \textit{disjoint} if $\sigma_i$
+and $\sigma_j$ are disjoint for each $i \neq j$. (Notice: this
+version of disjointness is what we usually refer to as \textit{mutual} disjointness.)\end{df}
+
+
+\begin{df}{Remark} Note that if cycles $\sigma$ and $\tau$ are disjoint, then $\sigma$ and $\tau$ commute; that is, $\sigma \tau=\tau \sigma$.\end{df}
+
+\warn{If cycles $\sigma$ and $\tau$ are \underline{not} disjoint then they may not commute. For instance, see Example \ref{nocommute}, where $\sigma\tau \neq \tau \sigma$.}
+
+
+Note that any permutation of $S_n$ is a product of disjoint cycles (where by ``product" we mean the permutation resulting from permutation multiplication).
+
+\begin{df}{Definition} Writing a permutation in \textit{(disjoint)
+cycle notation} means writing it as a product of disjoint
+cycles, where each cycle is written in cycle notation.\end{df}
+
+\begin{df}{Remark} Note that if $\sigma$ in $S_n$ is
+written in cycle notation and the number $a\in \{1,2,\ldots, n\}$
+appears nowhere in $\sigma$'s representation, this means that
+$\sigma$ fixes $a$. The only permutation that we cannot really write
+in cycle notation is the identity element $1_A$ of $S_A$, which we
+henceforth denote by $e$.\end{df}
+
+
+\begin{example}{} The permutation $$\sigma =\left(\begin{array}{cccccc}1&2&3&4&5&6\\ 3&1&2&6&5&4\end{array}\right)$$ is the product of disjoint cycles
+$(132)$ and $(46)$, so in cycle notation we have $$\sigma=(132)(46).$$  Note that we could also write $\sigma$ as $(321)(46)$, $(213)(64)$, $(64)(132)$, etc.
+\medskip
+
+While it is true that we also have $\sigma=(13)(23)(46)$, this is not a disjoint cycle representation of $\sigma$ since both $(13)$ and $(23)$ ``move" the element $3$. \end{example}
+
+\begin{example}{} In $S_4$, let $\sigma=(243)$ and $\tau=(13)(24)$. Then $\sigma \tau=(123)$ and $\tau \sigma = (134). $
+\end{example}
+
+\begin{example}{s9ex} In $S_9$, let $\sigma=(134)$, $\tau=(26)(17)$, and $\rho=(358)(12)$.  Find the following, writing your answers using disjoint cycle notation.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{1in}p{1in}p{1in}p{1in}}
+$\sigma^{-1}$
+&$\sigma^{-1}\tau\sigma$
+&$\sigma^2$
+&$\sigma^3$\\
+$\rho^2$
+&$\rho^{-2}$
+&$\sigma \tau$
+&$\sigma \rho $
+\end{tabular}
+\end{center}
+\end{example}
+
+\begin{example}{} Explicitly express all the elements of $S_4$ in disjoint cycle notation. \end{example}
+
+\begin{thm}\label{kcyc} Any $k$-cycle has order $k$ in $S_n$. More generally, if permutation $\sigma$ can be written in disjoint cycle notation as $\sigma=\sigma_1 \sigma_2 \cdots \sigma_m$, then
+\begin{align*}
+o(\sigma)&=\lcm(o(\sigma_1), o(\sigma_2),\ldots, o(\sigma_m))\\
+&=\lcm(\mathrm{length}(\sigma_1),\mathrm{length}(\sigma_2),\ldots,\mathrm{length}(\sigma_m)), \end{align*} where $\lcm$ denotes the least common multiple.
+\end{thm}
+
+
+\warn{Permutation $\sigma$ must be in \underline{disjoint} cycle notation for the above formula to hold.  For instance, let $\sigma=(12)(23)$ in $S_3$. The transpositions $(12)$ and $(23)$ both have order $2$, but $o(\sigma)\neq \lcm(2,2)=2$.  Rather, $o(\sigma)=3$, since in disjoint cycle notation $\sigma$ can be written as $\sigma=(123)$.  You must write a permutation using disjoint cycle notation before attempting to use this method to compute its order!}
+
+
+\begin{example}{}\
+\begin{enumerate}
+ \item Find the orders of each of the elements in Example \ref{s9ex}, including $\sigma$, $\tau$, and $\rho$ themselves.
+ \item Explicitly list the elements of $\<\sigma\>$, $\<\tau\>$, and $\<\rho\>$.  \end{enumerate}
+\end{example}
+
+\section{Alternating groups}
+
+Note that every $k$-cycle $(a_1a_2\ldots a_k)\in S_n$ can be written as a product of (not necessarily disjoint) transpositions:
+$$(a_1a_2\ldots a_k)=(a_1a_n)(a_1a_{n-1})\cdots(a_1a_3)(a_1a_2).$$  We therefore have the following theorem.
+
+\begin{thm}\label{} Every permutation in $S_n$ can be written as a product of transpositions.\end{thm}
+
+\begin{df}{Definition} We say that a permutation in $S_n$ is \textit{even} [resp., \textit{odd}] if it can be written as a product of an even [resp., odd] number of transpositions. \end{df}
+
+\begin{thm}\label{}
+Every permutation in $S_n$ is even or odd, but not both.
+\end{thm}
+
+\begin{proof} We already know that every permutation is $S_n$ is a product of transpositions, so must be even or odd.  For proof that no permutation is both even \textit{and} odd, see, for instance, Proof 1 or 2 of Theorem 9.15 on p. 91 in \cite{F}.\end{proof}
+
+
+\begin{lem}\label{evenodd} For each $2\leq k\leq n$, then a $k$-cycle is even if $k$ is odd, and odd if $k$ is even.
+\end{lem}
+
+\begin{proof} \red{This proof is left as an exercise for the reader.}\end{proof}
+
+\begin{example}{}\
+In $S_3$, the permutations $e$, $(123)=(13)(12)$, and $(132)=(12)(13)$ are even, while the permutations $(12)$, $(13)$, and $(23)$ are odd.
+\end{example}
+
+\begin{example}{}\
+List all of the even [resp., odd] permutations in $S_4$.
+\end{example}
+
+It turns out that the set of all even permutations in $S_n$ is a subgroup of $S_n$. \red{The proof of this is left as an exercise for the reader.}
+
+\begin{df}{Definition} The set of all even permutations in $S_n$ is a subgroup of $S_n$,  called the \textit{alternating group on $n$ letters}, and denoted by $A_n$.
+\end{df}
+
+We end with this theorem, whose proof can be found on p. 93 of \cite{F}.
+
+\begin{thm}\label{} $A_n=(n!)/2$.
+\end{thm}
+
+\section{Cayley's Theorem}
+
+One might wonder how ``common" permutation groups are in math. They
+are, it turns out, ubiquitous in abstract algebra: in fact, \textbf{every group} can be thought of as a group of permutations!  We will
+prove this, but we first need the following lemma. (We will not use
+the maps $\rho_a$ or $c_a$, defined below, in our theorem, but
+define them here for potential future use.)
+
+\begin{lem}\label{cay.lem} Let $G$ be a group and $a\in G$.  Then the
+following functions are permutations on $G$, and hence are elements
+of $S_G$:
+
+\begin{enumerate}
+\item[(i)] $\lambda_a\,:\,G\to G$ defined by $\lambda_a(x)=ax$;
+\item[(ii)] $\rho_a\,:\,G\to G$ defined by $\rho_a(x)=xa$;
+
+\item[(iii)] $c_a\,:\,G\to G$ defined by $c_a(x)=axa^{-1}$.
+\end{enumerate}
+\end{lem}
+
+\begin{proof} For (i): If $x_1,x_2 \in G$ with
+$\lambda_a(x_1)=\lambda_a(x_2)$, then $ax_1=ax_2$; so, by left
+cancellation, $x_1=x_2$.  Thus, $\lambda_a$ is one-to-one. Further,
+each $y\in G$ equals $\lambda_a(a^{-1}y)$ for $a^{-1}y\in G$, so
+$\lambda_a$ is onto.  Thus, $\lambda_a$ is a bijection from $G$ to
+$G$: that is, it's a permutation on $G$. The proofs for $\rho_a$ and
+$c_a$ are similar.\end{proof}
+
+\begin{df}{Terminology}We say that $\lambda_a$, $\rho_a$, and $c_a$
+perform on $G$, respectively, \textit{left multiplication by $a$}, \textit{right multiplication by $a$}, and \textit{conjugation by $a$}. (Nota
+bene: sometimes when people talk about conjugation by $a$ they
+instead are referring to the permutation of $G$ that sends each $x$
+to $a^{-1}xa$.)\end{df}
+
+Now we are ready for our theorem:
+
+\begin{thm}\label{}\textbf{(Cayley's Theorem)} Let $G$ be a group.  Then $G$
+is isomorphic to a subgroup of $S_G$. Thus, every group can be
+thought of as a group of permutations.\end{thm}
+
+\begin{proof} For each $a\in G$, let $\lambda_a$ be defined, as above, by
+$\lambda_a(x)=ax$ for each $x\in G$; recall that each $\lambda_a$ is
+in $S_G$.  Now define $\phi\,:\, G\to S_G$ by $\phi(a)=\lambda_a$,
+for each $a\in G$.
+
+We claim that $\phi$ is both a homomorphism and one-to-one.  Indeed,
+let $a,b\in G$.  Now, $\phi(a)\phi(b)$ and $\phi(ab)$ are both
+functions with domain $G$, so we need to show
+$(\phi(a)\phi(b))(x)=(\phi(ab))(x)$ for each $x\in G$.  Well, let
+$x\in G$.  Then
+\begin{align*}
+(\phi(a)\phi(b))(x)&=(\lambda_a\lambda_b)(x)&&\\
+&=\lambda_a(\lambda_b(x)) &&\text{(since the operation on $S_G$ is
+ composition)}\\
+&=\lambda_a(bx)&&\\
+&=a(bx)&&\\
+&=(ab)x&&\\
+&=\lambda_{ab}(x)&&\\
+&=(\phi(ab))(x).&&
+\end{align*}
+So $\phi$ is a homomorphism.  Further, if $a, b\in G$ with
+$\phi(a)=\phi(b)$, then $\lambda_a=\lambda_b$.  In particular,
+$\lambda_a(e)=\lambda_b(e)$.  But $\lambda_a(e)=ae=a$ and
+$\lambda_b(e)=be=b$, so $a=b$.  Thus, $\phi$ is one-to-one.
+
+Since by definition $\phi(G)$ we have that $\phi$ maps $G$ \textbf{onto} $\phi(G)$, we conclude that $\phi$ provides an isomorphism
+from $G$ to the subgroup $\phi(G)$ of $S_G$.\end{proof}
+
+\begin{df}{Nota bene} In general, $\phi(G) \neq S_G$, so we cannot
+conclude that $G$ is isomorphic to $S_G$ itself; rather, we may only
+conclude that it is is isomorphic to some \underline{subgroup} of
+$S_G$.\end{df}
+
+\begin{df}{Remark} While we chose to use the maps $\lambda_a$ to
+prove the above theorem, we could just as well have used the maps
+$\rho_a$ or $c_a$, instead.\end{df}
+
+
+\section{Dihedral groups}\label{dihedralgps}
+
+Dihedral groups are groups of symmetries of regular $n$-gons.  We start with an example.
+
+
+\begin{example}{D3} Consider a regular triangle $T$, with vertices labeled $1$, $2$, and $3$.  We show $T$ below, also using dotted lines to indicate a vertical line of symmetry of $T$ and a rotation of $T$.
+$$\xymatrix @R=1.732cm   @C=2cm {&1\ar@{-}[ldd]\ar@{-}[rdd]\ar@{--}[dd]_{\begin{array}{cc}f& \end{array}}\\ &\longleftrightarrow &
+\\ 3\ar@{-}[rr]&&2\ar@{-->}@/^{15pt}/[ll]^{\begin{array}{ccc}&r& \end{array}}}$$
+
+
+Note that if we reflect $T$ over the vertical dotted line (indicated in the picture by $f$), $T$ maps onto itself, with $1$ mapping to $1$, and $2$ and $3$ mapping to each other. Similarly, if we rotate $T$ clockwise by $120^{\circ}$ (indicated in the picture by $r$), $T$ again maps onto itself, this time with $1$ mapping to $2$, $2$ mapping to $3$, and $3$ mapping to $1$.  Both of these maps are called \textit{symmetries} of $T$; $f$ is a {\it reflection} or {\it flip} and $r$ is a {\it rotation}.
+
+Of course, these are not the only symmetries of $T$. If we compose
+two symmetries of $T$, we obtain a symmetry of $T$: for instance, if
+we apply the map $f\circ r$ to $T$ (meaning first do $r$, then do
+$f$) we obtain reflection over the line connecting $2$ to the
+midpoint of line segment $\overline{13}$.  Similarly, if we apply
+the map $f\circ (r\circ r)$ to $T$ (first do $r$ twice, then do $f$)
+we obtain reflection over the line connecting $3$ to the midpoint of
+line segment $\overline{12}$.  In fact, every symmetry of $T$ can be
+obtained by composing applications of $f$ and applications of $r$.
+
+For convenience of notation, we omit the composition symbols, writing, for instance, $fr$ for $f\circ r$, $r\circ r$ as $r^2$, etc. It turns out there are exactly six  symmetries of $T$, namely:
+\begin{enumerate}
+\item the map $e$ from $T$ to $T$ sending every element to itself;
+\item $f$ (that is, reflection over the line connecting $1$ and the midpoint of $\overline{23}$);
+\item $r$ (that is, clockwise rotation by $120^{\circ}$);
+\item $r^2$ (that is, clockwise rotation by $240^{\circ}$);
+\item $fr$ (that is, reflection over the line connecting $2$ and the midpoint of $\overline{13}$); and
+\item $fr^2$ (that is, reflection over the line connecting $3$ and the midpoint of $\overline{12}$).
+\end{enumerate}
+
+Declaring that $f^0=r^0=e$, the set $$D_3=\{e, f, r, r^2, fr, fr^2\}=\{f^ir^j:i=0,1, j=0,1,2\}$$ is the collection of all symmetries of $T$.
+
+\begin{df}{Remark} Notice that $rf=fr^2$ and that $f^2=r^3=e$.\end{df}
+
+
+\begin{thm}\label{di3} $D_3$ is a group under composition.
+\end{thm}
+
+\begin{proof} We first show that $D_3$ is closed under composition. As
+noted above, $rf=fr^2$. So any map of the form $f^ir^jf^kr^l$
+($i,k=0,1$, $j,l=0,1,2$) can be written in the form $f^sr^t$
+for some $s,t \in \fatn$. Finally, let $R_2(s)$ and $R_3(t)$ be
+the remainders when you divide $s$ by $2$ and $t$ by $3$; then
+$f^sr^t=f^{R_2(s)}r^{R_3(t)} \in D_3$. So $D_3$ is closed under
+composition.
+
+Next:
+\begin{enumerate}
+\item[$\G_1$:] Function composition is always associative.
+\item[$\G_2$:] The function $e$ clearly acts as identity
+    element
+    in $D_3$.
+\item[$\G_3$:] Let $x=f^ir^j\in D_3$. Then $y=r^{3-j}f^{2-i}$
+    is
+    in $D_3$ (since $D_3$ is closed under composition) with $xy=yx=e$.
+\end{enumerate}
+So $D_3$ is a group.\end{proof}
+
+Let us look at $D_3$ another way.  Note that each map in $D_3$ can be uniquely described by how it permutes the vertices $1,2,3$ of $T$: that is, each map in $D_3$ can be uniquely identified with a unique element of $S_3$.  For instance, $f$ corresponds to the permutation $(23)$ in $S_3$, while $fr$ corresponds to the permutation $(13)$.  In turns out that $D_3 \simeq S_3$, via the following correspondence
+$$\begin{array}{ccl}
+e &\leftrightarrow & e\\
+f &\leftrightarrow & (23)\\
+r &\leftrightarrow & (123)\\
+r^2 &\leftrightarrow & (132)\\
+fr &\leftrightarrow & (13)\\
+fr^2 &\leftrightarrow & (12)
+\end{array}$$
+\end{example}
+
+
+
+The group $D_3$ is an example of class of groups called \textit{dihedral groups}.
+
+
+\begin{df}{Definition} Let $n$ be an integer greater than or equal to $3$. We
+let $D_n$ be the collection of symmetries of the regular
+$n$-gon. It turns out that $D_n$ is a group (see below), called
+the \textit{dihedral group of order $2n$} (Note: Some books and
+mathematicians instead denote the group of symmetries of the
+regular $n$-gon by $D_{2n}$---so, for instance, our $D_3$,
+above, would instead be called $D_6$.  Make sure you are aware
+of the convention your book or colleague is using.)\end{df}
+
+
+\begin{thm}\label{rf} Let $n$ be an integer greater than or equal to $3$.  Then, again using the convention that $f^0=r^0=e$, $D_n$ can be uniquely described as
+$$D_n=\{f^ir^j: i=0,1, j=0,1,\ldots, n-1\}$$ with the relations $$rf=fr^{n-1} \mbox{\quad and \quad} f^2=r^n=e.$$ The dihedral group $D_n$ is a nonabelian group of order $2n$.
+\end{thm}
+
+\begin{proof} The proof that $D_n$ is a group parallels the proof, above, that $D_3$ is a group.  It is clear that $D_n$ is nonabelian (e.g., $rf=fr^{n-1}\neq fr$) and has order $2n$.\end{proof}
+
+\begin{df}{Remark} Throughout this course, if we are discussing a
+group $D_n$ you should assume $n\in \Z^+$, $n\geq 3$, unless
+otherwise noted.\end{df}
+
+\begin{df}{Definition} We say that an element of $D_n$ is written in \textit{standard form} if it is written in the form $f^ir^j$ where
+$i\in \{0,1\}$ and $j\in \{0,1,\ldots,n-1\}$.\end{df}
+
+\begin{thm} Each $D_n$ is isomorphic to a subgroup of $S_n$.
+\end{thm}
+
+\noindent
+\textbf{Sketch of proof.} We described above how $D_3$ is isomorphic to a subgroup
+(namely, the improper subgroup) of $S_3$.  One can show that each $D_n$ is isomorphic to a subgroup of $S_n$ by similarly labeling the vertices of the regular $n$-gon $1,2,\ldots, n$ and determining how these vertices are permuted by each element of $D_n$.
+
+\warn{While $D_3$ is actually isomorphic to $S_3$ itself, for $n>3$ we have that $D_n$ is \underline{not} isomorphic to $S_n$ but is rather isomorphic to a \underline{proper subgroup} of $S_n$.  When $n>3$ you can see that $D_n$ cannot be isomorphic to $S_n$ since $|D_n|=2n < n! = |S_n|$ for $n>3$.}
+
+It is important to be able to do computations with specific elements of dihedral
+ groups. We have the following theorem.
+
+\begin{thm}\label{diords}
+The following relations hold in $D_n$, for every $n$:
+ \begin{enumerate} % \setlength\itemsep{0em}
+ \item For every $i$, $r^if=fr^{-i}$ (in particular, $rf=fr^{-1}=fr^{n-1}$);
+ \item $o(fr^i)=2$ for every $i$ (in particular, $f^2=e$);
+ \item $o(r)=o(r^{-1})=n$;
+ \item If $n$ is even, then $r^{n/2}$ commutes with every element of $D_n$.
+ \end{enumerate}
+\end{thm}
+
+\begin{proof}\
+\begin{enumerate}
+
+\item We use induction on the exponent of $r$. We already know that $r^1f=fr^{-1}$.  Now suppose $r^{i-1}f=fr^{-(i-1)}$ for some $i\geq 2$.  Then $$r^if=r(r^{i-1}f)=r(fr^{-(i-1)})=(rf)r^{-i+1}=(fr^{-1})r^{-i+1}=fr^{-i}.$$
+\item For every $i$, $fr^i\neq e$, but $$(fr^i)^2=(fr^i)(fr^i)=f(r^if)r^i=f(fr^{-i})r^i=f^2r^0=e.$$
+\item This follows from Theorem \ref{invord} and the fact that $o(r)=n$.
+\item \red{The proof of this statement is left as an exercise for the reader.} \qedhere
+\end{enumerate}
+\end{proof}
+
+
+\begin{example}{}\
+\begin{enumerate}
+\item Write $fr^2f$ in $D_3$ in standard form.  Do the same for $fr^2f$ in $D_4$.
+\item What is the inverse of $fr^3$ in $D_5$?  Write it in standard form.
+\item Explicitly describe an isomorphism from $D_4$ to a subgroup of $S_4$. \end{enumerate}
+\end{example}
+
+
+\begin{example}{}
+Classify the following groups up to isomorphism. (\textbf{Hint:}
+You may want to look at the number of group elements that have
+a specific finite order.)
+
+\renewcommand{\arraystretch}{2}
+$$\begin{array}{lllllll}
+
+\Z && \Z_6 && \Z_2&& S_6\\
+\Z_4 && \fatq && 3\Z && \fatr\\
+S_2&& \fatr^* && S_3 && \fatq^*\\
+\fatc^* && \<\pi\> \mbox{ in } \fatr^* &&  D_6 &&\<(134)(25)\>
+\mbox{ in } S_5\\
+\fatr^+ && D_3 && \<r\> \mbox{ in } D_4 &&17\Z \hspace{50pt}
+\end{array}$$
+\end{example}
+
+
+\pagebreak
+\section{Exercises}
+
+\fbox{Throughout these exercises, write all of your permutations using disjoint cycle notation.}
+
+
+\begin{exercise}
+Let $\sigma=(134)$, $\tau=(23)(145)$, $\rho=(56)(78)$, and $\alpha=(12)(145)$ in $S_8$. Compute the following.
+
+\medskip
+\noindent
+\begin{inparaenum}[(a)] \item $\sigma \tau$ \hfill \item $\tau \sigma$  \hfill \item $\tau^2$  \hfill \item $\tau^{-1}$  \hfill \item $o(\tau)$  \hfill \item $o(\rho)$  \hfill \item $o(\alpha)$  \hfill \item $\<\tau\>$
+\end{inparaenum}
+\end{exercise}
+
+\begin{solution}[print=true]
+
+
+\begin{enumerate}
+\item $\sigma \tau= (134)(23)(145)=(2453)$
+\item $\tau \sigma=  (23)(145)(134)=(1235)$
+\item $\tau^2=(154)$
+\item $\tau^{-1}=(23)(154)$
+\item $o(\tau)=\lcm(2,3)=6$ (since $(23)$ and $(145)$ are disjoint)
+\item $o(\rho)=\lcm(2,2)=2$
+\item In disjoint cycle notation, $\alpha=(1452)$, so $o(\alpha)=o(1452)=4$.
+\item $\<\tau\>=\{(23)(145), (154), (23), (145), e\}$
+\end{enumerate}
+
+\end{solution}
+
+\begin{exercise}
+Prove Lemma \ref{evenodd}.
+\end{exercise}
+
+\begin{solution}[print=true]
+Let $\sigma=(a_1a_2\cdots a_k)\in S_n$.  Then $\sigma=(a_1a_k)(a_1a_{k-1})\cdots (a_1a_3)(a_1a_2)$, so is a product of $k-1$ transpositions.  Thus, $\sigma$ is even if $k-1$ is even, that is, if $k$ is odd, and odd if $k-1$ is odd, that is, if $k$ is even.
+\end{solution}
+
+\begin{exercise}
+Prove that $A_n$ is a subgroup of $S_n$.
+\end{exercise}
+
+\begin{solution}[print=true]
+Since $e\in A_n$, $A_n\neq \emptyset$.  Next, let $\sigma, \tau \in A_n$.  Then $\sigma$ can be written as a product of $k$ transpositions and $\tau$ can be written as $\tau=\tau_1\tau_2\cdots \tau_m$, where $k$ and $m$ are even and the $\tau_i$ are transpositions. Since each $\tau_i$ is a transposition, each $\tau_i$ is its own inverse; so $$\tau^{-1}=(\tau_m)^{-1}(\tau_{m-1})^{-1}\cdots \tau_1^{-1}=\tau_m^{-1}\tau_{m-1}^{-1}\cdots \tau_1^{-1}.$$ Thus, $\sigma \tau^{-1}$ is a product of $k+m$ transpositions; since $k$ and $m$ are even, $k+m$ is even, and so $\sigma \tau^{-1}\in A_n$.  Thus, $A_n\leq S_n$, by the Two-Step Subgroup Test.
+\end{solution}
+
+\begin{exercise} Prove or disprove: The set of all odd permutations in $S_n$ is a subgroup of $S_n$.
+\end{exercise}
+
+\begin{solution}[print=true]
+This set is \textit{not} a subgroup of $S_n$ because, for instance, it doesn't contain $e$.
+\end{solution}
+
+\begin{exercise}
+Let $n$ be an integer greater than 2. $m \in \{1,2,\ldots,n\}$, and let $H=\{\sigma\in S_n\,:\,\sigma(m)=m\}$ (in other words, $H$ is the set of all permutations in $S_n$ that fix $m$).
+
+\begin{enumerate}
+\item Prove that $H\leq S_n$.
+\item Identify a familiar group to which $H$ is isomorphic. (You do not need to show any work.)
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item Since $e\in H$, $H\neq \emptyset$.  Next, let $\sigma, \tau\in H$.  Since $\tau(m)=m$ and $\tau$ is a bijection, $\tau^{-1}(m)=m$.  So $\sigma \tau^{-1}(m)=\sigma(\tau^{-1}(m))=\sigma(m)=m$.  So $\sigma \tau^{-1}\in H$; therefore, $H\leq S_n$, by the Two-Step Subgroup Test.
+\item $S_{n-1}$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+Write $rfr^2frfr$ in $D_5$ in standard form.
+\end{exercise}
+
+\begin{solution}[print=true]
+In $D_5$, $frfr=(fr)^2=e$ and $rf=fr^{-1}$, so $$rfr^2frfr=rfr^2=fr^{-1}r^2=fr.$$
+\end{solution}
+
+
+\begin{exercise}
+Prove or disprove: $D_6\simeq S_6$.
+\end{exercise}
+
+\begin{solution}[print=true]
+$|D_6|=2(6)=12$ while $|S_6|=720$, so $D_6\not\simeq S_6$.
+\end{solution}
+
+\begin{exercise}
+Which elements of $D_4$ (if any)
+\begin{enumerate}
+\item have order 2?
+\item have order $3$?
+    \end{enumerate}
+\fbox{Write all your elements
+    in standard form.}
+\end{exercise}
+
+\begin{solution}[print=true]
+We know $o(fr^i)=2$ for every $i$, and $o(e)=1$.  Moreover, since $4$ is even, $r^{4/2}=r^2$ has order 2. Finally, $o(r)=o(r^{-1})=4$. So (a) the elements of order 2 in $D_4$ are $f$, $fr$, $fr^2$, $fr^3$, and $r^2$, and (b) $D_4$ contains no elements of order 3.
+\end{solution}
+
+\begin{exercise} Let $n$ be an even integer that's greater than or equal to 4. Prove that $r^{n/2}\in Z(D_n)$: that is, prove that $r^{n/2}$ commutes with every element of $D_n$. (Do NOT simply refer to the last statement in Theorem \ref{diords}; that is the statement you are proving here.)
+\end{exercise}
+
+\begin{solution}[print=true]
+Clearly, $r^{n/2}$ commutes with every $r^k$ for $0\leq k\leq n$.  Moreover, by the first statement of Theorem \ref{diords}, $$r^{n/2}f=f(r^{n/2})^{-1}=fr^{n-n/2}=fr^{n/2}.$$  So $r^{n/2}$ commutes with $f$.  It clearly follows that $r^{n/2}\in Z(D_n)$.
+\end{solution}
+

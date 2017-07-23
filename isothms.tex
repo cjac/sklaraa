@@ -1,0 +1,368 @@
+\chapter{The Isomorphism Theorems}\label{isothms}%\footnote{See Section 34 in \cite{F}.}
+
+Recall that our goal here is to use a subgroup of a group $G$ to
+study not just the structure of the subgroup, but the structure of
+$G$ outside of that subgroup (the ultimate goal being to get a
+feeling for the structure of $G$ as a whole). We've further seen
+that if we choose $N$ to be a normal subgroup of $G$, we can do this
+by studying both $N$ and the factor group $G/N$.  Now, we've noticed
+that in some cases---in particular, when $G$ is cyclic--it is not
+too hard to identify the structure of a factor group of $G$. But
+what about when $G$ and $N$ are more complicated? For instance, we
+have seen that $SL(5,\fatr)$ is a normal subgroup of $GL(5,\fatr)$.
+What is the structure of $GL(5,\fatr)/SL(5,\fatr)$?  That is not so
+easy to figure out by looking directly at left coset multiplication
+in the factor group.
+
+\section{The First Isomorphism Theorem} A very powerful theorem, called the First Isomorphism
+Theorem, lets us in many cases identify factor groups (up to
+isomorphism) in a very slick way. Kernels will play an extremely
+important role in this. We
+ therefore first provide some theorems relating to kernels.
+
+ \begin{thm}\label{kermean} Let $G$ and $G'$ be groups, let $\phi$ be a
+ homomorphism from $G$ to $G'$, and let $K=\Ker \phi$.  Then for
+ $a,b\in G$, $aK=bK$ if and only if $\phi(a)=\phi(b)$.
+ \end{thm}
+
+ \begin{proof} Let $a,b\in G$.  Then
+ \begin{align*}\phi(a)=\phi(b)&\Leftrightarrow
+ \phi(b)^{-1}\phi(a)=e_{G'}\\
+&\Leftrightarrow \phi(b^{-1}a)=e_{G'}\\
+&\Leftrightarrow b^{-1}a\in K\\
+&\Leftrightarrow a \in bK\\
+&\Leftrightarrow aK=bK, \end{align*}as desired.\end{proof}
+
+ \begin{cor}\label{kerone} Let $\phi$ be a homomorphism from group $G$ to group
+ $G'$.  Then $\phi$ is one-to-one (hence a monomorphism) if and only
+ if $\Ker \phi=\{e_G\}$.
+ \end{cor}
+
+\begin{proof} Clearly, if $\phi$ is one-to-one then $\Ker \phi=\{e_G\}$.
+Conversely, assume $\Ker \phi=\{e_G\}$.  If $a,b\in G$ with
+$\phi(a)=\phi(b)$, then by the above theorem, $a\Ker \phi=b\Ker
+\phi$. But $a\Ker \phi=a\{e_G\}=\{a\}$ and $b\Ker
+\phi=b\{e_G\}=\{b\}$. Thus, $a=b$, and we see that $\phi$ is
+one-to-one.\end{proof}
+  We now prove a theorem that
+provides the meat and potatoes of the First Isomorphism Theorem.
+
+\begin{thm}\label{} \textbf{(Factorization Theorem)} Let $G$ and
+$G'$ be groups, let $\phi$ be a homomorphism from $G$ to $G'$,
+let $K=\Ker \phi$, let $N$ be a normal subgroup of $G$ with
+$N\subseteq K$, and let $\Psi$ be the canonical epimorphism
+from $G$ to $G/N$.  Then the map $\phibar: G/N \to G'$ defined
+by $\phibar(aN)=\phi(a)$ is a well defined homomorphism, with
+$\phibar \circ \Psi=\phi$.\end{thm}
+
+We can summarize this using the following picture:
+
+$$\xymatrix{G\ar[rr]^{\phi}\ar[dr]_{\Psi}&&G'\\&G/N\ar@{.>}[ur]_{\phibar}&}.$$
+
+\begin{proof} We define $\phibar: G/N\to G'$, as indicated above, by
+$\phibar(aN)=\phi(a)$ for every $aN\in G/N$.  Since $\phibar$
+is defined using coset representatives, we must first show that
+$\phibar$ is well defined.  So let $aN=bN\in G/N$. Then
+$\phibar(aN)=\phi(a)$ and $\phibar(bN)=\phi(b)$, so we must
+show that $\phi(a)=\phi(b)$.  Since $aN=bN$ and $N\subseteq K$,
+we have that $aK=bK$ by Statement 6 of Theorem
+\ref{cosetfacts}; thus $\phi(a)=\phi(b)$ (using Lemma
+\ref{kermean}).  So $\phibar$ is well defined.
+
+ Next, we show that $\phibar$ is a homomorphism.  Let $aN,bN\in
+G/N$.  Then
+$$\phibar((aN)(bN))=\phibar(abN)=\phi(ab)=\phi(a)\phi(b)=\phibar(aN)\phibar(bN).$$
+
+Finally, for every $a\in G$, $$(\phibar \circ
+\Psi)(a)=\phibar(\Psi(a))=\phibar(aN)=\phi(a);$$ so $\phibar \circ
+\Psi = \phi$, as desired.\end{proof}
+
+ Note that the above theorem does \underline{not} state that
+$\phibar$ is a monomorphism or an epimorphism.  This is because in
+general it may be neither! We do have the following theorem:
+
+\begin{thm}\label{epimono} Let $G$, $G'$, $\phi$, $N$, and $\phibar$ be as
+defined in the Factorization Theorem.  Then
+
+\begin{enumerate}
+\item $\phibar$ is onto (an epimorphism) if and only if $\phi$ is onto
+(an epimorphism); and
+
+\item $\phibar$ is one-to-one (a monomorphism) if and only if $N=\Ker
+\phi$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}\
+
+\begin{enumerate}
+\item
+This is clear, since
+$\phibar(G/N)=\phi(G)$.
+\item  By Corollary
+\ref{kerone}, $\phibar$ is one-to-one if and only if $\Ker
+\phibar=\{N\}$.  But \begin{align*}\Ker \phibar&=\{aN\in G/N
+\,:\, \phibar(aN)=e_{G'}\}\\&=\{aN\in G/N \,:\,
+\phi(a)=e_{G'}\}\\&=\{aN\in G/N \,:\, a\in
+\Ker\phi\}.\end{align*} So $\Ker \phibar = \{N\}$ if and only if
+$$\{aN\in G/N\,:\,a\in \Ker\phi\}=\{N\},$$ in other words if and
+only if $aN=N$ for all $a\in \Ker\phi$.  But
+\begin{alignat*}{3}
+&&&aN=N &&\text{\quad for all $a\in \Ker\phi$}\\
+&\Leftrightarrow \quad && a\in N &&\text{\quad for all $a\in \Ker\phi$}\\
+&\Leftrightarrow \quad && \Ker \phi\subseteq N&&\\
+&\Leftrightarrow \quad && \Ker\phi=N,&&
+\end{alignat*}
+since we are given that
+$N\subseteq \Ker \phi$. Thus, $\phibar$ is one-to-one
+if and only if $N=\Ker\phi$, as desired. \qedhere \end{enumerate}
+
+\end{proof}
+
+ We are now ready to state the all-important First Isomorphism
+Theorem (which we have essentially already proven).
+
+\begin{thm}\label{}\textbf{(First Isomorphism Theorem)} Let $G$ and $G'$
+be groups, with homomorphism $\phi:G \rightarrow G'$.  Let $K=\Ker
+\phi$. Then $G/K \simeq \phi(G)$. In particular, if $\phi$ is onto,
+then $G/K\simeq G'$.\end{thm}
+
+\begin{proof} This follows directly from the Factorization Theorem and
+Theorem \ref{epimono}.\end{proof}
+
+ So to prove that a factor group $G/N$ is isomorphic to a group
+$G'$, it suffices to show there exists an epimorphism from $G$ to
+$G'$ that has $N$ as its kernel.
+
+\begin{example}{} Letting $n\in \Z^+$, let's identify a familiar group to which
+$GL(n,\fatr)/SL(n,\fatr)$ is isomorphic.  As in Example
+\ref{slnormgl}, the map $\phi:GL(n,\fatr)\to \fatr^*$ defined by
+$\phi(A)$ is a homomorphism with kernel $SL(n,\fatr)$.  Moreover,
+$Phi$ clearly maps onto $\fatr^*$: indeed, given $\lambda \in
+\fatr^*$, the diagonal matrix having $\lambda$ in the uppermost left
+position and 1's elsewhere down the diagonal gets sent to $\lambda$
+by $\phi$.  So by the First Isomorphism Theorem, we have
+$GL(n,\fatr)/SL(n,\fatr) \simeq \fatr^*$. \end{example}
+
+\begin{example}{} Let $G=S_3\times \Z_{52}$ and let $N=S_3 \times
+\{0\}\subseteq G$.  It is straightforward to show that $N$ is normal
+in $G$.  What is the structure of $G/N$? Well, define $\phi:G\to
+\Z_{52}$ by $\phi((\sigma, a))=a$.  Then $\phi$ is clearly an
+epimorphism and $\Ker \phi=\{(\sigma,a)\in G\,:a=0\}=N$. So $G/N$ is
+isomorphic to $\Z_{52}$. \end{example}
+
+Generalizing the above example, we have the following theorem, whose
+proof we leave to the reader.
+
+\begin{thm}\label{} Let $G=G_1\times G_2 \times \cdots \times G_k$ (where
+$k\in \Z^+$) and let $N_i$ be a normal subgroup of $G_i$ for each
+$i=1,2,\ldots, k$.  Then $N=N_1 \times N_2 \times \cdots \times N_k$
+is a normal subgroup of $G$, with $G/N \simeq G_1/N_1 \times G_2/N_2
+\cdots \times G_k/N_k.$ \end{thm}
+
+We provide one more cool example of using the First Isomorphism
+Theorem. Clearly, since $\fatr$ is abelian, $\Z$ is a normal
+subgroup of $\fatr$.  What is the structure of $\fatr/\Z$?  Well, in
+modding $\fatr$ out by $\Z$ we have essentially identified together
+all real numbers that are an integer distance apart.  So we can
+think of the canonical epimorphism from $\fatr$ to $\fatr/\Z$ as
+wrapping up $\fatr$ like a garden hose!  Thus, one might guess that
+$\fatr/\Z$ has some circle-like structure---but if we want to think
+of it as a group, we have to figure out what the group structure on
+such a ``circle" would be!
+
+We leave, for a moment, our group $\fatr/\Z$, and look at how we can
+consider a circle to be a group.
+
+\begin{df}{Notation} Recall that for every $\theta \in \fatr$,
+$e^{i\theta}$ is defined to be $\cos \theta + i\sin \theta$. It
+is clear then that the set $\{e^{i\theta} \,:\, \theta\in
+\fatr\}$ is the unit circle in the complex plane; we denote
+this set by $\S_1$.\footnote{We do this because this set is a
+one-dimensional sphere (i.e., a circle).  More generally, an
+$n$-dimensional sphere, for $n\in \fatn$, is denoted by $S_n$.}\end{df}
+
+\begin{df}{Remark} Note that if $\theta_1, \theta_2\in \fatr$, then
+$e^{i\theta_1}=e^{i\theta_2}$ if and only if $\theta_1-\theta_2
+\in 2\pi \Z$.\end{df}
+
+
+\begin{thm}\label{} $\S_1$ is a group under the multiplication
+$e^{i\theta_1}e^{i\theta_2}=e^{i(\theta_1+\theta_2)}$.
+\end{thm}
+
+\begin{proof}  The tricky part is showing that the operation is well
+defined. Suppose $\theta_1, \theta_2, t_1$, and $t_2$ are in
+$\fatr$, with $e^{i\theta_1}=e^{it_1}$ and
+$e^{i\theta_2}=e^{it_2}$. We want to show that
+$$e^{i\theta_1}e^{i\theta_2}=e^{it_1}e^{it_2},$$ i.e., that
+$$e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}.$$ Now, $e^{i\theta_1}=e^{it_1}$ and
+$e^{i\theta_2}=e^{it_2}$ imply that $\theta_1 -t_1 = 2\pi m$
+and $\theta_2-t_2 = 2\pi n$ for some $m$ and $n$ in $\Z$;
+hence,
+$$\theta_1+\theta_2-(t_1+t_2)= 2\pi(m+n) \in 2\pi\Z.$$  Thus,
+$e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}$, so our operation is
+well defined.
+
+Next, $\S_1$ is clearly closed under the operation, and
+associativity follows from associativity of addition in
+$\fatr$. Moreover, $e^{i0}=1$ clearly acts as an identity
+element in $\S_1$, and if $e^{i\theta}\in \S_1$, then
+$e^{i\theta}$ has inverse $e^{i(-\theta)} \in \S_1$. So $\S_1$
+is a group under the described operation.
+ Beautifully, it turns out that our group $\fatr/\Z$ is
+isomorphic to $\S_1$.\end{proof}
+
+\begin{thm}\label{} $\fatr/\Z \simeq \S_1$.
+\end{thm}
+
+\begin{proof} We will define an epimorphism $\phi$ from $\fatr$ to $\S_1$
+with $\Ker \phi=\Z$; then we'll have $\fatr/\Z \simeq \S_1$,
+by the First Isomorphism Theorem.
+
+Define $\phi:\fatr \to \S_1$ by $\phi(r)=e^{i2\pi r}$. We have
+that $\phi$ is a homomorphism, since for every $r,s\in \fatr$,
+we have
+$$\phi(r+s)=e^{i2\pi (r+s)}=e^{i2\pi r+i2\pi s}=e^{i2\pi
+r}e^{i2\pi s}=\phi(r)\phi(s).$$  Moreover, $\phi$ is clearly
+onto, since if $e^{i\theta}\in \S_1$, then
+$$e^{i\theta}=e^{i2\pi\left(\frac{\theta}{2\pi}\right)}=\phi\left(\frac{\theta}{2\pi}\right).$$
+Finally, $\Ker\phi=\Z$: indeed,
+\begin{align*}
+r\in \Ker\phi &\Leftrightarrow \phi(r)=1\\
+&\Leftrightarrow e^{i2\pi r}=1 \\
+&\Leftrightarrow \cos 2\pi r + i\sin 2\pi r=1 \\
+&\Leftrightarrow \cos 2\pi r = 1 \mbox{ and }\sin 2\pi r = 0\\
+&\Leftrightarrow r\in \Z.
+\end{align*}
+Thus, $\Ker \phi = \Z$, and hence $\fatr/\Z\simeq \S_1$, as
+desired.\end{proof}
+
+\section{The Second and Third Isomorphism Theorems}
+
+\begin{comment}
+\noindent \textbf{Corollary of the Correspondence Theorem.}  Let $G$
+and $G'$ be groups, with epimorphism $\phi:G\rightarrow G'$ (note
+that $\phi$ has to be onto).  Let $K=\Ker \phi$.  Then the [normal]
+subgroups of $G'$ are in one-to-one correspondence with the [normal]
+subgroups of $G$ containing $K$.  (Specifically, if $H\leq G$ with
+$K\subseteq H$, then $H$ corresponds to $\phi(H)\leq G'$.)
+\end{comment}
+
+The following theorems can be proven using the First Isomorphism
+Theorem. They are very useful in special cases.
+
+\begin{thm}\label{}\textbf{(Second Isomorphism Theorem)} Let $G$ be a
+group, let $H\leq G$, and let $N\unlhd G$. Then the set
+$$HN=\{hn:h\in H, n\in N\}$$
+is a subgroup of $G$, $H\cap N\unlhd H$, and $$H/(H\cap N) \simeq
+HN/N.$$ \end{thm}
+
+\begin{proof} We first prove that $HN$ is a subgroup of $G$. Since $e_G\in
+HN$, $HN\neq \emptyset$.  Next, let $x=h_1n_1, y=h_2n_2\in HN$
+(where $h_1,h_2\in H$ and $n_1,n_2\in N$). Then
+$$xy^{-1}=h_1n_1(h_2n_2)^{-1}=h_1n_1n_2^{-1}h_2^{-1}.$$ Since
+$N\leq G$, $n_1n_2^{-1}$ is in $N$; so $h_1n_1n_2^{-1}h_2^{-1}\in
+h_1Nh_2^{-1}$, which equals $h_1h_2^{-1}N$, since $N\unlhd G$
+implies $Nh_2^{-1}=h_2^{-1}N$.  So $xy^{-1}=\in h_1h_2^{-1}N.$ But
+$H\leq G$ implies $h_1h_2^{-1}\in H$; thus, $xy^{-1}\in HN$, and so
+$HN$ is a subgroup of $G$.
+
+Since $N\unlhd G$ and $N\subseteq HN$, $N$ is normal in $HN$
+(do you see why?).  So $HN/N$ is a group under left coset
+multiplication. We define $\phi: H\to HN/N$ by $\phi(h)=hN$
+(notice that when $h\in H$, $h\in HN$ since $h=he_G$). Clearly,
+$\phi$ is a homomorphism. Further, $\phi$ is onto: Indeed, let
+$y\in HN/N$.  Then $y=hnN$ for some $h\in H$ and $n\in N$.  But
+$nN=N$, so $y=hN=\phi(h)$. Finally,
+$$\Ker \phi=\{h\in H\,:\, \phi(h)=N\}=\{h\in H\,:\, hN=N\}=\{h\in
+H\,:\, h\in N\}=H\cap N.$$
+ Thus,$$H/(H\cap N)
+\simeq HN/N,$$ by the First Isomorphism Theorem.\end{proof}
+
+
+\begin{thm}\label{}\textbf{(Third Isomorphism Theorem)} Let $G$ be a group,
+and let $K$ and $N$ be normal subgroups of $G$, with $K\subseteq N$.
+Then $N/K \unlhd G/K$, and $$(G/K)/(N/K)\simeq G/N.$$\end{thm}
+
+\begin{proof} Define $\phi: G/K\to G/N$ by $\phi(aK)=aN$. We have that
+$\phi$ is well defined: indeed, let $aK=bK \in G/K$. Then by
+Statement 6 of Theorem \ref{cosetfacts}, we have $aN=bN$, that
+is, $\phi(aK)=\phi(bK)$.  So $\phi$ is well defined.  $\phi$ is
+clearly onto, and we have \begin{align*}\Ker \phi&=\{aK\in
+G/K\,:\,\phi(aK)=N\}\\&=\{aK\in G/K\,:\,aN=N\}\\&=\{aK\in
+G/K\,:\,a\in N\}\\&=N/K.\end{align*}  So the desired
+results hold, by the First Isomorphism Theorem.\end{proof}
+
+\begin{example}{} Using the Third Isomorphism Theorem we see that the group
+$$(\Z/12\Z)/(6\Z/12\Z)$$ is isomorphic to the group $\Z/6\Z$, or
+$\Z_6$.
+\end{example}
+
+
+\pagebreak
+
+\section{Exercises}
+
+\begin{exercise} Let $F$ be the group of all functions from $[0,1]$ to
+$\fatr$, under pointwise addition. Let $$N=\{f\in F:
+f(1/4)=0\}.$$  Prove that $F/N$ is a group that's
+isomorphic to $\fatr$.
+\end{exercise}
+
+\begin{solution}[print=true]
+Define $\Phi:F\rightarrow \fatr$ by
+$\Phi(f)=f\left(\frac{1}{4}\right)$, for every $f\in F$. We have
+that $\Phi$ is a homomorphism, since for every $f, g\in F$,
+$$\Phi(f+g)=(f+g)\left(\frac{1}{4}\right)=f\left(\frac{1}{4}\right)+g\left(\frac{1}{4}\right)=\Phi(f)+\Phi(g).$$
+We also have that $\Phi$ is onto, since if $r\in \fatr$, then the
+constant function $c_r$ defined by $$c_r(x)=r \mbox{ for every $x\in
+[0,1]$}$$ is sent to $r$ by $\Phi$.  So $\Phi(F)=\fatr$. Finally, if
+$f\in F$, then
+$$f\in \Ker \Phi \Leftrightarrow \Phi(f)=0 \Leftrightarrow
+f\left(\frac{1}{4}\right)=0 \Leftrightarrow f\in N;$$ so $\Ker
+\Phi=N$.  Thus, $F/N \cong \fatr$, by the First Isomorphism Theorem.
+\end{solution}
+
+\begin{exercise}  Let $N=\{1,-1\}\subseteq \fatr^*$. Prove that $\fatr^*/N$ is
+ a group that's isomorphic to
+$\fatr^+$.
+\end{exercise}
+
+\begin{solution}[print=true]
+Define $\Phi: \fatr^* \rightarrow \fatr^+$ by
+$\Phi(x)=|x|$. We know that $\Phi$ is a homomorphism, since
+$\Phi(xy)=|xy|=|x||y|=\Phi(x)\Phi(y)$, for every $x,y\in \fatr^*$.
+Moreover, $\Phi$ is clearly onto (so $\Phi(\fatr^*)=\fatr^+$), and
+has
+$$\Ker \Phi=\{x\in \fatr^*\,:\,\Phi(x)=1\}=\{1,-1\}=N.$$  Thus,
+$\fatr^*/N \cong \fatr^+$, by the First Isomorphism Theorem.
+\end{solution}
+
+\begin{exercise} Let $n\in \Z^+$ and let $H=\{A\in GL(n,\fatr)\,:\, \det A =\pm
+1\}$.  Identify a group familiar to us that is isomorphic to
+$GL(n,\fatr)/H$.
+\end{exercise}
+
+\begin{solution}[print=true]
+Define $\Phi:GL(n,\fatr)\to \fatr^+$ by
+$\Phi(A)=|\det A|$.  We have that $\Phi$ is an epimorphism since for
+all $A,B\in GL(n,\fatr)$, $$\Phi(AB)=|\det AB|=|\det A \det B|=|\det
+A||\det B|=\Phi(A)\Phi(B),$$ and for all $\lambda \in \fatr^+$, the
+diagonal matrix having $\lambda$ in the uppermost left position and
+1's elsewhere down the diagonal gets sent to $\lambda$. Since $\Ker
+\Phi=H$, we have that $GL(n,\fatr)/H \simeq \fatr^+$, by the First
+Isomorphism Theorem.
+\end{solution}
+
+\begin{exercise} Let $G$ and $G'$ be groups with respective normal subgroups
+$N$ and $N'$.  Prove or disprove: If $G/N\simeq G'/N'$ then $G\simeq
+G'$.
+\end{exercise}
+
+\begin{solution}[print=true]
+The statement is false.  Indeed, using the preceding two problems, we see that $\fatr^*/\{1,-1\}$ and $GL(2,\fatr)/H$,
+where $H=\{A\in GL(2,\fatr):\det A =\pm 1\}$, are both isomorphic
+to $\fatr^+$, hence are isomorphic to each other. But we know that
+$\fatr^* \not\simeq GL(2,\fatr)$.\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

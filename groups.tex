@@ -1,0 +1,1153 @@
+\chapter{Groups}\label{gps} %\footnote{See Section 4, along with portions of Sections 2 and 3, in \cite{F}.}
+
+\section{Binary operations and structures}
+So far we have been discussing sets. These are extremely simple
+objects, essentially mathematical ``bags of stuff." Without any
+added structure, their usefulness is very limited. Imagine, for
+instance, living with friends in a two-story house without rooms,
+stairs, closets, or hallways. You have no privacy, cannot access the
+second floor, etc. A set with no added structure will not help us,
+say, solve a linear equation.  What \textit{will} help us with such
+things are objects such as groups, rings, fields, and vector spaces.
+These are sets equipped with \textit{binary operations} which allow us
+to combine set elements in various ways.  We first rigorously define
+a binary operation.
+
+\begin{df}{Definitions and notation} A \textit{binary operation} on a set $S$ is a function from
+$S\times S$ to $S$. Given a binary operation $*$ on $S$, for
+each $(a,b)\in S\times S$ we denote $*((a,b))$ in $S$ more
+simply by $a*b$.  (Intuitively, a binary operation $*$ on $S$
+assigns to each pair of elements $a,b \in S$ a unique element
+$a*b$ of $S$.)
+
+A set $S$ equipped with a binary operation $*$ is called a \textit{binary (algebraic) structure}, and is denoted by $\<S,*\>$, or
+just by $S$, if $*$ is understood from context.\end{df}
+
+\begin{df}{Remarks}\
+
+\begin{enumerate}
+\item For $*$ to be a binary operation on $S$, $a*b$ must be
+    \textbf{well defined} and \textbf{in} $\mathbf{S}$ for each $a,b\in S$.
+    For instance, we cannot define a binary operation on
+    $\fatr$ by $$a*b=\mbox{ the greatest number less than
+    $a+b$}$$ since there \textit{is}\, no such ``greatest number."
+    Nor can we define a binary operation on $\Z$ by $a*b=ab/2$,
+    since for, say, $a=b=1 \in \Z$, $ab/2=1/2 \not\in \Z$.
+\item Not every binary operation is denoted by $*$.  In fact, many already have common notations: for instance, $+$ on $\Z$ or $\circ$ on the set of functions from $\fatr$ to $\fatr$. We will assume these common notations represent the ``usual" binary operations we know them to mean, unless otherwise noted.
+\item Do not mix up the $*$ that indicates a binary operation and the
+superscript $^*$ that indicates that we are only considering the
+nonzero elements of a given set (e.g., $\fatr^*$). You should be
+able to tell which type of $*$ we are using from context and
+placement. Also, make sure you correctly place these symbols!
+\end{enumerate}
+\end{df}
+\begin{comment}
+
+\begin{example}{binop}\
+\begin{enumerate}
+\item[1.]  For each of the following, decide whether or not the given $*$ is a binary operation on the given set $S$.
+\begin{center}
+\vspace{-10pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{1in}p{1in}p{1in}}
+$+$ on $\Z$ %Y
+&$-$  on $\Z$ %Y
+&$+$  on $\fatq$\\ %Y
+$\cdot$  on $\Z$%Y
+&$\cdot$  on $\fatq$ %Y
+&$\div$  on $\Z$\\ %N
+$\div$  on $\fatr$ %N (can't divide by 0)
+&$\div$  on $\fatr^*$  %Y
+&$\circ$ on $F$,  %Y
+\end{tabular}
+\end{center}
+where $F$ is the set of all functions from $\fatr$ to
+$\fatr$.
+\end{enumerate}
+
+\begin{df}{Remark}Though we usually denote the operation
+of multiplication on sets of numbers or of matrices by
+$\cdot$\,, we usually omit the $\cdot$ symbol when actually
+multiplying elements.  For instance, if $a,b\in \fatr$ and
+$A,B\in M_2(\fatr)$, we denote $a\cdot b$ by $ab$ and $A\cdot
+B$ by $AB$.\end{df}
+
+\begin{enumerate}
+\item[2.]  Is matrix addition, $+$, a binary operation on $\M_n(\fatq)$?  %Y
+    How about matrix multiplication, $\cdot$ \footnote{We typically denote matrix addition and multiplication by $+$ and $\cdot$\,, respectively, and have to recognize from context that we mean operations on matrices rather than on real numbers.}? %Y
+    What about declaring $A*B=AB^{-1}$ for each $A,B$ in $\M_n(\fatq)$; is $*$ a binary operation on $\M_n(\fatr)$?
+        %N (inverses need not exist)
+
+\item[3.] Is matrix addition a binary operation on $\M_{m\times n}(\fatr)$?  %Y
+    How about matrix multiplication? %Only if m=n
+
+\item[4.] Define $*$ on $\fatq$ by $(a/b)*(c/d)=ac$ (where $a,b,c,d\in \Z$, $b,d\neq 0$).  Is $*$ a binary operation on $\fatq$? %N; it isn't well defined.  E.g., 1=(1/2)*(1/2)=(2/4)*(2/4)=4.
+\end{enumerate}
+\end{example}
+
+\ddef Let $\<S,*\>$ be a binary structure and let $T$ be a
+subset of $S$. If $t_1*t_2$ is in $T$ for all $t_1,t_2\in T$,
+we say that $T$ is \textit{closed under $*$ in $S$} (or simply
+that $T$ is \textit{closed under $*$}).
+\begin{example}{}\
+\begin{enumerate}
+\item[1.] Is $\Z$ closed under addition in $\fatr$? %Y
+    Is it closed under division in $\fatr^*$? %N
+
+\item[2.] Is the set $H=\{n^2:n\in \Z^+\}$ closed under addition in $\Z$? %N
+    How about under multiplication in $\Z$?%Y
+      \end{enumerate}
+\end{example}
+
+\section{Properties of binary structures}
+
+Binary operations may have properties that make working with them very useful. We introduce and explore some of these here.
+\end{comment}
+
+\begin{df}{Definition} A binary operation $*$ on a set $S$ is \textit{associative}
+if $(a*b)*c=a*(b*c)$ for all $a,b,c\in S$.\end{df}
+
+\begin{df}{Remark} When a binary operation is associative,
+we can omit parentheses when operating on set elements. For
+example, $+$ is associative on $\Z$, so we can unambiguously
+write the (equal) expressions $1+(2+3)$ and $(1+2)+3$ as
+$1+2+3$.\end{df}
+
+\begin{comment}
+
+\begin{example}{ass} Are the following operations on the given sets associative?
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{1in}p{1in}p{1in}}
+$+$ on $\fatr$ %Y
+& $-$  on $\fatr$ %N
+&$\cdot$  on $\fatr^*$\\ %Y
+$\div$  on $\fatr$ %N
+&$+$  on $\M_n(\fatr)$ %Y
+&$\cdot$  on $\M_n(\fatr)$ \\ %Y
+\end{tabular}
+\end{center}
+
+Make sure you can provide explanations/proofs for all of your answers! \end{example}
+
+\end{comment}
+
+\begin{df}{Definitions} A binary operation $*$ on set $S$ is \textit{commutative} if
+$$a*b=b*a$$ for all $a,b\in S$. We say that specific elements
+$a$ and $b$ of $S$ \textit{commute} if $a*b=b*a$.\end{df}
+
+\begin{comment}
+\ddef A binary structure $\<S,*\>$ is \textit{associative} [\textit{commutative}] if $*$ is associative [commutative].
+
+\begin{example}{com}\ \begin{enumerate}
+\item[1.] Revisit Example \ref{ass}. Are the given operations on the given sets commutative? Again,
+make sure you can provide explanations/proofs for all your answers.
+%ANSWERS: Y, N, Y, N, Y, N
+
+\item[2.] Let $F$ be the set of all functions from $\fatr$ to $\fatr$.  Let $\circ$ be composition on $F$.  Is $\circ$ commutative on $F$? %N
+Is it associative on $F$? %Y
+Explain.
+
+\item[3.] Is the operation $*$ on $\fatq$ defined by
+    $a*b=(ab)/2$ commutative?  Associative?  Prove or disprove, in each case. \end{enumerate}
+\end{example}
+
+\end{comment}
+
+\begin{df}{Definition} Let $\<S,*\>$ be a binary structure.  An element $e$ in
+$S$ is an \textit{identity element of $\<S,*\>$} if $x*e=e*x=x$ for all
+$x\in S$.\end{df}
+
+\begin{df}{Note} Sometimes an identity element of $\<S,*\>$ is referred to as an \textit{identity element of $S$ under $*$}, or, when $*$ is clear from context, simply
+as an \textit{identity element of $S$}.\end{df}
+
+\warn{\begin{center}Not every binary structure contains an identity element! (Ex: $\<\Z,-\>$)\end{center}}
+
+\begin{comment}
+
+\begin{example}{} Decide whether or not each of the following binary structures has an identity element.  If it does, what is it? If it doesn't, provide a proof that no identity element exists.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{p{1in}p{1in}p{1in}p{1in}}
+$\<\fatr,+\>$  %Y, 0
+&$\<\fatr,-\>$  %N (Use contradiction: assume e is an id. element. Then 2-e=2 implies e=0, but e-2=2 implies e=4.
+&$\<\fatr,\cdot\,\>$  %Y, 1
+&$\<\M_2(\fatr),+\>$ (we can denote zero matrices by \0)\\ %Y, zero matrix
+$\<\M_2(\fatr),\cdot\,\>$%Y, identity matrix I_2
+&$\<\M_n(\fatr),+\>$ %Y, zero matrix
+&$\<\M_n(\fatr),\cdot\,\>$ %Y, identity matrix I_n
+&$\<F,\circ\>$,\\ %Y, the identity function f(x)=x
+\end{tabular}
+\end{center}
+where, as above, $F$ is the set of all functions from $\fatr$
+to $\fatr$. \end{example}
+
+\end{comment}
+ A natural question to ask is if a binary structure can have
+more than one identity element?  The answer is no!
+\begin{thm}\label{uniqueid} A binary structure $\<S, *\>$ has \textbf{at most one} identity element.  That is, identity elements in binary structures, when they exist, are unique.
+\end{thm}
+
+\begin{proof} Assume that $e$ and $f$ are identity elements of $S$.  Then since $e$ is an identity element, $e*f=f$ and since $f$ is an identity element, $e*f=e$.  Thus, $e=f$.\end{proof}
+
+\begin{df}{Definition} Let $\<S, *\>$ be a binary structure with identity
+element $e$.  Then for $a\in S$, $b$ is an \textit{(two-sided)
+inverse of $a$ in $\<S,*\>$} if $a*b=b*a=e$. \end{df}
+
+\begin{df}{Note} We can also refer to such an element $b$ as  an \textit{inverse for $a$ in $S$ under $*$}, or, when $*$ is clear from context, simply as an \textit{inverse of $a$}.\end{df}
+
+\warn{\begin{itemize} \item [1.] Not every element in a binary structure with an identity element has an inverse!
+\item [2.] If a binary structure \textbf{does not have} an identity element, it \textbf{doesn't even make sense} to say an element in the
+structure does or does not have an inverse!
+\end{itemize}}
+
+\begin{comment}
+\bigskip
+\begin{example}{} For each of the following, decide whether the given element necessarily has an inverse in the given binary structure.   \begin{center}
+%\renewcommand{\arraystretch}{1.3}
+\vspace{-12pt}
+\begin{tabular}{p{1.7in}p{1.7in}p{1.7in}}
+3 in $\<\Z, +\>$ & arbitrary  $a$ in $\<\Z,+\>$ & 3 in $\<\fatq, \cdot\,\>$\\\\
+ arbitrary  $a$ in $\<\fatq, \cdot\,\>$ %exactly when a\neq 0
+ & arbitrary $A$ in $\<\M_2(\fatr),+\>$
+ & arbitrary $A$ in $\<\M_n(\fatr),\cdot\,\>$ \\ %exactly when det A \neq 0
+ \end{tabular}
+\end{center}\medskip
+Make sure you can explain your answers! \end{example}
+
+We have another uniqueness theorem.
+
+\end{comment}
+\begin{thm}\label{uniqueinverse} Let $\<S, *\>$ be a binary structure with an identity element, where $*$ is associative. Let $a\in S$. If $a$ has an inverse, then its inverse is unique.
+\end{thm}
+
+\begin{proof} Let $e$ be the identity element of $S$.  Suppose $a$ has inverses $b$ and $c$.  Then $a*b=e$ so, multiplying both sides of the equation by $c$ on the left, we have $c*(a*b)=c*e=c$.  But since $*$ is associative, we have $c*(a*b)=(c*a)*b=e*b=b$.  But $b=c$.  Thus, $a$'s inverse is unique.\end{proof}
+
+\pagebreak
+\section{Exercises, Part I}
+
+\begin{exercise}[ID=2B]
+For each of the following, write Y if the given ``operation" is a well-defined binary operation on the given set; otherwise, write N. In each case in which it \underline{isn't} a well-defined binary operation on the set, provide a \textit{brief} explanations. You do not need to prove or explain anything in the cases in which it \underline{is} a binary operation.
+
+\begin{enumerate}
+\item $+$ on $\fatc^*$
+\item $*$ on $\fatr^+$ defined by $x*y=\log_x y$
+\item $*$ on $\M_2(\fatr)$ defined by $A*B=AB^{-1}$
+\item $*$ on $\fatq^*$ defined by $z*w=z/w$
+\end{enumerate}
+
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item Y
+\item N; for instance, $10*1=\log_{10}0.1=-1\not\in\fatr^+$.
+\item N; for instance, the zero matrix, $\0$, in $\M_2(\fatr)$ is not invertible, so $A*\0$ is undefined for every $A\in\M_2(\fatr)$.
+\item Y
+
+\end{enumerate}
+\end{solution}
+
+
+\begin{exercise}[ID=2D]
+Define $*$ on $\fatq$ by $p*q=pq+1$. Prove or disprove that $*$ is (a) commutative; (b) associative.
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item Let $p,q\in \fatq$.  Then $p*q=pq+1=qp+1$ (since multiplication is commutative on $\fatq$), which equals $q*p$.  So $*$ is commutative.
+\item  $*$ is not associative: for instance, $1,2,3\in \fatq$ and $1*(2*3)=1*7=8$, while $(1*2)*3=3*3=10\neq 8$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}[ID=2E]
+Prove that matrix multiplication is not commutative on $\M_2(\fatr)$.
+\end{exercise}
+
+\begin{solution}[print=true]
+Let $$A=\left[
+          \begin{array}{cc}
+            1 & 0 \\
+            0 & 0 \\
+          \end{array}
+        \right] \mbox{\quad and \quad}B=\left[
+          \begin{array}{cc}
+            0 & 1 \\
+            0 & 0 \\
+          \end{array}
+        \right]$$ in $\M_2(\fatr)$.  Then $AB=B$ while $BA$ is the zero matrix.  Since $AB\neq BA$, matrix multiplication isn't commutative on $\M_2(\fatr)$.
+\end{solution}
+
+
+\begin{exercise}[ID=2G]
+Prove or disprove each of the following statements.
+
+\begin{enumerate}
+\item The set $2\Z=\{2x\,:\,x\in \Z\}$ is closed under addition in $\Z$.
+\item The set $S=\{1,2,3\}$ is closed under multiplication in $\fatr$.
+\item The set $$U=\left\{\left[
+                     \begin{array}{cc}
+                      a & b \\
+                       0 & c \\
+                     \end{array}
+                   \right]\,:\, a,b,c\in \fatr \right\}$$ is closed under multiplication in $\M_2(\fatr)$. (Recall that $U$ is  the set of \textit{upper-triangular matrices} in $\M_2(\fatr)$.)
+\end{enumerate}
+
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item Let $x, y\in 2\Z$. Then there exist $a,b\in \Z$ such that $x=2a$ and $y=2b$.  Then $$x+y=2a+2b=2(a+b)\in 2\Z.$$ So $2\Z$ is closed under addition.
+\item Since, for instance, $2,3\in S$ but $2(3)=6\not\in S$, $S$ isn't closed under multiplication.
+\item Let $$A=\left[
+          \begin{array}{cc}
+            a & b \\
+            0 & c \\
+          \end{array}
+        \right] \mbox{\quad and \quad}B=\left[
+          \begin{array}{cc}
+            \alpha & \beta \\
+            0 & \gamma \\
+          \end{array}
+        \right]\in U.$$ Then $$AB=\left[
+          \begin{array}{cc}
+            a & b \\
+            0 & c \\
+          \end{array}
+        \right]\left[
+          \begin{array}{cc}
+            \alpha & \beta \\
+            0 & \gamma \\
+          \end{array}
+        \right]=\left[
+          \begin{array}{cc}
+            a\alpha & a\beta+b\gamma \\
+            0 & c\gamma \\
+          \end{array}
+        \right]\in U.$$ So $U$ is closed under matrix multiplication.
+
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}[ID=2H]
+ Let $*$ be an associative and commutative binary operation on a set $S$. An element $u\in S$ is said to be an \textit{idempotent} in $S$ if $u*u=u$. Let $H$ be the set of all idempotents in $S$.  Prove that $H$ is closed under $*$.
+\end{exercise}
+
+\bigskip
+\begin{center}
+\includegraphics[width=\textwidth]{zippy.png}
+{\small \copyright Bill Griffith. Reprinted with permission.}
+             \end{center}
+
+ \begin{solution}[print=true]
+ Let $u,v\in H$.  To show $u*v\in H$, we need to show that $(u*v)*(u*v)=u*v$. Now,
+ \begin{align*}
+(u*v)*(u*v)&=u*(v*u)*v &&\text{(since $*$ is associative)}\\
+&=u*(u*v)*v &&\text{(since $*$ is commutative)}\\
+&=(u*u)*(v*v) &&\text{(since $*$ is associative)}\\
+&=u*v &&\text{(since $u,v\in H$)}.
+\end{align*} So $u*v\in H$.
+ \end{solution}
+
+
+
+\section{The definition of a group}
+
+At this point you may be asking yourself, why do we care?  We've covered a lot of definitions and proved some theorems, but what is the goal of all this? Well, there are actually many goals that we can achieve using such material.  Consider the following as an example.  Suppose we want to solve the equation $5+x=2$.  We can probably solve this quite easily almost just by looking at it ($x=-3$), but what facts are we actually using there?  If we break down the reasoning leading to this answer, we may obtain something like the following set of steps.
+
+\begin{center}
+\begin{tabular}{rrlrl}&$5+x$ &=& $2$& \\
+$\Rightarrow$ & $-5+(5+x)$ & = &$-5+2$& \\
+$\Rightarrow$ & $(-5+5)+x$ & = &$-3$& \\
+$\Rightarrow$ & $0+x$ &= &$-3$& \\
+$\Rightarrow$ & $x$&=&$-3$&.
+\end{tabular}
+\end{center}
+In line 2, we add the inverse of $5$ in $\<\Z, +\>$ to each side of
+the equation.  In line 3, we use associativity of $+$ in $\Z$ (along
+with computation), while in line 4 we use the fact that $-5$ is the
+additive inverse of $5$ (that is, the inverse of $5$ in $\Z$ under
+$+$).  Finally, in line 5 we use the fact that 0 is an additive
+identity element in $\Z$ (that is, the identity element in $\Z$
+under $+$).
+
+In summary, we used \textbf{associativity, identity elements, and
+inverses} in $\Z$ to solve the given equation. This perhaps
+suggests that these would be useful traits for a binary
+structure and/or its operation to have.  They are in fact so
+useful that a binary structure displaying these characteristics
+is given a special name. We note that these axioms are rather
+strong; ``most" binary structures aren't groups.
+
+\begin{df}{Definition and notation} A \textit{group} is a set $G$, equipped with a binary
+operation $*$, that satisfies the following three \textit{group
+axioms}:
+\begin{enumerate}
+\item[$\G_1$:] $*$ is associative on $G$;
+\item[$\G_2$:] There exists an identity element for $*$ in $G$;
+\item[$\G_3$:] Every element $a\in G$ has an inverse in $G$.
+\end{enumerate}
+\noindent We
+    denote group $G$ under $*$ by the binary structure notation
+    $\<G,*\>$, or simply by $G$ if the operation $*$ is known
+    from context (or need not be known in the current
+    situation).\end{df}
+
+\fbox{\begin{minipage}{380pt}\begin{center}\begin{minipage}{360pt}\begin{center}
+\medskip \textbf{
+IMPORTANT NOTE}\end{center} When proving/disproving that a set $G$ is/is
+not a group under an (apparent) operation $*$:
+
+\begin{itemize}
+\item The first thing you should do is check to make sure that  $\<G,*\>$
+    is a binary structure by making sure $G$ is closed under $*$---if not, it doesn't make sense to
+    check to see if axioms $\G_1$--$\G_3$ hold). (For instance: $\Z^*$ has no chance of being a group under
+$\div$, since, e.g., $3,4\in \Z^*$ but $3 \div 4 \not\in\Z^*$.)
+
+\item You should never check $\G_3$ before confirming
+    $\G_2$ holds, because it makes no sense to look for
+    inverses if you haven't confirmed that $G$ contains an
+    identity element under $*$.
+
+    \end{itemize}
+   \smallskip
+\end{minipage}\end{center}
+\end{minipage}}
+
+
+\section{Examples of groups/nongroups, Part I}
+Let's look at some examples of groups/nongroups.
+
+\begin{example}{}
+We claim that $\Z$ is a group under addition.  Indeed, we already
+know that $\Z$ is closed under addition and that addition is
+associative on the integers.  The integer $0$ acts as an identity
+element of $\Z$ under addition (since $a+0=0+a=a$ for each $a\in
+\Z$), and each element $a$ in $G$ has inverse $-a$ since
+$a+(-a)=-a+a=0$. \end{example}
+
+\begin{example}{}\
+\begin{enumerate}
+\item  For each following binary structure $\<G,*\>$, determine whether or not $G$ is a group.
+\item For those that are \textit{not\,} groups, determine the first group axiom  that fails, and provide a proof that it fails.
+
+\item[]
+\begin{center}
+\begin{tabular}{p{1in}p{1in}p{1in}p{1in}}
+$\<\fatq,+\>$ & $\<\Z,-\>$ & $\<\fatr,\cdot\,\>$ & $\<\fatc^*,\cdot\, \>$\\
+$\<\fatr,+\>$ & $\<\Z^+,+\>$ & $\<\Z^*,\cdot\,\>$ & $\<\M_n(\fatr),+\>$\\
+$\<\fatc,+\>$ & $\<\Z, \cdot\,\>$ & $\<\fatr^*,\cdot\, \>$ & $\<\M_n(\fatr),\cdot\, \>$
+\end{tabular}
+\end{center}
+\end{enumerate}
+\end{example}
+
+
+\noindent If you have taken
+linear algebra, you have also probably seen a collection of matrices
+that is a group under matrix multiplication.
+
+
+\begin{df}{Definitions} For $n\in \Z^+$, we define $GL(n,\fatr)$ by
+$$GL(n,\fatr):=\{M\in \M_n(\fatr):\det M \neq 0\}.$$ In other
+words, $G$ is the set of all invertible $n\times n$ matrices
+over $\fatr$. We also define subset $SL(n,\fatr)$ of
+$GL(n,\fatr)$, by
+$$SL(n,\fatr):=\{M\in \M_n(\fatr):\det M =1\}.$$\end{df}
+
+\begin{df}{Notation} We may use the notation $\0$ to denote a zero matrix and $I_n$ to denote an $n\times n$ identity matrix.\end{df}
+
+\begin{df}{Remark} Throughout this course, if we are discussing a set $GL(n,\fatr)$ or $SL(n,\fatr)$, you should assume $n\in \Z^+$, unless otherwise noted.\end{df}
+
+\begin{thm}\label{glsl} $GL(n,\fatr)$ and $SL(n,\fatr)$ are closed under matrix multiplication (so $\<GL(n,\fatr),\cdot\>$ and $\<SL(n,\fatr),\cdot\>$ are binary structures).\end{thm}
+
+\begin{proof} Let $A,B\in GL(n, \fatr)$. Then $\det(AB)=(\det A)(\det B) \neq 0$ (since $\det A, \det B \neq 0)$, so $AB\in GL(n,\fatr)$.  Similarly, if $A,B \in SL(n,\fatr)$, then $\det(AB)=(\det A)(\det B)=1(1)=1$, so $AB\in SL(n,\fatr)$.\end{proof}
+
+\begin{example}{} The binary structures
+ $GL(n,\fatr)$ and $SL(n,\fatr)$ are groups under matrix multiplication.
+
+\begin{proof} Let $G:=GL(n,\fatr)$. We show that $G$, under matrix multiplication, satisfies
+the three group axioms.
+\begin{enumerate}
+\item[$\G_1$:] Matrix multiplication is always associative.
+\item[$\G_2$:] The $n\times n$ identity matrix
+    $$I_n:=\begin{bmatrix}
+1 & 0 & 0 & \cdots & 0 \\
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 1 \end{bmatrix} \in G$$
+acts as an identity element for $\<G, \cdot\,\>$ since $$AI_n=I_nA = A$$ for all $A\in G$.
+\item[$\G_3$:] Let $A\in G$.  Since $\det A\neq 0$, $A$ has
+    (matrix multiplicative) inverse $A^{-1}$ in
+    $\M_2(\fatr)$. But we need to verify that $A^{-1}$ is in
+    $G$. This is in fact the case, however, since
+    $A^{-1}$ is invertible (it has inverse $A$), hence $\det
+    A^{-1} \neq 0$.  Thus, $A^{-1}$ is also in $G$.
+    \end{enumerate}
+
+So $G$ is a group under multiplication.
+
+\red{The proof that $SL(n,\fatr)$ is a group under multiplication is left as an exercise for the reader.}\end{proof} \end{example}
+
+These groups are very important in many areas of mathematics, including linear algebra and geometry.  Because of this, we have special names for them (which give rise to the ``GL" and ``SL" in their names).
+
+\begin{df}{Definitions} For $n\in \Z^+$, $GL(n,\fatr)$ is called the \textit{general
+linear group of degree $n$ over $\fatr$} and $SL(n,\fatr)$ is
+called the \textit{special linear group of degree $n$ over
+$\fatr$}.\end{df}
+
+\begin{example}{} Define $*$ on $\fatq^*$ by $a*b=(ab)/2$ for all $a,b\in \fatq^*$.  Prove that $\<\fatq^*,*\>$ is a group.
+
+\begin{proof} First, $\fatq^*$ is closed under $*$, since $(ab)/2$ is
+rational and nonzero whenever $a,b$ are rational and nonzero.
+
+Next, we check that $\fatq^*$ under $*$ satisfies the group
+axioms. Since multiplication is commutative on $\fatq$, $*$ is
+clearly commutative on $\fatq^*$, and so our work to show
+$\G_2$ and $\G_3$ is marginally reduced.
+
+\begin{enumerate}
+\item[$\G_1$:] Associativity of $*$ on $\fatq^*$ is inherited
+    from associativity of multiplication on $\fatq^*$.
+\item[$\G_2$:] Notice that the perhaps ``obvious" choice, 1, is
+    \underline{not} an identity element for $\fatq^*$ under
+    $*$: for instance, $1*3=3/2 \neq 3$. Rather, $e$ is such an
+    identity element if and only if for all $a\in \fatq$ we
+    have $a=e*a=(ea)/2$. We clearly have $a=(2a)/2$ for all
+    $a\in \fatq^*$; so $2$ acts as an identity element for
+    $\fatq^*$ under $*$.
+\item[$\G_3$:] Let $a\in \fatq^*$.  Since $a\neq 0$, it makes
+    sense to divide by $a$; then $4/a\in \fatq^*$, with
+    $a*(4/a)=(a(4/a))/2=2$.
+\end{enumerate}
+Thus,  $\<\fatq^*,*\>$ is a group.\end{proof}
+\end{example}
+
+\section{Group conventions and properties}
+
+\noindent Before we discuss more examples, we present a theorem and look at some conventions we follow and notation we use  when discussing groups in general; we also discuss some properties of groups.
+
+\subsection{Some group conventions}
+\smallskip
+
+\begin{thm}\label{} The identity element of a group is
+unique (by Theorem \ref{uniqueid}), and given any element $a$
+of a group $G$, the inverse of $a$ in $G$ is unique (by Theorem
+\ref{uniqueinverse}).\end{thm}
+
+
+\begin{itemize}
+\item
+We usually \textbf{don't} use the notation $*$ when describing group
+operations. Instead, we use the multiplication symbol $\cdot$ for
+the operation in an arbitrary group, and  call
+    applying the operation ``multiplying"---even though the operation may
+not be ``multiplication" in the non-abstract, traditional sense! It may
+    actually be addition of real numbers, composition of
+    functions, etc.
+
+
+Moreover, when actually operating in a group $\<G, \cdot\,\>$, we
+typically omit the $\cdot$\,. That is, for $a,b\in G$, we write the
+product $a\cdot b$ as $ab$. We call this the ``product" of $a$ and $b$. We will generally use $e$
+or $e_G$ as our default notation for an identity element of group,\footnote{Many mathematicians denote a group's identity element by 1, rather than $e$.} and $a^{-1}$ to denote the inverse of element $a$ in $G$.
+
+\bigskip
+\warn{Although it is what we call \textit{multiplicative
+notation} for an inverse, do \underline{not} assume $a^{-1}$ is what we usually think of as a
+multiplicative inverse for $a$; remember, we don't even know if
+elements of a group are numbers! The type of inverse that $a^{-1}$
+is (a multiplicative inverse for a real number? an additive inverse
+for a real number? a multiplicative inverse for a matrix? an inverse
+function for a function from $\fatr$ to $\fatr$?) depends on both
+$G$'s elements and its operation.}
+
+\item For every element $a$ in a group $\Gdot$ and $n\in \Z^+$, we use the expression $a^n$ to denote  the product
+$$\stackrel{\underbrace{a\cdot a \cdot \,\cdots \,\cdot a}}{n \mbox{ \rm times}}$$ and $a^{-n}$ to denote $(a^{-1})^n$ (that is, the product of $n$ copies of $a^{-1}$).
+Finally, we define $a^0$ to be $e$.  Note that our ``usual" rules for exponents then hold in an arbitrary group: that is, if $a$ is in group $\<G, \cdot\,\>$
+and $m,n\in \Z$, then $a^m a^n = a^{m+n}$ and $(a^m)^n=a^{mn}=(a^n)^m$.
+
+\end{itemize}
+\noindent
+There are exceptions to these conventions:
+
+\begin{itemize}
+\item When working with an operation that is known to be commutative, we typically
+continue to use additive notation ($+$ for the group operation, $-a$
+for the inverse of element $a$ in the group) and call the operation
+``addition," though using $\cdot$ is also valid in these cases. When
+we use additive notation, we do \underline{not} omit the $+$ when
+operating in a group $\<G,+\>$, and we call $a+b$ a \textit{sum} rather
+than a product.\footnote{Also, when working with an operation that is known to be commutative, the identity element may be denoted by 0 rather than by $e$, $e_G$, or 1.}  For $n\in \Z^+$, we write $na$ instead of $a^n$; we also write $0a$ instead of $a^0$. Finally, note that
+$(-n)a=n(-a)=-(na)$ (where $-a$ and $-(na)$ indicate the
+additive inverses of $a$ and $na$, respectively); we can therefore
+unambiguously use the notation $-na$ for this element.
+Using this notation, note that for $m\in \Z$, $na+ma=(n+m)a$ and $n(ma)=(nm)a$.
+
+\bigskip
+\warn{Be careful to always know where an element
+you are working with lives!  For instance, if, as above, $n\in
+\Z^+$ and $a$ is a group element, $-n$ and $-a$ look similar but
+may mean very different things.  While $-n$ is a negative integer,
+$-a$ may be the additive inverse of a matrix in $\M_2(\fatr)$, the
+additive inverse 2 of the number 4 in $\Z_6$, or even something
+completely unrelated to numbers.}
+
+We summarize multiplicative versus addition notation in the following table, where $a,b$ are elements of a group $G$.
+
+
+\begin{center}
+\begin{threeparttable}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|c|c|}
+\hline
+ & \textbf{Multiplicative notation\tnote{*}}& \textbf{Additive notation\tnote{$\dagger$}}\\
+\hline
+Operation notation& $\cdot$ & +\\
+$a$ operated with $b$ & product $ab$ & sum $a+b$\\
+Identity element & 1 (or $e$ or $e_G$) & 0 (or $e$ or $e_G$)\\
+Inverse of $a$ & $a^{-1}$ & $-a$\\
+\hline
+\end{tabular}
+
+\begin{tablenotes}
+\item[*]\small Used in an arbitrary group.
+\item[$\dagger$]\small Used only in abelian groups.
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+
+
+\item We \textbf{do} use the notation
+$*$ when using multiplicative or additive notation would lead to
+confusion. For instance, if we want to define an operation on
+$\fatq^*$ that assigns to pair $(a,b)$ the quantity $ab/2$, it would
+be unwise to use multiplicative or additive notation for this
+operation since we already have conventional meanings of $ab$ and
+$a+b$. Similarly, we would not denote the identity element of
+$\fatq^*$ under this operation by $0$ or $1$, since the identity
+element in this group is the rational number $2$, and writing $0=2$
+or $1=2$ would look weird.
+
+\item If there is a default notation for a particular
+operation (say, $\circ$ for composition of functions) or identity
+element (say, $I_n$ in $GL(n,\fatr)$) we usually use that notation
+instead.
+
+\end{itemize}
+
+\subsection{Some group properties}
+\bigskip
+While we don't need to worry about ``order" when multiplying a group element $a$ by itself, we \textbf{do} need to worry about it in general.
+
+\bigskip
+\warn{\begin{center}Group operations need \textit{not} be commutative!\end{center}}
+
+\begin{df}{Definitions} A group $\<G, \cdot\,\>$ is said to be \textit{abelian}\footnote{
+The word ``abelian" is derived from the surname of
+mathematician Niels Henrik Abel.} if $ab=ba$ for all $a,b\in
+G$. Otherwise, $G$ is \textit{nonabelian}.\end{df}
+
+\begin{df}{Remark} If we know that a binary operation $\cdot$
+on a set $G$ is commutative, then in checking to see if axioms
+$\G_2$ and $\G_3$ hold we need only verify that there exists
+$e\in G$ such that $ae=a$ (we don't need to check that
+$ea=a$) for all $a\in G$ and that for each $a\in G$ there
+exists $b\in G$ such that $ab=e$ (we don't need to check that
+$ba=e$).\end{df}
+
+\begin{df}{Remark} If $G$ is not known to be abelian, we
+must be careful when multiplying elements of $G$ by one
+another: multiplying on the left is, in general, not the same
+as multiplying on the right! \end{df}
+
+\begin{df}{Definitions} If $G$ is a group, then the cardinality $|G|$ of $G$ is
+called the \textit{order of $G$}. If $|G|$ is finite, then $G$ is
+said to be a \textit{finite group}; otherwise, it's an \textit{infinite group}.\end{df}
+
+
+\begin{example}{} Of the groups we've discussed, which are abelian? Which are infinite/finite?\end{example}
+
+We have already seen that identity elements of groups are unique,
+and that each element $a$ of a group $G$ has a unique inverse
+$a^{-1}\in G$. Here are some other basic properties of groups.
+\begin{thm}\label{cancel} If $\Gdot$ is a group, then \emph{\textbf{left and right cancellation laws}} hold in $G$.  That is, if $a,b,c\in G$, then
+
+\begin{center}\begin{enumerate} \item If $ab=ac$, we have $b=c$ (the left cancellation law); and
+\item If $ba=ca$, we have $b=c$ (the right cancellation law).\end{enumerate}
+\end{center}
+\end{thm}
+
+ \begin{proof} Let $a,b,c\in G$ and assume that $ab=ac$.  Multiplying
+both equation sides on the left by $a^{-1}$, we obtain
+\begin{alignat*}{2}
+&& a^{-1}(ab)&=a^{-1}(ac)\\
+  &\Rightarrow\quad
+  &(a^{-1}a)b&=(a^{-1}a)c\\
+  &\Rightarrow
+  &eb&=ec\\
+   &\Rightarrow
+  &b&=c
+\end{alignat*}
+This proves that the left cancellation law holds.  A similar proof shows that the right cancellation law holds.\end{proof}
+
+\begin{thm}\label{uniquesols} Let $\Gdot$ be a group and let $a,b\in G$. Then there exist \emph{\textbf{unique}} elements $x,y\in G$ such that $ax=b$ and $ya=b$.
+\end{thm}
+
+
+\begin{proof} If $x=a^{-1}b$ and $y=ba^{-1}$, then
+$ax=a(a^{-1}b)=(aa^{-1})b=eb=b$ and
+$ya=(ba^{-1})a=b(a^{-1}a)=be=b$. So such elements $x$ and $y$
+exist.  The fact that they are unique follows from the cancellation
+laws: if $ax=b$ and $ax'=b$ then $x=x'$ by left cancellation, and
+if $ya=b$ and $y'a=b$ then $y=y'$ by right cancellation.\end{proof}
+
+\warn{\begin{center}We only of necessity have $(ab)^{-1}=a^{-1}b^{-1}$ if $G$ is known to be abelian!\end{center}}
+
+However, we do have the following:
+
+\begin{thm}\label{invofprod} If $a$ and $b$ are elements of a group $\Gdot$, then $$(ab)^{-1}=b^{-1}a^{-1}.$$
+\end{thm}
+
+\begin{proof} We have that
+$$(ab)(b^{-1}a^{-1})=a(bb^{-1})a^{-1}=aea^{-1}=aa^{-1}=e.$$
+Similarly, $(b^{-1}a^{-1})(ab)=e$.\end{proof}
+\section{Examples of groups/nongroups, Part II}
+
+\begin{example}{} Let $n\in \Z^+$.  We define $n\Z$ by $$n\Z=\{nx: x\in \Z\}:$$ that is, $n\Z$ is the set of all (integer) multiples of $n$.
+
+\begin{thm}\label{nz} $n\Z$ is a group under $+$ (the usual addition of integers).\end{thm}
+
+\begin{proof} Let $x, y\in n\Z$. Then there exist $a,b\in \Z$ such that $x=na$ and $y=nb$.  Then $x+y=na+nb=n(a+b)\in n\Z$. So $\<n\Z,+\>$ is a binary structure.  \red{The remainder of the proof is left as an exercise for the reader.}\end{proof}
+\end{example}
+
+\begin{df}{Remark} When we are discussing a group $n\Z$, assume that $n\in \Z^+$, unless otherwise noted.\end{df}
+
+ We use an  example from our next class of groups all the time;
+in fact, most six-year-olds do as well, since it is used when
+telling time! Before we get to the example, we need some more
+definitions and some notation. Throughout the following discussion,
+assume $n$ is a fixed positive integer.
+
+\begin{df}{Definitions and notation} We say integers $a$ and $b$ are \textit{congruent
+modulo [or mod] $n$} if $n$ divides $a-b$. If $a$ and $b$ are
+congruent mod $n$, we write $a \equiv b\, \pmod{n}$.\end{df}
+
+\begin{example}{cong.ex} $1, 7, 13,$ and $-5$ are all congruent mod $6$. \end{example}
+
+The following is a profoundly useful theorem; it's so
+important, it has a special name. We omit the proof of this theorem,
+but direct interested readers to for, instance, p. 5 in \cite{NZM}.
+
+\begin{df}{The Division Algorithm} Let $n\in \Z^+$ and let $a$ be any
+integer.  Then there exist unique integers $q$ and $r$, with $0\leq
+r <n$, such that $a=qn+r$.\footnote{This is actually a special case
+of a more general theorem, which states that given any integers $n$
+and $a$, there exist unique integers $q$ and $r$, with $0\leq
+r<|n|$, such that $a=qn+r$.}\end{df}
+
+ It follows that for each positive integer $n$ and integer $a$,
+there exists a unique element $R_n(a)$ (the $r$ in the above
+theorem) of the set $\{0,1,2,\ldots, n-1\}$ such that $a$ is
+congruent to $R_n(a)$ modulo $n$. For example, $R_3(4)=1$, $R_3(0)=0$,
+$R_3(17)=2$, and $R_3(-5)=1$.
+
+
+\begin{df}{Definition} $R_n(a)$ is the \textit{remainder} when we divide $a$ by $n$. (Note: You were probably already familiar with the remainder when you divide a \textbf{positive} integer by $n$.)\end{df}
+
+\begin{df}{Definition} We define \textit{addition modulo $n$}, $+_n$, on $\Z$ by,
+for all $a,b\in \Z$,
+$$a+_n b=R_n(a+b),$$ that is, the unique element of $\{0,1,\ldots, n-1\}$ that's congruent to the integer $a+b$ modulo $n$.\end{df}
+
+
+\begin{df}{Remark} Addition mod 24 is what we use to tell
+time!\end{df}
+
+ The set $\{0,1,2,\ldots, n-1\}$ of remainders when dividing by $n$ is so important we give it a
+special notation.
+
+
+\begin{df}{Notation} We denote by $\Z_n$ the set $\{0,1,2,\ldots,n-1\}$.\end{df}
+
+Throughout this course, if we are discussing a set $\Z_n$, you
+should assume $n\in \Z^+, n\geq 2$, unless otherwise noted.
+(Though it will rarely come up for us, we may occasionally make
+reference to $\Z_1=\{0\}$.)
+
+\bigskip
+\warn{\begin{center}Note that by our definition of $\Z_n$, the
+integer $n$ itself is \underline{not} in $\Z_n$!\end{center}}
+
+
+ We are now ready to consider our next type of group.
+
+\begin{example}{} For each $n\in \Z^+$, $\<\Z_n,+_n\>$ is a group, called the \textit{cyclic group of order $n$} (we will see later why we use the word ``cyclic" here).
+This group is abelian and of order $n$.
+
+\begin{proof} We first check that $\Z_n$ is closed under $+_n$. Note
+that by the definition of $+_n$, $a+_nb \in \Z_n$ for each
+$a,b\in \Z$.  Thus, $a+_nb \in \Z_n$ for each $a,b\in \Z_n$.
+
+We next check that $\Z_n$ under $+_n$ satisfies the three group
+axioms. Note that since addition is commutative on $\Z$, $$a+_n
+b =R_n(a+b)=R_n(b+a)=b+_n a$$ for all $a,b\in \Z_n$. Again, a
+simpler way of stating this is that commutativity of $+_n$ on
+$\Z_n$ is inherited from the commutativity of addition on $\Z$.
+One nice result of this is that since $+_n$ is commutative on
+$\Z_n$, we have less to check when verifying group axioms
+$\G_2$ and $\G_3$.
+
+\begin{enumerate}
+\item[$\G_1$:]  Let $a,b,c\in \Z_n$.  We want to show that
+    $(a+_n b)+_n c = a +_n(b+_n c)$. Now,
+\begin{comment}
+\begin{eqnarray*}
+(a+_n b)+_n c&=& R_n(a+b)+_n c\\
+&\equiv& (R_n(a+b)+c) \pmod n \\
+&\equiv& ((a+b)+c) \pmod n\\
+&\equiv& (a+(b+c)) \pmod n\\
+&\equiv& (a+R_n(b+c)) \pmod n \\
+&\equiv& a+_n (b+_n c) \pmod n.
+\end{eqnarray*}
+\end{comment}
+\begin{align*}
+(a+_n b)+_n c&=R_n(a+b)+_n c&&\\
+&\equiv R_n(a+b)+c&& \pmod n \\
+&\equiv (a+b)+c&&  \pmod n\\
+&\equiv a+(b+c)&&  \pmod n\\
+&\equiv a+R_n(b+c)&&  \pmod n \\
+&\equiv a+_n (b+_n c)&& \pmod n.
+\end{align*}
+
+
+So $(a+_n b)+_n c$ and $a+_n (b+_n c)$ are congruent mod $n$.  Since
+both of these values are in $\{0,1,\ldots, n-1\}$, this implies that
+they are equal, as desired.
+\item[$\G_2$:] Clearly, $0\in \Z_n$ acts as an identity element
+    under $+_n$, since $$0+_n a =R_n(0+a)=R_n(a)$$ for each
+    $a\in \Z_n$.
+\item[$\G_3$:] Let $a\in \Z_n$.  If $a=0$, then clearly $a$ has
+    inverse $0\in \Z_n$ since $0+_n 0 = 0$. If $a\neq 0$, then
+    the element $n-a\in \Z_n$ is an inverse for $a$ since
+    $$a+_n(n-a)=R_n(a+(n-a))=R_n(n)=0.$$
+ \end{enumerate}
+
+Since $+_n$ is commutative on $\Z_n$, $\Z_n$ is an abelian  group under $+_n$.  Finally, we already know that $|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n$.\end{proof}
+\end{example}
+
+\begin{df}{Remark} In practice, we often omit the
+subscript $n$ and just write $+$ when discussing addition
+modulo $n$ on $\Z_n$.\end{df}
+
+\warn{\begin{center}Do not confuse $n\Z$ and $\Z_n$! They are very different as sets and as groups.\end{center}}
+
+
+\begin{example}{} In the group $\<\Z_8,+\>$ (where, as indicated by our above remark, $+$ means addition modulo $8$), we have, for instance, $3+7=2$ and $7+7=6$.
+The numbers 2 and 6 are each other's inverse, and $7^{-1}=1$. The number $0$ has inverse $0$ (it can't be $8$, since $8\not\in \Z_8$!). \end{example}
+
+\begin{df}{Definition} For $n\in \Z^+$,  we define binary operation $\cdot_n$ (\textit{multiplication modulo $n$}) on $\Z_n$ by $a\cdot_n b = r_n(a)$, the remainder when $ab$ is divided by $n$.\end{df}
+
+\begin{df}{Remark} $\Z_n$ is never a group under $\cdot_n$ (do you see why?). \end{df}
+
+But we can consider the following
+
+\begin{df}{Definition} For $n\in \Z^+$,
+let $\Z_n^{\times} = \{a\in \Z_n\,:\,\gcd(a,n)=1\}$.\end{df}
+
+\begin{example}{}
+$\<\Z_n^{\times},\,\cdot\, \>$ is a group under multiplication.  We omit the proof. \end{example}
+
+We end by considering a few more examples.
+
+\begin{example}{} Let $F$ be the set of all functions from $\fatr$ to $\fatr$, and define \textit{pointwise addition} $+$ on $F$ by
+$$(f+g)(x)=f(x)+g(x)$$ for all $f,g\in F$ and $x\in \fatr$. We claim that $F$ is a group under pointwise
+addition. (For variety, in this proof we don't explicitly refer
+to $\G_1$--$\G_3$, though we certainly do verify they hold.)
+Indeed, if $f,g\in F$ then clearly $f+g$ is also a function
+from $\fatr$ to $\fatr$, so $F$ is closed under $+$.
+
+Next, let $f,g,h\in F$.  Then for all $x\in \fatr$,
+\begin{align*}
+((f+g)+h)(x)&=(f+g)(x)+h(x)&&\\
+&=((f(x)+g(x))+h(x)&&\\
+&=f(x)+(g(x)+h(x))&&\text{(since addition is associative on
+$\fatr$)}\\
+&=f(x)+(g+h)(x)&&\\
+&=(f+(g+h))(x)&&.\end{align*} Note
+that the key fact used in this argument is that $f(x)$, $g(x)$ and
+$h(x)$ all lie in $\fatr$, and addition is associative on $\fatr$.
+When you get used to such arguments, it is sufficient to say that
+associativity of $+$ on $F$ is \textit{inherited} from the
+associativity of addition on $\fatr$.
+
+Next, let $z:\fatr\to\fatr$ be the function $z(x)=0$ for all $x$.  Then for all $f\in F$ and $x\in \fatr$, $$(f+z)(x)=f(x)+z(x)=f(x)+0=f(x)=0+f(x)=z(x)+f(x)=(z+f)(x).$$ So $z$ is an identity element of $\<F,+\>$.
+
+Finally, let $f\in F$, and define $g\in F$ by $g(x)=-f(x)$ for all $x\in \fatr$.  It is easy then to see that $g$ is an inverse for $f$ in $F$.
+
+Hence, $F$ is a group under pointwise addition. Note that it is uncountably infinite and abelian. \end{example}
+
+\begin{example}{}The set $F$ is \textbf{not} a group under function composition (do you see why?). But if we define $B$ to be the set of all \textbf{bijections} from $\fatr$ to $\fatr$, then $B$ is a group under function composition. (Prove it!) $B$ is uncountably infinite and nonabelian. \end{example}
+
+\begin{example}{gpprod}
+Let $\<G_1,*_1\>$, $\<G_2,*_2\>$ , $\ldots$, $\<G_n,*_n\>$ be groups ($n\in \Z^+$).  Then the \textit{group product}
+$$G=G_1\times G_2\times \cdots \times G_n$$ is a group under the \textit{componentwise} operation $*$ defined by
+$$(g_1,g_2,\ldots, g_n)*(h_1,h_2,\ldots,h_n)=(g_1*_1h_1, g_2*_2h_2,\ldots, g_n*_nh_n)$$ for all $(g_1,g_2,\ldots, g_n),(h_1,h_2,\ldots,h_n)\in G$.
+
+\bigskip
+For instance, considering multiplication on $\fatr^*$, matrix multiplication on $GL(2,\fatr)$, and addition modulo $6$ on $\Z_6$, we have that $\<\fatr^*\times GL(2,\fatr) \times \Z_6,*\>$ is a group in which, for instance, $$\left(-1, \left[
+                                                                         \begin{array}{cr}
+                                                                           1 & 3 \\
+                                                                           0 & -1 \\
+                                                                         \end{array}
+                                                                       \right],
+                                                                       3\right)
+                                                                       *\left(\pi,
+                                                                       \left[
+                                                                         \begin{array}{cc}
+                                                                           2 & 1 \\
+                                                                           1 & 1 \\
+                                                                         \end{array}
+                                                                       \right],4\right)=\left(-\pi, \left[
+                                                                         \begin{array}{rr}
+                                                                           5 & 4 \\
+                                                                           -1 & -1 \\
+                                                                         \end{array}
+                                                                       \right],1\right).  $$
+                                                                       \end{example}
+
+\begin{example}{}
+A common example of a group product is the group $\Z_2^2$, equipped with componentwise addition modulo 2. \end{example}
+
+\begin{df}{Definition} The group $\Z_2^2$ is known as the \textit{Klein 4-group}.\footnote{Felix Klein was a German mathematician; you may have heard of him in relation to the Klein Bottle. You may see the group $\Z_2^2$ denoted by $V$, for ``Vierergruppe," the German word for "four-group".} \end{df}
+
+\section{Summaries of groups we've seen}
+When you see the following identified as groups, you should
+assume they are equipped with the following operations, unless
+otherwise. Throughout, assume $m,n\in \Z^+$.
+\begin{center}
+\begin{threeparttable}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|l|l|} \hline \textbf{Group(s)} &\textbf{Operation}&
+\textbf{Properties} \\\hline $\Z$, $\fatq$ & addition of numbers & countably
+infinite; abelian%; cyclic
+\\\hline $n\Z$ &  addition of numbers
+& countably infinite; abelian\tnote{*}%;cyclic
+\\\hline $\fatr$, $\fatc$ & addition of numbers&
+uncountable; abelian%; noncyclic
+\\\hline $\fatq^*$, $\fatq^+$ &
+multiplication of  numbers& countably infinite; abelian%;noncyclic
+\\\hline $\fatr^*$, $\fatr^+$, $\fatc^*$ &
+multiplication of  numbers& uncountable; abelian%; noncyclic
+\\\hline
+$\M_{m\times n}(\fatr), \M_n(\fatr)$ & matrix addition &
+uncountable; abelian%; noncyclic
+\\\hline $GL(n,\fatr), SL(n,\fatr)$ &
+ matrix multiplication& uncountable; nonabelian\tnote{$\dagger$}%;noncyclic
+\\\hline $\Z_n$ & addition mod $n$  & finite; abelian%;cyclic
+\\\hline $\Z_2^2$& componentwise addition mod 2& finite; abelian%; noncyclic
+\\\hline $F$& pointwise addition& uncountable; abelian
+\\ \hline$B$&composition&uncountable; nonabelian\\
+\hline
+\end{tabular}
+\begin{tablenotes}
+\item[*]\small Unless $n=0$.
+\item[$\dagger$]\small Unless $n=1$.
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+
+
+\pagebreak
+\section{Exercises, Part II}
+
+\begin{exercise}[ID=2A]
+\tf
+
+\begin{enumerate}
+\item For every positive integer $n$, there exists a group of order $n$.
+
+\item For every integer $n\geq 2$, $\Z_n$ is abelian.
+
+\item Every abelian group is finite.
+
+\item For every integer $m$ and integer $n>2$, there exist infinitely many integers $a$ such that $a$ is congruent to $m$ modulo $n$.
+
+\item A binary operation $*$ on a set $S$ is commutative if and only if there exist $a,b\in S$ such that $a*b=b*a$.
+
+\item If $\<S, *\>$ is a binary structure, then the elements of $S$ must be numbers.
+
+\item If $e\in \<S,*\>$ is an identity element of $S$, then $e$ is an idempotent in $S$ (that is, $e*e=e$).
+
+\item If $s\in \<S,*\>$ is an idempotent, then $s$ must be an identity element of $S$.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+
+
+\noindent
+\begin{inparaenum}[(a)]
+\item T \hfill \item T  \hfill \item  F  \hfill \item T  \hfill \item F  \hfill \item F  \hfill \item T   \hfill\item F
+\end{inparaenum}
+
+\end{solution}
+
+
+\begin{exercise}[ID=2F]
+Let $G$ be the set of all functions from $\Z$ to $\fatr$.  Prove that pointwise multiplication on $G$ is commutative. (\textbf{Note.} To prove that two functions, $h$ and $j$, sharing the same domain $D$ are equal, you need to show that $h(x)=j(x)$ for every $x\in D$.)
+\end{exercise}
+
+\begin{solution}[print=true]
+Let $f,g\in G$.  Then for every $x\in \Z$,
+$$(fg)(x)=f(x)g(x)=g(x)f(x),$$
+since $f(x), g(x)\in \fatr$ and multiplication of real numbers is commutative. Since $g(x)f(x)=(gf)(x)$,
+$fg=gf$, and so pointwise multiplication on $G$ is commutative.
+\end{solution}
+
+\begin{exercise}[ID=2J]
+Decide which of the following binary structures are groups.  For each, if the binary structure \textit{isn't} a group, prove that. (Remember, you should \textit{not} state that inverses do or do not exist for elements until you have made sure that the structure contains an identity element!) If the binary structure {\it is} a group, prove that.
+
+\begin{enumerate}
+\item $\fatq$ under multiplication
+\item $\M_2(\fatr)$ under addition
+\item $\M_2(\fatr)$ under multiplication
+\item $\fatr^+$ under $*$, defined by $a*b=\sqrt{ab}$ for all $a,b\in \fatr^+$
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item $\fatq$ isn't a group under multiplication since $0\in \fatq$ has no inverse.
+\item
+\begin{enumerate}
+\item[$\G_1$:] Matrix multiplication is always associative.
+\item[$\G_2$:] The zero matrix in $\M_2(\fatr)$ acts as an additive identity element.
+\item[$\G_3$:] Let $A\in \M_2(\fatr)$.  Then $-A\in \M_2(\fatr)$ is an inverse for $A$ under addition.
+\end{enumerate}
+Thus, $\M_2(\fatr)$ is a group under addition.
+
+\item $\M_2(\fatr)$ isn't a group under multiplication since the zero matrix has no inverse.
+\item $1*(4*9)=1*6=\sqrt{6}$ while $(1*4)*9=2*9=\sqrt{18}$, so $*$ isn't associative.  Thus, $\fatr^+$ isn't a group under $*$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}[ID=2K]
+Give an example of an abelian group containing 711 elements.
+\end{exercise}
+
+\begin{solution}[print=true]
+$\Z_{711}$. (Other answers are possible.)
+\end{solution}
+
+
+
+\begin{exercise}[ID=2M]
+Let $n\in \Z$.   Prove that $n\Z$ is a group under the usual addition of integers. \textbf{Note:} You may use the fact that $\<n\Z,+\>$ is a binary structure if you provide a reference for this fact.
+\end{exercise}
+
+\begin{solution}[print=true]
+We know from Theorem \ref{nz} that $\<n\Z,+\>$ is a binary structure.
+
+\begin{enumerate}
+\item[$\G_1$:] $+$ is
+    associative on $n$, since it's associative on
+    $\Z$, and $n\Z \subseteq \Z$.
+
+\item[$\G_2$:] Notice that
+    $0\in n\Z$ (since $0=n(0)$); 0 then clearly acts as
+    an identity element for $+$ in $n\Z$.
+
+\item[$\G_3$:] Let $x\in n\Z$, then $x=nm$ for some $m\in \Z$, so
+    $-x=n(-m)$ for $m\in \Z$, implying $-x\in n\Z$;
+    and clearly $-x$ acts as an inverse for $x$ in
+    $n\Z$.
+
+    \end{enumerate}Thus, $\<n\Z, +\>$ is a group.
+
+    \end{solution}
+
+\begin{exercise}[ID=2N]
+ Let $n\in \Z^+$. Prove that $SL(n,\fatr)$  is a group under matrix multiplication.
+\textbf{Note:} You may use the fact that $\<SL(n\fatr),\cdot\>$ is a binary structure if you provide a reference for this fact.
+\end{exercise}
+
+
+\begin{solution}[print=true]
+We know from Theorem \ref{glsl} that $\<SL(n,\fatr),\cdot\>$ is a binary structure.
+
+\begin{enumerate}
+\item[$\G_1$:] Matrix multiplication is always associative.
+
+\item[$\G_2$:] Since $\det I_n=1$, $I_n$ is in $SL(n,\fatr)$, and clearly acts as an identity element in $SL(n,\fatr)$.
+
+\item[$\G_3$:] Let $A\in SL(n,\fatr)$.  Since $\det A=1\neq 0$, $A$ has an inverse matrix $A^{-1}$ in $GL(n, \fatr)$.  $A^{-1}$ is in $SL(n,\fatr)$ since $$\det(A^{-1})=\frac{1}{\det A}=1/1=1.$$ So $A$ has an inverse in $SL(n,\fatr)$.
+\end{enumerate}
+Thus, our proof is complete.
+\end{solution}
+
+
+\begin{exercise}[ID=2P]
+\begin{enumerate}
+\item List three distinct integers that are congruent to $6$ modulo $5$.
+\item List the elements of $\Z_5$.
+\item Compute: \begin{enumerate}
+\item $4+5$ in $\Z$;
+\item $4+5$ in $\fatq$;
+\item $4+_65$ in $\Z_6$;
+\item the inverse of $4$ in $\Z$;
+\item the inverse of $4$ in $\Z_6$.
+\end{enumerate}
+\item Why does it not make sense for me to ask you to compute $4+_3 2$ in $\Z_3$? \textbf{Please answer this using a complete, grammatically correct sentence.}
+
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item $11, 1, -4$. (Other answers are possible.)
+\item  $\Z_5=\{0,1,2,3,4\}$
+\item (i) 9 \quad (ii) 9 \quad (iii) 3 \quad (iv) $-4$ \quad (v) 2
+\item It doesn't make sense because $4\not\in \Z_3$.
+\end{enumerate}
+\end{solution}
+
+
+\begin{exercise}[ID=2O]
+Let $G$ be a group with identity element $e$.  Prove that if every element of $G$ is its own inverse, then $G$ is abelian.
+
+\end{exercise}
+
+\begin{solution}[print=true]
+Let $a,b\in G$.  Then
+\begin{align*}ab&=(ab)^{-1}&&\text{(since $ab$
+is its own inverse)}\\
+&=b^{-1}a^{-1}&&\\
+&=ba &&\text{(since $b$ and $a$ are their own
+inverses)}.\end{align*} So $G$ is abelian.
+\end{solution}
+
+
+\begin{exercise}[ID=2R, subtitle=(Extra Credit)]
+Let $G$ be a group.  The subset $$Z(G):=\{z \in G\,:\, zg=gz \mbox{ for all }g\in Z(G)\}$$ of $G$ is called the \textit{center} of $G$. In other words, $Z(G)$ is the set of all elements of $G$ that commute with every element of $G$.
+Prove that $Z(G)$ is closed in $G$. %NOTE: This is actually proved in the chapter on Factor Groups.
+\end{exercise}
+
+\begin{solution}[print=true]
+Let $z_1, z_2\in Z(G)$.  Let $z=z_1z_2$; we want to
+show that $z$ is in $H$: that is, we want to show that for every $g\in G$,
+$zg=gz$.  But for every $g\in G$,
+\begin{center}
+\begin{align*}
+zg&=(z_1z_2)g&& \text{(using the definition of $z$)}\\
+&=z_1(z_2g)&& \text{(since $G$'s operation is associative)}\\
+&=z_1(gz_2)&& \text{(since $z_2\in Z(G)$)}\\
+&=(z_1g)z_2 && \text{(since $G$'s operation is associative)}\\
+&=(gz_1)z_2 && \text{(since $z_1\in Z(G)$)}\\
+&=g(z_1z_2)&&  \text{(since $G$'s operation is associative)}\\
+&=gz && \text{(using the definition of $h$)}.
+\end{align*}\end{center}
+Thus, $Z(G)$ is closed in $G$.
+
+\end{solution} 

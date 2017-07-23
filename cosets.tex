@@ -1,0 +1,731 @@
+\chapter{The Wonderful World of Cosets}\label{coslag}%\footnote{See Section 10, and parts of Section 0, in \cite{F}.}
+
+We have already seen one way we can examine a complicated group $G$:
+namely, study its subgroups, whose group structures are in some
+cases much more directly understandable than the structure of $G$
+itself.  But if $H$ is a subgroup of a group $G$, if we only study
+$H$ we lose all the information about $G$'s structure ``outside" of
+$H$.  We might hope that $G-H$ (that is, the set of elements of $G$
+that are not in $H$) is also a subgroup of $G$, but we immediately
+see that cannot be the case since the identity element of $G$ must
+be in $H$, and $H\cap (G-H)=\emptyset$.  Instead, let's ask how we
+can get at some understanding of $G$'s entire structure using a
+subgroup $H$?  It turns out we use what are called \textit{cosets} of
+$H$; but before we get to those, we need to cover some preliminary
+material.
+
+\section{Partitions of and equivalence relations
+on sets}
+
+\begin{df}{Definitions} Let $S$ be a set.  Then a collection of subsets
+$P=\{S_i\}_{i\in I}$ (where $I$ is some index set) is a \textit{partition} of $S$ if each $S_i \neq \emptyset$ and each element
+of $S$ is in exactly one $S_i$.  In other words,
+$P=\{S_i\}_{i\in I}$ is a partition of $S$ if and only if:
+\begin{center}
+\parbox{3in}{
+\begin{enumerate}
+\item[(i)] each $S_i\neq \emptyset$;
+\item[(ii)] the $S_i$ are mutually disjoint (that is, $S_i\cap S_j =
+\emptyset$ for $i\neq j \in I$); and
+\item[(iii)] $\d{S=\bigcup_{i\in I}S_i}$.
+\end{enumerate}}\end{center}
+
+\noindent The $S_i$ are called the \textit{cells} of the partition.
+\end{df}
+
+\begin{example}{}\ \begin{enumerate}
+\item The set $\{1,2,3\}$ has 5 partitions: namely,
+$$\{\{1,2,3\}\},\{\{1,2\},\{3\}\}, \{\{1,3\},\{2\}\},\{\{2,3\},\{1\}\} \mbox{ and } \{\{1\},\{2\},\{3\}\}.$$
+
+The first partition we've mentioned has one cell, the next three have
+two cells, and the last one has three cells.
+
+\item The following is a 2-celled partition of $\Z$: $$\{\{x\in \Z\,:\ x \mbox{
+is even}\},\{x\in \Z\,:\, x\mbox{ is odd}\}\}. $$
+\end{enumerate}
+\end{example}
+
+ The number of partitions of a finite set of $n$ elements gets
+large very quickly as $n$ goes to infinity. Indeed, there are 52
+partitions of a set containing just 5 elements!\footnote{The total
+number of partitions of an $n$-element set is the \textit{Bell number},
+$B_n$. There is no trivial way of computing $B_n$, in general,
+though the $B_n$ do satisfy the relatively simple recurrence
+relation $$B_{n+1}=\sum_{k=0}^n \binom{n}{k} B_k,$$ for each $n\geq 1$.}  But our goal here is not to count the number of
+partitions of a given set, but rather to use particular partitions
+of a group $G$ to help us study that group's structure.  We turn now
+to our next definition.
+
+\begin{df}{Definitions and notation} Let $S$ be a set.  Then a \textit{relation} on $S$ is a
+subset $\R$ of $S\times S$.\footnote{More generally, if $S$ and
+$T$ are sets, a \textit{relation between $S$ and $T$} is a subset
+of $S \times T$. We will not, however, in our class consider
+the cases in which $S$ and $T$ are different sets.} If $\R$ is
+a relation on $S$ and $x,y\in S$, then we say $x$ is \textit{related to} $y$, and write $x\R y$, if $(x,y)\in \R$;
+otherwise, we say that $x$ is \textit{not related} to $y$, and
+write $x \not {\hspace{-4pt}\R} y$.\end{df}
+
+
+\begin{df}{Remark} If there is a conventional notation used to denote
+a particular relation on a set, we will usually use that notation,
+rather than $\R$, to denote the relation.\end{df}
+
+  We are already familiar with some relations on
+$\fatr$. Common such relations are $=$, $\neq$, $<$, $\leq$, $>$,
+and $\geq$; they contain exactly the elements we'd expect them to
+contain.
+
+\begin{example}{}\
+\begin{enumerate}
+\item $<$ is a relation on $\fatr$ that contains, for instance, $(3,4)$ but not
+$(3,3)$ or $(4,3)$; $\leq$ is a relation on $\fatr$ that contains
+$(3,4)$ \textbf{and} $(3,3)$ but not $(4,3)$.
+
+\item Given any $n\in \Z^+$, congruence modulo $n$, denoted $\equiv_n$, is a
+relation on $\Z$, where $\equiv_n$ is defined to be $\{(x,y) \in \Z
+\times \Z \,:\, n \mbox{ divides }x-y\}$.
+
+\item We can define a relation $\D$ on $C^1$ (the set of
+    all differentiable functions from $\fatr$ to $\fatr$
+    whose derivatives are continuous) by declaring that
+    $(f,g)\in C^1 \times C^1$ is in $\D$ if and only if
+    $f'=g'$. \end{enumerate}
+\end{example}
+
+\begin{df}{Definitions} Let $\R$ be a relation on a set $S$. Then $\R$ is said to
+be:
+
+ \textit{reflexive on $S$} if $x\R x$ for every $x\in S$;\\
+\indent \textit{symmetric on $S$} if whenever $x,y\in S$ with $x\R y$
+we also have $y\R x$; and \\ \indent \textit{transitive on $S$} if
+whenever $x,y,z\in S$ with $x\R y$ and $y\R z$ we also have $x\R z$.
+
+
+\noindent
+ A relation that is reflexive,
+symmetric, \textbf{and} transitive is called an \textit{equivalence
+relation}.\end{df}
+
+
+\begin{df}{Remarks}\
+
+\begin{enumerate} \item You can think of an
+equivalence relation on a set $S$ as being a ``weak version" of
+equality on $S$.  Indeed, $=$ is an equivalence relation on any set
+$S$, but it also has a very special property that most equivalence
+relations \textbf{don't} have: namely, no element of $S$ is related to
+\textbf{any other element} of $S$ under $=$.
+
+\item If we know, or plan to prove, that a relation is an equivalence
+relation, by convention we will often denote the relation by $\sim$,
+rather than by $\R$.
+\end{enumerate}\end{df}
+
+
+\begin{example}{}\
+\begin{enumerate}
+\item $<$ is \textbf{not} an equivalence relation on $\fatr$ because
+it is not reflexive: for instance, $3\not< 3$. $\leq$ is also \textbf{not} an equivalence relation on $\fatr$, since even though it is
+reflexive, it's not symmetric: indeed, $3\leq 4$ but $4\not\leq 3$.
+
+\item Given any $n\in \Z^+$, $\equiv_n$ \textbf{is} an equivalence relation on $\Z$.  \red{The proof of this is left as an exercise for the reader.}
+
+\item The relation $\D$ on $C^1$ discussed above (that
+    $f\D\, g$ iff $f'=g'$) \textbf{is} an equivalence relation
+    on $C^1$.
+
+\item $\simeq$ \textbf{is} an equivalence relation on any set of
+groups. This follows from Theorem \ref{groupisoequiv}.
+
+\item Define relation $\R$ on $\Z$ by $x\R y$ if and only if $xy
+\geq 0$.  Is $\R$ an equivalence relation on $\Z$?  Well, for every
+$x\in \Z$, $x^2\geq 0$, so $\R$ is reflexive.  Moreover, if $x,y\in
+\Z$ with $xy \geq 0$, then $yx \geq 0$; so $\R$ is symmetric.  But
+$\R$ is \textbf{not} transitive: indeed, $3,0,-4\in \Z$ with $3(0)=0
+\geq 0$ and $0(-4)=0\geq 0$, so $3\R 0$ and $0 \R -4$; but
+$3(-4)=-12 \not \geq 0$.  So $\R$ isn't transitive, and hence is
+\textbf{not} an equivalence relation. \end{enumerate}
+\end{example}
+
+\begin{df}{Definition} Given an equivalence relation $\sim$ on a set $S$, for
+each $x\in S$ we define the \textit{equivalence class of $x$ under
+$\sim$} to be
+$$[x]=\{y\in S\,:\, y\sim x\}.$$ These sets $[x]$ ($x\in S$) are
+called the \textit{equivalence classes of $S$ under $\sim$}.\end{df}
+\begin{comment}the set of distinct equivalence classes of $S$ under
+$\sim$ is typically denoted by $S/ \sim$.\end{comment}
+
+\begin{df}{Remark} Note that, by reflexivity of $\sim$, $x\in [x]$
+for every $x\in S$.\end{df}
+
+
+  We have now the following Very Important
+Lemma:
+\begin{lem}\label{vil.lem} Let $\sim$ be an equivalence relation on set $S$.  Then for $x,y\in S$, the following are equivalent:
+\begin{center}
+(i) $y\in [x]$;\\ (ii) $[x]=[y]$; \\ (iii) $x\in [y]$.
+\end{center}
+\end{lem}
+
+\begin{proof} For (i) $\Leftrightarrow$ (ii): Let $x, y\in S$.  If $y\in
+[x]$, then $y \sim x$, so for every $z\in [y]$ (that is, for every
+$z$ in $S$ with $z\sim y$), we have, by transitivity, $z\sim x$, so
+$z\in [x]$. On the other hand, by the symmetry of $\sim$ we have
+$x\sim y$; so for every $z\in [x]$, we have, again by transitivity,
+that $z\in [y]$. Thus, $[x]=[y]$. Conversely, if $[x]=[y]$, then
+since $y\in [y]=[x]$.
+
+\indent The proof of (ii) $\Leftrightarrow$ (iii) is nearly
+identical.\end{proof}
+
+\begin{df}{Remark and definition.} In many cases there are
+many distinct elements $x,y\in S$ with $[x]=[y]$; thus, there
+are usually many different ways we could denote a particular
+equivalence class of $S$ under $\sim$. Element $y\in S$ is
+called a \textit{representative} of class $X$ if $y\in X$.\end{df}
+
+\begin{example}{}\ \begin{enumerate}\item Consider the equivalence relation $\equiv_2$ on
+$\Z$.  Under this relation, $[0]=\{0,\pm 2, \pm 4, \ldots\}$
+and $[1]=\{\ldots, -3, -1, 1, 3, \ldots\}$; in fact, if we let
+$E$ be the set of all even integers and $O$ the set of all odd
+integers, then for $x\in \Z$, $[x]=E$ if $x$ is even and $O$ if
+$x$ is odd. Thus, the set of all equivalence classes of $\Z$
+under $\equiv_2$ is the 2-element set $\{E,O\}$: every even
+integer is a representative of $E$, while every odd integer is
+a representative of $O$.
+
+\item For $f\in C^1$, the equivalence class of $f$ under $\D$
+    (defined above)
+    is
+    the set of all functions in $C^1$ of the
+    form $g(x)=f(x)+c$, where $c\in \fatr$.
+
+\item Let $A=\{a,b,c\}$, and define $\sim$ on the power set $P(A)$ of $A$ by $X\sim Y$ if
+and only if $|X|=|Y|$. It is straightforward to show that $\sim$ is
+an equivalence relation on $P(A)$, under which $P(A)$ has exactly 4
+distinct equivalence classes:
+$$[\emptyset]=\{\emptyset\},$$
+$$[\{a\}]=[\{b\}]=[\{c\}]=\{\{a\},\{b\}, \{c\}\},$$
+$$[\{a,b\}]=[\{a,c\}]=[\{b,c\}]=\{\{a,b\},\{a,c\},\{b,c\}\}, \mbox{ and }$$
+$$[A]=\{A\}.$$
+\end{enumerate} \end{example}
+
+
+\begin{center}\fbox{\begin{minipage}{380pt
+}\begin{center}\begin{minipage}{360pt}
+\medskip Notice that the complete set
+$\{E,O\}$ of distinct equivalence classes of $\Z$ under
+$\equiv_n$ is a partition of $\Z$, and the complete set
+$\{[\emptyset],[\{a\}],[\{a,b\}],[A]\}$ of distinct equivalence
+classes of $P(A)$ under $\sim$ is a partition of $P(A)$. This
+is not a coincidence! It turns out that equivalence relations
+and partitions go hand in hand. \smallskip \end{minipage}\end{center}\end{minipage}}\end{center}
+
+\begin{thm}\label{part.quiv} Let $S$ be a set.  Then:
+
+\begin{enumerate}
+\item[(i)] If $\sim$ is an equivalence relation on $S$,
+    then the set of all equivalence classes of $S$ under
+    $\sim$ is a partition of $S$; and
+\item[(ii)] If $P$ is a partition of $S$, then the relation on $S$
+defined by
+\begin{center}$x\sim y$ if and only $x$ is in the same
+cell of $P$ as $y$ \end{center} is an equivalence relation on $S$.
+\end{enumerate}
+Notice that in each case, the cells of the partition are the
+equivalence classes of the set under the corresponding equivalence
+relation.
+\end{thm}
+
+\begin{proof} For (i): Let $\sim$ be an equivalence relation on $S$.
+Clearly, the equivalence classes of $S$ under $\sim$ are
+nonempty sets whose union is $S$. Thus, it suffices to show $X
+\cap Y =\emptyset$ for each pair of equivalence classes $X\neq
+Y$ of $S$ under $\sim$.  Let $X,Y$ be equivalence classes of
+$S$ under $\sim$ that are NOT disjoint.  Then there exists an
+element $z\in X\cap Y$. Then by Lemma \ref{vil.lem}, $[z]=X$
+and $[z]=Y$; so $X=Y$. Thus, if $X\neq Y$, then $X\cap Y
+=\emptyset$.
+
+For (ii), it is straightforward (almost silly!) to prove that
+$\sim$ is reflexive, symmetric, and transitive.\end{proof}
+
+\begin{example}{}\
+\begin{enumerate}\item For $n\in \Z^+$, the set of the equivalence classes of $\Z$ under $\equiv_n$ is
+the partition $\{[0],[1],\ldots,[n-1]\}$ of $\Z$. (The
+partition $\{E
+,O\}$ of $\Z$ discussed above is this partition when
+$n=2$.)
+\end{enumerate}
+\end{example}
+
+\section{Introduction to cosets and normal subgroups}
+
+Throughout this section, let $G$  be a group with subgroup $H$
+and consider two particular relations on $G$:
+\begin{center}$\siml$ defined by $a\siml b$ if and only if
+$a^{-1}b\in H$\end{center} and
+\begin{center}$\simr$ defined by $a\simr b$ if and only if
+$ab^{-1}\in H$.\end{center}
+
+\begin{thm}\label{simlreq} $\siml$ and $\simr$ are equivalence relations on $G$.
+\end{thm}
+
+\begin{proof}
+
+First, let $a\in G$.  Then $a^{-1}a=e\in H$,
+so $a\siml a$. Thus, $\siml$ is reflexive.
+
+Next, let $a,b\in G$ with $a\siml b$.  Then
+$a^{-1}b\in H$, so, since $H$ is a subgroup of $G$,
+$(a^{-1}b)^{-1}\in H$.  But
+$(a^{-1}b)^{-1}=b^{-1}(a^{-1})^{-1}=b^{-1}a$; thus, $b\siml a$, and so $\siml$ is symmetric.
+
+Finally, let $a,b,c\in G$ with $a\siml b$
+and $b\siml c$. Then $a^{-1}b$ and $b^{-1}c$ are in $H$.  Since
+$H$ is a subgroup of $G$, we must then have
+$(a^{-1}b)(b^{-1}c)\in H$; but $(a^{-1}b)(b^{-1}c)$ equals
+ $a^{-1}c$. Thus, $a\siml c$, and so $\siml$ is transitive.
+
+ Thus, $\siml$ is an equivalence relation on $G$. \red{The proof that $\simr$ is an equivalence relation is left as an exercise for the reader.} \end{proof}
+
+ Now, as equivalence relations, each of $\siml$ and $\simr$
+gives rise to a partition of $G$.  What are the cells of those
+partitions?
+
+\begin{df}{Definition} Given $a\in G$, we define $$aH =
+\{ah\,:\, h\in H\}$$ and
+$$Ha=\{ha\,:\,h\in H\}.$$ We call $aH$ and $Ha$, respectively, the \textit{left } and \textit{right cosets of $H$ containing
+$a$}.\end{df}
+
+\begin{thm}\label{[a]} Let $a\in G$.  Then under $\siml$, $[a]=aH$ while
+under $\simr$, $[a]=Ha$.
+\end{thm}
+
+\begin{proof} Let $b\in G$.  Then $b\siml a \Leftrightarrow a \siml b
+\Leftrightarrow a^{-1}b\in H \Leftrightarrow a^{-1}b=h$ for some
+$h\in H \Leftrightarrow b=ah$ for some $h\in H \Leftrightarrow b\in
+aH$. So under $\siml$ we have $[a]=aH$.  Similarly, under $\simr$ we
+have $[a]=Ha$.\end{proof}
+
+ We next summarize some facts about the left and right cosets of
+a subgroup $H$ of a group $G$:
+
+\begin{thm}\label{cosetfacts} Let $G$ be a group with $H\leq G$ and $a,b\in G$.
+\begin{enumerate}
+\item The left [right] cosets of $H$ in $G$ partition $G$.
+\item $$b\in aH \lra aH=bH \lra  a\in bH$$ and
+    $$b\in Ha \lra  Ha=Hb \lra  a\in
+    Hb.$$  In particular, $a\in H \lra aH=H \lra Ha=H$.
+\item $H$ is the only left or right coset of $H$ that is a \underline{subgroup}
+of $G$.
+\item $|aH|=|H|=|Ha|$.
+\end{enumerate}\end{thm}
+
+\begin{comment} VERSION WITH K
+\begin{thm}\label{cosetfacts} Let $G$ be a group with $H,K\leq G$ and $a,b\in G$.
+\begin{enumerate}
+\item The left [right] cosets of $H$ in $G$ partition $G$.
+\item $$b\in aH \lra aH=bH \lra  a\in bH$$ and
+    $$b\in Ha \lra  Ha=Hb \lra  a\in
+    Hb.$$  In particular, $a\in H \lra aH=H \lra Ha=H$.
+\item $H$ is the only left or right coset of $H$ that is a \underline{subgroup}
+of $G$.
+\item $|aH|=|H|=|Ha|$.
+\item If $K\leq G$ with $K\subseteq H$ then $aK=bK$ implies $aH=bH$.
+\end{enumerate}\end{thm}
+\end{comment}
+
+\begin{proof} Statements 1 and 2 hold because the left and right
+cosets of $H$ in $G$ are equivalence classes. Statement 3
+holds because no left or right coset of $H$ other than $H$
+itself can contain $e$, since the left [right] cosets of $H$
+are mutually disjoint. For Statement 4: Define $f\,:\,H\to aH$ by $f(h)=ah$. It is straightforward to show that $f$ is a bijection, so $|H|=|aH|$.  Similarly, $|Ha|=|H|$.\end{proof} \begin{comment} Finally, if $K\leq G$ with $K\subseteq
+H$ and $aK=bK$, then $b^{-1}a\in K\subseteq H$ so $a\in bH$,
+implying $aH=bH$.\end{comment}
+
+
+\begin{df}{Remark} We can use Statements 2 and 3, above, to save some
+time when computing left and right cosets of a subgroup of a
+group.\end{df}
+
+\begin{example}{s3.ex} Find the left and right cosets of $H=\<(12)\>$ in
+$S_3$.
+$$
+\begin{array}{l|l|l}
+a& aH & Ha\\ \hline
+e&H&H\\
+(12)&H&H\\
+(13)&\{(13)e,(13)(12)\}=\{(13),(123)\}&\{e(13),(12)(13)\}=\{(13),(132)\}\\
+(23)&\{(23)e,(23)(12)\}=\{(23),(132)\}&\{e(23),(12)(23)\}=\{(23),(123)\}\\
+ (123)&\{(13),(123)\} \mbox{ (since }(123)\in (13)H)&\{(23),(123)\} \mbox{ (since } (123)\in H(23))\\
+ (132)&\{(23),(132)\} \mbox{ (since } (132)\in(23)H)&\{(13),(132)\} \mbox{ (since } (132)\in H(13))
+\end{array}$$
+
+Thus, $\siml$ partitions $S_3$ into $\{H,\{(13),(123)\},\{(23),
+(132)\}\}$ and $\simr$ partitions $S_3$ into
+$\{H,\{(13),(132)\},\{(23), (123)\}\}$.
+\end{example}
+
+\begin{example}{d4.ex} Find the left and right cosets of $H=\<f\>$ in
+$D_4$.
+
+\red{This example is left as an exercise for the reader.} \end{example}
+
+We now draw attention to some very important facts:
+
+\warn{For $a,b\in G$:
+\begin{enumerate}
+\item In general, $aH \neq Ha$!
+\item $aH=bH$ does not necessarily imply $a=b$ or that there exists
+an $h\in H$ with $ah=bh$; similarly, $Ha=Hb$ does not necessarily
+imply $a=b$ or that there exists an $h\in H$ with
+$ha=hb$.\end{enumerate}
+}
+
+\begin{example}{} We saw above that in $S_3$ with $H=\<(12)\>$,
+$$(13)H=\{(13),(123)\} \neq \{(13),(132)\}=H(13).$$  Also,
+$(13)H=(123)H$ but $(13)e\neq (123)e$ and $(13)(12)\neq (123)(12)$.
+\end{example}
+
+ It turns out that subgroups $H$ for which $aH=Ha$ for all $a\in
+G$ will be very important to us.
+
+\begin{df}{Definition and notation} We say that subgroup $H$ of $G$ is \textit{normal} in $G$
+if $aH=Ha$ for all $a\in G$. We denote that fact that $H$ is
+normal in $G$ by writing $H\unlhd G$.\end{df}
+
+
+\begin{df}{Remarks}\
+
+ \begin{enumerate}
+
+\item If $H$ is normal in $G$, we may refer to the left and
+    right cosets of $G$ as simply \textit{cosets}.
+
+\item Of course, if $G$ is abelian, every subgroup of $G$ is normal in $G$.
+ But there can also be normal subgroups of nonabelian groups: for instance, the trivial and improper
+ subgroups of every group are normal in that group.
+\end{enumerate}
+
+\end{df}
+
+\begin{example}{} Find the cosets of $5\Z$ in $\Z$.
+
+Notice that in additive notation, the statement ``$a^{-1}b\in H$"
+ becomes $-a+b\in H$.  So for $a,b\in \Z$, $a\siml b$ if and only if $-a+b \in
+ 5\Z$; that is, if and only if $5$ divides $b-a$.  In other words, $a\siml b$ if and only if  $a\equiv_5 b$.  So
+ in this case, $\siml$ is just congruence modulo $5$.  Thus, the cosets of $5\Z$ in $\Z$ are
+\begin{align*}
+5\Z&=\{\ldots,-5,0,5,\ldots\}\\
+1+5\Z&=\{\ldots,-4, 1,
+ 6,\ldots\},\\
+ 2+5\Z&=\{\ldots,-3,2, 7,
+ \ldots\},\\
+ 3+5\Z&=\{\ldots,-2,3, 8,
+\ldots\},\\
+ 4+5\Z&=\{\ldots,-1, 4, 9,
+\ldots\}.\end{align*}
+Do you see how this example would
+generalize for $n\Z$ ($n \in \Z^+$) in $\Z$?
+\end{example}
+
+\begin{example}{} Find the cosets of $H=\<12\>$ in $4\Z$.
+
+They are \begin{align*} H&=\{\ldots, -12,0,12\ldots\},\\ 4+H &=
+\{\ldots,-8,4,16,\ldots\},\\ 8+H&=\{\ldots, -4,8,20,\ldots\}.
+\end{align*}
+\end{example}
+
+\begin{example}{z6.ex} Find the cosets of $H=\<4\>$ in $\Z_{12}$.
+
+They are \begin{align*} H&=\{0,4,8\},\\ 1+H &= \{1,5,9\},\\
+2+H&=\{2,6,10\}\\3+H&=\{3,7,11\}.
+\end{align*}
+
+\end{example}
+
+ We now consider the set of all left cosets of
+a subgroup of a group. (Note: There are analogous versions of
+what follows using right cosets, but we relegate any discussions
+of that to footnotes.)
+
+\begin{df}{Notation and terminology} We let $G/H$ denote the set of
+all left cosets of subgroup $H$ in $G$. We read $G/H$ as ``$G$
+mod $H$." \footnote{We denote the set of all right cosets of subgroup $H$ in $G$ by $H\backslash G$.}\end{df}
+
+\section{The index of a subgroup and Lagrange's Theorem}
+
+\begin{df}{Definition} We define the \textit{index of $H$ in $G$}, denoted $(G:H)$,
+to be the cardinality of $G/H$. \footnote{Even though we need not have $aH=Ha$ for all $a\in G$, we do always have $|G/H|=|H\backslash G|$.}\end{df}
+
+ Note that if $G$ is finite then $(G:H)$ must be finite; however,
+we see below that if $G$ is infinite then $(G:H)$ could be finite or
+infinite.
+
+\begin{example}{} If $(\fatr:\Z)$ were finite, then we'd be able to
+write $\fatr$ as a finite union of countable sets, implying that
+$\fatr$ is countable---which it isn't.  Thus, $(\fatr:\Z)=\infty$.
+\end{example}
+
+\begin{example}{} Since $\<i\>=\{i,-1,-i,1\}$ is a finite subgroup
+of $C^*$ and $C^*$ is infinite, we must have that $(C^*:\<i\>)$ is
+infinite.  However, $(C^*:C^*)=1$. \end{example}
+
+\begin{example}{indices.ex}  Referring to our previous examples, we have:
+$$\begin{array}{cl} &(S_3:\<(12)\>)=3,\\
+&(D_4:\<f\>)=4, \\
+&(\Z:5\Z)=5,\\
+&(4\Z:12\Z)=3,\\
+\mbox{and }& (\Z_{12}:\<4\>)=4.
+\end{array}$$
+
+Letting $d,n\in \Z^+$ with $d$ dividing $n$, we can generalize
+the some of the above examples, obtaining:
+$$\begin{array}{cl}
+& (d\Z:n\Z)=n/d \mbox{\hspace{10pt} (special case: } (\Z:n\Z)=n)\\
+\mbox{and } & (\Z_n:\<d\>)=d.
+\end{array}$$
+\end{example}
+
+ Notice that in the cases in which $G$ is finite,
+$(G:H)=|G|/|H|$. This makes sense, since the left cosets of $H$ in $G$ partition $G$, and each left coset has cardinality $|H|$.
+
+ Since the left cosets of a subgroup $H$ of a group $G$
+partition $G$ and all have the same cardinality, we have the
+following two theorems.  The first is known as \textit{Lagrange's
+Theorem}.\footnote{Named after the French mathematician Joseph-Louis Lagrange.}
+
+\begin{thm}\label{}\textbf{(Lagrange's Theorem)} If $G$ is a finite
+group and $H\leq G$, then $|H|$ divides $|G|$.\end{thm}
+
+\begin{thm}\label{indexfin} If $G$ is a finite group and $H\leq G$, then
+$(G:H)=|G|/|H|$. \end{thm}
+
+\begin{df}{Remark}The converse of
+Lagrange's Theorem does \underline{not} hold. Indeed $A_4$ is a group of order 12 which contains no subgroup of
+order $6$ even though $6$ divides $|A_4|=12$.\end{df}
+
+ We end this chapter with two corollaries to Lagrange's Theorem.
+
+\begin{cor}\label{} Let $G$ be a finite group and let $a\in G$.  Then
+$a^{|G|}=e_G$.
+\end{cor}
+
+\begin{proof} Let $d=o(a)$. By Lagrange's Theorem, $d$ divides $|G|$, so
+there exists $k\in \Z$ with $|G|=dk$.  Then
+$a^{|G|}=a^{dk}=(a^d)^k=(e_G)^k=e_G.$
+\end{proof}
+
+\begin{cor}\label{pcyc} Let $G$ be a group of prime order.  Then $G$ is
+cyclic. It follows that for every prime $p$, there exists a unique
+group of order $p$, up to isomorphism.
+\end{cor}
+
+\begin{proof} \red{This proof is left as an exercise for the reader.} \end{proof}
+
+\pagebreak
+
+\section{Exercises}
+\begin{exercise}
+How many distinct partitions of the set
+    $S=\{a,b,c,d\}$ are there?  You do not need to list them.
+    (Yes, you can find this answer online.  But I recommend
+    doing the work yourself for practice working with
+    partitions!)
+\end{exercise}
+
+\begin{solution}[print=true]
+There are 15 distinct partitions of the set $\{a,b,c,d\}$:
+    $$\{\{a\},\{b\},\{c\},\{d\}\}, \{\{a,b\},\{c\},\{d\}\},\{\{a,c\},\{b\},\{d\}\},\{\{a,d\},\{b\},\{c\}\},$$
+    $$\{\{b,c\},\{a\},\{d\}\},\{\{b,d\},\{a\},\{c\}\},\{\{c,d\},\{a\},\{b\}\},$$
+    $$\{\{a,b\},\{c,d\}\},
+    \{\{a,c\},\{b,d\}\},\{\{a,d\},\{b,c\}\},$$
+    $$\{\{a,b,c\},\{d\}\},\{\{a,b,d\},\{c\}\},\{\{a,c,d\},\{b\}\},\{\{b,c,d\},\{a\},\},$$
+    $$\{\{a,b,c,d\}\}.$$
+
+\end{solution}
+
+\begin{exercise}
+\begin{enumerate}
+\item
+Let  $n\in \Z^+$. Prove that  $\equiv_n$ is an equivalence relation on $\Z$.
+\item The cells of the induced partition of $\Z$ are called
+    the \textit{residue classes} (or \textit{congruence classes}) {\it of $\Z$ modulo $n$}.  Using
+    set notation of the form $\{\ldots,\#, \#,\#,\ldots\}$
+    for each class, write down the residue classes of $\Z$
+    modulo $4$.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item First, for every $x \in \Z$, $n$
+    divides $0=x-x$; so $x\equiv_n x$ for every $x\in
+    \Z$.  Thus, $\equiv_n$ is reflexive.
+
+Next, let $x,y \in \Z$ with $x\equiv_n y$.  Then
+there exists some $q\in \Z$ with $x-y=nq$; so $y-x=n(-q)$.
+Since $-q\in \Z$, this shows us that $y\equiv_n x$.  Hence,
+$\equiv_n$ is symmetric.
+
+Finally, let $x,y$ and $z$ be in $\Z$ with $x\equiv_n
+y$ and $y\equiv_nz$.  Then there exist $q_1,q_2 \in \Z$ with
+$x-y=nq_1$ and $y-z=nq_2$.  Thus,
+$$x-z=(x-y)+(y-z)=nq_1+nq_2=n(q_1+q_2);$$ since $q_1+q_2 \in \Z$,
+this shows us that $x\equiv_n z$.  Thus, $\equiv_n$ is transitive.
+
+Hence, $\equiv_n$ is an equivalence relation, as desired.
+
+\item
+
+\begin{align*} \{\ldots,-8,-4,0,4,\ldots\},&
+\{\ldots,-7,-3,1,5,\ldots\},\\
+\{\ldots,-6,-2,2,6,\ldots\},&
+\{\ldots,-5,-1,3,7,\ldots\}\end{align*}
+\end{enumerate}
+\end{solution}
+
+\begin{exercise} Let $G$ be a group with subgroup $H$. Prove that $\simr$ is an equivalence relation on $G$.
+\end{exercise}
+
+\begin{solution}[print=true]
+First, let $a\in G$.  Then $aa^{-1}=e\in H$,
+so $a\simr a$. Thus, $\simr$ is reflexive.
+
+Next, let $a,b\in G$ with $a\simr b$.  Then
+$ab^{-1}\in H$, so, since $H$ is a subgroup of $G$,
+$(ab^{-1})^{-1}\in H$.  But
+$(ab^{-1})^{-1}=ba^{-1}$; thus, $b\simr a$, and so $\simr$ is symmetric.
+
+Finally, let $a,b,c\in G$ with $a\simr b$
+and $b\siml c$. Then $ab^{-1}$ and $bc^{-1}$ are in $H$.  Since
+$H$ is a subgroup of $G$, we must then have
+$(ab^{-1})(bc^{-1})\in H$; but $(ab^{-1})(bc^{-1})$ equals
+ $ac^{-1}$. Thus, $a\simr c$, and so $\simr$ is transitive.
+
+Hence, $\simr$ is an equivalence relation on $G$, as desired.
+\end{solution}
+
+\begin{exercise} For each subgroup $H$ of group $G$, (i) find the left and the right cosets of $H$ in $G$, (ii) decide whether or not $H$ is normal in $G$, and (iii) find $(G:H)$.
+
+\medskip
+\fbox{\begin{minipage}{380pt}\begin{center}\begin{minipage}{360pt}\begin{center}
+\smallskip
+Write all permutations using disjoint cycle notation, and write all dihedral group elements in standard form.\smallskip \end{center}\end{minipage}\end{center}
+\end{minipage}}
+
+\begin{enumerate}
+\item $H=6\Z$ in $G=2\Z$
+\item $H=\<4\>$ in $\Z_{20}$
+\item $H=\<(23)\>$ in $G=S_3$
+\item $H=\<r\>$ in $G=D_4$
+\item $H=\<f\>$ in $G=D_4$
+\end{enumerate}
+
+\end{exercise}
+
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item
+\begin{enumerate} \item The left and the right cosets of $6\Z$ in $2\Z$ are $6\Z$, $2+6\Z=6\Z+2$, and $4+6\Z=6\Z+4$. \item $6\Z \unlhd 2\Z$. \item $(2\Z:6\Z)=3$.\end{enumerate}
+\item \begin{enumerate} \item The left and the right cosets of $H=\<4\>=\{0,4,8,12,16\}$ in $\Z_{20}$ are $H$, $1+H=\{1,5,9,13,17\}=H+1$, $2+H=\{2,7,10,14,18\}=H+2$, and $3+H=\{3,8,11,15,19\}=H+3$. \item $H \unlhd \Z_{20}$. \item $(\Z_{20}:H)=4$.\end{enumerate}
+\item  \begin{enumerate} \item The left cosets of $H$ in $S_3$ are $H=\{e,(23)\}$, $(12)H=\{(12),(123)\}$, and $(13)H=\{(13),(132)\}$. The right cosets of $H$ in $S_3$ are $H$, $H(12)=\{(12),(132)\}$, and $H(13)=\{(13),(123)\}$.   \item $H$ is not normal in $S_3$.  \item $(S_3:H)=3$. \end{enumerate}
+\item  \begin{enumerate} \item The left cosets and the right cosets of $H$ in $D_4$ are $H=\{e,r,r^2,r^3\}$ and $fH=\{f,fr, fr^2, fr^3\}=Hf$. \item $H\unlhd D_4$.\item $(D_4:H)=2$. \end{enumerate}
+\item \begin{enumerate} \item The left cosets of $H$ in $D_4$ are $H=\{e,f\}$, $rH=\{r,fr^3\}$, $r^2H=\{r^2,fr^2\}$, and $r^3H=\{r^3, fr\}$. The right cosets of $H$ in $D_4$ are $H$, $Hr=\{r, fr\}$, $Hr^2=\{r^2,fr^2\}$, and $Hr^3=\{r^3, fr^3\}$. \item $H$ is not normal in $D_4$.  \item $(D_4:H)=4$. \end{enumerate}
+\end{enumerate}
+\end{solution}
+
+
+\begin{exercise}
+For each of the following, give an example of a group $G$ with a subgroup $H$ that matches the given conditions.  If no such example exists, prove that.
+
+\begin{enumerate}
+\item A group $G$ with subgroup $H$ such that $|G/H|=1$.
+\item A finite group $G$ with subgroup $H$ such that $|G/H|=|G|$.
+\item An abelian group $G$ of order $8$ containing a non-normal subgroup $H$ of order 2.
+\item A group $G$ of order 8 containing a normal subgroup of order $2$.
+\item A nonabelian group $G$ of order 8 containing a normal subgroup of index $2$.
+\item A group $G$ of order 8 containing a subgroup of order $3$.
+\item An infinite group $G$ containing a subgroup $H$ of finite index.
+\item An infinite group $G$ containing a finite nontrivial subgroup $H$.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+(Other answers are possible.)
+
+\begin{enumerate}
+\item $G=H=S_3$.
+\item $G=S_3$, $H=\{e\}$.
+\item No such example exists, since every subgroup of an abelian group is normal.
+\item $G=\Z_8$, $H=\{0,4\}$.
+\item $G=D_4$, $H=\<r\>$.
+\item No such example exists, since by Lagrange's Theorem $|H|$ must divide $|G|$, and 3 doesn't divide 8.
+\item $G=\Z$, $H=2\Z$.
+\item $G=GL(2,\fatr)$, $H=\{\pm I_2\}$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+\tf Throughout, let $G$ be a group with subgroup $H$ and elements $a,b\in G$.
+
+\begin{enumerate}
+\item If $a\in bH$ then $aH$ must equal $bH$.
+\item $aH$ must equal $Ha$.
+\item If $aH=bH$ then $Ha$ must equal $Hb$.
+\item If $a\in H$ then $aH$ must equal $Ha$.
+\item $H$ must be normal in $G$ if there exists $a\in G$ such that $aH=Ha$.
+\item If $aH=bH$ then $ah=bh$ for every $h\in H$.
+\item $|G/H|$ must be less than $|G|$.
+\item $(G:H)$ must be less than or equal to $|G|$.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{inparaenum}[(a)]
+\item T \hfill \item F \hfill \item F \hfill \item T \hfill \item F \hfill \item F \hfill \item F \hfill \item T
+\end{inparaenum}
+\end{solution}
+
+\begin{exercise}
+Find the indices of:
+
+\begin{enumerate}\item $H=\<(15)(24)\>$ in $S_5$
+\item $K=\<(1453)(25)\>$ in $S_5$
+\item $L=\<(2354)(34)\>$ in $S_6$
+\item $A_n$ in $S_n$
+\end{enumerate}
+\end{exercise}
+
+
+\begin{solution}[print=true]
+ \begin{enumerate}\item $(S_5:H)=|S_5|/|H|=120/2=60.$
+\item In disjoint cycle notation, the permutation $(1453)(25)$ is written $(14523)$, so $K$ has order 5. Thus, $(S_5:K)=|S_5|/|K|=120/5=24.$
+\item In disjoint cycle notation, the permutation $(2354)(34)$ is written $(23)(45)$, so $L$ has order 2. Thus, $(S_6:L)=|S_6|/|L|=720/2=360.$
+\item $(S_n:A_n)=2$.
+\end{enumerate}
+\end{solution}
+
+
+\begin{exercise} Let $G$ be a group of order $pq$, where $p$
+    and $q$ are prime, and let $H$ be a proper subgroup of
+    $G$. Prove that $H$ is cyclic.
+\end{exercise}
+
+\begin{solution}[print=true]
+By Lagrange's Theorem, $|H|$ divides $pq$, and since $H$ is proper, $|H|\neq  pq$.
+    Thus, $|H|=1,p$, or $q$. Since the order of $H$ is
+    either 1 or a prime number, $H$ must be cyclic.
+\end{solution}
+
+\begin{exercise} Prove Corollary \ref{pcyc}: that is, let $G$ be a group of prime order, and prove that $G$ is cyclic. \end{exercise}
+
+\begin{solution}[print=true]
+Since $|G|$ is prime, $|G|>1$, so there exists $a\in G$
+with $a\neq e$. Then $\<a\>$ is a subgroup of $G$, so by
+Lagrange's Theorem, $|\<a\>|$ divides $|G|$.  But $|G|$ is
+prime and $a\neq e$, so we must have $|\<a\>|=|G|$; thus,
+$G=\<a\>$.\end{solution}
+

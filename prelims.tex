@@ -1,0 +1,581 @@
+\chapter{Preliminaries}\label{pre} %\footnote{See Section 0 in \cite{F}.}
+
+\section{Notation}
+To start, we begin learning and/or reviewing some notation.  Here is a table of frequently used symbols and abbreviations we will use, along with their meanings.
+\begin{center}
+\begin{threeparttable}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Notation}& \textbf{Meaning}\\
+\hline
+$\forall$ & for all/for every\\
+\hline
+$\exists$ & there exists\\
+\hline
+s.t. & such that\tnote{*}\\
+\hline
+$\therefore$ & therefore\\
+\hline
+WLOG or wolog & without loss of generality\tnote{$\dagger$}\\
+\hline
+WTS & want to show\\
+\hline
+! & unique (also used to denote factorials)\\
+\hline
+$\Rightarrow$ & implies; also the ``if" direction in proofs\\
+\hline
+$\Leftarrow$ & only if; also the ``only if" direction in proofs \\
+\hline
+$\Leftrightarrow$ or iff& if and only if\\
+\hline
+w/ & with\\
+\hline
+o.w. & otherwise\\
+\hline
+\end{tabular}
+\begin{tablenotes}
+\item[*]\small You can also use $\ni$ to denote ``such that," but we will avoid this convention as it can be confused with the notation $\in$, meaning ``is an element of."
+\item[$\dagger$]\small We will discuss what this means in greater detail as it arises in our work.
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+
+Finally, the notation $:=$ means we are assigning a definition. E.g., writing ``Let $S:=\{1,2,3\}$" means we are defining $S$ to be the set $\{1,2,3\}$.  We often omit the colon and simply write $=$ in these cases, but we may include it to emphasize the fact that we are defining something.
+
+\section{Sets}
+Now we provide a ``definition" of a basic mathematical object to which we will soon add bells and whistles.
+
+\begin{df}{``Sort of" definition} A \textit{set} is an (unordered)
+collection of objects.\end{df}
+
+We say this is a ``sort of" definition because it is not a
+rigorous definition of a set.  For instance, what do we mean by a
+``collection" of objects? This ``definition" will be sufficient for
+our course, but be warned that defining a set in this vague way can
+lead to some serious mathematical issues, such as Russell's
+paradox\footnote{ Let $S$ be the set of all sets that aren't members
+of themselves.  Is $S$ a member of itself? If you think carefully
+about this, you'll see that $S$ can be neither a member of itself,
+nor \underline{not} a member of itself. Uh oh!  This contradiction
+is known as Russell's paradox (named for the British philosopher, mathematician, and all-round academic Bertrand Russell). Mathematicians deal with this by
+declaring that some object collections, called \textit{classes}, are
+not in fact sets.};  a mathematician whose expertise is in set
+theory may scowl disagreeably if you try to define a set as we have
+above.
+
+\begin{df}{Definitions and notation} The members of a set are called its \textit{elements}. If
+$S$ is a set, we write $x\in S$ to indicate ``$x$ is an element
+of $S$," and $x \not\in S$ to indicate ``$x$ is not an element
+of $S$."  There is a unique set containing no elements; it is
+called the \textit{empty set}, and denoted by $\emptyset$.\end{df}
+
+
+Sets must be \textit{well defined}: that is, it must be clear
+exactly which objects are in a set, and which objects aren't.
+For instance, the set of all integers is well defined, but the
+set of all big integers is not well defined, since it is
+unclear what ``big" means in this context.
+
+We refer to some sets so frequently in mathematics that we have special notation for them.  Common examples are:
+
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{threeparttable}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Notation}& \textbf{Meaning}\\
+\hline
+$\Z$ & the set of all integers\\
+\hline
+$\fatq$ & the set of all rational numbers\\
+\hline
+$\fatr$ & the set of all real numbers\\
+\hline
+$\fatc$ & the set of all complex numbers\\
+\hline
+$\fatn$ & the set of all natural numbers (that is, the set $\{0, 1, 2, \ldots\}$)\tnote{*}\\
+\hline
+$\Z^+$/$\fatq^+$/$\fatr^+$ & the set of all positive integers/rational numbers/real numbers\\
+\hline
+$\Z^-$/$\fatq^-$/$\fatr^-$ & the set of all negative integers/rational numbers/real numbers\\
+\hline
+$\Z^-$/$\fatq^-$/$\fatr^-$/$\fatc^*$ &   \pbox{20cm}{the set of all nonzero integers/rational numbers/real numbers/\\complex numbers}\\
+\hline
+\end{tabular}
+\begin{tablenotes}
+\item[*]\small Be aware that many books/mathematicians do not include 0 in the set of natural numbers.
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+
+We also provide notation for commonly considered sets of matrices:
+
+\begin{df}{Notation} Given $m,n\in \Z^+$ and a set $S$, we define $\M_{m\times n}(S)$ to
+be the set of all $m\times n$ matrices over $S$ (that is, of all $m\times n$ matrices with entries in $S$).  We use the
+shorthand notation $\M_n(S)$ for the set $\M_{n\times n}(S)$.\end{df}
+
+One common way of describing a set is to list its elements in
+curly braces, separated by commas; you can use ellipses to
+indicate a repeated pattern of elements. A few examples are
+$\{1,4,\pi\}$, $\{3, 4, 5, \ldots\}$, and $\{\ldots, -4, -2, 0,
+2, 4, \ldots\}$; the last of these can be written more concisely as $\{0,\pm 2, \pm 4,\ldots\}$.  Note that since elements of a set are
+unordered, the sets $\{1,4,\pi\}$ and $\{4,\pi, 1\}$, for
+instance, are identical.
+
+ Another method is using \textit{set-builder notation}. This consists of an element name (or
+names), followed by a colon (meaning ``such that"), followed by
+a Boolean expression involving the element name(s), all
+surrounded by curly braces.\footnote{
+ \textbf{WARNING:} The use of a colon to denote ``such that" is \textit{only} valid in the above set-builder notation context.  Outside of this context, you should never use a colon to denote ``such that"; instead, write out the actual words or use the abbreviation s.t. (or the symbol $\ni$, though I do not recommended).  Conversely, never use one of those ways of indicating ``such that" within set-builder notation; always use a colon there.  Why?  Convention.}
+ For example,
+$$\{x\in \Z : x > 4\}$$ is the set $\{5, 6, 7, \ldots\}$, while
+$$\{z\in \fatc : |z|=1\}$$ is the set of all complex numbers at
+distance 1 from the origin in the complex plane.
+
+\begin{df}{Note} If one simply writes $\{x\,:\,x>4\}$,
+it is unclear what this set is; it could be the set of all
+integers greater than 4, or the set of all real numbers greater
+than 4, or something else. When one can, it is better to
+identify the named element(s) as a member (members) of a known
+set, such as $\fatr$ or $\Z$, whenever possible.\end{df}
+
+\begin{df}{Definitions and notation} Set $A$ is a \textit{subset} of $B$ (and set $B$ is a \textit{superset} of $A$) if every element in $A$ is also in $B$. We
+denote ``$A$ is a subset of $B$'' by $A\subseteq B$. Sets $A$
+and $B$ are said to be \textit{equal}, and we write $A=B$, if they
+contain exactly the same elements; equivalently, $A=B$ if and
+only if $A \subseteq B$ and $B\subseteq A$.  Set $A$ is a \textit{proper} subset of set $B$ if $A\subseteq B$ but $A\neq B$; we
+write this $A\subsetneq B$ or $A\subset B$ \footnote{ \textbf{
+WARNING:} Sometimes the notation $A\subset B$ is merely used to
+indicate that $A$ is a subset of $B$ (but may equal $B$). Be
+careful to check what your book or peer means by this
+notation.}. \end{df}
+
+\begin{df}{Remark} One often proves that two sets $A$ and
+$B$ are equal by proving that $A\cont B$ and $B\cont A$.\end{df}
+
+\begin{example}{} We have the following: $\Z^+ \subseteq \Z \subseteq \fatq \subseteq \fatr \subseteq \fatc$. \end{example}
+
+
+\begin{df}{Definition} The \textit{power set} of $A$, denoted $P(A)$, is the set of
+all subsets of $A$. (Note that the power set of any set
+contains the empty set as an element.)\end{df}
+
+\warn{Be careful to use your curly braces correctly when writing power sets!
+Remember, the power set of a set is a \textit{set of sets}.}
+
+The following provides a good example of using braces correctly.
+
+\begin{example}{} If $A=\{a,b\}$, then $P(A)=\{\emptyset, \{a\}, \{b\}, \{a,b\}\}$.  Note that the element $\{a,b\}$ of $P(A)$ could also be written simply as $A$. \end{example}
+
+\begin{df}{Definitions and notation}\
+
+\begin{enumerate}
+\item If $A$ and $B$ are sets, then the \textit{union} of $A$ and $B$, denoted $A\cup B$, is the set
+$A\cup B=\{x: x\in A \mbox{ or } x\in B\};$ the \textit{intersection} of $A$ and $B$, denoted $A\cap B$, is the set
+$A\cap B=\{x: x\in A \mbox{ and } x\in B\};$ and the \textit{difference} of $A$ and $B$, denoted $A-B$ (or $A\setminus B$), is the set
+$A-B=\{x: x\in A \mbox{ and } x\not\in B\}.$
+
+\item More generally, given any collection of sets $A_i$ ($i$ in some index set $I$), the \textit{union} of the $A_i$ is
+$$\bigcup_{i\in I}A_i=\{x: x\in A_i \mbox{ for some } i\in I\},$$ and the \textit{intersection} of the $A_i$ is
+$$\bigcap_{i\in I}A_i=\{x: x\in A_i \mbox{ for every } i\in I\}.$$
+
+\item Sets $A$ and $B$ are \textit{disjoint} if $A\cap B=\emptyset$.  More generally, sets $A_i$ ($i$ in some index set $I$) are
+\textit{disjoint} if $$\bigcap_{i\in I}A_i=\emptyset$$ and are {\it mutually disjoint} if $$A_i\cap A_j=\emptyset \mbox{ for all }i\neq j \in I.$$
+\end{enumerate}
+\end{df}
+
+Notice that for any sets $A$ and $B$, $A\cap B \cont A \cont A\cup B$ and
+$A\cap B \cont B \cont A\cup B$. Also note that if sets $A_i$ ($i \in I$) are mutually disjoint then they are also disjoint, but they may be disjoint without being mutually disjoint. For example, the sets $\{i, i+1\}$ for $i\in \Z$ are disjoint but not mutually disjoint. (Do you see why?)
+
+We define one more way of ``combining" sets.
+
+\begin{df}{Definitions} Let $A$ and $B$ be sets.  Then the \textit{(direct)
+product} $A\times B$ of $A$ and $B$ is the set $$A\times B =
+\{(a,b): \mbox{$a\in A$, $b\in B$}\}.$$  An element $(a,b)$ of
+$A\times B$ is called an \textit{ordered pair}. More generally, if
+$A_1, A_2, \ldots, A_n$ are sets for some $n\in \Z^+$, then the
+\textit{product} of the $A_i$ is $$A_1\times A_2 \times \cdots
+\times A_n=\{(a_1, a_2, \ldots, a_n): a_i \in A_i \mbox{ for
+each }i\};$$  the elements $(a_1,a_2,\ldots,a_n)$ of this
+product are called $n$-tuples (or triples, if $n=3$).\footnote{
+You can also have products of infinitely many sets, but we will
+not discuss that in this course.} Finally, if each set $A_i$ is
+the same set $A$, we can use the notation $A^n$ to denote the
+product $$A\times A \times \cdots \times A$$ of $n$ copies of
+$A$.\end{df}
+
+\begin{example}{} For example, the Cartesian plane is the set $\fatr^2$, and the set $\Z \times \fatr$ consists of exactly the points in the plane with integer $x$-coordinates
+(that is, the points that lie on vertical lines intersecting the $x$-axis at integer values). \end{example}
+
+\section{Functions}
+
+You have probably encountered functions before.  In introductory
+calculus, for instance, you typically deal with functions from
+$\fatr$ to $\fatr$ (e.g., the function $f(x)=x^2$).  More generally,
+functions ``send" elements of one set to elements of another set;
+these sets may or may not be sets of real numbers. We provide below
+a ``good enough for government work" definition of a function.
+%\textcolor[rgb]{1.00,0.00,0.00}{We leave the ``official" definition of a function for later; for now, the following definition will be sufficient.}
+
+\begin{df}{Definitions and notation} A \textit{function} $f$ from a set $S$ to a set $T$ is a
+``rule" that assigns to each element $s$ in $S$ a unique
+element $f(s)$ in $T$; the element $f(s)$ is called the \textit{image of $s$ under $f$}.  If $f$ is a function from $S$ to $T$,
+we write $f: S \to T$, and call $S$ the \textit{domain} of $f$ and
+$T$ the \textit{codomain} of $f$. The \textit{range} of $f$ is
+$$f(S)=\{f(s) \in T : s \in S\} \cont T.$$ More generally, if $U \cont S$, the \textit{image of $U$ in $T$ under $f$} is
+$$f(U)=\{f(u)\in T : u\in U\}.$$ If $V\cont T$, the \textit{preimage of $V$ in $S$ under $f$} is the set
+$$f^{\leftarrow}(V)=\{s\in S: f(s)\in V\}.$$
+\end{df}
+
+\begin{example}{} Consider the function $f: \Z \to \fatr$ defined by $f(x)=x^2$.
+The domain of $f$ is $\Z$ and the codomain of $f$ is $\fatr$; the
+range of $f$ is $\{x^2\,:\,x\in \Z\}=\{0,1,4,9,\ldots\}$. The image
+of $\{-2,-1,1,2\}$ under $f$ is the two-element set $\{1,4\} \cont
+\fatr$, and the preimage of $\{4,25,\pi\}$ under $f$ is the set
+$\{\pm 2, \pm 5\}$. (Do you see why $\pm \sqrt{\pi}$ are not in this
+preimage?) What is the preimage of just $\{\pi\}$ under $f$? \end{example}
+
+
+The following definitions will be very important in our future work.
+
+
+\begin{df}{Definitions} Let $S$ and $T$ be sets, and $f:S\to T$.
+\begin{enumerate}
+\item Function $f$ is \textit{one-to-one} (1-1) if whenever $s_1, s_2\in S$ with $f(s_1)=f(s_2)$, we have $s_1=s_2$.  Equivalently, $f$ is one-to-one if
+whenever $s_1\neq s_2 \in S$, then $f(s_1)\neq f(s_2) \in T$.
+\item Function $f$ is \textit{onto} if for every $t\in T$, there exists an element $s\in S$ such that $f(s)=t$.  Equivalently, $f$ is onto if $f(S)=T$.
+\item Function $f$ is a \textit{bijection} if it is both one-to-one and onto.
+\end{enumerate}
+\end{df}
+
+We will often have to show functions are one-to-one or onto.  Given a function $f:S\to T$, the following methods are recommended.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|p{5cm}|}
+\hline
+\textbf{To prove that $f$ is one-to-one}& Let $s_1,s_2 \in S$ with $f(s_1)=f(s_2)$ and prove that then $s_1=s_2$.  {\bf WARNING:} It is \underline{not} sufficient to prove that if $s_1=s_2$ in $S$ then $f(s_1)=f(s_2)$; that is true for any function from $S$ to $T$!  Be careful to \textit{assume} and \textit{prove} the correct facts.\\
+\hline
+\textbf{To prove that $f$ is \textit{not} one-to-one}& Identify two elements $s_1 \neq s_2$ of $S$ such that $f(s_1)=f(s_2)$.\\
+\hline
+\textbf{To prove that $f$ is onto}& Let $t\in T$ and prove that there exists an element $s\in S$ with $f(s)=t$. {\bf WARNING:} It is \underline{not} sufficient to prove that if $s\in S$ then $f(s)$ is in $T$; that is true for any function from $S$ to $T$!  Again, be careful to \textit{assume} and \textit{prove} the correct facts.\\
+\hline
+\textbf{To prove that $f$ is \textit{not} onto}& Identify an element $t\in T$ for which there is no $s\in S$ with $f(s)=t$.\\
+\hline
+\end{tabular}
+\end{center}
+\smallskip
+
+\begin{example}{} Consider the function $f: \fatr^* \to \fatr^+$ defined by $f(x)=x^2$. Function $f$ is \textit{not} one-to-one: indeed,
+$-1$ and $1$ are in $\fatr^*$ with $f(-1)=1=f(1)$ in $\fatr^+$.
+However, $f$ \textit{is} onto: indeed, let $t\in \fatr^+$.  Then
+$\sqrt{t} \in \fatr^*$ with $t=f(\sqrt{t})$, so we're done. \end{example}
+
+\begin{example}{} Consider the function $f: \Z^+ \to \fatr$ defined by $f(x)=x/2$. Function $f$ \textit{is} one-to-one: indeed, let $s_1, s_2 \in \Z^+$ with $f(s_1)=f(s_2)$.
+Then $s_1/2=f(s_1)=f(s_2)=s_2/2$; multiplying both sides of the equation $s_1/2=s_2/2$ by 2, we obtain $s_1=s_2$. However, $f$ is \textit{not} onto: for example, $\pi\in \fatr$
+but there is no positive integer $s$ for which $f(s)=s/2=\pi$.\end{example}
+
+
+Recall that we can combine certain functions using \textit{composition}:
+if $f:S\to T$ and $g:T\to U$, then \textit{$g$ composed with $f$} is the function $g\circ f: S\to U$ defined by
+$$(g\circ f)(s)=g(f(s))$$ for all $s\in S$.\footnote{More generally, you can compose functions $f:S\to T$ and $g:R\to U$ to form $g\circ f:S\to U$,  as long as $f(S)\subseteq R$.} Also recall that given any set $S$, the \textit{identity function on $S$} is the function $1_S: S\to S$ defined by $1_S(s)=s$ for every $s\in S$.
+
+
+\begin{df}{Definitions} Let $f$ be a function from $S$ to $T$.  A function $g$
+from $T$ to $S$ is an \textit{inverse} of $f$ if $g\circ f$ and
+$f\circ g$ are the identity functions on $S$ and $T$,
+respectively; that is, if for all $s\in S$ and $t\in
+T$, $g(f(s))=s$ and $f(g(t))=t$.  If $f$ has an inverse, we say that $f$ is \textit{invertible}.\end{df}
+
+\smallskip
+We present three theorems, omitting the
+proofs of the first two.
+\begin{thm}\label{}
+If $f$ has an inverse, then that inverse is unique. \end{thm}
+
+\begin{df}{Notation} If $f$ is invertible, we denote its unique inverse by $f^{-1}$.
+\end{df}
+
+\begin{thm}\label{invbij}
+Function $f:S\to T$ has an inverse if and only if $f$ is a bijection. Also, if $f$ has inverse $f^{-1}$, then $f^{-1}$ is also a bijection. \end{thm}
+
+\begin{thm}\label{compbij} Let $f:S\to T$ and $g:T\to U$ be functions.
+If $f$ and $g$ are both 1-1 [onto], then so is $g\circ f: S\to U$.
+\end{thm}
+
+\begin{proof}
+Assume $f$ and $g$ are 1-1.  Let $s_1, s_2\in S$
+with $(g\circ f)(s_1)=(g\circ f)(s_2)$.  Then $g(f(s_1))=g(f(s_2))$;
+since $g$ is one-to-one (since it's a bijection), this shows that
+$f(s_1)=f(s_2)$. Then since $f$ is one-to-one (since $f$ is also a
+bijection), we must have $s_1=s_2$. Thus, $g\circ f$ is one-to-one.\end{proof}
+
+\red{The proof that $g\circ f$ is onto if $f$ and $g$ are onto is left as an exercise for the reader.}
+
+\section{Cardinality}
+
+One of the set traits that will be useful to us in
+distinguishing between algebraic structures is \textit{cardinality}.
+
+\begin{df}{Definitions} A set is \textit{finite} if it contains a finite number of
+elements (including the case in which it contains no elements);
+otherwise, it's \textit{infinite}.\end{df}
+
+\begin{df}{Definition}The \textit{cardinality of a finite set} is the number of
+elements in that set. \end{df}
+
+But what is the cardinality of an infinite set?  This is more
+subtle. Essentially, it is the ``size" of the set, but what
+does that mean?
+
+\begin{df}{Definitions and notation} The symbol $\aleph_0$ denotes the cardinality of the set
+$\Z$.  An arbitrary set $S$ has cardinality $\aleph_0$ if there
+exists a bijection from $S$ to $\Z$ (equivalently, if there
+exists a bijection from $\Z$ to $S$).
+
+Note that if there is a bijection from $S$ to $\Z$, then $S$
+must be infinite.  If the cardinality of $S$ is $\aleph_0$, we
+say $S$ is \textit{countably infinite}. If $S$ is finite or
+countably infinite, we say it's \textit{countable}.  Finally, an
+infinite set is \textit{uncountably infinite}, or \textit{uncountable}, if it is not countably infinite.  In this class,
+we don't discuss the cardinality of uncountably infinite sets,
+but simply note that an uncountable set cannot have the same
+cardinality as a countable one.\end{df}
+
+\begin{df}{Notation} We denote the cardinality of a set $S$ by
+$|S|$.\footnote{ Of course, vertical bars are used to denote
+other mathematical concepts; for instance, if $x$ is a real
+number, $|x|$ usually denotes the absolute value of $x$. You
+must determine from context, and from the nature of the
+expression within the bars, what vertical bars mean in a
+particular situation.}\end{df} So, e.g., $|\{a,b\}|=2$.
+
+\begin{example}{}  Clearly, $\Z$ itself is countably
+infinite.\end{example}
+
+Perhaps surprisingly, a proper subset of a set can have the
+same cardinality as its superset, as the following example
+shows.
+
+\begin{example}{} We claim that $\Z^+$ is countably infinite. Indeed, consider the function $f:\Z^+ \to \Z$ defined by $f(n)=(-1)^n \lfloor n/2 \rfloor$, where $\lfloor x \rfloor$
+denotes the greatest integer less than or equal to $x$, for each $x\in \fatr$. The fact that $f$ is a bijection is demonstrated (though not proven) by the following visual representation,
+where each number maps via $f$ to the value directly below it:
+
+$$
+\begin{array}{llrrrrrrr}
+&\Z^+ & 1 & 2 & 3 & 4 & 5 & \ldots&\\
+f &\Big\downarrow&&&&&&&\\
+&\Z   & 0 & 1 & -1 & 2 & -2 & \ldots&\\
+\end{array}$$
+
+Note that this means that $\Z$ and its proper subset $\Z^+$
+have the same cardinality, that is, the same ``size"! \end{example}
+
+ We summarize here examples of countably and uncountably
+infinite sets. (On pp. 5--6 of \cite{F}, Fraleigh sketches proofs of the
+facts that $\fatq$ is countable and that the interval $(0,1)$
+in $\fatr$ is uncountable. The proof then that $\fatr$ is
+uncountable follows from Theorem \ref{cardthm}, which
+follows.)
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|l|}
+\hline
+Countably infinite sets: &$\Z$, $\Z^+$, $\Z^-$, $\Z^*$, $\fatq$, $\fatq^+$, $\fatq^-$, $\fatq^*$, $\fatn$\\
+\hline
+Uncountably infinite sets: &$\fatr$, $\fatr^+$, $\fatr^-$, $\fatr^*$, $\fatc$, $\fatc^*$,  the interval $(0,1)$ in $\fatr$                              \\
+\hline
+\end{tabular}
+\end{center}
+
+ The key idea here for us is that if two sets are
+essentially ``the same," then they must have the same ``size."
+Thus, we see that there is some fundamental difference between
+the sets $\Z$ and $\fatr$ (in fact, there are many such
+differences). On the other hand, cardinality alone won't allow
+us to distinguish structurally between the sets $\Z$ and
+$\Z^+$.
+
+We end our preliminary chapter with the following theorem and a corollary of it (which can be proved using induction on $n$).
+
+\begin{thm}\label{cardthm} Let $A$ and $B$ be sets.
+
+\begin{enumerate}
+\item If $A\cont B$ and $A$ is infinite [uncountable] then so is $B$.
+
+\item If $A\cont B$ and $B$ is finite [countable] then so is $A$.
+
+\item If $|A|=n<\infty$ and $|B|=m< \infty$, then $|A\times B|=mn$.
+
+\item Any finite product of countable sets is countable.\footnote{\textbf{Note.} It is \textbf{not} true that any countable product
+of countable (or even finite) sets is countable. Indeed, even
+the set $\{0,1\}\times \{0,1\}\times \cdots$ is
+uncountable. (If you want to get into the gory details
+of this, the key is that there is a bijection from this set to
+the power set of the natural numbers, which Cantor's Theorem
+tells us is uncountable.  You are welcome to jump down this
+rabbit hole by googling ``Cantor's Theorem," if you desire, but
+know that you will not be responsible for that material in
+class.)}
+
+%\qquad Any countable union of countable sets is countable.
+\end{enumerate}
+
+\end{thm}
+
+\begin{proof} We omit proofs of the statements in Parts 1 and 2. \red{The proof of the statement in Part 3 is left as an exercise for the reader.}\end{proof}
+
+For Part 4: Let $A$ and $B$ be countable sets.  Assume that $A$ and $B$ are both countably infinite. Since $\Z^+$ is countably infinite, we can index the elements of $A$ and of $B$ by $\Z^+$, writing $$A=\{a_1,a_2,\ldots\} \mbox{\quad and \quad} B=\{b_1,b_2,\ldots\}.$$ Notice that the table
+
+$$
+    \begin{array}{cccc}
+      (a_1,b_1) & (a_1,b_2) & (a_2,b_3) & \cdots \\
+      (a_2,b_1) & (a_2,b_2) & (a_2,b_3) & \cdots \\
+      (a_3,b_1) & (a_3,b_2) & (a_3,b_3) & \cdots\\
+      \vdots & \vdots & \vdots &  \ddots
+    \end{array}$$ contains every element of $A\times B$. We can then list the elements of $A\times B$ by listing the elements in progressive upper-right to lower-left diagonals, starting with $(a_1,b_1)$ and moving to the right along the top row: that is, we can write
+   $$A\times B=\{(a_1,b_1),(a_1,b_2),(a_2,b_1),(a_2,b_3),(a_2,b_2),(a_3,b_1),\ldots\}$$
+    This implicitly yields a bijection from $\Z^+$ to $A\times B$; thus, $A\times B$ is countably infinite, and hence countable.
+
+    The proof in the case that one or both of sets $A$ and $B$ are finite is similar; the corresponding table in that case will simply have either only finitely many rows or finitely many columns, or both.
+
+\begin{cor} Let $n>1$ be an integer and let $A_1,A_2,\ldots, A_n$ be countable sets.  Then $A_1\times A_2\times \cdots \times A_n$ is countable.
+\end{cor}
+
+
+\pagebreak
+
+\section{Exercises}
+
+\begin{exercise}[ID=1A]
+
+Yes/No. For each of the following, write Y if the object described is a well-defined set; otherwise, write N. You do NOT need to provide explanations or show work for this problem.
+
+\begin{enumerate}
+
+\item $\{z \in \fatc \,:\, |z|=1\}$
+
+\item $\{\epsilon \in \fatr^+\,:\, \epsilon \mbox{ is sufficiently small}\}$
+
+\item $\{q\in \fatq \,:\, q \mbox{ can be written  with denominator }4\}$
+
+\item $\{n \in \Z\,:\, n^2 <0\}$
+
+\end{enumerate}
+
+\end{exercise}
+\begin{solution}[print=true]
+\begin{inparaenum}[(a)]
+\item Y \hfill \item N \hfill \item  Y \hfill \item Y (it's the empty set)
+\end{inparaenum}
+\end{solution}
+
+\begin{exercise}[ID=1B]
+List the elements in the following sets, writing your answers as sets.
+
+\medskip
+\textbf{Example:} $\{z\in \fatc\,:\,z^4=1\}$  \quad \textbf{Solution:} $\{\pm 1, \pm i\}$
+\medskip
+
+\begin{enumerate}
+
+\item $\{z\in \fatr\,:\, z^2=5\}$
+
+\item $\{m \in \Z\,:\, mn=50 \mbox{ for some }n\in \Z\}$
+
+\item $\{a,b,c\}\times \{1,d\}$
+
+\item $P(\{a,b,c\})$
+\end{enumerate}
+
+\end{exercise}
+
+\begin{solution}[print=true]
+\begin{enumerate}
+\item $\{\pm\sqrt{5}\}$
+\item $\{\pm 50, \pm 25, \pm 10, \pm 5, \pm 2, \pm 1\}$
+\item $\{(a,1),(a,d), (b,1),(b,d),(c,1),(c,d)\}$
+\item $\{\emptyset, \{a\}, \{b\},
+    \{c\},\{a,b\},\{a,c\},\{b,c\}, \{a,b,c\}\}$
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}[ID=1C]
+Let $S$ be a set with cardinality $n\in \fatn$. Use the cardinalities of $P(\{a,b\})$ and $P(\{a,b,c\})$ to make a conjecture about the cardinality of $P(S)$. You do not need to prove that your conjecture is correct (but you should try to ensure it is correct).
+
+\end{exercise}
+
+\begin{solution}[print=true]
+$|P(\{a,b\})|=4=2^2$ and $|P(\{a,b,c\})|=8=2^3$; we may conjecture that when $|S|=n$, $|P(S)|=2^n$.
+
+\end{solution}
+
+\begin{exercise}[ID=1D]
+Let $f: \Z^2 \to \fatr$ be defined by $f(a,b)=ab$.  (Note: technically, we should write $f((a,b))$, not $f(a,b)$, since $f$ is being applied to an ordered pair, but this is one of those cases in which mathematicians abuse notation in the interest of concision.)
+
+\begin{enumerate}
+\item What are $f$'s domain, codomain, and range?
+\item Prove or disprove each of the following statements. (Your proofs do not need to be long to be correct!)
+\begin{enumerate}
+\item $f$ is onto;
+\item $f$ is 1-1;
+\item $f$ is a bijection. (You may refer to parts (i) and (ii) for this part.)
+\end{enumerate}
+
+\item Find the images of the element $(6,-2)$ and of the set $\Z^- \times \Z^-$ under $f$. (Remember that the image of an element is an element, and the image of a set is a set.)
+\item Find the preimage of $\{2,3\}$ under $f$. (Remember that the preimage of a set is a set.)
+\end{enumerate}
+
+\end{exercise}
+
+\begin{solution}[print=true]
+
+\begin{enumerate}
+\item $f$'s domain, codomain, and range are, respectively, $\Z^2$, $\fatr$, and $\Z$.
+
+\item
+\begin{enumerate}
+\item $f$ is not onto, since, for instance, $1/2\in \fatr-\Z$.
+\item $f$ is not 1-1: for instance, $f(-2,2)=-4=f(2,-2)$.
+\item $f$ is not a bijection since it's not 1-1. (It would be equally valid to answer that it's not a bijection since it's not onto, or that it's not a bijection since it's neither 1-1 nor onto.)
+\end{enumerate}
+
+\item $f(6,-2)=-12$ and $f(\Z^-\times \Z^-)=\Z^+$.
+
+\item
+\begin{align*}
+f^{\leftarrow}(\{2,3\})&=\{(a,b)\in \Z\times \Z\,:\, f(a,b)\in \{2,3\}\}\\
+&=\{(a,b)\in \Z\times \Z\,:\, ab=2 \mbox{ or } ab=3\},
+\end{align*}
+which is the set
+$$\{(1,2),(2,1),(-1,-2),(-2,-1),(1,3),(3,1),(-1,-3),(-3,-1)\}.$$
+\end{enumerate}
+
+\end{solution}
+
+\begin{exercise}[ID=1F]
+Let $S$, $T$, and $U$ be sets, and let $f: S\to T$ and $g: T\to U$ be onto.  Prove that $g \circ f$ is onto.
+\end{exercise}
+
+\begin{solution}[print=true]
+Let $u\in U$. We want to show there is an element of $S$ that gets mapped to $u$ by $g\circ f$. Since $g:T\to U$ is onto, there is an element $t\in T$ such that $g(t)=u$; next, since $f:S\to T$ is onto, there is an element $s\in S$ such that $f(s)=t$.  Then $(g\circ f)(s)=g(f(s))=g(t)=u$.  Thus, $g\circ f$ is onto.
+\end{solution}
+
+\begin{exercise}Let $|A|=n<\infty$ and $|B|=m< \infty$. Prove that $|A\times B|=mn$.
+\end{exercise}
+
+\begin{solution}[print=true]
+We can list the elements of $A$ and $B$ as so: $$A=\{a_1,a_2,\ldots, a_n\} \mbox{\quad and \quad}B=\{b_1,b_2,\ldots, b_m\}.$$
+Consider the table
+$$\begin{array}{cccc}
+      (a_1,b_1) & (a_1,b_2) & \cdots & (a_1,b_m) \\
+      (a_2,b_1) & (a_2,b_2) & \cdots & (a_2,b_m)\\
+      \vdots & \vdots  & \ddots & \vdots\\
+      (a_n,b_1) & (a_n,b_2) & \cdots &  (a_n,b_m).
+    \end{array}$$
+Clearly this table contains $mn$ elements, and contains each element of $A\times B$ exactly once.  Therefore, $|A\times B|=mn$.
+
+\end{solution} 
