@@ -1,0 +1,221 @@
+\documentclass[openany, oneside]{book}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp} %enables use of copyright character
+\usepackage{paralist} %allows enumeration/itemization within paragraphs
+\usepackage{fancyhdr} %allows specification of GFDL headings
+\usepackage[hidelinks]{hyperref} %allows hyperlinks
+%\usepackage{appendix}
+\usepackage{pbox} %allows use of parboxes
+\usepackage{verbatim} %allows comment environment
+\usepackage{graphicx} %allows inclusion of images
+\usepackage{pdfpages} %allows inclusion of GFDL PDF
+\usepackage{threeparttable} %allows footnote references in tables, etc.
+\usepackage{color} %allows use of color
+\usepackage[inline]{enumitem} %allows control of enumeration/itemization layout
+\usepackage[all]{xy} %to create (di)graphs
+%\usepackage{sectsty}
+    %\chapternumberfont
+    %\chaptertitlefont{\Huge}
+    %\sectionfont{\Large}
+    %\subsectionfont{\large}
+%\usepackage{titlesec}
+%    \titleformat{\chapter}[hang]
+%    {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{}
+\usepackage{xsim}
+    \xsimsetup{ exercise/within=chapter,exercise/the-counter=\thechapter.\arabic{exercise},
+                exercise/begin-hook ={
+                    \setlist[enumerate,1]{label=(\alph*)}
+                    \setlist[enumerate,2]{label=(\roman*)}},
+                solution/begin-hook ={
+                    \setlist[enumerate,1]{label=(\alph*)}
+                    \setlist[enumerate,2]{label=(\roman*)}}}
+\usepackage[
+  top=1.25in,
+  bottom=1.25in,
+  left=1.25in,
+  right=1.25in,
+  bindingoffset=0.25in,
+  heightrounded,
+]{geometry}
+
+%\usepackage{etoolbox}
+%\appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}}
+\setcounter{tocdepth}{3}
+
+\renewcommand{\bibname}{References and Supplemental Resources}
+
+
+\def\Z{\mathbb{Z}}
+\def\zn{\mathbb{Z}_n}
+\def\znc{\mathbb{Z}_n^\times}
+\def\fatr{\mathbb{R}}
+\def\fatq{\mathbb{Q}}
+\def\fatc{\mathbb{C}}
+\def\fatn{\mathbb{N}}
+\def\M{\mathbb{M}}
+\def\S{\mathbb{S}}
+
+\newfont{\curly}{rsfs10}
+\def\G{\mbox{\curly G}}
+\def\R{\mbox{\curly R}}
+\def\D{\mbox{\curly D}}
+
+\def\0{\mathbf 0}
+\def\Gdot{\<G, \cdot\,\>}
+\def\phibar{\overline{\phi}}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Ker}{Ker}
+\def\siml{\sim_L}
+\def\simr{\sim_R}
+\def\<{\langle}
+\def\>{\rangle}
+\def\cont{\subseteq}
+\def\epsilon{\varepsilon}
+\def\lra{\Leftrightarrow}
+
+\def\tf{True/False. For each of the following, write T if the statement is
+true; otherwise, write F. You do NOT need to provide explanations or show work for this problem.}
+
+\def\red#1{\textcolor[rgb]{1.00,0.00,0.00}{#1}}
+\renewcommand{\d}{\displaystyle}
+
+\def\warn#1{\begin{center}\fbox{\begin{minipage}{380pt}\begin{center}\begin{minipage}{360pt} \begin{center}
+\medskip\textbf{WARNING}\end{center} #1 \smallskip \end{minipage}\end{center}\end{minipage}}\end{center}}
+
+
+\begin{document}
+
+
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{ex}[thm]{Example}
+
+\newenvironment{example}[1]
+  {\begin{ex}\label{#1}\rm}
+  {\medskip \end{ex}}
+
+\theoremstyle{plain} % just in case the style had changed
+\newcommand{\defhead}{}
+\newtheorem*{gendef*}{\defhead}
+\newenvironment{df}[1]
+  {\renewcommand{\defhead}{#1}%
+   \begin{gendef*}\rm}
+  {\end{gendef*}}
+
+
+
+%\theoremstyle{plain} % just in case the style had changed
+%\newcommand{\thistheoremname}{}
+%\newtheorem{genericthm}[thm]{\thistheoremname}
+%\newenvironment{namedthm}[1]
+%  {\renewcommand{\thistheoremname}{#1}%
+%   \begin{genericthm}}
+%  {\end{genericthm}}
+
+
+\title{First-Semester Abstract Algebra:\\ A Structural Approach}
+\author{Jessica K. Sklar\\Pacific Lutheran University\\
+%\href{mailto:sklarjk@plu.edu}{sklarjk@plu.edu}\\
+\texttt{sklarjk{@}plu.edu}}
+\date{Last updated: \today}
+
+\hypersetup{pageanchor=false}
+\maketitle
+\hypersetup{pageanchor=true}
+
+\frontmatter
+
+\thispagestyle{empty}
+\null \vfill
+\noindent Copyright \textcopyright 2017  Jessica K. Sklar. Permission is granted to copy, distribute and/or
+modify this document under the terms of the GNU Free Documentation License,
+Version 1.3 or any later version published by the Free Software Foundation; with no
+Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the
+license is included in the section entitled ``GNU Free Documentation License."
+\vfill \vfill
+
+\pagebreak
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\null \vfill
+
+
+\begin{center}\textbf{\huge Acknowledgments} \end{center}
+
+\bigskip
+\noindent
+Thank you to Jennifer Nordstrom of Linfield College for introducing me to the American Institute of Mathematics (AIM) Open Textbook Initiative (\url{https://aimath.org/textbooks/}); to Rob Beezer at the University of Puget Sound for encouraging my engagement with this initiative and for helping me make connections within the community; and to David Farmer at AIM for typesetting this book in MathBook XML (\url{http://mathbook.pugetsound.edu}).
+
+\vfill \vfill \vfill
+
+
+\tableofcontents
+
+\mainmatter
+
+\include{introd}
+\include{prelims}
+\include{groups}
+\include{homis}
+\include{subgroups}
+\include{cgroups}
+\include{perms}
+\include{cosets}
+\include{fgroups}
+\include{isothms}
+
+\backmatter
+\appendix
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+
+\thispagestyle{plain}
+\phantomsection
+\addcontentsline{toc}{chapter}{GNU Free Documentation License}
+
+\includepdf[pages={1-10}, pagecommand={}]{gfdl.pdf}
+
+\begin{comment}
+
+
+\chapter{Proof that $S_0$ is trivial}
+
+By definition, $S_0$ is the set of permutations of the empty set, that is, the set of all bijections from $\emptyset$ to $\emptyset$.  If we go back to the true definition of a function, we recall that a function from a set $A$ to itself is a relation $f$ on $A$ (that is, a subset of $A \times A$) such that for each $a\in A$, there is a unique $b\in A$ such that $(a,b)\in f$.
+
+So let A be the empty set.  Then $A \times A$ is also the empty set (do you see why?). Now,  $f=\emptyset$ is a subset of $A \times A$, and it is vacuously true that $f$ has the property that for each $a\in A$, there is a unique $b\in A$ such that $(a,b)\in f$ (it is vacuously true since there are no elements of $A$).  So $f$ is a function from $A$ to $A$. Since there is no other subset of $A \times A$, $f$ is the only function from $A$ to $A$.
+
+The remaining question is: Is  $f$ a permutation on $A$; that is, is $f$ a bijection?  The answer is yes: $f$ is both vacuously onto and vacuously one-to-one.  So there is a unique bijection from $\emptyset$ to $\emptyset$. Formally, it's the subset $\emptyset$ of $\emptyset \times \emptyset$.  Informally, it's the unique map that doesn't send anything anywhere.
+
+Thus, $S_0$ contains exactly one element, and hence is the trivial group.
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\printsolutionstype{exercise}
+\phantomsection
+\addcontentsline{toc}{chapter}{References and Supplemental Resources}
+
+\begin{thebibliography}{99}
+
+\bibitem{F} John B. Fraleigh, \textit{A First Course in Abstract Algebra (7th ed.)}, Addison Wesley, 2002.
+
+\bibitem{J} Thomas W. Judson, \textit{Abstract Algebra: Theory and Applications}. Revised edition published under the GNU Free
+Documentation License, 1997 (revised 2016). \url{
+http://abstract.pugetsound.edu/}
+
+\bibitem{NZM} Ivan Niven, Herbert S. Zuckerman, and Hugh L.
+Montgomery. \textit{An Introduction to the Theory of Numbers (5th
+ed.)}, John Wiley \& Sons, 1991.
+
+\end{thebibliography}
+
+\end{document} 
