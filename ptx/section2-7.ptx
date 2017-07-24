@@ -1,0 +1,145 @@
+
+<section>
+  <title>Summaries of groups we've seen</title>
+  <p>
+    When you see the following identified as groups, you should
+    assume they are equipped with the following operations, unless
+    otherwise. Throughout, assume <m>m,n\in \Z^+</m>.
+    \begin{threeparttable}
+  </p>
+  <tabular>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><em>Group(s)</em></cell>
+      <cell><em>Operation</em></cell>
+      <cell><em>Properties</em></cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Z</m>, <m>\fatq</m></cell>
+      <cell>addition of numbers</cell>
+      <cell>countably
+      infinite; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>n\Z</m></cell>
+      <cell>addition of numbers</cell>
+      <cell>countably infinite; abelian\tnote{*}</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\fatr</m>, <m>\fatc</m></cell>
+      <cell>addition of numbers</cell>
+      <cell>uncountable; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\fatq^*</m>, <m>\fatq^+</m></cell>
+      <cell>multiplication of  numbers</cell>
+      <cell>countably infinite; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\fatr^*</m>, <m>\fatr^+</m>, <m>\fatc^*</m></cell>
+      <cell>multiplication of  numbers</cell>
+      <cell>uncountable; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\M_{m\times n}(\fatr), \M_n(\fatr)</m></cell>
+      <cell>matrix addition</cell>
+      <cell>uncountable; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>GL(n,\fatr), SL(n,\fatr)</m></cell>
+      <cell>matrix multiplication</cell>
+      <cell>uncountable; nonabelian\tnote{<m>\dagger</m>}</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Z_n</m></cell>
+      <cell>addition mod <m>n</m></cell>
+      <cell>finite; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Z_2^2</m></cell>
+      <cell>componentwise addition mod 2</cell>
+      <cell>finite; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>F</m></cell>
+      <cell>pointwise addition</cell>
+      <cell>uncountable; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>B</m></cell>
+      <cell>composition</cell>
+      <cell>uncountable; nonabelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+  </tabular>
+  <p>
+    \begin{tablenotes}
+    \item[*] Unless <m>n=0</m>.
+    \item[<m>\dagger</m>] Unless <m>n=1</m>.
+    \end{tablenotes}
+    \end{threeparttable}
+  </p>
+</section>

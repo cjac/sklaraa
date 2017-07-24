@@ -1,0 +1,363 @@
+
+<section>
+  <title>Factor groups</title>
+  <p>
+    We now return to the notion
+    of equipping <m>G/H</m>, when <m>H\unlhd G</m>, with a group structure.
+    We have already proven that left coset multiplication on <m>G/H</m>
+    is well defined when <m>H\unlhd G</m>; it turns out that given this,
+    it is very easy to prove that <m>G/H</m> under this operation is a
+    group.
+  </p>
+
+  <p>
+    Before we prove this, we introduce a change in our notation: We
+    initiate the convention of frequently using <m>N</m>, rather than <m>H</m>, to
+    denote a subgroup of a group <m>G</m> when we know that that subgroup is
+    <em>normal</em> in <m>G</m>.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G</m> be a group with identity element <m>e</m>, and let <m>N\unlhd G</m>. Then <m>G/N</m> is a
+        group under left coset multiplication (that is, under the operation
+        <m>(aN)(bN)=abN</m> for all <m>a,b\in G</m>), and <m>|G/N|=(G:N)</m> (in
+        particular, if <m>|G|\lt \infty</m>, then <m>|G/N|=|G|/|N|</m>).
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We already know that since <m>N\unlhd G</m>, left coset
+      multiplication on <m>G/N</m> is well defined; further, it is clear
+      that <m>G/N</m> is closed under this operation.
+    </p>
+
+    <p>
+      Associativity of this operation on <m>G/N</m> follows from the
+      associativity of <m>G</m>'s operation: indeed, if <m>aN</m>, <m>bN</m>, <m>cN \in
+      G/N</m>, then
+      <me>
+        ((aN)(bN))(cN)=(abN)(cN)=(ab)cN=a(bc)N=(aN)(bcN)=(aN)((bN)(cN)).
+      </me>
+    </p>
+
+    <p>
+      Next, <m>N=eN\in G/N</m> acts as an identity element since for all <m>a\in
+      G</m>,
+    </p>
+
+    <p>
+      <m>(aN)(N)=aeN=aN</m> and <m>N(aN)=eaN=aN</m>.
+    </p>
+
+    <p>
+      Finally, let <m>aN\in G/N</m>. Then <m>a^{-1}N\in G/N</m> with
+      <m>(aN)(a^{-1}N)=aa^{-1}N=N</m> and <m>(a^{-1}N)(aN)=a^{-1}aN=N</m>.
+    </p>
+
+    <p>
+      So <m>G/N</m> is a group under left coset multiplication. Since <m>(G:N)</m>
+      is, by definition, the cardinality of <m>G/N</m>, we're done.
+    </p>
+  </proof>
+
+  <definition>
+    <statement>
+      <p>
+        When <m>G</m> is a group and <m>N\unlhd G</m>, the above group
+        (<m>G/N</m> under left coset multiplication) is called a <term>factor
+        group</term> or <term>quotient group</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>G=\Z</m> and <m>N=3\Z</m>. Then <m>N</m> is normal in <m>G</m>, since <m>G</m> is abelian, so the set
+        <m>G/N=\{N,1+N,2+N\}</m> is a group under left coset multiplication.
+        Noting that <m>N=0+N</m>, it is straightforward to see that
+        <m>G/N</m> (that is, <m>\Z/3\Z</m>) has the following group table:
+      </p>
+
+      <p>
+        <m>\begin{array}{c||c|c|c} +\amp 0+N\amp 1+N\amp 2+N\\ \hline\hline
+        0+N\amp 0+N\amp 1+N\amp 2+N\\ \hline 1+N\amp 1+N\amp 2+N\amp 0+N\\ \hline
+        2+N\amp 2+N\amp 0+N\amp 1+N
+        \end{array}</m>
+        Clearly, if we ignore all the <m>+N's</m> after the <m>0</m>'s, <m>1</m>'s, and
+        <m>2'</m> in the above table, and consider <m>+</m> to be addition mod 3,
+        rather than left coset addition in <m>\Z/3\Z</m>, we obtain the group
+        table for <m>\Z_3</m>:
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    <m>\begin{array}{c||c|c|c} +\amp 0\amp 1\amp 2\\ \hline\hline 0\amp 0\amp 1\amp 2\\ \hline
+    1\amp 1\amp 2\amp 0\\ \hline 2\amp 2\amp 0\amp 1
+    \end{array}</m>
+  </p>
+
+  <p>
+    Thus, we see that <m>\Z/3\Z</m> is isomorphic to <m>\Z_3</m>.
+    This is not a coincidence! In fact, we have the following:
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>n,d \in \Z^+</m> with <m>d</m> dividing <m>n</m>. Then we have:
+        <ol>
+          <li>
+            <p>
+              <m>n\Z\unlhd d\Z</m> and <m>\langle d\rangle \unlhd \Z_n</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>d\Z/n\Z\simeq \Z_{n/d}</m> (special case: <m>\Z/n\Z \simeq \Z_n</m>);
+              and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>Z_n/\langle d\rangle  \simeq \Z_d</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <ol>
+      <li>
+        <p>
+          Since <m>d</m> is a positive divisor of <m>n</m>, <m>n\Z</m> and
+          <m>\langle d\rangle</m> are clearly subgroups of, respectively, <m>d\Z</m> and <m>\Z_n</m>.
+          Moreover, since <m>d\Z</m> and <m>\Z_n</m> are abelian, all of their subgroups
+          are normal.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          This follows from the facts that <m>d\Z/n\Z=\langle d+n\Z\rangle</m>, hence
+          is cyclic, and that <m>|d\Z/n\Z|=(d\Z:n\Z)=n/d</m> (see <xref ref="indices_ex">Example</xref>). (Unpacking the statement that
+          <m>d\Z/n\Z=\langle d+n\Z\rangle</m>: Notice that <m>d\Z=\langle d\rangle</m>, so every element of
+          <m>d\Z</m> is of the form <m>kd</m> for some integer <m>k</m>. Thus, every element
+          of <m>d\Z/n\Z</m> is of the form <m>kd+n\Z</m> for some integer <m>k</m>. But for
+          each <m>k\in \Z</m>, using the definition of left coset multiplication we
+          have that <m>kd+n\Z=k(d+n\Z)</m>. So <m>d\Z/n\Z=\langle d+n\Z\rangle</m>.)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Similarly, since <m>\Z_n=\langle 1\rangle</m>, <m>\Z_n/\langle d\rangle =\langle 1+\langle d\rangle \rangle</m>, so
+          is cyclic. Since <m>(\Z_n:\langle d\rangle )=d</m> (again, see <xref ref="indices_ex">Example</xref>), <m>\Z_n/\langle d\rangle</m> is isomorphic to <m>\Z_d</m>, as desired. \qedhere
+        </p>
+      </li>
+    </ol>
+  </proof>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>N=\langle (123)\rangle  \leq S_3</m>. Since <m>(S_3:N)=2</m>,
+        <m>N</m> must be normal in <m>S_3</m>, so <m>S_3/N</m> is a group under left coset
+        multiplication. Since <m>|S_3/N|=2</m>, <m>S_3/N</m> must be isomomorphic to
+        <m>\Z_2</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    In the above examples, we were able to identify <m>G/N</m> up to
+    isomorphism relatively easily because we could determine that <m>G/N</m>
+    was cyclic. In general, however, it can be quite difficult to
+    identify the group structure of a factor group. We explore some
+    powerful tools we can use in this identification in the next
+    section, but first we note a couple properties of <m>G</m> that are
+    <q>inherited</q> by any of its factor groups.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G</m> be a group and <m>N\unlhd G</m>. Then:
+        <ol>
+          <li>
+            <p>
+              If <m>G</m> is finite, then <m>G/N</m> is finite.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>G</m> is abelian, then <m>G/N</m> is abelian; and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>G</m> is cyclic, then <m>G/N</m> is cyclic.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <ol>
+      <li>
+        <p>
+          Clearly this holds, since in this case
+          <m>|G/N|=|G|/|N|</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The proof of this statement is left as an exercise for the reader.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>G</m> be cyclic.  Then there exists <m>a\in G</m> with <m>G=\langle a\rangle</m>.  We claim <m>G/N=\langle aN\rangle</m>. Indeed:
+          <me>
+            \langle aN\rangle =\{(aN)^i\,:\,i\in \Z\}=\{a^iN\,:\,i\in \Z\}.
+          </me>
+          But every element of <m>G</m> is an integer power of <m>a</m>, so this set equals <m>\{xN\,:x\in G\}</m>, that is, it equals <m>G/N</m>. \qedhere
+        </p>
+      </li>
+    </ol>
+  </proof>
+
+  <warning>
+    <p>
+      However, <m>G</m> can be nonabelian [noncyclic, nonfinite] and
+      yet have a normal subgroup <m>N</m> such that <m>G/N</m> is abelian [cyclic,
+      finite]. (See the examples below.) Intuitively, the idea is that
+      modding out a group by a normal subgroup can <em>introduce</em>
+      abelianness or cyclicity, or finiteness, but not <em>remove</em>
+      one of those characteristics.
+    </p>
+  </warning>
+
+  <example>
+    <statement>
+      <p>
+        <m>S_3</m> is nonabelian (and therefore of course noncyclic), but we
+        saw above that <m>N=\langle (123)\rangle</m> is a normal subgroup of <m>S_3</m> with
+        <m>S_3/N \simeq \Z_2</m>, a cyclic (and therefore of course abelian)
+        group.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        <m>\Z</m> is an infinite group, but it has finite factor group
+        <m>\Z/2\Z</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    What do the (normal) subgroups of a factor group <m>G/N</m> look like?
+    Well, they come from the (normal) subgroups of <m>G</m>! We have the
+    following theorem, whose proof is tedious but straightforward.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        {<em>(Correspondence Theorem)</em>} Let <m>G</m> be a
+        group, and let <m>K\unlhd G</m>. Then the subgroups of <m>G/K</m> are exactly
+        those of the form <m>H/K</m>, where <m>H\leq G</m> with <m>K\subseteq H</m>.
+        Moreover, the normal subgroups of <m>G/K</m> are exactly those of the
+        form <m>N/K</m>, where <m>N\unlhd G</m> with <m>K\subseteq N</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>N=18\Z</m> in <m>\Z</m>. Since the subgroups of <m>\Z</m> containing <m>N</m>
+        are the sets <m>d\Z</m> where <m>d</m> is a positive divisor of <m>18</m>, the
+        subgroups of <m>\Z/N</m> are the sets <m>d\Z/N</m>, where, again, <m>d</m> is a
+        positive divisor of <m>18</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We end this chapter by noting that given any group <m>G</m> and
+    factor group <m>G/N</m> of <m>G</m>, there is a homomorphism from <m>G</m> to <m>G/N</m>
+    that is onto. Before we define this homomorphism, we provide some
+    more terminology.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>\phi: G\to G'</m> be a homomorphism of groups. Then
+        <m>\phi</m> is can be called an <term>epimorphism</term> if <m>\phi</m> is onto,
+        and a <term>monomorphism</term> if <m>\phi</m> is one-to-one. (Of course,
+        we already know that an epimorphism that is also a monomorphism
+        is called an <q>isomorphism.</q>)
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    We now present the following theorem, whose straightforward
+    proof is left to the reader.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G</m> be a group and let <m>N\unlhd G</m>. Then the
+        map <m>\Psi: G\to G/N</m> defined by <m>\Psi(g)=gN</m> is an epimorphism.
+      </p>
+    </statement>
+  </theorem>
+
+  <definition>
+    <statement>
+      <p>
+        We call this map <m>\Psi</m> the <term>canonical epimorphism
+        from <m>G</m> to <m>G/N</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Notice that given <m>N\unlhd G</m>, the kernel of the canonical
+    epimorphism from <m>G</m> to <m>G/N</m> is <m>N</m>. Thus, putting this fact
+    together with the fact that every kernel of a homomorphism is a
+    normal subgroup of the homomorphism's domain, we have the following:
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G</m> be a group and <m>N</m> a subset of <m>G</m>. Then <m>N</m>
+        is a normal subgroup of <m>G</m> if and only if <m>N</m> is the kernel of a
+        homomorphism from <m>G</m> to some group <m>G'</m>.
+      </p>
+    </statement>
+  </theorem>
+</section>

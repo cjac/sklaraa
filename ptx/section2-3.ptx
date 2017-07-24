@@ -1,0 +1,132 @@
+
+<section>
+  <title>The definition of a group</title>
+  <p>
+    At this point you may be asking yourself, why do we care? We've covered a lot of definitions and proved some theorems, but what is the goal of all this? Well, there are actually many goals that we can achieve using such material. Consider the following as an example. Suppose we want to solve the equation <m>5+x=2</m>. We can probably solve this quite easily almost just by looking at it (<m>x=-3</m>), but what facts are we actually using there? If we break down the reasoning leading to this answer, we may obtain something like the following set of steps.
+  </p>
+  <tabular>
+    <row>
+      <cell></cell>
+      <cell><m>5+x</m></cell>
+      <cell>=</cell>
+      <cell><m>2</m></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Rightarrow</m></cell>
+      <cell><m>-5+(5+x)</m></cell>
+      <cell>=</cell>
+      <cell><m>-5+2</m></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Rightarrow</m></cell>
+      <cell><m>(-5+5)+x</m></cell>
+      <cell>=</cell>
+      <cell><m>-3</m></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Rightarrow</m></cell>
+      <cell><m>0+x</m></cell>
+      <cell>=</cell>
+      <cell><m>-3</m></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Rightarrow</m></cell>
+      <cell><m>x</m></cell>
+      <cell>=</cell>
+      <cell><m>-3</m></cell>
+      <cell>.</cell>
+    </row>
+  </tabular>
+  <p>
+    In line 2, we add the inverse of <m>5</m> in <m>\langle \Z, +\rangle</m> to each side of
+    the equation. In line 3, we use associativity of <m>+</m> in <m>\Z</m> (along
+    with computation), while in line 4 we use the fact that <m>-5</m> is the
+    additive inverse of <m>5</m> (that is, the inverse of <m>5</m> in <m>\Z</m> under
+    <m>+</m>). Finally, in line 5 we use the fact that 0 is an additive
+    identity element in <m>\Z</m> (that is, the identity element in <m>\Z</m>
+    under <m>+</m>).
+  </p>
+
+  <p>
+    In summary, we used <em>associativity, identity elements, and
+    inverses</em> in <m>\Z</m> to solve the given equation. This perhaps
+    suggests that these would be useful traits for a binary
+    structure and/or its operation to have. They are in fact so
+    useful that a binary structure displaying these characteristics
+    is given a special name. We note that these axioms are rather
+    strong; <q>most</q> binary structures aren't groups.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>group</term> is a set <m>G</m>, equipped with a binary
+        operation <m>*</m>, that satisfies the following three <term>group
+        axioms</term>:
+        <ol>
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              <m>*</m> is associative on <m>G</m>;
+            </p>
+          </li>
+
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              There exists an identity element for <m>*</m> in <m>G</m>;
+            </p>
+          </li>
+
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              Every element <m>a\in G</m> has an inverse in <m>G</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        We
+        denote group <m>G</m> under <m>*</m> by the binary structure notation
+        <m>\langle G,*\rangle</m>, or simply by <m>G</m> if the operation <m>*</m> is known
+        from context (or need not be known in the current
+        situation).
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    \fbox{
+  </p>
+
+  <sidebyside>
+    <em>
+    IMPORTANT NOTE</em>When proving/disproving that a set <m>G</m> is/is
+    not a group under an (apparent) operation <m>*</m>:
+    <ul>
+      <li>
+        <p>
+          The first thing you should do is check to make sure that  <m>\langle G,*\rangle</m>
+          is a binary structure by making sure <m>G</m> is closed under <m>*</m><mdash />if not, it doesn't make sense to
+          check to see if axioms <m>\G_1</m><ndash /><m>\G_3</m> hold). (For instance: <m>\Z^*</m> has no chance of being a group under
+          <m>\div</m>, since, e.g., <m>3,4\in \Z^*</m> but <m>3 \div 4 \not\in\Z^*</m>.)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          You should never check <m>\G_3</m> before confirming
+          <m>\G_2</m> holds, because it makes no sense to look for
+          inverses if you haven't confirmed that <m>G</m> contains an
+          identity element under <m>*</m>.
+        </p>
+      </li>
+    </ul>
+  </sidebyside>
+</section>

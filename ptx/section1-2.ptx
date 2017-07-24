@@ -1,0 +1,353 @@
+
+<section>
+  <title>Sets</title>
+  <p>
+    Now we provide a <q>definition</q> of a basic mathematical object to which we will soon add bells and whistles.
+  </p>
+
+  <p>
+    \begin{df}{<q>Sort of</q> definition} A <em>set</em> is an (unordered)
+    collection of objects.\end{df}
+  </p>
+
+  <p>
+    We say this is a <q>sort of</q> definition because it is not a
+    rigorous definition of a set. For instance, what do we mean by a
+    <q>collection</q> of objects? This <q>definition</q> will be sufficient for
+    our course, but be warned that defining a set in this vague way can
+    lead to some serious mathematical issues, such as Russell's
+    paradox<fn>Let <m>S</m> be the set of all sets that aren't members
+    of themselves.  Is <m>S</m> a member of itself? If you think carefully
+    about this, you'll see that <m>S</m> can be neither a member of itself,
+    nor <em>not</em> a member of itself. Uh oh!  This contradiction
+    is known as Russell's paradox (named for the British philosopher, mathematician, and all-round academic Bertrand Russell). Mathematicians deal with this by
+    declaring that some object collections, called <em>classes</em>, are
+    not in fact sets.</fn>; a mathematician whose expertise is in set
+    theory may scowl disagreeably if you try to define a set as we have
+    above.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        The members of a set are called its <term>elements</term>. If
+        <m>S</m> is a set, we write <m>x\in S</m> to indicate ``<m>x</m> is an element
+        of <m>S</m>," and <m>x \not\in S</m> to indicate ``<m>x</m> is not an element
+        of <m>S</m>." There is a unique set containing no elements; it is
+        called the <term>empty set</term>, and denoted by <m>\emptyset</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Sets must be <em>well defined</em>: that is, it must be clear
+    exactly which objects are in a set, and which objects aren't.
+    For instance, the set of all integers is well defined, but the
+    set of all big integers is not well defined, since it is
+    unclear what <q>big</q> means in this context.
+  </p>
+
+  <p>
+    We refer to some sets so frequently in mathematics that we have special notation for them. Common examples are:
+  </p>
+
+  <p>
+    \begin{threeparttable}
+  </p>
+  <tabular>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><em>Notation</em></cell>
+      <cell><em>Meaning</em></cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Z</m></cell>
+      <cell>the set of all integers</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\fatq</m></cell>
+      <cell>the set of all rational numbers</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\fatr</m></cell>
+      <cell>the set of all real numbers</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\fatc</m></cell>
+      <cell>the set of all complex numbers</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\fatn</m></cell>
+      <cell>the set of all natural numbers (that is, the set <m>\{0, 1, 2, \ldots\}</m>)\tnote{*}</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Z^+</m>/<m>\fatq^+</m>/<m>\fatr^+</m></cell>
+      <cell>the set of all positive integers/rational numbers/real numbers</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Z^-</m>/<m>\fatq^-</m>/<m>\fatr^-</m></cell>
+      <cell>the set of all negative integers/rational numbers/real numbers</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Z^-</m>/<m>\fatq^-</m>/<m>\fatr^-</m>/<m>\fatc^*</m></cell>
+      <cell>\pbox{20cm}{the set of all nonzero integers/rational numbers/real numbers/</cell>
+    </row>
+    <row>
+      <cell>complex numbers}</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+  </tabular>
+  <p>
+    \begin{tablenotes}
+    \item[*] Be aware that many books/mathematicians do not include 0 in the set of natural numbers.
+    \end{tablenotes}
+    \end{threeparttable}
+  </p>
+
+  <p>
+    We also provide notation for commonly considered sets of matrices:
+  </p>
+
+  <notation>
+
+  <p>
+    Given <m>m,n\in \Z^+</m> and a set <m>S</m>, we define <m>\M_{m\times n}(S)</m> to
+    be the set of all <m>m\times n</m> matrices over <m>S</m> (that is, of all <m>m\times n</m> matrices with entries in <m>S</m>). We use the
+    shorthand notation <m>\M_n(S)</m> for the set <m>\M_{n\times n}(S)</m>.
+  </p>
+
+  </notation>
+
+  <p>
+    One common way of describing a set is to list its elements in
+    curly braces, separated by commas; you can use ellipses to
+    indicate a repeated pattern of elements. A few examples are
+    <m>\{1,4,\pi\}</m>, <m>\{3, 4, 5, \ldots\}</m>, and <m>\{\ldots, -4, -2, 0,
+    2, 4, \ldots\}</m>; the last of these can be written more concisely as <m>\{0,\pm 2, \pm 4,\ldots\}</m>. Note that since elements of a set are
+    unordered, the sets <m>\{1,4,\pi\}</m> and <m>\{4,\pi, 1\}</m>, for
+    instance, are identical.
+  </p>
+
+  <p>
+    Another method is using <em>set-builder notation</em>. This consists of an element name (or
+    names), followed by a colon (meaning <q>such that</q>), followed by
+    a Boolean expression involving the element name(s), all
+    surrounded by curly braces.<fn><em>WARNING:</em> The use of a colon to denote <q>such that</q> is <em>only</em> valid in the above set-builder notation context.  Outside of this context, you should never use a colon to denote <q>such that</q>; instead, write out the actual words or use the abbreviation s.t. (or the symbol <m>\ni</m>, though I do not recommended).  Conversely, never use one of those ways of indicating <q>such that</q> within set-builder notation; always use a colon there.  Why?  Convention.</fn>For example,
+    <me>
+      \{x\in \Z : x > 4\}
+    </me>
+    is the set <m>\{5, 6, 7, \ldots\}</m>, while
+    <me>
+      \{z\in \fatc : |z|=1\}
+    </me>
+    is the set of all complex numbers at
+    distance 1 from the origin in the complex plane.
+  </p>
+
+  <note>
+
+  <p>
+    If one simply writes <m>\{x\,:\,x>4\}</m>,
+    it is unclear what this set is; it could be the set of all
+    integers greater than 4, or the set of all real numbers greater
+    than 4, or something else. When one can, it is better to
+    identify the named element(s) as a member (members) of a known
+    set, such as <m>\fatr</m> or <m>\Z</m>, whenever possible.
+  </p>
+
+  </note>
+
+  <definition>
+    <statement>
+      <p>
+        Set <m>A</m> is a <term>subset</term> of <m>B</m> (and set <m>B</m> is a <term>superset</term> of <m>A</m>) if every element in <m>A</m> is also in <m>B</m>. We
+        denote <q><m>A</m> is a subset of <m>B</m></q> by <m>A\subseteq B</m>. Sets <m>A</m>
+        and <m>B</m> are said to be <term>equal</term>, and we write <m>A=B</m>, if they
+        contain exactly the same elements; equivalently, <m>A=B</m> if and
+        only if <m>A \subseteq B</m> and <m>B\subseteq A</m>. Set <m>A</m> is a <term>proper</term> subset of set <m>B</m> if <m>A\subseteq B</m> but <m>A\neq B</m>; we
+        write this <m>A\subsetneq B</m> or <m>A\subset B</m><fn><em>
+        WARNING:</em> Sometimes the notation <m>A\subset B</m> is merely used to
+        indicate that <m>A</m> is a subset of <m>B</m> (but may equal <m>B</m>). Be
+        careful to check what your book or peer means by this
+        notation.</fn>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      One often proves that two sets <m>A</m> and
+      <m>B</m> are equal by proving that <m>A\cont B</m> and <m>B\cont A</m>.
+    </p>
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        We have the following: <m>\Z^+ \subseteq \Z \subseteq \fatq \subseteq \fatr \subseteq \fatc</m>.
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        The <term>power set</term> of <m>A</m>, denoted <m>P(A)</m>, is the set of
+        all subsets of <m>A</m>. (Note that the power set of any set
+        contains the empty set as an element.)
+      </p>
+    </statement>
+  </definition>
+
+  <warning>
+    <p>
+      Be careful to use your curly braces correctly when writing power sets!
+      Remember, the power set of a set is a <em>set of sets</em>.
+    </p>
+  </warning>
+
+  <p>
+    The following provides a good example of using braces correctly.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        If <m>A=\{a,b\}</m>, then <m>P(A)=\{\emptyset, \{a\}, \{b\}, \{a,b\}\}</m>. Note that the element <m>\{a,b\}</m> of <m>P(A)</m> could also be written simply as <m>A</m>.
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            If <m>A</m> and <m>B</m> are sets, then the <em>union</em> of <m>A</m> and <m>B</m>, denoted <m>A\cup B</m>, is the set
+            <m>A\cup B=\{x: x\in A \mbox{ or }  x\in B\};</m> the <em>intersection</em> of <m>A</m> and <m>B</m>, denoted <m>A\cap B</m>, is the set
+            <m>A\cap B=\{x: x\in A \mbox{ and }  x\in B\};</m> and the <em>difference</em> of <m>A</m> and <m>B</m>, denoted <m>A-B</m> (or <m>A\setminus B</m>), is the set
+            <m>A-B=\{x: x\in A \mbox{ and }  x\not\in B\}.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            More generally, given any collection of sets <m>A_i</m> (<m>i</m> in some index set <m>I</m>), the <em>union</em> of the <m>A_i</m> is
+            <me>
+              \bigcup_{i\in I}A_i=\{x: x\in A_i \mbox{ for some }  i\in I\},
+            </me>
+            and the <em>intersection</em> of the <m>A_i</m> is
+            <me>
+              \bigcap_{i\in I}A_i=\{x: x\in A_i \mbox{ for every }  i\in I\}.
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Sets <m>A</m> and <m>B</m> are <em>disjoint</em> if <m>A\cap B=\emptyset</m>.  More generally, sets <m>A_i</m> (<m>i</m> in some index set <m>I</m>) are
+            <em>disjoint</em> if
+            <me>
+              \bigcap_{i\in I}A_i=\emptyset
+            </me>
+            and are <em>mutually disjoint</em> if
+            <me>
+              A_i\cap A_j=\emptyset \mbox{ for all } i\neq j \in I.
+            </me>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+
+  <p>
+    Notice that for any sets <m>A</m> and <m>B</m>, <m>A\cap B \cont A \cont A\cup B</m> and
+    <m>A\cap B \cont B \cont A\cup B</m>. Also note that if sets <m>A_i</m> (<m>i \in I</m>) are mutually disjoint then they are also disjoint, but they may be disjoint without being mutually disjoint. For example, the sets <m>\{i, i+1\}</m> for <m>i\in \Z</m> are disjoint but not mutually disjoint. (Do you see why?)
+  </p>
+
+  <p>
+    We define one more way of <q>combining</q> sets.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>A</m> and <m>B</m> be sets. Then the <term>(direct)
+        product</term> <m>A\times B</m> of <m>A</m> and <m>B</m> is the set
+        <me>
+          A\times B =
+          \{(a,b): \mbox{\(a\in A\), \(b\in B\)} \}.
+        </me>
+      </p>
+
+      <p>
+        An element <m>(a,b)</m> of
+        <m>A\times B</m> is called an <term>ordered pair</term>. More generally, if
+        <m>A_1, A_2, \ldots, A_n</m> are sets for some <m>n\in \Z^+</m>, then the
+        <term>product</term> of the <m>A_i</m> is
+        <me>
+          A_1\times A_2 \times \cdots
+          \times A_n=\{(a_1, a_2, \ldots, a_n): a_i \in A_i \mbox{ for
+          each } i\};
+        </me>
+        the elements <m>(a_1,a_2,\ldots,a_n)</m> of this
+        product are called <m>n</m>-tuples (or triples, if <m>n=3</m>).<fn>You can also have products of infinitely many sets, but we will
+        not discuss that in this course.</fn>Finally, if each set <m>A_i</m> is
+        the same set <m>A</m>, we can use the notation <m>A^n</m> to denote the
+        product
+        <me>
+          A\times A \times \cdots \times A
+        </me>
+        of <m>n</m> copies of
+        <m>A</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        For example, the Cartesian plane is the set <m>\fatr^2</m>, and the set <m>\Z \times \fatr</m> consists of exactly the points in the plane with integer <m>x</m>-coordinates
+        (that is, the points that lie on vertical lines intersecting the <m>x</m>-axis at integer values).
+      </p>
+    </statement>
+  </example>
+</section>

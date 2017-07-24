@@ -1,0 +1,117 @@
+
+<section>
+  <title>The Second and Third Isomorphism Theorems</title>
+  <p>
+    The following theorems can be proven using the First Isomorphism
+    Theorem. They are very useful in special cases.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>(Second Isomorphism Theorem)</em> Let <m>G</m> be a
+        group, let <m>H\leq G</m>, and let <m>N\unlhd G</m>. Then the set
+        <me>
+          HN=\{hn:h\in H, n\in N\}
+        </me>
+        is a subgroup of <m>G</m>, <m>H\cap N\unlhd H</m>, and
+        <me>
+          H/(H\cap N) \simeq
+          HN/N.
+        </me>
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We first prove that <m>HN</m> is a subgroup of <m>G</m>. Since <m>e_G\in
+      HN</m>, <m>HN\neq \emptyset</m>. Next, let <m>x=h_1n_1, y=h_2n_2\in HN</m>
+      (where <m>h_1,h_2\in H</m> and <m>n_1,n_2\in N</m>). Then
+      <me>
+        xy^{-1}=h_1n_1(h_2n_2)^{-1}=h_1n_1n_2^{-1}h_2^{-1}.
+      </me>
+    </p>
+
+    <p>
+      Since
+      <m>N\leq G</m>, <m>n_1n_2^{-1}</m> is in <m>N</m>; so <m>h_1n_1n_2^{-1}h_2^{-1}\in
+      h_1Nh_2^{-1}</m>, which equals <m>h_1h_2^{-1}N</m>, since <m>N\unlhd G</m>
+      implies <m>Nh_2^{-1}=h_2^{-1}N</m>. So <m>xy^{-1}=\in h_1h_2^{-1}N.</m> But
+      <m>H\leq G</m> implies <m>h_1h_2^{-1}\in H</m>; thus, <m>xy^{-1}\in HN</m>, and so
+      <m>HN</m> is a subgroup of <m>G</m>.
+    </p>
+
+    <p>
+      Since <m>N\unlhd G</m> and <m>N\subseteq HN</m>, <m>N</m> is normal in <m>HN</m>
+      (do you see why?). So <m>HN/N</m> is a group under left coset
+      multiplication. We define <m>\phi: H\to HN/N</m> by <m>\phi(h)=hN</m>
+      (notice that when <m>h\in H</m>, <m>h\in HN</m> since <m>h=he_G</m>). Clearly,
+      <m>\phi</m> is a homomorphism. Further, <m>\phi</m> is onto: Indeed, let
+      <m>y\in HN/N</m>. Then <m>y=hnN</m> for some <m>h\in H</m> and <m>n\in N</m>. But
+      <m>nN=N</m>, so <m>y=hN=\phi(h)</m>. Finally,
+      <me>
+        \Ker \phi=\{h\in H\,:\, \phi(h)=N\}=\{h\in H\,:\, hN=N\}=\{h\in
+        H\,:\, h\in N\}=H\cap N.
+      </me>
+    </p>
+
+    <p>
+      Thus,
+      <me>
+        H/(H\cap N)
+        \simeq HN/N,
+      </me>
+      by the First Isomorphism Theorem.
+    </p>
+  </proof>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>(Third Isomorphism Theorem)</em> Let <m>G</m> be a group,
+        and let <m>K</m> and <m>N</m> be normal subgroups of <m>G</m>, with <m>K\subseteq N</m>.
+        Then <m>N/K \unlhd G/K</m>, and
+        <me>
+          (G/K)/(N/K)\simeq G/N.
+        </me>
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Define <m>\phi: G/K\to G/N</m> by <m>\phi(aK)=aN</m>. We have that
+      <m>\phi</m> is well defined: indeed, let <m>aK=bK \in G/K</m>. Then by
+      Statement 6 of <xref ref="cosetfacts">Theorem</xref>, we have <m>aN=bN</m>, that
+      is, <m>\phi(aK)=\phi(bK)</m>. So <m>\phi</m> is well defined. <m>\phi</m> is
+      clearly onto, and we have
+      <md>
+        <mrow>\Ker \phi\amp =\{aK\in
+        G/K\,:\,\phi(aK)=N\}</mrow>
+        <mrow>\amp =\{aK\in G/K\,:\,aN=N\}</mrow>
+        <mrow>\amp =\{aK\in
+        G/K\,:\,a\in N\}</mrow>
+        <mrow>\amp =N/K.</mrow>
+      </md>
+    </p>
+
+    <p>
+      So the desired
+      results hold, by the First Isomorphism Theorem.
+    </p>
+  </proof>
+
+  <example>
+    <statement>
+      <p>
+        Using the Third Isomorphism Theorem we see that the group
+        <me>
+          (\Z/12\Z)/(6\Z/12\Z)
+        </me>
+        is isomorphic to the group <m>\Z/6\Z</m>, or
+        <m>\Z_6</m>.
+      </p>
+    </statement>
+  </example>
+</section>

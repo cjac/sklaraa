@@ -1,0 +1,223 @@
+
+<section>
+  <title>Functions</title>
+  <p>
+    You have probably encountered functions before. In introductory
+    calculus, for instance, you typically deal with functions from
+    <m>\fatr</m> to <m>\fatr</m> (e.g., the function <m>f(x)=x^2</m>). More generally,
+    functions <q>send</q> elements of one set to elements of another set;
+    these sets may or may not be sets of real numbers. We provide below
+    a <q>good enough for government work</q> definition of a function.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>function</term> <m>f</m> from a set <m>S</m> to a set <m>T</m> is a
+        <q>rule</q> that assigns to each element <m>s</m> in <m>S</m> a unique
+        element <m>f(s)</m> in <m>T</m>; the element <m>f(s)</m> is called the <term>image of <m>s</m> under <m>f</m></term>. If <m>f</m> is a function from <m>S</m> to <m>T</m>,
+        we write <m>f: S \to T</m>, and call <m>S</m> the <term>domain</term> of <m>f</m> and
+        <m>T</m> the <term>codomain</term> of <m>f</m>. The <term>range</term> of <m>f</m> is
+        <me>
+          f(S)=\{f(s) \in T : s \in S\} \cont T.
+        </me>
+      </p>
+
+      <p>
+        More generally, if <m>U \cont S</m>, the <term>image of <m>U</m> in <m>T</m> under <m>f</m></term> is
+        <me>
+          f(U)=\{f(u)\in T : u\in U\}.
+        </me>
+      </p>
+
+      <p>
+        If <m>V\cont T</m>, the <term>preimage of <m>V</m> in <m>S</m> under <m>f</m></term> is the set
+        <me>
+          f^{\leftarrow}(V)=\{s\in S: f(s)\in V\}.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Consider the function <m>f: \Z \to \fatr</m> defined by <m>f(x)=x^2</m>.
+        The domain of <m>f</m> is <m>\Z</m> and the codomain of <m>f</m> is <m>\fatr</m>; the
+        range of <m>f</m> is <m>\{x^2\,:\,x\in \Z\}=\{0,1,4,9,\ldots\}</m>. The image
+        of <m>\{-2,-1,1,2\}</m> under <m>f</m> is the two-element set <m>\{1,4\} \cont
+        \fatr</m>, and the preimage of <m>\{4,25,\pi\}</m> under <m>f</m> is the set
+        <m>\{\pm 2, \pm 5\}</m>. (Do you see why <m>\pm \sqrt{\pi}</m> are not in this
+        preimage?) What is the preimage of just <m>\{\pi\}</m> under <m>f</m>?
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    The following definitions will be very important in our future work.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>S</m> and <m>T</m> be sets, and <m>f:S\to T</m>.
+        <ol>
+          <li>
+            <p>
+              Function <m>f</m> is <em>one-to-one</em> (1-1) if whenever <m>s_1, s_2\in S</m> with <m>f(s_1)=f(s_2)</m>, we have <m>s_1=s_2</m>.  Equivalently, <m>f</m> is one-to-one if
+              whenever <m>s_1\neq s_2 \in S</m>, then <m>f(s_1)\neq f(s_2) \in T</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Function <m>f</m> is <em>onto</em> if for every <m>t\in T</m>, there exists an element <m>s\in S</m> such that <m>f(s)=t</m>.  Equivalently, <m>f</m> is onto if <m>f(S)=T</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Function <m>f</m> is a <em>bijection</em> if it is both one-to-one and onto.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    We will often have to show functions are one-to-one or onto. Given a function <m>f:S\to T</m>, the following methods are recommended.
+  </p>
+  <tabular>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><em>To prove that <m>f</m> is one-to-one</em></cell>
+      <cell>Let <m>s_1,s_2 \in S</m> with <m>f(s_1)=f(s_2)</m> and prove that then <m>s_1=s_2</m>.  <em>WARNING:</em> It is <em>not</em> sufficient to prove that if <m>s_1=s_2</m> in <m>S</m> then <m>f(s_1)=f(s_2)</m>; that is true for any function from <m>S</m> to <m>T</m>!  Be careful to <em>assume</em> and <em>prove</em> the correct facts.</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><em>To prove that <m>f</m> is <em>not</em> one-to-one</em></cell>
+      <cell>Identify two elements <m>s_1 \neq s_2</m> of <m>S</m> such that <m>f(s_1)=f(s_2)</m>.</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><em>To prove that <m>f</m> is onto</em></cell>
+      <cell>Let <m>t\in T</m> and prove that there exists an element <m>s\in S</m> with <m>f(s)=t</m>. <em>WARNING:</em> It is <em>not</em> sufficient to prove that if <m>s\in S</m> then <m>f(s)</m> is in <m>T</m>; that is true for any function from <m>S</m> to <m>T</m>!  Again, be careful to <em>assume</em> and <em>prove</em> the correct facts.</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><em>To prove that <m>f</m> is <em>not</em> onto</em></cell>
+      <cell>Identify an element <m>t\in T</m> for which there is no <m>s\in S</m> with <m>f(s)=t</m>.</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+  </tabular>
+
+  <example>
+    <statement>
+      <p>
+        Consider the function <m>f: \fatr^* \to \fatr^+</m> defined by <m>f(x)=x^2</m>. Function <m>f</m> is <em>not</em> one-to-one: indeed,
+        <m>-1</m> and <m>1</m> are in <m>\fatr^*</m> with <m>f(-1)=1=f(1)</m> in <m>\fatr^+</m>.
+        However, <m>f</m> <em>is</em> onto: indeed, let <m>t\in \fatr^+</m>. Then
+        <m>\sqrt{t} \in \fatr^*</m> with <m>t=f(\sqrt{t})</m>, so we're done.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Consider the function <m>f: \Z^+ \to \fatr</m> defined by <m>f(x)=x/2</m>. Function <m>f</m> <em>is</em> one-to-one: indeed, let <m>s_1, s_2 \in \Z^+</m> with <m>f(s_1)=f(s_2)</m>.
+        Then <m>s_1/2=f(s_1)=f(s_2)=s_2/2</m>; multiplying both sides of the equation <m>s_1/2=s_2/2</m> by 2, we obtain <m>s_1=s_2</m>. However, <m>f</m> is <em>not</em> onto: for example, <m>\pi\in \fatr</m>
+        but there is no positive integer <m>s</m> for which <m>f(s)=s/2=\pi</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Recall that we can combine certain functions using <em>composition</em>:
+    if <m>f:S\to T</m> and <m>g:T\to U</m>, then <em><m>g</m> composed with <m>f</m></em> is the function <m>g\circ f: S\to U</m> defined by
+    <me>
+      (g\circ f)(s)=g(f(s))
+    </me>
+    for all <m>s\in S</m>.<fn>More generally, you can compose functions <m>f:S\to T</m> and <m>g:R\to U</m> to form <m>g\circ f:S\to U</m>,  as long as <m>f(S)\subseteq R</m>.</fn>Also recall that given any set <m>S</m>, the <em>identity function on <m>S</m></em> is the function <m>1_S: S\to S</m> defined by <m>1_S(s)=s</m> for every <m>s\in S</m>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>f</m> be a function from <m>S</m> to <m>T</m>. A function <m>g</m>
+        from <m>T</m> to <m>S</m> is an <term>inverse</term> of <m>f</m> if <m>g\circ f</m> and
+        <m>f\circ g</m> are the identity functions on <m>S</m> and <m>T</m>,
+        respectively; that is, if for all <m>s\in S</m> and <m>t\in
+        T</m>, <m>g(f(s))=s</m> and <m>f(g(t))=t</m>. If <m>f</m> has an inverse, we say that <m>f</m> is <term>invertible</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    We present three theorems, omitting the
+    proofs of the first two.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        If <m>f</m> has an inverse, then that inverse is unique.
+      </p>
+    </statement>
+  </theorem>
+
+  <notation>
+
+  <p>
+    If <m>f</m> is invertible, we denote its unique inverse by <m>f^{-1}</m>.
+  </p>
+
+  </notation>
+
+  <theorem xml:id="invbij">
+    <statement>
+      <p>
+        Function <m>f:S\to T</m> has an inverse if and only if <m>f</m> is a bijection. Also, if <m>f</m> has inverse <m>f^{-1}</m>, then <m>f^{-1}</m> is also a bijection.
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem xml:id="compbij">
+    <statement>
+      <p>
+        Let <m>f:S\to T</m> and <m>g:T\to U</m> be functions.
+        If <m>f</m> and <m>g</m> are both 1-1 [onto], then so is <m>g\circ f: S\to U</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Assume <m>f</m> and <m>g</m> are 1-1. Let <m>s_1, s_2\in S</m>
+      with <m>(g\circ f)(s_1)=(g\circ f)(s_2)</m>. Then <m>g(f(s_1))=g(f(s_2))</m>;
+      since <m>g</m> is one-to-one (since it's a bijection), this shows that
+      <m>f(s_1)=f(s_2)</m>. Then since <m>f</m> is one-to-one (since <m>f</m> is also a
+      bijection), we must have <m>s_1=s_2</m>. Thus, <m>g\circ f</m> is one-to-one.
+    </p>
+  </proof>
+
+  <p>
+    The proof that <m>g\circ f</m> is onto if <m>f</m> and <m>g</m> are onto is left as an exercise for the reader.
+  </p>
+</section>

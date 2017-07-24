@@ -1,0 +1,398 @@
+
+<section>
+  <title>The First Isomorphism Theorem</title>
+  <p>
+    A very powerful theorem, called the First Isomorphism
+    Theorem, lets us in many cases identify factor groups (up to
+    isomorphism) in a very slick way. Kernels will play an extremely
+    important role in this. We
+    therefore first provide some theorems relating to kernels.
+  </p>
+
+  <theorem xml:id="kermean">
+    <statement>
+      <p>
+        Let <m>G</m> and <m>G'</m> be groups, let <m>\phi</m> be a
+        homomorphism from <m>G</m> to <m>G'</m>, and let <m>K=\Ker \phi</m>. Then for
+        <m>a,b\in G</m>, <m>aK=bK</m> if and only if <m>\phi(a)=\phi(b)</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Let <m>a,b\in G</m>. Then
+      <md>
+        <mrow>\phi(a)=\phi(b)\amp \Leftrightarrow
+        \phi(b)^{-1}\phi(a)=e_{G'}</mrow>
+        <mrow>\amp \Leftrightarrow \phi(b^{-1}a)=e_{G'}</mrow>
+        <mrow>\amp \Leftrightarrow b^{-1}a\in K</mrow>
+        <mrow>\amp \Leftrightarrow a \in bK</mrow>
+        <mrow>\amp \Leftrightarrow aK=bK,</mrow>
+      </md>
+      as desired.
+    </p>
+  </proof>
+
+  <corollary xml:id="kerone">
+    <statement>
+      <p>
+        Let <m>\phi</m> be a homomorphism from group <m>G</m> to group
+        <m>G'</m>. Then <m>\phi</m> is one-to-one (hence a monomorphism) if and only
+        if <m>\Ker \phi=\{e_G\}</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <proof>
+    <p>
+      Clearly, if <m>\phi</m> is one-to-one then <m>\Ker \phi=\{e_G\}</m>.
+      Conversely, assume <m>\Ker \phi=\{e_G\}</m>. If <m>a,b\in G</m> with
+      <m>\phi(a)=\phi(b)</m>, then by the above theorem, <m>a\Ker \phi=b\Ker
+      \phi</m>. But <m>a\Ker \phi=a\{e_G\}=\{a\}</m> and <m>b\Ker
+      \phi=b\{e_G\}=\{b\}</m>. Thus, <m>a=b</m>, and we see that <m>\phi</m> is
+      one-to-one.
+    </p>
+  </proof>
+
+  <p>
+    We now prove a theorem that
+    provides the meat and potatoes of the First Isomorphism Theorem.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>(Factorization Theorem)</em> Let <m>G</m> and
+        <m>G'</m> be groups, let <m>\phi</m> be a homomorphism from <m>G</m> to <m>G'</m>,
+        let <m>K=\Ker \phi</m>, let <m>N</m> be a normal subgroup of <m>G</m> with
+        <m>N\subseteq K</m>, and let <m>\Psi</m> be the canonical epimorphism
+        from <m>G</m> to <m>G/N</m>. Then the map <m>\phibar: G/N \to G'</m> defined
+        by <m>\phibar(aN)=\phi(a)</m> is a well defined homomorphism, with
+        <m>\phibar \circ \Psi=\phi</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We can summarize this using the following picture:
+  </p>
+  <image source="images/5c5882f080aa52240d9c9dc2366a10dcf06a71bd.png"/>
+
+  <proof>
+    <p>
+      We define <m>\phibar: G/N\to G'</m>, as indicated above, by
+      <m>\phibar(aN)=\phi(a)</m> for every <m>aN\in G/N</m>. Since <m>\phibar</m>
+      is defined using coset representatives, we must first show that
+      <m>\phibar</m> is well defined. So let <m>aN=bN\in G/N</m>. Then
+      <m>\phibar(aN)=\phi(a)</m> and <m>\phibar(bN)=\phi(b)</m>, so we must
+      show that <m>\phi(a)=\phi(b)</m>. Since <m>aN=bN</m> and <m>N\subseteq K</m>,
+      we have that <m>aK=bK</m> by Statement 6 of <xref ref="cosetfacts">Theorem</xref>; thus <m>\phi(a)=\phi(b)</m> (using <xref ref="kermean">Lemma</xref>). So <m>\phibar</m> is well defined.
+    </p>
+
+    <p>
+      Next, we show that <m>\phibar</m> is a homomorphism. Let <m>aN,bN\in
+      G/N</m>. Then
+      <me>
+        \phibar((aN)(bN))=\phibar(abN)=\phi(ab)=\phi(a)\phi(b)=\phibar(aN)\phibar(bN).
+      </me>
+    </p>
+
+    <p>
+      Finally, for every <m>a\in G</m>,
+      <me>
+        (\phibar \circ
+        \Psi)(a)=\phibar(\Psi(a))=\phibar(aN)=\phi(a);
+      </me>
+      so <m>\phibar \circ
+      \Psi = \phi</m>, as desired.
+    </p>
+  </proof>
+
+  <p>
+    Note that the above theorem does <em>not</em> state that
+    <m>\phibar</m> is a monomorphism or an epimorphism. This is because in
+    general it may be neither! We do have the following theorem:
+  </p>
+
+  <theorem xml:id="epimono">
+    <statement>
+      <p>
+        Let <m>G</m>, <m>G'</m>, <m>\phi</m>, <m>N</m>, and <m>\phibar</m> be as
+        defined in the Factorization Theorem. Then
+        <ol>
+          <li>
+            <p>
+              <m>\phibar</m> is onto (an epimorphism) if and only if <m>\phi</m> is onto
+              (an epimorphism); and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phibar</m> is one-to-one (a monomorphism) if and only if <m>N=\Ker
+              \phi</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <ol>
+      <li>
+        <p>
+          This is clear, since
+          <m>\phibar(G/N)=\phi(G)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          By <xref ref="kerone">Corollary</xref>, <m>\phibar</m> is one-to-one if and only if <m>\Ker
+          \phibar=\{N\}</m>.  But
+          <md>
+            <mrow>\Ker \phibar\amp =\{aN\in G/N
+            \,:\, \phibar(aN)=e_{G'}\}</mrow>
+            <mrow>\amp =\{aN\in G/N \,:\,
+            \phi(a)=e_{G'}\}</mrow>
+            <mrow>\amp =\{aN\in G/N \,:\, a\in
+            \Ker\phi\}.</mrow>
+          </md>
+          So <m>\Ker \phibar = \{N\}</m> if and only if
+          <me>
+            \{aN\in G/N\,:\,a\in \Ker\phi\}=\{N\},
+          </me>
+          in other words if and
+          only if <m>aN=N</m> for all <m>a\in \Ker\phi</m>.  But
+          <md>
+            <mrow>{3}
+            \amp \amp \amp aN=N \amp \amp \ \ \text{ for all \(a\in \Ker\phi\) }</mrow>
+            <mrow>\amp \Leftrightarrow  \amp \amp  a\in N \amp \amp \ \ \text{ for all \(a\in \Ker\phi\) }</mrow>
+            <mrow>\amp \Leftrightarrow  \amp \amp  \Ker \phi\subseteq N\amp \amp</mrow>
+            <mrow>\amp \Leftrightarrow  \amp \amp  \Ker\phi=N,\amp \amp</mrow>
+          </md>
+          since we are given that
+          <m>N\subseteq \Ker \phi</m>. Thus, <m>\phibar</m> is one-to-one
+          if and only if <m>N=\Ker\phi</m>, as desired. \qedhere
+        </p>
+      </li>
+    </ol>
+  </proof>
+
+  <p>
+    We are now ready to state the all-important First Isomorphism
+    Theorem (which we have essentially already proven).
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>(First Isomorphism Theorem)</em> Let <m>G</m> and <m>G'</m>
+        be groups, with homomorphism <m>\phi:G \rightarrow G'</m>. Let <m>K=\Ker
+        \phi</m>. Then <m>G/K \simeq \phi(G)</m>. In particular, if <m>\phi</m> is onto,
+        then <m>G/K\simeq G'</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      This follows directly from the Factorization Theorem and
+      <xref ref="epimono">Theorem</xref>.
+    </p>
+  </proof>
+
+  <p>
+    So to prove that a factor group <m>G/N</m> is isomorphic to a group
+    <m>G'</m>, it suffices to show there exists an epimorphism from <m>G</m> to
+    <m>G'</m> that has <m>N</m> as its kernel.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Letting <m>n\in \Z^+</m>, let's identify a familiar group to which
+        <m>GL(n,\fatr)/SL(n,\fatr)</m> is isomorphic. As in <xref ref="slnormgl">Example</xref>, the map <m>\phi:GL(n,\fatr)\to \fatr^*</m> defined by
+        <m>\phi(A)</m> is a homomorphism with kernel <m>SL(n,\fatr)</m>. Moreover,
+        <m>Phi</m> clearly maps onto <m>\fatr^*</m>: indeed, given <m>\lambda \in
+        \fatr^*</m>, the diagonal matrix having <m>\lambda</m> in the uppermost left
+        position and 1's elsewhere down the diagonal gets sent to <m>\lambda</m>
+        by <m>\phi</m>. So by the First Isomorphism Theorem, we have
+        <m>GL(n,\fatr)/SL(n,\fatr) \simeq \fatr^*</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>G=S_3\times \Z_{52}</m> and let <m>N=S_3 \times
+        \{0\}\subseteq G</m>. It is straightforward to show that <m>N</m> is normal
+        in <m>G</m>. What is the structure of <m>G/N</m>? Well, define <m>\phi:G\to
+        \Z_{52}</m> by <m>\phi((\sigma, a))=a</m>. Then <m>\phi</m> is clearly an
+        epimorphism and <m>\Ker \phi=\{(\sigma,a)\in G\,:a=0\}=N</m>. So <m>G/N</m> is
+        isomorphic to <m>\Z_{52}</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Generalizing the above example, we have the following theorem, whose
+    proof we leave to the reader.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G=G_1\times G_2 \times \cdots \times G_k</m> (where
+        <m>k\in \Z^+</m>) and let <m>N_i</m> be a normal subgroup of <m>G_i</m> for each
+        <m>i=1,2,\ldots, k</m>. Then <m>N=N_1 \times N_2 \times \cdots \times N_k</m>
+        is a normal subgroup of <m>G</m>, with <m>G/N \simeq G_1/N_1 \times G_2/N_2
+        \cdots \times G_k/N_k.</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We provide one more cool example of using the First Isomorphism
+    Theorem. Clearly, since <m>\fatr</m> is abelian, <m>\Z</m> is a normal
+    subgroup of <m>\fatr</m>. What is the structure of <m>\fatr/\Z</m>? Well, in
+    modding <m>\fatr</m> out by <m>\Z</m> we have essentially identified together
+    all real numbers that are an integer distance apart. So we can
+    think of the canonical epimorphism from <m>\fatr</m> to <m>\fatr/\Z</m> as
+    wrapping up <m>\fatr</m> like a garden hose! Thus, one might guess that
+    <m>\fatr/\Z</m> has some circle-like structure<mdash />but if we want to think
+    of it as a group, we have to figure out what the group structure on
+    such a <q>circle</q> would be!
+  </p>
+
+  <p>
+    We leave, for a moment, our group <m>\fatr/\Z</m>, and look at how we can
+    consider a circle to be a group.
+  </p>
+
+  <notation>
+
+  <p>
+    Recall that for every <m>\theta \in \fatr</m>,
+    <m>e^{i\theta}</m> is defined to be <m>\cos \theta + i\sin \theta</m>. It
+    is clear then that the set <m>\{e^{i\theta} \,:\, \theta\in
+    \fatr\}</m> is the unit circle in the complex plane; we denote
+    this set by <m>\S_1</m>.<fn>We do this because this set is a
+    one-dimensional sphere (i.e., a circle).  More generally, an
+    <m>n</m>-dimensional sphere, for <m>n\in \fatn</m>, is denoted by <m>S_n</m>.</fn></p>
+
+  </notation>
+
+  <remark>
+    <p>
+      Note that if <m>\theta_1, \theta_2\in \fatr</m>, then
+      <m>e^{i\theta_1}=e^{i\theta_2}</m> if and only if <m>\theta_1-\theta_2
+      \in 2\pi \Z</m>.
+    </p>
+  </remark>
+
+  <theorem>
+    <statement>
+      <p>
+        <m>\S_1</m> is a group under the multiplication
+        <m>e^{i\theta_1}e^{i\theta_2}=e^{i(\theta_1+\theta_2)}</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      The tricky part is showing that the operation is well
+      defined. Suppose <m>\theta_1, \theta_2, t_1</m>, and <m>t_2</m> are in
+      <m>\fatr</m>, with <m>e^{i\theta_1}=e^{it_1}</m> and
+      <m>e^{i\theta_2}=e^{it_2}</m>. We want to show that
+      <me>
+        e^{i\theta_1}e^{i\theta_2}=e^{it_1}e^{it_2},
+      </me>
+      i.e., that
+      <me>
+        e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}.
+      </me>
+    </p>
+
+    <p>
+      Now, <m>e^{i\theta_1}=e^{it_1}</m> and
+      <m>e^{i\theta_2}=e^{it_2}</m> imply that <m>\theta_1 -t_1 = 2\pi m</m>
+      and <m>\theta_2-t_2 = 2\pi n</m> for some <m>m</m> and <m>n</m> in <m>\Z</m>;
+      hence,
+      <me>
+        \theta_1+\theta_2-(t_1+t_2)= 2\pi(m+n) \in 2\pi\Z.
+      </me>
+    </p>
+
+    <p>
+      Thus,
+      <m>e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}</m>, so our operation is
+      well defined.
+    </p>
+
+    <p>
+      Next, <m>\S_1</m> is clearly closed under the operation, and
+      associativity follows from associativity of addition in
+      <m>\fatr</m>. Moreover, <m>e^{i0}=1</m> clearly acts as an identity
+      element in <m>\S_1</m>, and if <m>e^{i\theta}\in \S_1</m>, then
+      <m>e^{i\theta}</m> has inverse <m>e^{i(-\theta)} \in \S_1</m>. So <m>\S_1</m>
+      is a group under the described operation.
+      Beautifully, it turns out that our group <m>\fatr/\Z</m> is
+      isomorphic to <m>\S_1</m>.
+    </p>
+  </proof>
+
+  <theorem>
+    <statement>
+      <p>
+        <m>\fatr/\Z \simeq \S_1</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We will define an epimorphism <m>\phi</m> from <m>\fatr</m> to <m>\S_1</m>
+      with <m>\Ker \phi=\Z</m>; then we'll have <m>\fatr/\Z \simeq \S_1</m>,
+      by the First Isomorphism Theorem.
+    </p>
+
+    <p>
+      Define <m>\phi:\fatr \to \S_1</m> by <m>\phi(r)=e^{i2\pi r}</m>. We have
+      that <m>\phi</m> is a homomorphism, since for every <m>r,s\in \fatr</m>,
+      we have
+      <me>
+        \phi(r+s)=e^{i2\pi (r+s)}=e^{i2\pi r+i2\pi s}=e^{i2\pi
+        r}e^{i2\pi s}=\phi(r)\phi(s).
+      </me>
+    </p>
+
+    <p>
+      Moreover, <m>\phi</m> is clearly
+      onto, since if <m>e^{i\theta}\in \S_1</m>, then
+      <me>
+        e^{i\theta}=e^{i2\pi\left(\frac{\theta}{2\pi}\right)}=\phi\left(\frac{\theta}{2\pi}\right).
+      </me>
+    </p>
+
+    <p>
+      Finally, <m>\Ker\phi=\Z</m>: indeed,
+      <md>
+        <mrow>r\in \Ker\phi \amp \Leftrightarrow \phi(r)=1</mrow>
+        <mrow>\amp \Leftrightarrow e^{i2\pi r}=1</mrow>
+        <mrow>\amp \Leftrightarrow \cos 2\pi r + i\sin 2\pi r=1</mrow>
+        <mrow>\amp \Leftrightarrow \cos 2\pi r = 1 \mbox{ and } \sin 2\pi r = 0</mrow>
+        <mrow>\amp \Leftrightarrow r\in \Z.</mrow>
+      </md>
+    </p>
+
+    <p>
+      Thus, <m>\Ker \phi = \Z</m>, and hence <m>\fatr/\Z\simeq \S_1</m>, as
+      desired.
+    </p>
+  </proof>
+</section>

@@ -1,0 +1,355 @@
+
+<section>
+  <title>Introduction to cosets and normal subgroups</title>
+  <p>
+    Throughout this section, let <m>G</m> be a group with subgroup <m>H</m>
+    and consider two particular relations on <m>G</m>:
+    <m>\siml</m> defined by <m>a\siml b</m> if and only if
+    <m>a^{-1}b\in H</m>and
+    <m>\simr</m> defined by <m>a\simr b</m> if and only if
+    <m>ab^{-1}\in H</m>.
+  </p>
+
+  <theorem xml:id="simlreq">
+    <statement>
+      <p>
+        <m>\siml</m> and <m>\simr</m> are equivalence relations on <m>G</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      First, let <m>a\in G</m>. Then <m>a^{-1}a=e\in H</m>,
+      so <m>a\siml a</m>. Thus, <m>\siml</m> is reflexive.
+    </p>
+
+    <p>
+      Next, let <m>a,b\in G</m> with <m>a\siml b</m>. Then
+      <m>a^{-1}b\in H</m>, so, since <m>H</m> is a subgroup of <m>G</m>,
+      <m>(a^{-1}b)^{-1}\in H</m>. But
+      <m>(a^{-1}b)^{-1}=b^{-1}(a^{-1})^{-1}=b^{-1}a</m>; thus, <m>b\siml a</m>, and so <m>\siml</m> is symmetric.
+    </p>
+
+    <p>
+      Finally, let <m>a,b,c\in G</m> with <m>a\siml b</m>
+      and <m>b\siml c</m>. Then <m>a^{-1}b</m> and <m>b^{-1}c</m> are in <m>H</m>. Since
+      <m>H</m> is a subgroup of <m>G</m>, we must then have
+      <m>(a^{-1}b)(b^{-1}c)\in H</m>; but <m>(a^{-1}b)(b^{-1}c)</m> equals
+      <m>a^{-1}c</m>. Thus, <m>a\siml c</m>, and so <m>\siml</m> is transitive.
+    </p>
+
+    <p>
+      Thus, <m>\siml</m> is an equivalence relation on <m>G</m>. The proof that <m>\simr</m> is an equivalence relation is left as an exercise for the reader.
+    </p>
+  </proof>
+
+  <p>
+    Now, as equivalence relations, each of <m>\siml</m> and <m>\simr</m>
+    gives rise to a partition of <m>G</m>. What are the cells of those
+    partitions?
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Given <m>a\in G</m>, we define
+        <me>
+          aH =
+          \{ah\,:\, h\in H\}
+        </me>
+        and
+        <me>
+          Ha=\{ha\,:\,h\in H\}.
+        </me>
+      </p>
+
+      <p>
+        We call <m>aH</m> and <m>Ha</m>, respectively, the <term>left </term> and <term>right cosets of <m>H</m> containing
+        <m>a</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+  <theorem xml:id="x[a]">
+    <statement>
+      <p>
+        Let <m>a\in G</m>. Then under <m>\siml</m>, <m>[a]=aH</m> while
+        under <m>\simr</m>, <m>[a]=Ha</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Let <m>b\in G</m>. Then <m>b\siml a \Leftrightarrow a \siml b
+      \Leftrightarrow a^{-1}b\in H \Leftrightarrow a^{-1}b=h</m> for some
+      <m>h\in H \Leftrightarrow b=ah</m> for some <m>h\in H \Leftrightarrow b\in
+      aH</m>. So under <m>\siml</m> we have <m>[a]=aH</m>. Similarly, under <m>\simr</m> we
+      have <m>[a]=Ha</m>.
+    </p>
+  </proof>
+
+  <p>
+    We next summarize some facts about the left and right cosets of
+    a subgroup <m>H</m> of a group <m>G</m>:
+  </p>
+
+  <theorem xml:id="cosetfacts">
+    <statement>
+      <p>
+        Let <m>G</m> be a group with <m>H\leq G</m> and <m>a,b\in G</m>.
+        <ol>
+          <li>
+            <p>
+              The left [right] cosets of <m>H</m> in <m>G</m> partition <m>G</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <me>
+                b\in aH \lra aH=bH \lra  a\in bH
+              </me>
+              and
+              <me>
+                b\in Ha \lra  Ha=Hb \lra  a\in
+                Hb.
+              </me>
+              In particular, <m>a\in H \lra aH=H \lra Ha=H</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>H</m> is the only left or right coset of <m>H</m> that is a <em>subgroup</em>
+              of <m>G</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>|aH|=|H|=|Ha|</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Statements 1 and 2 hold because the left and right
+      cosets of <m>H</m> in <m>G</m> are equivalence classes. Statement 3
+      holds because no left or right coset of <m>H</m> other than <m>H</m>
+      itself can contain <m>e</m>, since the left [right] cosets of <m>H</m>
+      are mutually disjoint. For Statement 4: Define <m>f\,:\,H\to aH</m> by <m>f(h)=ah</m>. It is straightforward to show that <m>f</m> is a bijection, so <m>|H|=|aH|</m>. Similarly, <m>|Ha|=|H|</m>.
+    </p>
+  </proof>
+
+  <remark>
+    <p>
+      We can use Statements 2 and 3, above, to save some
+      time when computing left and right cosets of a subgroup of a
+      group.
+    </p>
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        {s3.ex} Find the left and right cosets of <m>H=\langle (12)\rangle</m> in
+        <m>S_3</m>.
+        <me>
+          \begin{array}{l|l|l}
+          a\amp  aH \amp  Ha\\ \hline
+          e\amp H\amp H\\
+          (12)\amp H\amp H\\
+          (13)\amp \{(13)e,(13)(12)\}=\{(13),(123)\}\amp \{e(13),(12)(13)\}=\{(13),(132)\}\\
+          (23)\amp \{(23)e,(23)(12)\}=\{(23),(132)\}\amp \{e(23),(12)(23)\}=\{(23),(123)\}\\
+          (123)\amp \{(13),(123)\} \mbox{ (since } (123)\in (13)H)\amp \{(23),(123)\} \mbox{ (since }  (123)\in H(23))\\
+          (132)\amp \{(23),(132)\} \mbox{ (since }  (132)\in(23)H)\amp \{(13),(132)\} \mbox{ (since }  (132)\in H(13))
+          \end{array}
+        </me>
+      </p>
+
+      <p>
+        Thus, <m>\siml</m> partitions <m>S_3</m> into <m>\{H,\{(13),(123)\},\{(23),
+        (132)\}\}</m> and <m>\simr</m> partitions <m>S_3</m> into
+        <m>\{H,\{(13),(132)\},\{(23), (123)\}\}</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        {d4.ex} Find the left and right cosets of <m>H=\langle f\rangle</m> in
+        <m>D_4</m>.
+      </p>
+
+      <p>
+        This example is left as an exercise for the reader.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We now draw attention to some very important facts:
+  </p>
+
+  <warning>
+    <p>
+      For <m>a,b\in G</m>:
+      <ol>
+        <li>
+          <p>
+            In general, <m>aH \neq Ha</m>!
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>aH=bH</m> does not necessarily imply <m>a=b</m> or that there exists
+            an <m>h\in H</m> with <m>ah=bh</m>; similarly, <m>Ha=Hb</m> does not necessarily
+            imply <m>a=b</m> or that there exists an <m>h\in H</m> with
+            <m>ha=hb</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </warning>
+
+  <example>
+    <statement>
+      <p>
+        We saw above that in <m>S_3</m> with <m>H=\langle (12)\rangle</m>,
+        <me>
+          (13)H=\{(13),(123)\} \neq \{(13),(132)\}=H(13).
+        </me>
+      </p>
+
+      <p>
+        Also,
+        <m>(13)H=(123)H</m> but <m>(13)e\neq (123)e</m> and <m>(13)(12)\neq (123)(12)</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    It turns out that subgroups <m>H</m> for which <m>aH=Ha</m> for all <m>a\in
+    G</m> will be very important to us.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        We say that subgroup <m>H</m> of <m>G</m> is <term>normal</term> in <m>G</m>
+        if <m>aH=Ha</m> for all <m>a\in G</m>. We denote that fact that <m>H</m> is
+        normal in <m>G</m> by writing <m>H\unlhd G</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <ol>
+      <li>
+        <p>
+          If <m>H</m> is normal in <m>G</m>, we may refer to the left and
+          right cosets of <m>G</m> as simply <em>cosets</em>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Of course, if <m>G</m> is abelian, every subgroup of <m>G</m> is normal in <m>G</m>.
+          But there can also be normal subgroups of nonabelian groups: for instance, the trivial and improper
+          subgroups of every group are normal in that group.
+        </p>
+      </li>
+    </ol>
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        Find the cosets of <m>5\Z</m> in <m>\Z</m>.
+      </p>
+
+      <p>
+        Notice that in additive notation, the statement <q><m>a^{-1}b\in H</m></q>
+        becomes <m>-a+b\in H</m>. So for <m>a,b\in \Z</m>, <m>a\siml b</m> if and only if <m>-a+b \in
+        5\Z</m>; that is, if and only if <m>5</m> divides <m>b-a</m>. In other words, <m>a\siml b</m> if and only if <m>a\equiv_5 b</m>. So
+        in this case, <m>\siml</m> is just congruence modulo <m>5</m>. Thus, the cosets of <m>5\Z</m> in <m>\Z</m> are
+        <md>
+          <mrow>5\Z\amp =\{\ldots,-5,0,5,\ldots\}</mrow>
+          <mrow>1+5\Z\amp =\{\ldots,-4, 1,
+          6,\ldots\},</mrow>
+          <mrow>2+5\Z\amp =\{\ldots,-3,2, 7,
+          \ldots\},</mrow>
+          <mrow>3+5\Z\amp =\{\ldots,-2,3, 8,
+          \ldots\},</mrow>
+          <mrow>4+5\Z\amp =\{\ldots,-1, 4, 9,
+          \ldots\}.</mrow>
+        </md>
+      </p>
+
+      <p>
+        Do you see how this example would
+        generalize for <m>n\Z</m> (<m>n \in \Z^+</m>) in <m>\Z</m>?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Find the cosets of <m>H=\langle 12\rangle</m> in <m>4\Z</m>.
+      </p>
+
+      <p>
+        They are
+        <md>
+          <mrow>H\amp =\{\ldots, -12,0,12\ldots\},</mrow>
+          <mrow>4+H \amp =
+          \{\ldots,-8,4,16,\ldots\},</mrow>
+          <mrow>8+H\amp =\{\ldots, -4,8,20,\ldots\}.</mrow>
+        </md>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        {z6.ex} Find the cosets of <m>H=\langle 4\rangle</m> in <m>\Z_{12}</m>.
+      </p>
+
+      <p>
+        They are
+        <md>
+          <mrow>H\amp =\{0,4,8\},</mrow>
+          <mrow>1+H \amp = \{1,5,9\},</mrow>
+          <mrow>2+H\amp =\{2,6,10\}</mrow>
+          <mrow>3+H\amp =\{3,7,11\}.</mrow>
+        </md>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We now consider the set of all left cosets of
+    a subgroup of a group. (Note: There are analogous versions of
+    what follows using right cosets, but we relegate any discussions
+    of that to footnotes.)
+  </p>
+
+  <notation>
+
+  <p>
+    We let <m>G/H</m> denote the set of
+    all left cosets of subgroup <m>H</m> in <m>G</m>. We read <m>G/H</m> as ``<m>G</m>
+    mod <m>H</m>."<fn>We denote the set of all right cosets of subgroup <m>H</m> in <m>G</m> by <m>H\backslash G</m>.</fn></p>
+
+  </notation>
+</section>

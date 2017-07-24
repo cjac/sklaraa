@@ -1,0 +1,128 @@
+
+<section>
+  <title>Motivation</title>
+  <p>
+    We mentioned previously that given a subgroup <m>H</m> of <m>G</m>, we'd like
+    to use <m>H</m> to get at some understanding of <m>G</m>'s entire structure.
+    Recall that we've defined <m>G/H</m> to be the set of all left cosets of
+    <m>H</m> in <m>G</m>. What we'd like to do now is equip <m>G/H</m> with some
+    operation under which <m>G/H</m> is a group! The natural way to do this
+    would be to define multiplication on <m>G/H</m> by
+    <me>
+      (aH)(bH)=abH \mbox{ for all } a,b\in G.
+    </me>
+  </p>
+
+  <p>
+    Ok, so let's do that! But wait: we're defining this operation
+    by referring to coset representatives, so we'd better make sure
+    our operation is well defined. Only it sadly turns out that in
+    general this operation is <em>not</em> well defined. For
+    example:
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>H=\langle (12)\rangle</m> in <m>S_3</m>, and let <m>a=(13)</m> and
+        <m>b=(132)</m>. Let <m>x=aH</m> and <m>y=bH</m> in <m>S_3/H</m>. Then using the
+        above-defined operation on <m>G/H</m> we'd have
+        <me>
+          xy=(aH)(bH)=abH=(13)(132)H=(23)H.
+        </me>
+      </p>
+
+      <p>
+        But also <m>x=(123)H</m> and <m>y=(23)H</m>, so
+        we'd also have
+        <me>
+          xy=((123)H)((23)H))=(123)(23)H=(12)H=H\neq (23)H.
+        </me>
+      </p>
+
+      <p>
+        So this operation isn't well defined.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    The question for us now becomes: what conditions must hold
+    for <m>H</m> in <m>G</m> in order for operation
+    <me>
+      (aH)(bH)=abH
+    </me>
+    on <m>G/H</m>
+    to be well defined? It turns out that this operation is well
+    defined exactly when <m>H</m> is normal in <m>G</m>! We state this in the
+    following theorem:
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>H\leq G</m>. Then the operation
+        <me>
+          (aH)(bH)=abH
+        </me>
+        on
+        <m>G/H</m> is well defined if and only if <m>H \unlhd G</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      (<m>\Leftarrow</m>) Let <m>a_1,a_2,b_1,b_2\in G</m> with <m>a_1H=a_2H</m> and
+      <m>b_1H=b_2H</m>. We want to show that then <m>a_1b_1H=a_2b_2H</m>, that is,
+      that <m>(a_2b_2)^{-1}a_1b_1\in H</m>. Well, since <m>a_1H=a_2H</m> we have
+      <m>a_2^{-1}a_1\in H</m>. So
+      <me>
+        (a_2b_2)^{-1}a_1b_1=b_2^{-1}(a_2^{-1}a_1)b_1 \in b_2^{-1}Hb_1.
+      </me>
+    </p>
+
+    <p>
+      Next, since <m>H\unlhd G</m>,
+      we have <m>Hb_1=b_1H</m>, so <m>b_2^{-1}Hb_1=b_2^{-1}b_1H</m>; but since
+      <m>b_1H=b_2H</m>, we have <m>b_2^{-1}b_1\in H</m>, so <m>b_2^{-1}b_1H=H</m>. Thus,
+      <m>(a_2b_2)^{-1}a_1b_1\in H</m>, as desired.
+    </p>
+
+    <p>
+      (<m>\Rightarrow</m>) Let <m>a\in G</m>. We want to show that <m>aH=Ha</m>. Well,
+      first let <m>x\in aH</m>. Then
+      <me>
+        (xH)(a^{-1}H)=xa^{-1}H
+      </me>
+      and, since
+      <m>xH=aH</m>,
+      <me>
+        (xH)(a^{-1}H)=(aH)(a^{-1}H)=aa^{-1}H=H.
+      </me>
+    </p>
+
+    <p>
+      Since our operation on <m>G/H</m> is well defined, this means that
+      <m>xa^{-1}H=H</m>, so <m>xa^{-1}\in H</m>; thus, <m>x\in Ha</m>. We conclude that
+      <m>aH\subseteq Ha</m>. The proof that <m>Ha\subseteq aH</m> is similar.
+    </p>
+  </proof>
+
+  <definition>
+    <statement>
+      <p>
+        When <m>H\unlhd G</m>, the well defined operation
+        <m>(aH)(bH)=abH</m> on <m>G/H</m> is called <term>left coset
+        multiplication</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    It is clear that normal subgroups will be
+    very important for us in studying group structures. We therefore
+    spend some time looking at normal subgroups before returning to
+    equipping <m>G/H</m> with a group structure.
+  </p>
+</section>

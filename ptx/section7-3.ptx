@@ -1,0 +1,138 @@
+
+<section>
+  <title>The index of a subgroup and Lagrange's Theorem</title>
+  <definition>
+    <statement>
+      <p>
+        We define the <term>index of <m>H</m> in <m>G</m></term>, denoted <m>(G:H)</m>,
+        to be the cardinality of <m>G/H</m>.<fn>Even though we need not have <m>aH=Ha</m> for all <m>a\in G</m>, we do always have <m>|G/H|=|H\backslash G|</m>.</fn></p>
+    </statement>
+  </definition>
+
+  <p>
+    Note that if <m>G</m> is finite then <m>(G:H)</m> must be finite; however,
+    we see below that if <m>G</m> is infinite then <m>(G:H)</m> could be finite or
+    infinite.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        If <m>(\fatr:\Z)</m> were finite, then we'd be able to
+        write <m>\fatr</m> as a finite union of countable sets, implying that
+        <m>\fatr</m> is countable<mdash />which it isn't. Thus, <m>(\fatr:\Z)=\infty</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Since <m>\langle i\rangle =\{i,-1,-i,1\}</m> is a finite subgroup
+        of <m>C^*</m> and <m>C^*</m> is infinite, we must have that <m>(C^*:\langle i\rangle )</m> is
+        infinite. However, <m>(C^*:C^*)=1</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        {indices.ex} Referring to our previous examples, we have:
+        <me>
+          \begin{array}{cl} \amp (S_3:\langle (12)\rangle )=3,\\
+          \amp (D_4:\langle f\rangle )=4, \\
+          \amp (\Z:5\Z)=5,\\
+          \amp (4\Z:12\Z)=3,\\
+          \mbox{and } \amp  (\Z_{12}:\langle 4\rangle )=4.
+          \end{array}
+        </me>
+      </p>
+
+      <p>
+        Letting <m>d,n\in \Z^+</m> with <m>d</m> dividing <m>n</m>, we can generalize
+        the some of the above examples, obtaining:
+        <me>
+          \begin{array}{cl}
+          \amp  (d\Z:n\Z)=n/d \mbox{\  (special case: }  (\Z:n\Z)=n)\\
+          \mbox{and }  \amp  (\Z_n:\langle d\rangle )=d.
+          \end{array}
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Notice that in the cases in which <m>G</m> is finite,
+    <m>(G:H)=|G|/|H|</m>. This makes sense, since the left cosets of <m>H</m> in <m>G</m> partition <m>G</m>, and each left coset has cardinality <m>|H|</m>.
+  </p>
+
+  <p>
+    Since the left cosets of a subgroup <m>H</m> of a group <m>G</m>
+    partition <m>G</m> and all have the same cardinality, we have the
+    following two theorems. The first is known as <em>Lagrange's
+    Theorem</em>.<fn>Named after the French mathematician Joseph-Louis Lagrange.</fn></p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>(Lagrange's Theorem)</em> If <m>G</m> is a finite
+        group and <m>H\leq G</m>, then <m>|H|</m> divides <m>|G|</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem xml:id="indexfin">
+    <statement>
+      <p>
+        If <m>G</m> is a finite group and <m>H\leq G</m>, then
+        <m>(G:H)=|G|/|H|</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <remark>
+    <p>
+      The converse of
+      Lagrange's Theorem does <em>not</em> hold. Indeed <m>A_4</m> is a group of order 12 which contains no subgroup of
+      order <m>6</m> even though <m>6</m> divides <m>|A_4|=12</m>.
+    </p>
+  </remark>
+
+  <p>
+    We end this chapter with two corollaries to Lagrange's Theorem.
+  </p>
+
+  <corollary>
+    <statement>
+      <p>
+        Let <m>G</m> be a finite group and let <m>a\in G</m>. Then
+        <m>a^{|G|}=e_G</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <proof>
+    <p>
+      Let <m>d=o(a)</m>. By Lagrange's Theorem, <m>d</m> divides <m>|G|</m>, so
+      there exists <m>k\in \Z</m> with <m>|G|=dk</m>. Then
+      <m>a^{|G|}=a^{dk}=(a^d)^k=(e_G)^k=e_G.</m>
+    </p>
+  </proof>
+
+  <corollary xml:id="pcyc">
+    <statement>
+      <p>
+        Let <m>G</m> be a group of prime order. Then <m>G</m> is
+        cyclic. It follows that for every prime <m>p</m>, there exists a unique
+        group of order <m>p</m>, up to isomorphism.
+      </p>
+    </statement>
+  </corollary>
+
+  <proof>
+    <p>
+      This proof is left as an exercise for the reader.
+    </p>
+  </proof>
+</section>
