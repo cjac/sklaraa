@@ -1,0 +1,255 @@
+
+<section>
+  <title>Examples of groups/nongroups, Part I</title>
+  <p>
+    Let's look at some examples of groups/nongroups.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        We claim that <m>\Z</m> is a group under addition. Indeed, we already
+        know that <m>\Z</m> is closed under addition and that addition is
+        associative on the integers. The integer <m>0</m> acts as an identity
+        element of <m>\Z</m> under addition (since <m>a+0=0+a=a</m> for each <m>a\in
+        \Z</m>), and each element <m>a</m> in <m>G</m> has inverse <m>-a</m> since
+        <m>a+(-a)=-a+a=0</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            For each following binary structure <m>\langle G,*\rangle</m>, determine whether or not <m>G</m> is a group.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            For those that are <em>not </em> groups, determine the first group axiom  that fails, and provide a proof that it fails.
+          </p>
+        </li>
+
+        <li class="custom-list-style-type" label="" >
+
+        <p>
+          <tabular>
+            <row>
+              <cell><m>\langle \fatq,+\rangle</m></cell>
+              <cell><m>\langle \Z,-\rangle</m></cell>
+              <cell><m>\langle \fatr,\cdot\,\rangle</m></cell>
+              <cell><m>\langle \fatc^*,\cdot\, \rangle</m></cell>
+            </row>
+            <row>
+              <cell><m>\langle \fatr,+\rangle</m></cell>
+              <cell><m>\langle \Z^+,+\rangle</m></cell>
+              <cell><m>\langle \Z^*,\cdot\,\rangle</m></cell>
+              <cell><m>\langle \M_n(\fatr),+\rangle</m></cell>
+            </row>
+            <row>
+              <cell><m>\langle \fatc,+\rangle</m></cell>
+              <cell><m>\langle \Z, \cdot\,\rangle</m></cell>
+              <cell><m>\langle \fatr^*,\cdot\, \rangle</m></cell>
+              <cell><m>\langle \M_n(\fatr),\cdot\, \rangle</m></cell>
+            </row>
+          </tabular>
+        </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <p>
+    If you have taken
+    linear algebra, you have also probably seen a collection of matrices
+    that is a group under matrix multiplication.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        For <m>n\in \Z^+</m>, we define <m>GL(n,\fatr)</m> by
+        <me>
+          GL(n,\fatr):=\{M\in \M_n(\fatr):\det M \neq 0\}.
+        </me>
+      </p>
+
+      <p>
+        In other
+        words, <m>G</m> is the set of all invertible <m>n\times n</m> matrices
+        over <m>\fatr</m>. We also define subset <m>SL(n,\fatr)</m> of
+        <m>GL(n,\fatr)</m>, by
+        <me>
+          SL(n,\fatr):=\{M\in \M_n(\fatr):\det M =1\}.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <notation>
+
+  <p>
+    We may use the notation <m>\0</m> to denote a zero matrix and <m>I_n</m> to denote an <m>n\times n</m> identity matrix.
+  </p>
+
+  </notation>
+
+  <remark>
+    <p>
+      Throughout this course, if we are discussing a set <m>GL(n,\fatr)</m> or <m>SL(n,\fatr)</m>, you should assume <m>n\in \Z^+</m>, unless otherwise noted.
+    </p>
+  </remark>
+
+  <theorem xml:id="glsl">
+    <statement>
+      <p>
+        <m>GL(n,\fatr)</m> and <m>SL(n,\fatr)</m> are closed under matrix multiplication (so <m>\langle GL(n,\fatr),\cdot\rangle</m> and <m>\langle SL(n,\fatr),\cdot\rangle</m> are binary structures).
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Let <m>A,B\in GL(n, \fatr)</m>. Then <m>\det(AB)=(\det A)(\det B) \neq 0</m> (since <m>\det A, \det B \neq 0)</m>, so <m>AB\in GL(n,\fatr)</m>. Similarly, if <m>A,B \in SL(n,\fatr)</m>, then <m>\det(AB)=(\det A)(\det B)=1(1)=1</m>, so <m>AB\in SL(n,\fatr)</m>.
+    </p>
+  </proof>
+
+  <example>
+    <statement>
+      <p>
+        The binary structures
+        <m>GL(n,\fatr)</m> and <m>SL(n,\fatr)</m> are groups under matrix multiplication.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Let <m>G:=GL(n,\fatr)</m>. We show that <m>G</m>, under matrix multiplication, satisfies
+        the three group axioms.
+        <ol>
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              Matrix multiplication is always associative.
+            </p>
+          </li>
+
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              The <m>n\times n</m> identity matrix
+              <me>
+                I_n:=\begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \amp  0 \\
+                0 \amp  1 \amp  0 \amp  \cdots \amp  0 \\
+                0 \amp  0 \amp  1 \amp  \cdots \amp  0 \\
+                \vdots \amp  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
+                0 \amp  0 \amp  0 \amp  \cdots \amp  1
+                \end{bmatrix}  \in G
+              </me>
+              acts as an identity element for <m>\langle G, \cdot\,\rangle</m> since
+              <me>
+                AI_n=I_nA = A
+              </me>
+              for all <m>A\in G</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              Let <m>A\in G</m>.  Since <m>\det A\neq 0</m>, <m>A</m> has
+              (matrix multiplicative) inverse <m>A^{-1}</m> in
+              <m>\M_2(\fatr)</m>. But we need to verify that <m>A^{-1}</m> is in
+              <m>G</m>. This is in fact the case, however, since
+              <m>A^{-1}</m> is invertible (it has inverse <m>A</m>), hence <m>\det
+              A^{-1} \neq 0</m>.  Thus, <m>A^{-1}</m> is also in <m>G</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        So <m>G</m> is a group under multiplication.
+      </p>
+
+      <p>
+        The proof that <m>SL(n,\fatr)</m> is a group under multiplication is left as an exercise for the reader.
+      </p>
+    </proof>
+
+  </example>
+
+  <p>
+    These groups are very important in many areas of mathematics, including linear algebra and geometry. Because of this, we have special names for them (which give rise to the <q>GL</q> and <q>SL</q> in their names).
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        For <m>n\in \Z^+</m>, <m>GL(n,\fatr)</m> is called the <term>general
+        linear group of degree <m>n</m> over <m>\fatr</m></term> and <m>SL(n,\fatr)</m> is
+        called the <term>special linear group of degree <m>n</m> over
+        <m>\fatr</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Define <m>*</m> on <m>\fatq^*</m> by <m>a*b=(ab)/2</m> for all <m>a,b\in \fatq^*</m>. Prove that <m>\langle \fatq^*,*\rangle</m> is a group.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        First, <m>\fatq^*</m> is closed under <m>*</m>, since <m>(ab)/2</m> is
+        rational and nonzero whenever <m>a,b</m> are rational and nonzero.
+      </p>
+
+      <p>
+        Next, we check that <m>\fatq^*</m> under <m>*</m> satisfies the group
+        axioms. Since multiplication is commutative on <m>\fatq</m>, <m>*</m> is
+        clearly commutative on <m>\fatq^*</m>, and so our work to show
+        <m>\G_2</m> and <m>\G_3</m> is marginally reduced.
+        <ol>
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              Associativity of <m>*</m> on <m>\fatq^*</m> is inherited
+              from associativity of multiplication on <m>\fatq^*</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              Notice that the perhaps <q>obvious</q> choice, 1, is
+              <em>not</em> an identity element for <m>\fatq^*</m> under
+              <m>*</m>: for instance, <m>1*3=3/2 \neq 3</m>. Rather, <m>e</m> is such an
+              identity element if and only if for all <m>a\in \fatq</m> we
+              have <m>a=e*a=(ea)/2</m>. We clearly have <m>a=(2a)/2</m> for all
+              <m>a\in \fatq^*</m>; so <m>2</m> acts as an identity element for
+              <m>\fatq^*</m> under <m>*</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              Let <m>a\in \fatq^*</m>.  Since <m>a\neq 0</m>, it makes
+              sense to divide by <m>a</m>; then <m>4/a\in \fatq^*</m>, with
+              <m>a*(4/a)=(a(4/a))/2=2</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        Thus, <m>\langle \fatq^*,*\rangle</m> is a group.
+      </p>
+    </proof>
+
+  </example>
+</section>

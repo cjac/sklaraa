@@ -1,0 +1,135 @@
+
+<section>
+  <title>Cayley's Theorem</title>
+  <p>
+    One might wonder how <q>common</q> permutation groups are in math. They
+    are, it turns out, ubiquitous in abstract algebra: in fact, <em>every group</em> can be thought of as a group of permutations! We will
+    prove this, but we first need the following lemma. (We will not use
+    the maps <m>\rho_a</m> or <m>c_a</m>, defined below, in our theorem, but
+    define them here for potential future use.)
+  </p>
+
+  <lemma xml:id="cay_lem">
+    <statement>
+      <p>
+        Let <m>G</m> be a group and <m>a\in G</m>. Then the
+        following functions are permutations on <m>G</m>, and hence are elements
+        of <m>S_G</m>:
+        <ol>
+          <li>
+            <title>(i)</title>
+            <p>
+              <m>\lambda_a\,:\,G\to G</m> defined by <m>\lambda_a(x)=ax</m>;
+            </p>
+          </li>
+
+          <li>
+            <title>(ii)</title>
+            <p>
+              <m>\rho_a\,:\,G\to G</m> defined by <m>\rho_a(x)=xa</m>;
+            </p>
+          </li>
+
+          <li>
+            <title>(iii)</title>
+            <p>
+              <m>c_a\,:\,G\to G</m> defined by <m>c_a(x)=axa^{-1}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      For (i): If <m>x_1,x_2 \in G</m> with
+      <m>\lambda_a(x_1)=\lambda_a(x_2)</m>, then <m>ax_1=ax_2</m>; so, by left
+      cancellation, <m>x_1=x_2</m>. Thus, <m>\lambda_a</m> is one-to-one. Further,
+      each <m>y\in G</m> equals <m>\lambda_a(a^{-1}y)</m> for <m>a^{-1}y\in G</m>, so
+      <m>\lambda_a</m> is onto. Thus, <m>\lambda_a</m> is a bijection from <m>G</m> to
+      <m>G</m>: that is, it's a permutation on <m>G</m>. The proofs for <m>\rho_a</m> and
+      <m>c_a</m> are similar.
+    </p>
+  </proof>
+
+  <p>
+    \begin{df}{Terminology}We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
+    perform on <m>G</m>, respectively, <em>left multiplication by <m>a</m></em>, <em>right multiplication by <m>a</m></em>, and <em>conjugation by <m>a</m></em>. (Nota
+    bene: sometimes when people talk about conjugation by <m>a</m> they
+    instead are referring to the permutation of <m>G</m> that sends each <m>x</m>
+    to <m>a^{-1}xa</m>.)\end{df}
+  </p>
+
+  <p>
+    Now we are ready for our theorem:
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>(Cayley's Theorem)</em> Let <m>G</m> be a group. Then <m>G</m>
+        is isomorphic to a subgroup of <m>S_G</m>. Thus, every group can be
+        thought of as a group of permutations.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      For each <m>a\in G</m>, let <m>\lambda_a</m> be defined, as above, by
+      <m>\lambda_a(x)=ax</m> for each <m>x\in G</m>; recall that each <m>\lambda_a</m> is
+      in <m>S_G</m>. Now define <m>\phi\,:\, G\to S_G</m> by <m>\phi(a)=\lambda_a</m>,
+      for each <m>a\in G</m>.
+    </p>
+
+    <p>
+      We claim that <m>\phi</m> is both a homomorphism and one-to-one. Indeed,
+      let <m>a,b\in G</m>. Now, <m>\phi(a)\phi(b)</m> and <m>\phi(ab)</m> are both
+      functions with domain <m>G</m>, so we need to show
+      <m>(\phi(a)\phi(b))(x)=(\phi(ab))(x)</m> for each <m>x\in G</m>. Well, let
+      <m>x\in G</m>. Then
+      <md>
+        <mrow>(\phi(a)\phi(b))(x)\amp =(\lambda_a\lambda_b)(x)\amp \amp</mrow>
+        <mrow>\amp =\lambda_a(\lambda_b(x)) \amp \amp \text{ (since the operation on \(S_G\) is
+        composition) }</mrow>
+        <mrow>\amp =\lambda_a(bx)\amp \amp</mrow>
+        <mrow>\amp =a(bx)\amp \amp</mrow>
+        <mrow>\amp =(ab)x\amp \amp</mrow>
+        <mrow>\amp =\lambda_{ab}(x)\amp \amp</mrow>
+        <mrow>\amp =(\phi(ab))(x).\amp \amp</mrow>
+      </md>
+    </p>
+
+    <p>
+      So <m>\phi</m> is a homomorphism. Further, if <m>a, b\in G</m> with
+      <m>\phi(a)=\phi(b)</m>, then <m>\lambda_a=\lambda_b</m>. In particular,
+      <m>\lambda_a(e)=\lambda_b(e)</m>. But <m>\lambda_a(e)=ae=a</m> and
+      <m>\lambda_b(e)=be=b</m>, so <m>a=b</m>. Thus, <m>\phi</m> is one-to-one.
+    </p>
+
+    <p>
+      Since by definition <m>\phi(G)</m> we have that <m>\phi</m> maps <m>G</m> <em>onto</em> <m>\phi(G)</m>, we conclude that <m>\phi</m> provides an isomorphism
+      from <m>G</m> to the subgroup <m>\phi(G)</m> of <m>S_G</m>.
+    </p>
+  </proof>
+
+  <note>
+
+  <p>
+    In general, <m>\phi(G) \neq S_G</m>, so we cannot
+    conclude that <m>G</m> is isomorphic to <m>S_G</m> itself; rather, we may only
+    conclude that it is is isomorphic to some <em>subgroup</em> of
+    <m>S_G</m>.
+  </p>
+
+  </note>
+
+  <remark>
+    <p>
+      While we chose to use the maps <m>\lambda_a</m> to
+      prove the above theorem, we could just as well have used the maps
+      <m>\rho_a</m> or <m>c_a</m>, instead.
+    </p>
+  </remark>
+</section>

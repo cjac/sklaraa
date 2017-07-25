@@ -1,0 +1,264 @@
+
+<section>
+  <title>Symmetric groups</title>
+  <definition>
+    <statement>
+      <p>
+        When <m>A=\{1,2,\ldots, n\}</m> (<m>n\in \Z^+</m>), we call <m>S_A</m>
+        the <term>symmetric group on <m>n</m> letters</term> and denote it by
+        <m>S_n</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Throughout this course, if we are discussing a
+      group <m>S_n</m>, you should assume <m>n\in \Z^+</m>.
+    </p>
+  </remark>
+
+  <p>
+    It is important for us to be able to easily describe specific elements of <m>S_n</m>. It would be cumbersome to describe, for instance, an element of <m>S_3</m> by saying it swaps <m>1</m> and <m>2</m> and fixes <m>3</m>; imagine how much more cumbersome it could be to describe an element of, say, <m>S_{100}</m>! One can somewhat concisely describe a permutation <m>\sigma</m> of <m>S_n</m> by listing out the elements <m>1,2,\ldots,n</m> and writing the element <m>\sigma(i)</m> below each <m>i</m> for <m>i=1,2,\ldots, n</m>.
+    For instance, if <m>\sigma</m> sends <m>1</m> to <m>2</m>, we'd write the number <m>2</m> below the number <m>1</m>. The convention is to enclose these two rows of numbers in a single set of parentheses, as in the following example.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        {nocommute} We can denote the element <m>\sigma</m> of <m>S_3</m> that swaps <m>1</m> and <m>2</m> and fixes <m>3</m> by
+        <me>
+          \sigma = \left(\begin{array}{ccc}1\amp 2\amp 3\\ 2\amp 1\amp 3
+          \end{array} \right),
+        </me>
+        and the element <m>\tau</m> of <m>S_3</m> that sends <m>1</m> to <m>3</m>, <m>2</m> to <m>1</m>, and <m>3</m> to <m>2</m> by
+        <me>
+          \tau =\left(\begin{array}{ccc}1\amp 2\amp 3\\ 3\amp 1\amp 2
+          \end{array} \right).
+        </me>
+      </p>
+
+      <p>
+        Then
+        <me>
+          \sigma\tau = \left(\begin{array}{ccc}1\amp 2\amp 3\\ 3\amp 2\amp 1
+          \end{array} \right) \mbox{ and } 
+          \tau\sigma = \left(\begin{array}{ccc}1\amp 2\amp 3\\ 1\amp 3\amp 2
+          \end{array} \right) .
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    But even this notation is unnecessarily cumbersome. Instead, we
+    use <em>cycle notation</em>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A permutation <m>\sigma</m> in <m>S_n</m> is called a <term><m>k</m>-cycle</term> or a <term>cycle of length <m>k</m></term> (or, less
+        specifically, a <term>cycle</term>) if there exist elements <m>a_1,
+        a_2,\ldots, a_k</m> in <m>\{1,2,\ldots,n\}</m> such that
+      </p>
+      <tabular>
+        <row>
+          <cell><m>\sigma(a_i)=a_{i+1}</m> for each <m>i=1,2,\ldots, k-1</m>;</cell>
+        </row>
+        <row>
+          <cell><m>\sigma(a_k)=a_1</m>; and</cell>
+        </row>
+        <row>
+          <cell><m>\sigma(x)=x</m> for every other element of <m>\{1,2,\ldots, n\}</m>.</cell>
+        </row>
+      </tabular>
+      <p>
+        We use the <term>cycle notation</term> <m>\sigma = (a_1 a_2 \cdots a_k)</m> to describe such a cycle. A <m>2</m>-cycle is often called a <term>transposition</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        {tr} The permutation <m>\tau</m> in <m>S_3</m> that sends <m>1</m> to <m>3</m>, <m>2</m> to <m>1</m>, and <m>3</m> to <m>2</m> is a cycle. It can be denoted by <m>\tau =(132)</m>.
+        Similarly, the cycle <m>\rho</m> in <m>S_3</m> swapping <m>1</m> and <m>3</m> can be denoted by <m>\rho=(13)</m>. On the other hand, the permutation in <m>S_4</m> that swaps <m>1</m> with <m>2</m> and <m>3</m> with <m>4</m> is
+        <em>not</em> a cycle.
+      </p>
+    </statement>
+  </example>
+
+  <remark>
+    <p>
+      Given a <m>k</m>-cycle <m>\sigma=(a_1 a_2\cdots a_k)</m>, there are <m>k</m> different expressions for <m>\sigma</m>. Indeed, we have
+      <me>
+        \sigma=(a_1 a_2\cdots a_k)=(a_2 a_3 \cdots a_k a_1)=(a_3 a_4 \cdots a_k a_1 a_2)=\cdots = (a_k a_1 \cdots a_{k-1}).
+      </me>
+    </p>
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        The permutation <m>\tau</m> described in <xref ref="tr">Example</xref> can also be written as <m>(321)</m> and as <m>(213)</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    However, by convention, we usually <q>start</q> a cycle <m>\sigma</m>
+    with the smallest of the numbers that <m>\sigma</m> doesn't fix: e.g.,
+    we'd write <m>\sigma=(213)</m> as <m>(132)</m>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Two cycles <m>\sigma=(a_1 a_2 \cdots a_k)</m> and <m>\tau=(b_1
+        b_2 \cdots b_m)</m> are said to be <term>disjoint</term> if <m>a_i \neq
+        b_j</m> for all <m>i</m> and <m>j</m>. Cycles <m>\sigma_1</m>,
+        <m>\sigma_2</m>, <m>\ldots</m>, <m>\sigma_m</m> are <term>disjoint</term> if <m>\sigma_i</m>
+        and <m>\sigma_j</m> are disjoint for each <m>i \neq j</m>. (Notice: this
+        version of disjointness is what we usually refer to as <term>mutual</term> disjointness.)
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Note that if cycles <m>\sigma</m> and <m>\tau</m> are disjoint, then <m>\sigma</m> and <m>\tau</m> commute; that is, <m>\sigma \tau=\tau \sigma</m>.
+    </p>
+  </remark>
+
+  <warning>
+    <p>
+      If cycles <m>\sigma</m> and <m>\tau</m> are <em>not</em> disjoint then they may not commute. For instance, see <xref ref="nocommute">Example</xref>, where <m>\sigma\tau \neq \tau \sigma</m>.
+    </p>
+  </warning>
+
+  <p>
+    Note that any permutation of <m>S_n</m> is a product of disjoint cycles (where by <q>product</q> we mean the permutation resulting from permutation multiplication).
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Writing a permutation in <term>(disjoint)
+        cycle notation</term> means writing it as a product of disjoint
+        cycles, where each cycle is written in cycle notation.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Note that if <m>\sigma</m> in <m>S_n</m> is
+      written in cycle notation and the number <m>a\in \{1,2,\ldots, n\}</m>
+      appears nowhere in <m>\sigma</m>'s representation, this means that
+      <m>\sigma</m> fixes <m>a</m>. The only permutation that we cannot really write
+      in cycle notation is the identity element <m>1_A</m> of <m>S_A</m>, which we
+      henceforth denote by <m>e</m>.
+    </p>
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        The permutation
+        <me>
+          \sigma =\left(\begin{array}{cccccc}1\amp 2\amp 3\amp 4\amp 5\amp 6\\ 3\amp 1\amp 2\amp 6\amp 5\amp 4
+          \end{array} \right)
+        </me>
+        is the product of disjoint cycles
+        <m>(132)</m> and <m>(46)</m>, so in cycle notation we have
+        <me>
+          \sigma=(132)(46).
+        </me>
+      </p>
+
+      <p>
+        Note that we could also write <m>\sigma</m> as <m>(321)(46)</m>, <m>(213)(64)</m>, <m>(64)(132)</m>, etc.
+      </p>
+
+      <p>
+        While it is true that we also have <m>\sigma=(13)(23)(46)</m>, this is not a disjoint cycle representation of <m>\sigma</m> since both <m>(13)</m> and <m>(23)</m> <q>move</q> the element <m>3</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        In <m>S_4</m>, let <m>\sigma=(243)</m> and <m>\tau=(13)(24)</m>. Then <m>\sigma \tau=(123)</m> and <m>\tau \sigma = (134).</m>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        {s9ex} In <m>S_9</m>, let <m>\sigma=(134)</m>, <m>\tau=(26)(17)</m>, and <m>\rho=(358)(12)</m>. Find the following, writing your answers using disjoint cycle notation.
+      </p>
+      <tabular>
+        <row>
+          <cell><m>\sigma^{-1}</m></cell>
+          <cell><m>\sigma^{-1}\tau\sigma</m></cell>
+          <cell><m>\sigma^2</m></cell>
+          <cell><m>\sigma^3</m></cell>
+        </row>
+        <row>
+          <cell><m>\rho^2</m></cell>
+          <cell><m>\rho^{-2}</m></cell>
+          <cell><m>\sigma \tau</m></cell>
+          <cell><m>\sigma \rho</m></cell>
+        </row>
+      </tabular>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Explicitly express all the elements of <m>S_4</m> in disjoint cycle notation.
+      </p>
+    </statement>
+  </example>
+
+  <theorem xml:id="kcyc">
+    <statement>
+      <p>
+        Any <m>k</m>-cycle has order <m>k</m> in <m>S_n</m>. More generally, if permutation <m>\sigma</m> can be written in disjoint cycle notation as <m>\sigma=\sigma_1 \sigma_2 \cdots \sigma_m</m>, then
+        <md>
+          <mrow>o(\sigma)\amp =\lcm(o(\sigma_1), o(\sigma_2),\ldots, o(\sigma_m))</mrow>
+          <mrow>\amp =\lcm(\mathrm{length}(\sigma_1),\mathrm{length}(\sigma_2),\ldots,\mathrm{length}(\sigma_m)),</mrow>
+        </md>
+        where <m>\lcm</m> denotes the least common multiple.
+      </p>
+    </statement>
+  </theorem>
+
+  <warning>
+    <p>
+      Permutation <m>\sigma</m> must be in <em>disjoint</em> cycle notation for the above formula to hold. For instance, let <m>\sigma=(12)(23)</m> in <m>S_3</m>. The transpositions <m>(12)</m> and <m>(23)</m> both have order <m>2</m>, but <m>o(\sigma)\neq \lcm(2,2)=2</m>. Rather, <m>o(\sigma)=3</m>, since in disjoint cycle notation <m>\sigma</m> can be written as <m>\sigma=(123)</m>. You must write a permutation using disjoint cycle notation before attempting to use this method to compute its order!
+    </p>
+  </warning>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Find the orders of each of the elements in <xref ref="s9ex">Example</xref>, including <m>\sigma</m>, <m>\tau</m>, and <m>\rho</m> themselves.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Explicitly list the elements of <m>\langle \sigma\rangle</m>, <m>\langle \tau\rangle</m>, and <m>\langle \rho\rangle</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+</section>

@@ -1,0 +1,25 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="coslag">
+  <title>The Wonderful World of Cosets</title>
+  <introduction>
+    <p>
+      We have already seen one way we can examine a complicated group <m>G</m>:
+      namely, study its subgroups, whose group structures are in some
+      cases much more directly understandable than the structure of <m>G</m>
+      itself. But if <m>H</m> is a subgroup of a group <m>G</m>, if we only study
+      <m>H</m> we lose all the information about <m>G</m>'s structure <q>outside</q> of
+      <m>H</m>. We might hope that <m>G-H</m> (that is, the set of elements of <m>G</m>
+      that are not in <m>H</m>) is also a subgroup of <m>G</m>, but we immediately
+      see that cannot be the case since the identity element of <m>G</m> must
+      be in <m>H</m>, and <m>H\cap (G-H)=\emptyset</m>. Instead, let's ask how we
+      can get at some understanding of <m>G</m>'s entire structure using a
+      subgroup <m>H</m>? It turns out we use what are called <em>cosets</em> of
+      <m>H</m>; but before we get to those, we need to cover some preliminary
+      material.
+    </p>
+  </introduction>
+  <xi:include  href="section7-1.ptx" />
+  <xi:include  href="section7-2.ptx" />
+  <xi:include  href="section7-3.ptx" />
+  <xi:include  href="section7-4.ptx" />
+</chapter>

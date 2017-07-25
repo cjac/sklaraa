@@ -1,0 +1,15 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Introduction</title>
+  <p>
+    At its most basic level, abstract algebra is the study of structures. Just as an architect may examine buildings or an anthropologist societal hierarchies, an algebraist explores the nature of sets equipped with binary operations that satisfy certain properties. While these structures may not seem at first to be very important, they are at the heart of most, if not all, mathematical endeavors. On an elemental level, they allow us to solve systems of equations; on a more global-level, they are behind some of our most important cryptographic systems. We even use them implicitly when telling time!
+  </p>
+
+  <p>
+    Our focus in this course will be exploring some of the most fundamental algebraic structures: namely, groups, rings, and fields. Along the way, we will explore rigorous mathematical notions of similarity and difference: When can we consider two objects to be more or less <q>the same</q>? When are they fundamentally different? For instance, consider two houses that have exactly the same construction, but are painted different colors. Are they the same house? No. But viewed structurally (as opposed to aesthetically) they are the same. This means that if we know certain information about one of the houses (say, how far the bathroom is from the kitchen) we know the same information about the other house. However, knowing that the first house is painted yellow does not tell us anything about the second house's color. We explore an analogous idea in mathematics, namely, the concept of <em>isomorphism</em>.
+  </p>
+
+  <p>
+    Along the way, we will gain experience writing mathematical proofs and will see plenty of specific examples demonstrating more general ideas.
+  </p>
+</chapter>

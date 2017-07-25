@@ -1,0 +1,82 @@
+
+<section>
+  <title>Exploring the subgroup lattices of cyclic groups</title>
+  <p>
+    We now explore the subgroups of cyclic groups. A complete proof of the following theorem is provided on p. 61 of<nbsp /><xref ref="F" />.
+  </p>
+
+  <theorem xml:id="subc">
+    <statement>
+      <p>
+        Every subgroup of a cyclic group is cyclic.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    <em>Sketch of proof:</em> Let <m>G=\langle a\rangle</m> and <m>H\leq G</m>. If <m>H=\{e\}</m>, then clearly <m>H</m> is cyclic. Else, there exists an element <m>a^i</m> in <m>H</m> with <m>i>0</m>; let <m>d</m> be the least positive integer such that <m>a^d\in H</m>. It turns out that <m>H=\langle a^d\rangle</m>.
+  </p>
+
+  <corollary>
+    <statement>
+      <p>
+        Every subgroup of <m>\Z</m> is of the form <m>n\Z</m> for <m>n\in \Z</m>. (Note that <m>n\Z\simeq \Z</m> unless <m>n=0</m>.)
+      </p>
+    </statement>
+  </corollary>
+
+  <p>
+    Really, it suffices to study the subgroups of <m>\Z</m> and <m>\Z_n</m> to understand the subgroup lattice of every cyclic group.
+  </p>
+
+  <p>
+    We provide the following theorem without proof.
+  </p>
+
+  <theorem xml:id="znsubgps">
+    <statement>
+      <p>
+        The nontrivial subgroups of <m>\Z_n</m> are exactly those of the form <m>\langle d\rangle</m>, where <m>d</m> is a positive divisor of <m>n</m>. Note that <m>|\langle d\rangle |=n/d</m> for each such <m>d</m>.<fn><em>Remark.</em> It turns out that for each <m>0\neq a\in \Z_n</m>, <m>\d{\langle a\rangle =\left\langle \frac{n}{\gcd(n,a)}\right\rangle }</m>. Note that it follows that <m>|\langle a\rangle |=n/\gcd(n,a)</m> for every <m>0\neq a \in \Z_n</m>.</fn></p>
+    </statement>
+  </theorem>
+
+  <p>
+    In fact:
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <m>\Z_n</m> has a unique subgroup of order <m>k</m>, for each positive divisor <m>k</m> of <m>n</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <example>
+    <statement>
+      <p>
+        How many subgroups does <m>\Z_{18}</m> have? What are the generators of <m>\Z_{15}</m>?
+      </p>
+
+      <p>
+        Well, the positive divisors of <m>18</m> are <m>1,2,3,6,9,</m> and <m>18</m>, so <m>\Z_{18}</m> has exactly six subgroups (namely, <m>\langle 1\rangle</m>, <m>\langle 2\rangle</m>, etc.).
+        The generators of <m>\Z_{15}</m> are the elements of <m>\Z_{15}</m> that are relatively prime to <m>15</m>, namely <m>1,2,4,7,8,11,13,</m> and <m>14</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Draw a subgroup lattice for <m>\Z_{12}</m>.
+      </p>
+
+      <p>
+        The positive divisors of <m>12</m> are <m>1,2,3,4,6,</m> and <m>12</m>; so
+        <m>\Z_{12}</m>'s subgroups are of the form <m>\langle 1\rangle</m>, <m>\langle 2\rangle</m>, etc. So
+        <m>\Z_{12}</m> has the following subgroup lattice.
+      </p>
+      <image source="images/1b979754dca7c6b01279c99ad0c0b07e343c78e1.png"/>
+    </statement>
+  </example>
+</section>

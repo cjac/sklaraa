@@ -1,0 +1,255 @@
+
+<section>
+  <title>Proving that a subset of a group is or isn't a subgroup</title>
+  <p>
+    Using <xref ref="subsame">Lemma</xref> and the argument preceding it, we
+    have the following.
+  </p>
+
+  <theorem xml:id="subgp">
+    <statement>
+      <p>
+        A subset <m>H</m> of a group <m>G</m> is a subgroup of <m>G</m> if and only if
+        <ol>
+          <li>
+            <p>
+              <m>H</m> is closed under <m>G</m>'s operation;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The identity element of <m>G</m> is in <m>H</m>; and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              For each <m>a\in H</m>, <m>a</m>'s inverse in <m>G</m> is contained in <m>H</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <example>
+    <statement>
+      <p>
+        {subsetvsubgp2} For each of the following, prove that the given subset <m>H</m> of group <m>G</m> is or is not a subgroup of <m>G</m>.
+        <ol>
+          <li>
+            <p>
+              <m>H=3\Z</m>, <m>G=\Z</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>H=\{0,1,2,3\}</m>, <m>G=\Z_6</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>H=\fatr^*</m>, <m>G=\fatr</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>H=\{(0,x,y,z):x,y,z\in \fatr\}</m>, <m>G=\fatr^4</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Generalizing Part 1 of the above theorem, we have <m>n\Z\leq \Z</m> for every <m>n\in \Z^+</m>. The proof of this is left as an exercise for the reader.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        {FHKL} Consider the group <m>\langle F,+\rangle</m>, where <m>F</m> is the set of all functions from <m>\fatr</m> to <m>\fatr</m> and <m>+</m> is pointwise addition. Which of the following are subgroups of <m>F</m>?
+        <ol>
+          <li class="custom-list-style-type" label="" >
+
+          <p>
+            <m>H=\{f\in F: f(5)=0\}</m>;
+          </p>
+          </li>
+
+          <li class="custom-list-style-type" label="" >
+
+          <p>
+            <m>K=\{f\in F: f \mbox{ is continuous} \}</m>;
+          </p>
+          </li>
+
+          <li class="custom-list-style-type" label="" >
+
+          <p>
+            <m>L=\{f\in F: f \mbox{ is differentiable} \}</m>.
+          </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        Are any of <m>H</m>, <m>K</m>, and <m>L</m> subgroups of one another?
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    In fact, we can narrow down the number of facts we need to
+    check to prove a subset <m>H\cont G</m> is a subgroup of <m>G</m> to only
+    two.
+  </p>
+
+  <theorem xml:id="twostep">
+    <statement>
+      <p>
+        <em>Two-Step Subgroup Test.</em> Let <m>G</m> be
+        a group and <m>H\cont G</m>. Then <m>H</m> is a subgroup of <m>G</m> if
+      </p>
+      <tabular>
+        <row>
+          <cell>1.</cell>
+          <cell><m>H\neq \emptyset</m>; and</cell>
+        </row>
+        <row>
+          <cell>2.</cell>
+          <cell>For each <m>a,b\in H</m>, <m>ab^{-1}\in H</m>.</cell>
+        </row>
+      </tabular>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Assume that the above two properties hold. Since <m>H\neq
+      \emptyset</m>, there exists an <m>x\in G</m> such that <m>x\in H</m>. Then
+      <m>e_G=xx^{-1}</m> is in <m>H</m>, by the second property. Next, for every
+      <m>a\in H</m> we have <m>a^{-1}=e_Ga^{-1}\in H</m> (again by the second
+      property). Finally, if <m>a,b\in H</m> then we've already shown
+      <m>b^{-1}\in H</m>; so <m>ab=a(b^{-1})^{-1}\in H</m>, yet again by the second
+      property. Thus, <m>H\leq G</m>.
+    </p>
+  </proof>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Use the Two-Step Subgroup Test to prove that <m>3\Z</m> is a subgroup of <m>\Z</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Use the Two-Step Subgroup Test to prove that <m>SL(n,\fatr)</m> is a subgroup of <m>GL(n,\fatr)</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <p>
+    \begin{df} Note that if <m>H</m> is a subgroup of a group <m>G</m> and <m>K</m> is a subset of <m>H</m>, then <m>K</m> is a subgroup of
+    <m>H</m> if and only if it's a subgroup of <m>G</m>.\end{df}
+  </p>
+
+  <p>
+    It can be useful to look at how subgroups of a group relate to one
+    another. One way of doing this is to consider <em>subgroup
+    lattices</em> (also known as <em>subgroup diagrams</em>. To draw a
+    subgroup lattice for a group <m>G</m>, we list all the subgroups of <m>G</m>,
+    writing a subgroup <m>K</m> below a subgroup <m>H</m>, and connecting them
+    with a line, if <m>K</m> is a subgroup of <m>H</m>.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Consider the group <m>\Z_8</m>. We will see later that the subgroups of <m>\Z_8</m> are <m>\{0\}</m>, <m>\{0,2,4,6\}</m>, <m>\{0,4\}</m> and <m>\Z_8</m> itself. So <m>\Z_8</m> has the following subgroup lattice.
+      </p>
+      <image source="images/b8831c406064d5ef67c570eaa7e051b320a7bfa1.png"/>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Referring to <xref ref="FHKL">Example</xref>, draw the portion of the subgroup lattice for <m>F</m> that shows the relationships between itself and its proper subgroups <m>H</m>, <m>K</m>, and <m>L</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Indicate the subgroup relationships between the following groups:
+        <m>\Z</m>, <m>12\Z</m>, <m>\fatq^+</m>, <m>\fatr</m>, <m>6\Z</m>, <m>\fatr^+</m>, <m>3\Z</m>, <m>G=\langle \{\pi^n:n\in \Z\},\cdot\,\rangle</m>
+        and
+        <m>J=\langle \{6^n:n\in \Z\},\cdot\,\rangle .</m>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We end with a theorem about homomorphisms and subgroups
+    that leads us to another group invariant.
+  </p>
+
+  <theorem xml:id="imsubgp">
+    <statement>
+      <p>
+        Let <m>G</m> and <m>G'</m> be groups, let <m>\phi</m> a homomorphism from <m>G</m> to <m>G'</m>, and let <m>H</m> a subgroup of <m>G</m>. Then <m>\phi(H)</m> is a subgroup of <m>G'</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      This proof is left as an exercise for the reader.
+    </p>
+  </proof>
+
+  <corollary>
+    <statement>
+      <p>
+        If <m>G\simeq G'</m> and <m>G</m> contains exactly <m>n</m> subgroups (<m>n\in \Z^+</m>), then so does <m>G'</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <p>
+    This is another way of, for instance, distinguishing between the groups <m>\Z_4</m> and the Klein 4-group <m>Z_2^2</m>.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        By inspection, <m>\Z_4</m> has subgroup lattice
+      </p>
+      <image source="images/d9ac3f951f645cfd2f17f429a80d38102a50ac7c.png"/>
+      <p>
+        and <m>\Z_2^2</m> has subgroup lattice
+      </p>
+      <image source="images/e48de41dca39e2d5cb604267b6262ef2db11fc9e.png"/>
+      <p>
+        Since <m>\Z_4</m> contains exactly 3 subgroups and <m>\Z_2^2</m> exactly 5, we have
+        that <m>\Z_4\not\simeq V</m>.
+      </p>
+    </statement>
+  </example>
+</section>

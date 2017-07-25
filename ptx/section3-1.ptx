@@ -1,0 +1,79 @@
+
+<section>
+  <title>Groups of small order</title>
+  <p>
+    Let's start exploring groups in order of increasing, well, order. Before we do this, it will be helpful to introduce the notion of a <em>group table</em> (also known as a <em>Cayley table</em><fn>Named after the British mathematician Arthur Cayley.</fn>) for a finite group. Given a finite group <m>G</m>, list its elements in some fixed order, say, <m>a_1, a_2, \ldots, a_n</m>, and then construct its group table by creating an array with exactly one row and exactly one column corresponding to each group element. We then put in the row <m>i</m> and column <m>j</m> the element <m>a_ia_j</m> of <m>G</m>. Note that a single group can have group tables that look different from one another, since reordering a group's elements will change its table.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Consider the group <m>\Z_4</m> under addition modulo 4. Ordering the elements of <m>\Z_4</m> as <m>1,2,3,4</m>, we have the following group table for <m>\langle \Z_4,+\rangle</m>:
+      </p>
+
+      <p>
+        <m>\begin{array}{c||c|c|c|c}
+        +\amp 0\amp 1\amp 2\amp 3\\ \hline\hline 0\amp 0\amp 1\amp 2\amp 3\\ \hline
+        1\amp 1\amp 2\amp 3\amp 0\\ \hline 2\amp 2\amp 3\amp 0\amp 1\\ \hline 3\amp 3\amp 0\amp 1\amp 2
+        \end{array}</m>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Now, clearly, there is no group of order 0 (do you see why?). Is there a group of order 1? Well, suppose <m>\langle G,*\rangle</m> is such a group. Since <m>G</m> must contain an identity element <m>e</m>, we must have <m>G=\{e\}</m>, and since <m>e</m> is <m>G</m>'s identity element, we must have <m>e*e=e</m>. Clearly, in this case, the three group axioms hold. So <m>G</m> is a valid group, without much going on in it.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>G</m> is a group with <m>|G|=1</m>, then <m>G</m> is called the
+        <term>trivial group</term><fn>A good question to ask here is
+        why it's called <q>the</q> trivial group, rather than <q>a</q> trivial
+        group.  Indeed, there are infinitely many groups of order 1!
+        (Do you see why?) But it turns out that all of these groups are
+        <em>structurally</em> the same. Hence mathematicians end up
+        thinking of them as various instantiations of one group, rather
+        than separate groups. We will discuss this in more depth
+        shortly, when we introduce the idea of <em>isomorphism</em>.</fn>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Next suppose that group <m>\Gdot</m> has order 2. Then <m>G</m> must contain an identity element, <m>e</m>, and a non-identity element, <m>a</m>. Since <m>e</m> is its own inverse, and inverses are unique, <m>a</m> must be its own inverse as well. So <m>G</m> must have the following table.
+  </p>
+
+  <p>
+    <m>\begin{array}{c||c|c}
+    *\amp e\amp a\\ \hline\hline e\amp e\amp a\\ \hline
+    a\amp a\amp e
+    \end{array}</m>
+  </p>
+
+  <p>
+    It is straightforward to show that such a structure does satisfy all the group axioms (the only one we really need to check is associativity).
+  </p>
+
+  <p>
+    Now, what if group <m>\Gdot</m> has order 3? Note that <em>you can't have any entry appear more than once in the same row or same column</em> (excluding of course the labels outside the grid we're filling in), given <xref ref="uniquesols">Theorem</xref>. Is there only one way of filling in the table for a group of order 3? (Hint: consider what element must be the second row, third column entry.)
+  </p>
+
+  <p>
+    <m>\begin{array}{c||c|c|c}
+    *\amp e\amp a\amp b\\ \hline \hline e\amp \amp \amp \\ \hline
+    a\amp \amp \amp \\ \hline b\amp \amp \amp 
+    \end{array}</m>
+  </p>
+
+  <p>
+    Finally, what if group <m>\Gdot</m> has order 4? It turns out in this case there are <em>two</em> valid ways of filling in a group table!
+  </p>
+
+  <p>
+    What we have been doing here is really getting into the idea of the
+    <em>structure</em> of groups, and when we can consider groups to be
+    essentially <q>the same</q> or fundamentally <q>different.</q> We approach
+    this more formally via the concepts of homomorphism and isomorphism.
+  </p>
+</section>

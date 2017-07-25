@@ -1,0 +1,129 @@
+
+<section>
+  <title>Notation</title>
+  <p>
+    To start, we begin learning and/or reviewing some notation. Here is a table of frequently used symbols and abbreviations we will use, along with their meanings.
+    \begin{threeparttable}
+  </p>
+  <tabular>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><em>Notation</em></cell>
+      <cell><em>Meaning</em></cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\forall</m></cell>
+      <cell>for all/for every</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\exists</m></cell>
+      <cell>there exists</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell>s.t.</cell>
+      <cell>such that\tnote{*}</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\therefore</m></cell>
+      <cell>therefore</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell>WLOG or wolog</cell>
+      <cell>without loss of generality\tnote{<m>\dagger</m>}</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell>WTS</cell>
+      <cell>want to show</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell>!</cell>
+      <cell>unique (also used to denote factorials)</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Rightarrow</m></cell>
+      <cell>implies; also the <q>if</q> direction in proofs</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Leftarrow</m></cell>
+      <cell>only if; also the <q>only if</q> direction in proofs</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Leftrightarrow</m> or iff</cell>
+      <cell>if and only if</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell>w/</cell>
+      <cell>with</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell>o.w.</cell>
+      <cell>otherwise</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+  </tabular>
+  <p>
+    \begin{tablenotes}
+    \item[*] You can also use <m>\ni</m> to denote <q>such that,</q> but we will avoid this convention as it can be confused with the notation <m>\in</m>, meaning <q>is an element of.</q>
+    \item[<m>\dagger</m>] We will discuss what this means in greater detail as it arises in our work.
+    \end{tablenotes}
+    \end{threeparttable}
+  </p>
+
+  <p>
+    Finally, the notation <m>:=</m> means we are assigning a definition. E.g., writing <q>Let <m>S:=\{1,2,3\}</m></q> means we are defining <m>S</m> to be the set <m>\{1,2,3\}</m>. We often omit the colon and simply write <m>=</m> in these cases, but we may include it to emphasize the fact that we are defining something.
+  </p>
+</section>

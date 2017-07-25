@@ -1,0 +1,453 @@
+
+<section>
+  <title>Partitions of and equivalence relations
+  on sets</title>
+  <definition>
+    <statement>
+      <p>
+        Let <m>S</m> be a set. Then a collection of subsets
+        <m>P=\{S_i\}_{i\in I}</m> (where <m>I</m> is some index set) is a <term>partition</term> of <m>S</m> if each <m>S_i \neq \emptyset</m> and each element
+        of <m>S</m> is in exactly one <m>S_i</m>. In other words,
+        <m>P=\{S_i\}_{i\in I}</m> is a partition of <m>S</m> if and only if:
+        <ol>
+          <li>
+            <title>(i)</title>
+            <p>
+              each <m>S_i\neq \emptyset</m>;
+            </p>
+          </li>
+
+          <li>
+            <title>(ii)</title>
+            <p>
+              the <m>S_i</m> are mutually disjoint (that is, <m>S_i\cap S_j =
+              \emptyset</m> for <m>i\neq j \in I</m>); and
+            </p>
+          </li>
+
+          <li>
+            <title>(iii)</title>
+            <p>
+              <m>\d{S=\bigcup_{i\in I}S_i}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        The <m>S_i</m> are called the <term>cells</term> of the partition.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            The set <m>\{1,2,3\}</m> has 5 partitions: namely,
+            <me>
+              \{\{1,2,3\}\},\{\{1,2\},\{3\}\}, \{\{1,3\},\{2\}\},\{\{2,3\},\{1\}\} \mbox{ and }  \{\{1\},\{2\},\{3\}\}.
+            </me>
+            The first partition we've mentioned has one cell, the next three have
+            two cells, and the last one has three cells.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The following is a 2-celled partition of <m>\Z</m>:
+            <me>
+              \{\{x\in \Z\,:\ x \mbox{
+              is even} \},\{x\in \Z\,:\, x\mbox{ is odd} \}\}.
+            </me>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <p>
+    The number of partitions of a finite set of <m>n</m> elements gets
+    large very quickly as <m>n</m> goes to infinity. Indeed, there are 52
+    partitions of a set containing just 5 elements!<fn>The total
+    number of partitions of an <m>n</m>-element set is the <em>Bell number</em>,
+    <m>B_n</m>. There is no trivial way of computing <m>B_n</m>, in general,
+    though the <m>B_n</m> do satisfy the relatively simple recurrence
+    relation
+    <me>
+      B_{n+1}=\sum_{k=0}^n \binom{n}{k} B_k,
+    </me>
+    for each <m>n\geq 1</m>.</fn>But our goal here is not to count the number of
+    partitions of a given set, but rather to use particular partitions
+    of a group <m>G</m> to help us study that group's structure. We turn now
+    to our next definition.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>S</m> be a set. Then a <term>relation</term> on <m>S</m> is a
+        subset <m>\R</m> of <m>S\times S</m>.<fn>More generally, if <m>S</m> and
+        <m>T</m> are sets, a <em>relation between <m>S</m> and <m>T</m></em> is a subset
+        of <m>S \times T</m>. We will not, however, in our class consider
+        the cases in which <m>S</m> and <m>T</m> are different sets.</fn>If <m>\R</m> is
+        a relation on <m>S</m> and <m>x,y\in S</m>, then we say <m>x</m> is <term>related to</term> <m>y</m>, and write <m>x\R y</m>, if <m>(x,y)\in \R</m>;
+        otherwise, we say that <m>x</m> is <term>not related</term> to <m>y</m>, and
+        write <m>x \not {\ \R} y</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      If there is a conventional notation used to denote
+      a particular relation on a set, we will usually use that notation,
+      rather than <m>\R</m>, to denote the relation.
+    </p>
+  </remark>
+
+  <p>
+    We are already familiar with some relations on
+    <m>\fatr</m>. Common such relations are <m>=</m>, <m>\neq</m>, <m>\lt</m>, <m>\leq</m>, <m>></m>,
+    and <m>\geq</m>; they contain exactly the elements we'd expect them to
+    contain.
+  </p>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            <m>\lt</m> is a relation on <m>\fatr</m> that contains, for instance, <m>(3,4)</m> but not
+            <m>(3,3)</m> or <m>(4,3)</m>; <m>\leq</m> is a relation on <m>\fatr</m> that contains
+            <m>(3,4)</m> <em>and</em> <m>(3,3)</m> but not <m>(4,3)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Given any <m>n\in \Z^+</m>, congruence modulo <m>n</m>, denoted <m>\equiv_n</m>, is a
+            relation on <m>\Z</m>, where <m>\equiv_n</m> is defined to be <m>\{(x,y) \in \Z
+            \times \Z \,:\, n \mbox{ divides } x-y\}</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            We can define a relation <m>\D</m> on <m>C^1</m> (the set of
+            all differentiable functions from <m>\fatr</m> to <m>\fatr</m>
+            whose derivatives are continuous) by declaring that
+            <m>(f,g)\in C^1 \times C^1</m> is in <m>\D</m> if and only if
+            <m>f'=g'</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>\R</m> be a relation on a set <m>S</m>. Then <m>\R</m> is said to
+        be:
+      </p>
+
+      <p>
+        <term>reflexive on <m>S</m></term> if <m>x\R x</m> for every <m>x\in S</m>;
+      </p>
+
+      <p>
+        <term>symmetric on <m>S</m></term> if whenever <m>x,y\in S</m> with <m>x\R y</m>
+        we also have <m>y\R x</m>; and
+      </p>
+
+      <p>
+        <term>transitive on <m>S</m></term> if
+        whenever <m>x,y,z\in S</m> with <m>x\R y</m> and <m>y\R z</m> we also have <m>x\R z</m>.
+      </p>
+
+      <p>
+        A relation that is reflexive,
+        symmetric, <term>and</term> transitive is called an <term>equivalence
+        relation</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <ol>
+      <li>
+        <p>
+          You can think of an
+          equivalence relation on a set <m>S</m> as being a <q>weak version</q> of
+          equality on <m>S</m>.  Indeed, <m>=</m> is an equivalence relation on any set
+          <m>S</m>, but it also has a very special property that most equivalence
+          relations <em>don't</em> have: namely, no element of <m>S</m> is related to
+          <em>any other element</em> of <m>S</m> under <m>=</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          If we know, or plan to prove, that a relation is an equivalence
+          relation, by convention we will often denote the relation by <m>\sim</m>,
+          rather than by <m>\R</m>.
+        </p>
+      </li>
+    </ol>
+  </remark>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            <m>\lt</m> is <em>not</em> an equivalence relation on <m>\fatr</m> because
+            it is not reflexive: for instance, <m>3\not\lt  3</m>. <m>\leq</m> is also <em>not</em> an equivalence relation on <m>\fatr</m>, since even though it is
+            reflexive, it's not symmetric: indeed, <m>3\leq 4</m> but <m>4\not\leq 3</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Given any <m>n\in \Z^+</m>, <m>\equiv_n</m> <em>is</em> an equivalence relation on <m>\Z</m>.  The proof of this is left as an exercise for the reader.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The relation <m>\D</m> on <m>C^1</m> discussed above (that
+            <m>f\D\, g</m> iff <m>f'=g'</m>) <em>is</em> an equivalence relation
+            on <m>C^1</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\simeq</m> <em>is</em> an equivalence relation on any set of
+            groups. This follows from <xref ref="groupisoequiv">Theorem</xref>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Define relation <m>\R</m> on <m>\Z</m> by <m>x\R y</m> if and only if <m>xy
+            \geq 0</m>.  Is <m>\R</m> an equivalence relation on <m>\Z</m>?  Well, for every
+            <m>x\in \Z</m>, <m>x^2\geq 0</m>, so <m>\R</m> is reflexive.  Moreover, if <m>x,y\in
+            \Z</m> with <m>xy \geq 0</m>, then <m>yx \geq 0</m>; so <m>\R</m> is symmetric.  But
+            <m>\R</m> is <em>not</em> transitive: indeed, <m>3,0,-4\in \Z</m> with <m>3(0)=0
+            \geq 0</m> and <m>0(-4)=0\geq 0</m>, so <m>3\R 0</m> and <m>0 \R -4</m>; but
+            <m>3(-4)=-12 \not \geq 0</m>.  So <m>\R</m> isn't transitive, and hence is
+            <em>not</em> an equivalence relation.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        Given an equivalence relation <m>\sim</m> on a set <m>S</m>, for
+        each <m>x\in S</m> we define the <term>equivalence class of <m>x</m> under
+        <m>\sim</m></term> to be
+        <me>
+          [x]=\{y\in S\,:\, y\sim x\}.
+        </me>
+      </p>
+
+      <p>
+        These sets <m>[x]</m> (<m>x\in S</m>) are
+        called the <term>equivalence classes of <m>S</m> under <m>\sim</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Note that, by reflexivity of <m>\sim</m>, <m>x\in [x]</m>
+      for every <m>x\in S</m>.
+    </p>
+  </remark>
+
+  <p>
+    We have now the following Very Important
+    Lemma:
+  </p>
+
+  <lemma xml:id="vil_lem">
+    <statement>
+      <p>
+        Let <m>\sim</m> be an equivalence relation on set <m>S</m>. Then for <m>x,y\in S</m>, the following are equivalent:
+        (i) <m>y\in [x]</m>;
+      </p>
+
+      <p>
+        (ii) <m>[x]=[y]</m>;
+      </p>
+
+      <p>
+        (iii) <m>x\in [y]</m>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      For (i) <m>\Leftrightarrow</m> (ii): Let <m>x, y\in S</m>. If <m>y\in
+      [x]</m>, then <m>y \sim x</m>, so for every <m>z\in [y]</m> (that is, for every
+      <m>z</m> in <m>S</m> with <m>z\sim y</m>), we have, by transitivity, <m>z\sim x</m>, so
+      <m>z\in [x]</m>. On the other hand, by the symmetry of <m>\sim</m> we have
+      <m>x\sim y</m>; so for every <m>z\in [x]</m>, we have, again by transitivity,
+      that <m>z\in [y]</m>. Thus, <m>[x]=[y]</m>. Conversely, if <m>[x]=[y]</m>, then
+      since <m>y\in [y]=[x]</m>.
+    </p>
+
+    <p>
+      The proof of (ii) <m>\Leftrightarrow</m> (iii) is nearly
+      identical.
+    </p>
+  </proof>
+
+  <p>
+    \begin{df}{Remark and definition.} In many cases there are
+    many distinct elements <m>x,y\in S</m> with <m>[x]=[y]</m>; thus, there
+    are usually many different ways we could denote a particular
+    equivalence class of <m>S</m> under <m>\sim</m>. Element <m>y\in S</m> is
+    called a <em>representative</em> of class <m>X</m> if <m>y\in X</m>.\end{df}
+  </p>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Consider the equivalence relation <m>\equiv_2</m> on
+            <m>\Z</m>.  Under this relation, <m>[0]=\{0,\pm 2, \pm 4, \ldots\}</m>
+            and <m>[1]=\{\ldots, -3, -1, 1, 3, \ldots\}</m>; in fact, if we let
+            <m>E</m> be the set of all even integers and <m>O</m> the set of all odd
+            integers, then for <m>x\in \Z</m>, <m>[x]=E</m> if <m>x</m> is even and <m>O</m> if
+            <m>x</m> is odd. Thus, the set of all equivalence classes of <m>\Z</m>
+            under <m>\equiv_2</m> is the 2-element set <m>\{E,O\}</m>: every even
+            integer is a representative of <m>E</m>, while every odd integer is
+            a representative of <m>O</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            For <m>f\in C^1</m>, the equivalence class of <m>f</m> under <m>\D</m>
+            (defined above)
+            is
+            the set of all functions in <m>C^1</m> of the
+            form <m>g(x)=f(x)+c</m>, where <m>c\in \fatr</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Let <m>A=\{a,b,c\}</m>, and define <m>\sim</m> on the power set <m>P(A)</m> of <m>A</m> by <m>X\sim Y</m> if
+            and only if <m>|X|=|Y|</m>. It is straightforward to show that <m>\sim</m> is
+            an equivalence relation on <m>P(A)</m>, under which <m>P(A)</m> has exactly 4
+            distinct equivalence classes:
+            <me>
+              [\emptyset]=\{\emptyset\},
+            </me>
+            <me>
+              [\{a\}]=[\{b\}]=[\{c\}]=\{\{a\},\{b\}, \{c\}\},
+            </me>
+            <me>
+              [\{a,b\}]=[\{a,c\}]=[\{b,c\}]=\{\{a,b\},\{a,c\},\{b,c\}\}, \mbox{ and }
+            </me>
+            <me>
+              [A]=\{A\}.
+            </me>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <p>
+    \fbox{
+  </p>
+
+  <sidebyside>
+    Notice that the complete set
+    <m>\{E,O\}</m> of distinct equivalence classes of <m>\Z</m> under
+    <m>\equiv_n</m> is a partition of <m>\Z</m>, and the complete set
+    <m>\{[\emptyset],[\{a\}],[\{a,b\}],[A]\}</m> of distinct equivalence
+    classes of <m>P(A)</m> under <m>\sim</m> is a partition of <m>P(A)</m>. This
+    is not a coincidence! It turns out that equivalence relations
+    and partitions go hand in hand.
+  </sidebyside>
+  <theorem xml:id="part_quiv">
+    <statement>
+      <p>
+        Let <m>S</m> be a set. Then:
+        <ol>
+          <li>
+            <title>(i)</title>
+            <p>
+              If <m>\sim</m> is an equivalence relation on <m>S</m>,
+              then the set of all equivalence classes of <m>S</m> under
+              <m>\sim</m> is a partition of <m>S</m>; and
+            </p>
+          </li>
+
+          <li>
+            <title>(ii)</title>
+            <p>
+              If <m>P</m> is a partition of <m>S</m>, then the relation on <m>S</m>
+              defined by
+              <m>x\sim y</m> if and only <m>x</m> is in the same
+              cell of <m>P</m> as <m>y</m> is an equivalence relation on <m>S</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        Notice that in each case, the cells of the partition are the
+        equivalence classes of the set under the corresponding equivalence
+        relation.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      For (i): Let <m>\sim</m> be an equivalence relation on <m>S</m>.
+      Clearly, the equivalence classes of <m>S</m> under <m>\sim</m> are
+      nonempty sets whose union is <m>S</m>. Thus, it suffices to show <m>X
+      \cap Y =\emptyset</m> for each pair of equivalence classes <m>X\neq
+      Y</m> of <m>S</m> under <m>\sim</m>. Let <m>X,Y</m> be equivalence classes of
+      <m>S</m> under <m>\sim</m> that are NOT disjoint. Then there exists an
+      element <m>z\in X\cap Y</m>. Then by <xref ref="vil_lem">Lemma</xref>, <m>[z]=X</m>
+      and <m>[z]=Y</m>; so <m>X=Y</m>. Thus, if <m>X\neq Y</m>, then <m>X\cap Y
+      =\emptyset</m>.
+    </p>
+
+    <p>
+      For (ii), it is straightforward (almost silly!) to prove that
+      <m>\sim</m> is reflexive, symmetric, and transitive.
+    </p>
+  </proof>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            For <m>n\in \Z^+</m>, the set of the equivalence classes of <m>\Z</m> under <m>\equiv_n</m> is
+            the partition <m>\{[0],[1],\ldots,[n-1]\}</m> of <m>\Z</m>. (The
+            partition <m>\{E
+            ,O\}</m> of <m>\Z</m> discussed above is this partition when
+            <m>n=2</m>.)
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+</section>

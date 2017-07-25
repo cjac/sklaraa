@@ -1,0 +1,252 @@
+
+<section>
+  <title>Focusing on normal subgroups</title>
+  <p>
+    We first provide a theorem that will help us in identifying when a
+    subgroup of a group is normal. First, we provide a definition.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>H</m> be a subgroup of <m>G</m> and <m>a,b</m> in <m>G</m>. We define
+        <me>
+          aHb=\{ahb\,:h\in H\}.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <theorem xml:id="norm_thm">
+    <statement>
+      <p>
+        Let <m>H</m> be a subgroup of a group <m>G</m>. Then the
+        following are equivalent:
+        <ol>
+          <li>
+            <p>
+              <m>H</m> is normal in <m>G</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>aHa^{-1}=H</m> for all <m>a\in G</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>aHa^{-1}\subseteq H</m> for all <m>a\in G</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      The equivalence of Statements 1 and 2 is clear, as is the
+      fact that Statement 2 implies Statement 3. So it suffices to show
+      that Statement 3 implies Statement 2. Well, assume that
+      <m>aHa^{-1}\subseteq H</m> for all <m>a\in G</m>, and let <m>b\in G</m>. We want
+      to show that <m>bHb^{-1}=H</m>. Since Statement 3 holds, we clearly have
+      <m>bHb^{-1}\subseteq H</m>. But, again using Statement 3, we also have
+      <m>b^{-1}Hb\subseteq H</m>; multiplying both sides of this equation on
+      the left by <m>b</m> and on the right by <m>b^{-1}</m>, we obtain <m>H\subseteq
+      bHb^{-1}</m>. Hence, since <m>bHb^{-1}\subseteq H</m> and <m>H\subseteq
+      bHb^{-1}</m>, those two sets are equal. Thus, Statement 2 is proven.
+    </p>
+  </proof>
+
+  <p>
+    We now consider some examples and nonexamples of normal subgroups of
+    groups.
+  </p>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            As previously mentioned, the trivial and improper subgroups of
+            any group <m>G</m> are normal in <m>G</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            As previously mentioned, if group <m>G</m> is abelian then each of
+            its subgroups is normal in <m>G</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Suppose <m>H\leq G</m> has <m>(G:H)=2</m>.  Then <m>H \unlhd G</m>. The proof of this is left as an exercise for the reader.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <xref ref="s3_ex">Example</xref> shows that subgroup <m>H=\langle (12)\rangle</m> isn't normal in
+            <m>S_3</m> (for example, <m>(13)H\neq H(13)</m>.  But <m>\langle (123)\rangle</m> must be
+            normal in <m>S_3</m> since <m>(S_3:\langle (123)\rangle )=6/3=2.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\langle r\rangle</m> is normal in <m>D_n</m> since <m>(D_n:\langle r\rangle )=2</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\langle f\rangle</m> isn't normal in <m>D_4</m>: for instance,
+            <me>
+              r\langle f\rangle r^{-1}=\{e,rfr^3\}=\{e, fr^3r^3\}=\{e,fr^2\}\not\subseteq
+              \langle f\rangle .
+            </me>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <p>
+    We consider two other very significant examples.
+  </p>
+
+  <p>
+    \begin{df}{Definition, notation, and terminology} Let <m>G</m>
+    be a group. We let
+    <me>
+      Z(G)=\{z\in G\,:\, az=za \mbox{ for all } a\in
+      G\}.
+    </me>
+  </p>
+
+  <p>
+    <m>Z(G)</m> is called the <em>center</em> of <m>G</m>.<fn>The center of a group was originally introduced in the Exercises of <xref ref="gps">Chapter</xref>. The Z stands for <q>zentrum,</q> the German word for <q>center.</q></fn>\end{df}
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G</m> be a group. Then <m>Z(G)</m> is a subgroup of <m>G</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Clearly,
+      <m>e\in Z(G)</m>. Next, let <m>z,w\in Z(G)</m>. Then for all <m>a \in G</m>,
+      <me>
+        a(zw)=(az)w=(za)w=z(aw)=z(wa)=(zw)a,
+      </me>
+      so <m>zw\in Z(G)</m>. Finally, <m>az=za</m> so, multiplying both
+      sides on the left and right by <m>z^{-1}</m>, we have <m>z^{-1}a=az^{-1}</m>;
+      thus, <m>z^{-1}\in Z(G)</m>. Hence, <m>Z(G)\leq G</m>.
+    </p>
+  </proof>
+
+  <theorem xml:id="znorm">
+    <statement>
+      <p>
+        Let <m>G</m> be a group and let <m>H</m> be a subgroup of <m>G</m> with <m>H\subseteq Z(G)</m>. Then <m>H\unlhd G</m>. In particular, <m>Z(G)</m> is itself a normal
+        subgroup of <m>G</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Let <m>a\in G</m>.
+      Then since every element of <m>Z(G)</m> commutes with every element of
+      <m>G</m>, every element of <m>H</m> commutes with every element of <m>G</m>; so we must have <m>aH=Ha</m>. Thus,
+      <m>H\unlhd G</m>.
+    </p>
+  </proof>
+
+  <p>
+    The next definition is profoundly important for us.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>G</m> and <m>G'</m> be groups and let <m>\phi</m> be a
+        homomorphism from <m>G</m> to <m>G'</m>. Letting <m>e'</m> be the identity
+        element of <m>G'</m>, we define the <term>kernel of <m>\phi</m></term>, <m>\Ker
+        \phi</m>, by
+        <me>
+          \Ker \phi = \{k\in G\,:\,\phi(k)=e'\}.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>G</m> and <m>G'</m> be groups and let <m>\phi</m> be a
+        homomorphism from <m>G</m> to <m>G'</m>. Then <m>\Ker \phi</m> is a normal subgroup
+        of <m>G</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Let <m>K=\Ker \phi</m>. We first show that <m>K</m> is a subgroup of
+        <m>G</m>. Clearly, the identity element of <m>G</m> is in <m>K</m>, so <m>K\neq
+        \emptyset</m>. Next, let <m>k,m\in K</m>. Then, letting <m>e'</m> denote the
+        identity element of <m>G'</m>, we have
+        <me>
+          \phi(km^{-1})=\phi(k)\phi(m)^{-1}=e'(e')^{-1}=e',
+        </me>
+        so <m>km^{-1}\in
+        K</m>. Thus, by the Two-Step Subgroup Test, we have that <m>K</m> is a
+        subgroup of <m>G</m>.
+      </p>
+
+      <p>
+        Next, let <m>k\in K</m> and let <m>a\in G</m>. Then
+        <me>
+          \phi(aka^{-1})=\phi(a)\phi(k)\phi(a)^{-1}=\phi(a)e'\phi(a)^{-1}=\phi(a)\phi(a)^{-1}=e'.
+        </me>
+      </p>
+
+      <p>
+        So <m>aka^{-1}\in K</m>. Thus, <m>K \unlhd G</m>.
+      </p>
+    </proof>
+
+  </example>
+
+  <p>
+    One slick way, therefore, of showing that a particular set is a
+    normal subgroup of a group <m>G</m> is by showing it's the kernel of a
+    homomorphism from <m>G</m> to another group.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        {slnormgl} Let <m>n\in \Z^+</m>. Here is a rather elegant proof of the fact that
+        <m>SL(n,\fatr)</m> is a normal subgroup of <m>GL(n,\fatr)</m>: Define <m>\phi:
+        GL(n,\fatr) \to \fatr^*</m> by <m>\phi(A)=\det A</m>. Clearly, <m>\phi</m> is a
+        homomorphism, and since the identity element of <m>\fatr^*</m> is 1,
+        <me>
+          \Ker \phi=\{A\in GL(n,\fatr)\,:\,\det A= 1\}=SL(n,\fatr).
+        </me>
+      </p>
+
+      <p>
+        So
+        <m>SL(n,\fatr)\unlhd GL(n,\fatr)</m>.
+      </p>
+    </statement>
+  </example>
+</section>

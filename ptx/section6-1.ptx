@@ -1,0 +1,195 @@
+
+<section>
+  <title>Introduction to permutation groups</title>
+  <definition>
+    <statement>
+      <p>
+        A <term>permutation</term> on a set <m>A</m> is a bijection from <m>A</m>
+        to <m>A</m>. We say a permutation <m>\sigma</m> on <m>A</m> <term>fixes</term> <m>a\in
+        A</m> if <m>\sigma(a)=a</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        {stperm} Let <m>A</m> be the set <m>A=\{\Delta, \star, \dollar\}</m>. Then the functions <m>\sigma : A\to A</m> defined by
+        <me>
+          \sigma(\Delta)=\star,
+          \sigma(\star)=\Delta,  \mbox{and }  \sigma(\dollar)=\dollar
+        </me>
+        and <m>\tau : A\to A</m> defined by
+        <me>
+          \tau(\Delta)=\dollar, 
+          \tau(\star)=\Delta,  \mbox{and }  \tau(\dollar)=\star
+        </me>
+        are
+        both permutations on <m>A</m>.
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        Composition of permutations on a set <m>A</m> is often called
+        <term>permutation multiplication</term>, and if <m>\sigma</m> and <m>\tau</m>
+        are permutations on a set <m>A</m>, we usually omit the composition
+        symbol and write <m>\sigma \circ \tau</m> simply as <m>\sigma \tau</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <warning>
+    <p>
+      For us, if <m>\sigma</m> and <m>\tau</m> are permutations on a set <m>A</m>, then applying <m>\sigma \tau</m> to <m>A</m> means first applying <m>\tau</m> and <em>then</em> applying <m>\sigma</m>. This is due to the conventional right-to-left reading of function compositions.
+    </p>
+  </warning>
+
+  <p>
+    That is, if <m>a\in A</m>, by <m>\sigma \tau(a)</m> we mean <m>\sigma(\tau(a))</m>. (Some other books/mathematicians do not use this convention, and read permutation multiplication from left-to-right.
+    Make sure to always know what convention your particular author or colleague is using!)
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>A</m>, <m>\sigma</m>, and <m>\tau</m> be as in <xref ref="stperm">Example</xref>.
+        Then <m>\sigma \tau</m> is the function from <m>A</m> to <m>A</m> defined by
+        <me>
+          \sigma \tau(\Delta)=\dollar,  \sigma \tau(\star)=\star,  \mbox{and }  \sigma \tau(\dollar)=\Delta,
+        </me>
+        while <m>\tau \sigma</m> is
+        the function from <m>A</m> to <m>A</m> defined by
+        <me>
+          \tau \sigma (\Delta)=\Delta,  \tau \sigma (\star)=\dollar,  \mbox{and }  \tau \sigma(\dollar)=\star
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        Given a set <m>A</m>, we let <m>S_A</m> be the set of all
+        permutations on <m>A</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <theorem xml:id="sym">
+    <statement>
+      <p>
+        Given a set <m>A</m>:
+        <ol>
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              <m>S_A</m> is a group under permutation multiplication.
+            </p>
+          </li>
+
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              If <m>A</m> has finite cardinality <m>n</m>, then <m>|S_A|=n!</m> (if <m>|A|=\infty</m> then <m>|S_A|</m> is also <m>\infty</m>).
+            </p>
+          </li>
+
+          <li>
+            <title>invalidlabel</title>
+            <p>
+              <m>S_A</m> is abelian if <m>|A|=1</m> or <m>2</m>, and nonabelian otherwise.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Let <m>\sigma, \tau \in S_A</m>. Since a composition of
+      bijections is a bijection (see <xref ref="compbij">Theorem</xref>), <m>\sigma
+      \tau</m> is a bijection from <m>A</m> to <m>A</m>, hence is in <m>S_A</m>. So
+      <m>S_A</m> is closed under composition.
+      <ol>
+        <li>
+          <title>invalidlabel</title>
+          <p>
+            Function composition is always associative.
+          </p>
+        </li>
+
+        <li>
+          <title>invalidlabel</title>
+          <p>
+            The identity function <m>1_A : A\to A</m> defined by
+            <me>
+              1_A(a)=a \mbox{ for all \(a\in A\)}
+            </me>
+            clearly acts as an
+            identity element in <m>S_A</m>. Henceforth, we will denote <m>1_A</m>
+            by <m>e</m>.
+          </p>
+        </li>
+
+        <li>
+          <title>invalidlabel</title>
+          <p>
+            Let <m>\sigma \in S_A</m>.  Since <m>\sigma</m> is a
+            bijection, <m>\sigma</m> has an inverse function <m>\sigma^{-1}</m>
+            that is also a bijection from <m>A</m> to <m>A</m> (<xref ref="invbij">Theorem</xref>). Since <m>\sigma^{-1}\in S_A</m> with <m>\sigma
+            \sigma^{-1}= \sigma^{-1} \sigma=1_A</m>, every element of
+            <m>S_A</m> has an inverse element in <m>S_A</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      So <m>S_A</m> is a group.
+    </p>
+  </proof>
+
+  <p>
+    Clearly <m>|S_A|=\infty</m> when <m>|A|=\infty</m>, and a straightforward
+    combinatorial argument yields that when <m>|A|=n \in \Z^+</m>, we have
+    <m>|S_A|=n!</m>. Finally, if <m>|A|=1</m> or <m>2</m>, then <m>|S_A|=1!=1</m> or
+    <m>|S_A|=2!=2</m> so <m>S_A</m> must be abelian (as it's a group of order 1 or
+    2). On the other hand, suppose <m>|A|>2</m>. Then <m>A</m> contains at least
+    three distinct elements, say <m>x</m>, <m>y</m>, and <m>z</m>. Let <m>\sigma</m> be the
+    permutation of <m>A</m> swapping <m>x</m> and <m>y</m> and fixing every other
+    element of <m>A</m>, and let <m>\tau</m> be the permutation of <m>A</m> swapping
+    <m>y</m> and <m>z</m> and fixing every other element of <m>A</m>. Then <m>\sigma
+    \tau(x)=y</m> while <m>\tau \sigma(x)=z</m>, so <m>\sigma \tau \neq \tau
+    \sigma</m>, and hence <m>S_A</m> is nonabelian.
+    We will in the future use language provided by the following
+    definition:
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A group is said to be a <term>permutation group</term> if it is
+        a subgroup of <m>S_A</m> for some set <m>A</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Notice
+      that if <m>A</m> and <m>B</m> are sets, then <m>|A|=|B|</m> if and only if
+      <m>S_A\simeq S_B</m>.
+    </p>
+  </remark>
+
+  <p>
+    Thus, for any set <m>B</m> with <m>|B|=n \in \Z^+</m>, we have <m>S_B\simeq
+    S_A</m>, where <m>A=\{1,2,\ldots,n\}</m>. Since we are concerned in this
+    course primarily with group structures which are invariant under
+    isomorphism, we may focus now on groups of permutations on the set
+    <m>\{1,2,\ldots, n\}</m> (<m>n\in \Z^+</m>).<fn>We can, in fact,  define <m>S_0</m>, the set of all permutations on the empty set. One can show, using the fact that a function is a relation on a Cartesian product of sets, that <m>S_0</m> is the trivial group. However, this will not be relevant in this text.</fn></p>
+</section>

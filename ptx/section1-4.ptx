@@ -1,0 +1,239 @@
+
+<section>
+  <title>Cardinality</title>
+  <p>
+    One of the set traits that will be useful to us in
+    distinguishing between algebraic structures is <em>cardinality</em>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A set is <term>finite</term> if it contains a finite number of
+        elements (including the case in which it contains no elements);
+        otherwise, it's <term>infinite</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        The <term>cardinality of a finite set</term> is the number of
+        elements in that set.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    But what is the cardinality of an infinite set? This is more
+    subtle. Essentially, it is the <q>size</q> of the set, but what
+    does that mean?
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        The symbol <m>\aleph_0</m> denotes the cardinality of the set
+        <m>\Z</m>. An arbitrary set <m>S</m> has cardinality <m>\aleph_0</m> if there
+        exists a bijection from <m>S</m> to <m>\Z</m> (equivalently, if there
+        exists a bijection from <m>\Z</m> to <m>S</m>).
+      </p>
+
+      <p>
+        Note that if there is a bijection from <m>S</m> to <m>\Z</m>, then <m>S</m>
+        must be infinite. If the cardinality of <m>S</m> is <m>\aleph_0</m>, we
+        say <m>S</m> is <term>countably infinite</term>. If <m>S</m> is finite or
+        countably infinite, we say it's <term>countable</term>. Finally, an
+        infinite set is <term>uncountably infinite</term>, or <term>uncountable</term>, if it is not countably infinite. In this class,
+        we don't discuss the cardinality of uncountably infinite sets,
+        but simply note that an uncountable set cannot have the same
+        cardinality as a countable one.
+      </p>
+    </statement>
+  </definition>
+
+  <notation>
+
+  <p>
+    We denote the cardinality of a set <m>S</m> by
+    <m>|S|</m>.<fn>Of course, vertical bars are used to denote
+    other mathematical concepts; for instance, if <m>x</m> is a real
+    number, <m>|x|</m> usually denotes the absolute value of <m>x</m>. You
+    must determine from context, and from the nature of the
+    expression within the bars, what vertical bars mean in a
+    particular situation.</fn></p>
+
+  </notation>
+
+  <p>
+    So, e.g., <m>|\{a,b\}|=2</m>.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Clearly, <m>\Z</m> itself is countably
+        infinite.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Perhaps surprisingly, a proper subset of a set can have the
+    same cardinality as its superset, as the following example
+    shows.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        We claim that <m>\Z^+</m> is countably infinite. Indeed, consider the function <m>f:\Z^+ \to \Z</m> defined by <m>f(n)=(-1)^n \lfloor n/2 \rfloor</m>, where <m>\lfloor x \rfloor</m>
+        denotes the greatest integer less than or equal to <m>x</m>, for each <m>x\in \fatr</m>. The fact that <m>f</m> is a bijection is demonstrated (though not proven) by the following visual representation,
+        where each number maps via <m>f</m> to the value directly below it:
+        <me>
+          \begin{array}{llrrrrrrr}
+          \amp \Z^+ \amp  1 \amp  2 \amp  3 \amp  4 \amp  5 \amp  \ldots\amp \\
+          f \amp \Big\downarrow\amp \amp \amp \amp \amp \amp \amp \\
+          \amp \Z   \amp  0 \amp  1 \amp  -1 \amp  2 \amp  -2 \amp  \ldots\amp 
+          \end{array}
+        </me>
+      </p>
+
+      <p>
+        Note that this means that <m>\Z</m> and its proper subset <m>\Z^+</m>
+        have the same cardinality, that is, the same <q>size</q>!
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We summarize here examples of countably and uncountably
+    infinite sets. (On pp. 5<ndash />6 of<nbsp /><xref ref="F" />, Fraleigh sketches proofs of the
+    facts that <m>\fatq</m> is countable and that the interval <m>(0,1)</m>
+    in <m>\fatr</m> is uncountable. The proof then that <m>\fatr</m> is
+    uncountable follows from <xref ref="cardthm">Theorem</xref>, which
+    follows.)
+  </p>
+  <tabular>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell>Countably infinite sets:</cell>
+      <cell><m>\Z</m>, <m>\Z^+</m>, <m>\Z^-</m>, <m>\Z^*</m>, <m>\fatq</m>, <m>\fatq^+</m>, <m>\fatq^-</m>, <m>\fatq^*</m>, <m>\fatn</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell>Uncountably infinite sets:</cell>
+      <cell><m>\fatr</m>, <m>\fatr^+</m>, <m>\fatr^-</m>, <m>\fatr^*</m>, <m>\fatc</m>, <m>\fatc^*</m>,  the interval <m>(0,1)</m> in <m>\fatr</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+    </row>
+  </tabular>
+  <p>
+    The key idea here for us is that if two sets are
+    essentially <q>the same,</q> then they must have the same <q>size.</q>
+    Thus, we see that there is some fundamental difference between
+    the sets <m>\Z</m> and <m>\fatr</m> (in fact, there are many such
+    differences). On the other hand, cardinality alone won't allow
+    us to distinguish structurally between the sets <m>\Z</m> and
+    <m>\Z^+</m>.
+  </p>
+
+  <p>
+    We end our preliminary chapter with the following theorem and a corollary of it (which can be proved using induction on <m>n</m>).
+  </p>
+
+  <theorem xml:id="cardthm">
+    <statement>
+      <p>
+        Let <m>A</m> and <m>B</m> be sets.
+        <ol>
+          <li>
+            <p>
+              If <m>A\cont B</m> and <m>A</m> is infinite [uncountable] then so is <m>B</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>A\cont B</m> and <m>B</m> is finite [countable] then so is <m>A</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>|A|=n\lt \infty</m> and <m>|B|=m\lt  \infty</m>, then <m>|A\times B|=mn</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Any finite product of countable sets is countable.<fn><em>Note.</em> It is <em>not</em> true that any countable product
+              of countable (or even finite) sets is countable. Indeed, even
+              the set <m>\{0,1\}\times \{0,1\}\times \cdots</m> is
+              uncountable. (If you want to get into the gory details
+              of this, the key is that there is a bijection from this set to
+              the power set of the natural numbers, which Cantor's Theorem
+              tells us is uncountable.  You are welcome to jump down this
+              rabbit hole by googling ``Cantor's Theorem," if you desire, but
+              know that you will not be responsible for that material in
+              class.)</fn></p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We omit proofs of the statements in Parts 1 and 2. The proof of the statement in Part 3 is left as an exercise for the reader.
+    </p>
+  </proof>
+
+  <p>
+    For Part 4: Let <m>A</m> and <m>B</m> be countable sets. Assume that <m>A</m> and <m>B</m> are both countably infinite. Since <m>\Z^+</m> is countably infinite, we can index the elements of <m>A</m> and of <m>B</m> by <m>\Z^+</m>, writing
+    <me>
+      A=\{a_1,a_2,\ldots\} \mbox{ and }  B=\{b_1,b_2,\ldots\}.
+    </me>
+  </p>
+
+  <p>
+    Notice that the table
+    <me>
+      \begin{array}{cccc}
+      (a_1,b_1) \amp  (a_1,b_2) \amp  (a_2,b_3) \amp  \cdots \\
+      (a_2,b_1) \amp  (a_2,b_2) \amp  (a_2,b_3) \amp  \cdots \\
+      (a_3,b_1) \amp  (a_3,b_2) \amp  (a_3,b_3) \amp  \cdots\\
+      \vdots \amp  \vdots \amp  \vdots \amp   \ddots
+      \end{array}
+    </me>
+    contains every element of <m>A\times B</m>. We can then list the elements of <m>A\times B</m> by listing the elements in progressive upper-right to lower-left diagonals, starting with <m>(a_1,b_1)</m> and moving to the right along the top row: that is, we can write
+    <me>
+      A\times B=\{(a_1,b_1),(a_1,b_2),(a_2,b_1),(a_2,b_3),(a_2,b_2),(a_3,b_1),\ldots\}
+    </me>
+  </p>
+
+  <p>
+    This implicitly yields a bijection from <m>\Z^+</m> to <m>A\times B</m>; thus, <m>A\times B</m> is countably infinite, and hence countable.
+  </p>
+
+  <p>
+    The proof in the case that one or both of sets <m>A</m> and <m>B</m> are finite is similar; the corresponding table in that case will simply have either only finitely many rows or finitely many columns, or both.
+  </p>
+
+  <corollary>
+    <statement>
+      <p>
+        Let <m>n>1</m> be an integer and let <m>A_1,A_2,\ldots, A_n</m> be countable sets. Then <m>A_1\times A_2\times \cdots \times A_n</m> is countable.
+      </p>
+    </statement>
+  </corollary>
+</section>

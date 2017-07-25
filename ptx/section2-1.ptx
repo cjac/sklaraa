@@ -1,0 +1,198 @@
+
+<section>
+  <title>Binary operations and structures</title>
+  <p>
+    So far we have been discussing sets. These are extremely simple
+    objects, essentially mathematical <q>bags of stuff.</q> Without any
+    added structure, their usefulness is very limited. Imagine, for
+    instance, living with friends in a two-story house without rooms,
+    stairs, closets, or hallways. You have no privacy, cannot access the
+    second floor, etc. A set with no added structure will not help us,
+    say, solve a linear equation. What <em>will</em> help us with such
+    things are objects such as groups, rings, fields, and vector spaces.
+    These are sets equipped with <em>binary operations</em> which allow us
+    to combine set elements in various ways. We first rigorously define
+    a binary operation.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>binary operation</term> on a set <m>S</m> is a function from
+        <m>S\times S</m> to <m>S</m>. Given a binary operation <m>*</m> on <m>S</m>, for
+        each <m>(a,b)\in S\times S</m> we denote <m>*((a,b))</m> in <m>S</m> more
+        simply by <m>a*b</m>. (Intuitively, a binary operation <m>*</m> on <m>S</m>
+        assigns to each pair of elements <m>a,b \in S</m> a unique element
+        <m>a*b</m> of <m>S</m>.)
+      </p>
+
+      <p>
+        A set <m>S</m> equipped with a binary operation <m>*</m> is called a <term>binary (algebraic) structure</term>, and is denoted by <m>\langle S,*\rangle</m>, or
+        just by <m>S</m>, if <m>*</m> is understood from context.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <ol>
+      <li>
+        <p>
+          For <m>*</m> to be a binary operation on <m>S</m>, <m>a*b</m> must be
+          <em>well defined</em> and <em>in</em> <m>\mathbf{S}</m> for each <m>a,b\in S</m>.
+          For instance, we cannot define a binary operation on
+          <m>\fatr</m> by
+          <me>
+            a*b=\mbox{ the greatest number less than
+            \(a+b\)}
+          </me>
+          since there <em>is</em>  no such <q>greatest number.</q>
+          Nor can we define a binary operation on <m>\Z</m> by <m>a*b=ab/2</m>,
+          since for, say, <m>a=b=1 \in \Z</m>, <m>ab/2=1/2 \not\in \Z</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Not every binary operation is denoted by <m>*</m>.  In fact, many already have common notations: for instance, <m>+</m> on <m>\Z</m> or <m>\circ</m> on the set of functions from <m>\fatr</m> to <m>\fatr</m>. We will assume these common notations represent the <q>usual</q> binary operations we know them to mean, unless otherwise noted.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Do not mix up the <m>*</m> that indicates a binary operation and the
+          superscript <m>^*</m> that indicates that we are only considering the
+          nonzero elements of a given set (e.g., <m>\fatr^*</m>). You should be
+          able to tell which type of <m>*</m> we are using from context and
+          placement. Also, make sure you correctly place these symbols!
+        </p>
+      </li>
+    </ol>
+  </remark>
+
+  <definition>
+    <statement>
+      <p>
+        A binary operation <m>*</m> on a set <m>S</m> is <term>associative</term>
+        if <m>(a*b)*c=a*(b*c)</m> for all <m>a,b,c\in S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      When a binary operation is associative,
+      we can omit parentheses when operating on set elements. For
+      example, <m>+</m> is associative on <m>\Z</m>, so we can unambiguously
+      write the (equal) expressions <m>1+(2+3)</m> and <m>(1+2)+3</m> as
+      <m>1+2+3</m>.
+    </p>
+  </remark>
+
+  <definition>
+    <statement>
+      <p>
+        A binary operation <m>*</m> on set <m>S</m> is <term>commutative</term> if
+        <me>
+          a*b=b*a
+        </me>
+        for all <m>a,b\in S</m>. We say that specific elements
+        <m>a</m> and <m>b</m> of <m>S</m> <term>commute</term> if <m>a*b=b*a</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>\langle S,*\rangle</m> be a binary structure. An element <m>e</m> in
+        <m>S</m> is an <term>identity element of <m>\langle S,*\rangle</m></term> if <m>x*e=e*x=x</m> for all
+        <m>x\in S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <note>
+
+  <p>
+    Sometimes an identity element of <m>\langle S,*\rangle</m> is referred to as an <term>identity element of <m>S</m> under <m>*</m></term>, or, when <m>*</m> is clear from context, simply
+    as an <term>identity element of <m>S</m></term>.
+  </p>
+
+  </note>
+
+  <warning>
+    <p>
+      Not every binary structure contains an identity element! (Ex: <m>\langle \Z,-\rangle</m>)
+    </p>
+  </warning>
+
+  <p>
+    A natural question to ask is if a binary structure can have
+    more than one identity element? The answer is no!
+  </p>
+
+  <theorem xml:id="uniqueid">
+    <statement>
+      <p>
+        A binary structure <m>\langle S, *\rangle</m> has <em>at most one</em> identity element. That is, identity elements in binary structures, when they exist, are unique.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Assume that <m>e</m> and <m>f</m> are identity elements of <m>S</m>. Then since <m>e</m> is an identity element, <m>e*f=f</m> and since <m>f</m> is an identity element, <m>e*f=e</m>. Thus, <m>e=f</m>.
+    </p>
+  </proof>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>\langle S, *\rangle</m> be a binary structure with identity
+        element <m>e</m>. Then for <m>a\in S</m>, <m>b</m> is an <term>(two-sided)
+        inverse of <m>a</m> in <m>\langle S,*\rangle</m></term> if <m>a*b=b*a=e</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <note>
+
+  <p>
+    We can also refer to such an element <m>b</m> as an <term>inverse for <m>a</m> in <m>S</m> under <m>*</m></term>, or, when <m>*</m> is clear from context, simply as an <term>inverse of <m>a</m></term>.
+  </p>
+
+  </note>
+
+  <warning>
+    <ul>
+      <li>
+        <title>1.</title>
+        <p>
+          Not every element in a binary structure with an identity element has an inverse!
+        </p>
+      </li>
+
+      <li>
+        <title>2.</title>
+        <p>
+          If a binary structure <em>does not have</em> an identity element, it <em>doesn't even make sense</em> to say an element in the
+          structure does or does not have an inverse!
+        </p>
+      </li>
+    </ul>
+  </warning>
+
+  <theorem xml:id="uniqueinverse">
+    <statement>
+      <p>
+        Let <m>\langle S, *\rangle</m> be a binary structure with an identity element, where <m>*</m> is associative. Let <m>a\in S</m>. If <m>a</m> has an inverse, then its inverse is unique.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Let <m>e</m> be the identity element of <m>S</m>. Suppose <m>a</m> has inverses <m>b</m> and <m>c</m>. Then <m>a*b=e</m> so, multiplying both sides of the equation by <m>c</m> on the left, we have <m>c*(a*b)=c*e=c</m>. But since <m>*</m> is associative, we have <m>c*(a*b)=(c*a)*b=e*b=b</m>. But <m>b=c</m>. Thus, <m>a</m>'s inverse is unique.
+    </p>
+  </proof>
+</section>
