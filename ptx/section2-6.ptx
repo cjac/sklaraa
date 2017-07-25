@@ -50,10 +50,10 @@
     </statement>
   </definition>
 
-  <example>
+  <example xml:id="cong_ex">
     <statement>
       <p>
-        {cong.ex} <m>1, 7, 13,</m> and <m>-5</m> are all congruent mod <m>6</m>.
+        <m>1, 7, 13,</m> and <m>-5</m> are all congruent mod <m>6</m>.
       </p>
     </statement>
   </example>
@@ -347,10 +347,9 @@
     </statement>
   </example>
 
-  <example>
+  <example xml:id="gpprod">
     <statement>
       <p>
-        {gpprod}
         Let <m>\langle G_1,*_1\rangle</m>, <m>\langle G_2,*_2\rangle</m> , <m>\ldots</m>, <m>\langle G_n,*_n\rangle</m> be groups (<m>n\in \Z^+</m>). Then the <em>group product</em>
         <me>
           G=G_1\times G_2\times \cdots \times G_n

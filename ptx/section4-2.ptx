@@ -33,10 +33,10 @@
     </statement>
   </theorem>
 
-  <example>
+  <example xml:id="subsetvsubgp2">
     <statement>
       <p>
-        {subsetvsubgp2} For each of the following, prove that the given subset <m>H</m> of group <m>G</m> is or is not a subgroup of <m>G</m>.
+        For each of the following, prove that the given subset <m>H</m> of group <m>G</m> is or is not a subgroup of <m>G</m>.
         <ol>
           <li>
             <p>
@@ -74,10 +74,10 @@
     </statement>
   </example>
 
-  <example>
+  <example xml:id="FHKL">
     <statement>
       <p>
-        {FHKL} Consider the group <m>\langle F,+\rangle</m>, where <m>F</m> is the set of all functions from <m>\fatr</m> to <m>\fatr</m> and <m>+</m> is pointwise addition. Which of the following are subgroups of <m>F</m>?
+        Consider the group <m>\langle F,+\rangle</m>, where <m>F</m> is the set of all functions from <m>\fatr</m> to <m>\fatr</m> and <m>+</m> is pointwise addition. Which of the following are subgroups of <m>F</m>?
         <ol>
           <li class="custom-list-style-type" label="" >
 

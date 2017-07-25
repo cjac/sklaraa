@@ -204,119 +204,116 @@
     Here are some examples of cyclic subgroups of groups, and orders of group elements.
   </p>
 
-  <example>
+  <example xml:id="csexs">
     <statement>
-      <p>
-        {csexs}
-        <ol>
-          <li>
-            <p>
-              In <m>\Z</m>, <m>\langle 2\rangle =\{\ldots,-4,-2,0,2,4,\ldots\}=2\Z</m>. More generally, given any <m>n\in \Z</m>, in <m>\Z</m> we have <m>\langle n\rangle =n\Z</m>. For <m>a\in \Z</m>, <m>o(a)=\infty</m> if <m>a\neq 0</m>; <m>o(0)=1</m>.
-            </p>
-          </li>
+      <ol>
+        <li>
+          <p>
+            In <m>\Z</m>, <m>\langle 2\rangle =\{\ldots,-4,-2,0,2,4,\ldots\}=2\Z</m>. More generally, given any <m>n\in \Z</m>, in <m>\Z</m> we have <m>\langle n\rangle =n\Z</m>. For <m>a\in \Z</m>, <m>o(a)=\infty</m> if <m>a\neq 0</m>; <m>o(0)=1</m>.
+          </p>
+        </li>
 
-          <li>
-            <p>
-              In <m>\Z_8</m>, we have <m>\langle 0\rangle =\{0\}</m>, <m>\langle 1\rangle =\langle 3\rangle =\langle 5\rangle =\langle 7\rangle =\Z_8,</m> <m>\langle 2\rangle =\langle 6\rangle =\{0,2,4,6\},</m> and <m>\langle 4\rangle =\{0,4\}</m>.
-            </p>
-          </li>
+        <li>
+          <p>
+            In <m>\Z_8</m>, we have <m>\langle 0\rangle =\{0\}</m>, <m>\langle 1\rangle =\langle 3\rangle =\langle 5\rangle =\langle 7\rangle =\Z_8,</m> <m>\langle 2\rangle =\langle 6\rangle =\{0,2,4,6\},</m> and <m>\langle 4\rangle =\{0,4\}</m>.
+          </p>
+        </li>
 
-          <li>
-            <p>
-              In <m>\fatr</m>, <m>\langle \pi\rangle =\pi\Z</m>, so <m>o(\pi)=\infty</m>.
-            </p>
-          </li>
+        <li>
+          <p>
+            In <m>\fatr</m>, <m>\langle \pi\rangle =\pi\Z</m>, so <m>o(\pi)=\infty</m>.
+          </p>
+        </li>
 
-          <li>
-            <p>
-              In <m>\fatr^*</m>, <m>\langle \pi\rangle =\{\pi^n:n\in \Z\}</m>. Again, <m>o(\pi)=\infty</m>.
-            </p>
-          </li>
+        <li>
+          <p>
+            In <m>\fatr^*</m>, <m>\langle \pi\rangle =\{\pi^n:n\in \Z\}</m>. Again, <m>o(\pi)=\infty</m>.
+          </p>
+        </li>
 
-          <li>
-            <p>
-              In <m>\M_2(\fatr)</m>,
-              <me>
-                \left\langle \left[
-                \begin{array}{cc}
-                1 \amp  1 \\
-                0 \amp  1
-                \end{array} 
-                \right]\right\rangle =\left\{\left[
-                \begin{array}{cc}
-                c \amp  c \\
-                0 \amp  c
-                \end{array} 
-                \right] : c\in \Z \right\}= \left\{c\left[
-                \begin{array}{cc}
-                1 \amp  1 \\
-                0 \amp  1
-                \end{array} 
-                \right] : c\in \Z \right\}.
-              </me>
-              The order of the the matrix is therefore infinity.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              In <m>\M_2(\Z_2)</m>, if <m>A=\left[
+        <li>
+          <p>
+            In <m>\M_2(\fatr)</m>,
+            <me>
+              \left\langle \left[
               \begin{array}{cc}
               1 \amp  1 \\
               0 \amp  1
               \end{array} 
-              \right]</m>, then <m>\langle A\rangle =\{A, \0\}</m>, so <m>A</m> has order 2.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              In <m>GL(2,\Z_2)</m>, <m>\left[
+              \right]\right\rangle =\left\{\left[
+              \begin{array}{cc}
+              c \amp  c \\
+              0 \amp  c
+              \end{array} 
+              \right] : c\in \Z \right\}= \left\{c\left[
               \begin{array}{cc}
               1 \amp  1 \\
               0 \amp  1
               \end{array} 
-              \right]</m> has order 2. (Why?)
-            </p>
-          </li>
+              \right] : c\in \Z \right\}.
+            </me>
+            The order of the the matrix is therefore infinity.
+          </p>
+        </li>
 
-          <li>
-            <p>
-              In <m>GL(2,\fatr)</m>, <m>\left[
-              \begin{array}{cr}
-              0 \amp  -1 \\
-              1 \amp  0
-              \end{array} 
-              \right]</m> has order 4. (Why?)
-            </p>
-          </li>
+        <li>
+          <p>
+            In <m>\M_2(\Z_2)</m>, if <m>A=\left[
+            \begin{array}{cc}
+            1 \amp  1 \\
+            0 \amp  1
+            \end{array} 
+            \right]</m>, then <m>\langle A\rangle =\{A, \0\}</m>, so <m>A</m> has order 2.
+          </p>
+        </li>
 
-          <li>
-            <p>
-              In <m>GL(2,\fatr)</m>, <m>\left[
-              \begin{array}{cc}
-              1 \amp  1 \\
-              0 \amp  1
-              \end{array} 
-              \right]</m> has infinite order. (Why?)
-            </p>
-          </li>
+        <li>
+          <p>
+            In <m>GL(2,\Z_2)</m>, <m>\left[
+            \begin{array}{cc}
+            1 \amp  1 \\
+            0 \amp  1
+            \end{array} 
+            \right]</m> has order 2. (Why?)
+          </p>
+        </li>
 
-          <li>
-            <p>
-              In <m>GL(4,\Z_2)</m>,
-              <m>A=\left[
-              \begin{array}{cccc}
-              0 \amp  0 \amp  1 \amp  0 \\
-              0 \amp  0 \amp  0 \amp  1 \\
-              1 \amp  0 \amp  0 \amp  0 \\
-              0 \amp  1 \amp  0 \amp  0
-              \end{array} 
-              \right]</m> has order 2. (Why?)
-            </p>
-          </li>
-        </ol>
-      </p>
+        <li>
+          <p>
+            In <m>GL(2,\fatr)</m>, <m>\left[
+            \begin{array}{cr}
+            0 \amp  -1 \\
+            1 \amp  0
+            \end{array} 
+            \right]</m> has order 4. (Why?)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            In <m>GL(2,\fatr)</m>, <m>\left[
+            \begin{array}{cc}
+            1 \amp  1 \\
+            0 \amp  1
+            \end{array} 
+            \right]</m> has infinite order. (Why?)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            In <m>GL(4,\Z_2)</m>,
+            <m>A=\left[
+            \begin{array}{cccc}
+            0 \amp  0 \amp  1 \amp  0 \\
+            0 \amp  0 \amp  0 \amp  1 \\
+            1 \amp  0 \amp  0 \amp  0 \\
+            0 \amp  1 \amp  0 \amp  0
+            \end{array} 
+            \right]</m> has order 2. (Why?)
+          </p>
+        </li>
+      </ol>
     </statement>
   </example>
 

@@ -2,7 +2,6 @@
 <section>
   <title>Exercises</title>
   <exercise>
-    <title>ID=3A</title>
     <statement>
       <p>
         True/False. For each of the following, write T if the statement is
@@ -233,7 +232,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=3B</title>
     <statement>
       <p>
         Complete the group tables for <m>\Z_4</m> and <m>\Z_8^{\times}</m>. Use the group tables to decide whether or not <m>\Z_4</m> and <m>\Z_8^{\times}</m> are isomorphic to one another. (You do not need to provide a proof.)
@@ -261,7 +259,6 @@
     </p>
   </solution>
   <exercise>
-    <title>ID=3C</title>
     <statement>
       <p>
         Let <m>n\in \Z^+</m>. Prove that <m>\langle n\Z,+\rangle  \simeq \langle \Z,+\rangle</m>.
@@ -285,7 +282,6 @@
     </p>
   </solution>
   <exercise>
-    <title>ID=3D</title>
     <statement>
       <ol>
         <li>
@@ -327,7 +323,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=3E,subtitle=(Extra Credit)</title>
     <statement>
       <p>
         Let <m>\langle G,\cdot\rangle</m> and <m>\langle G',\cdot'\rangle</m> be groups with identity elements <m>e</m> and <m>e'</m>, respectively, and let <m>\phi</m> be a homomorphism from <m>G</m> to <m>G'</m>. Let <m>a\in G</m>. Prove that <m>\phi(a)^{-1}=\phi(a^{-1})</m>.

@@ -2,7 +2,6 @@
 <section>
   <title>Exercises</title>
   <exercise>
-    <title>ID=4A</title>
     <statement>
       <p>
         True/False. For each of the following, write T if the statement is
@@ -64,7 +63,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=4B</title>
     <statement>
       <p>
         Give specific, precise examples of the following groups <m>G</m> with subgroups <m>H</m>:
@@ -282,7 +280,6 @@
     </p>
   </solution>
   <exercise>
-    <title>ID=4D, subtitle=(Extra Credit)</title>
     <statement>
       <p>
         Recall that an element <m>u</m> of a binary structure is said to be an <em>idempotent</em> if <m>u^2=u</m>. Let <m>G</m> be an abelian group, and let <m>U</m> be the set of all idempotents of <m>G</m>. Prove that <m>U</m> is a subgroup of <m>G</m>.

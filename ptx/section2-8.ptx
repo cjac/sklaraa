@@ -2,7 +2,6 @@
 <section>
   <title>Exercises, Part II</title>
   <exercise>
-    <title>ID=2A</title>
     <statement>
       <p>
         True/False. For each of the following, write T if the statement is
@@ -112,7 +111,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=2F</title>
     <statement>
       <p>
         Let <m>G</m> be the set of all functions from <m>\Z</m> to <m>\fatr</m>. Prove that pointwise multiplication on <m>G</m> is commutative. (<em>Note.</em> To prove that two functions, <m>h</m> and <m>j</m>, sharing the same domain <m>D</m> are equal, you need to show that <m>h(x)=j(x)</m> for every <m>x\in D</m>.)
@@ -131,7 +129,6 @@
     </p>
   </solution>
   <exercise>
-    <title>ID=2J</title>
     <statement>
       <p>
         Decide which of the following binary structures are groups. For each, if the binary structure <em>isn't</em> a group, prove that. (Remember, you should <em>not</em> state that inverses do or do not exist for elements until you have made sure that the structure contains an identity element!) If the binary structure <em>is</em> a group, prove that.
@@ -211,7 +208,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=2K</title>
     <statement>
       <p>
         Give an example of an abelian group containing 711 elements.
@@ -225,7 +221,6 @@
     </p>
   </solution>
   <exercise>
-    <title>ID=2M</title>
     <statement>
       <p>
         Let <m>n\in \Z</m>. Prove that <m>n\Z</m> is a group under the usual addition of integers. <em>Note:</em> You may use the fact that <m>\langle n\Z,+\rangle</m> is a binary structure if you provide a reference for this fact.
@@ -272,7 +267,6 @@
     </p>
   </solution>
   <exercise>
-    <title>ID=2N</title>
     <statement>
       <p>
         Let <m>n\in \Z^+</m>. Prove that <m>SL(n,\fatr)</m> is a group under matrix multiplication.
@@ -317,7 +311,6 @@
     </p>
   </solution>
   <exercise>
-    <title>ID=2P</title>
     <statement>
       <ol>
       <li>
@@ -406,7 +399,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=2O</title>
     <statement>
       <p>
         Let <m>G</m> be a group with identity element <m>e</m>. Prove that if every element of <m>G</m> is its own inverse, then <m>G</m> is abelian.
@@ -431,7 +423,6 @@
     </p>
   </solution>
   <exercise>
-    <title>ID=2R, subtitle=(Extra Credit)</title>
     <statement>
       <p>
         Let <m>G</m> be a group. The subset

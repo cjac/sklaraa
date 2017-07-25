@@ -23,10 +23,10 @@
     For instance, if <m>\sigma</m> sends <m>1</m> to <m>2</m>, we'd write the number <m>2</m> below the number <m>1</m>. The convention is to enclose these two rows of numbers in a single set of parentheses, as in the following example.
   </p>
 
-  <example>
+  <example xml:id="nocommute">
     <statement>
       <p>
-        {nocommute} We can denote the element <m>\sigma</m> of <m>S_3</m> that swaps <m>1</m> and <m>2</m> and fixes <m>3</m> by
+        We can denote the element <m>\sigma</m> of <m>S_3</m> that swaps <m>1</m> and <m>2</m> and fixes <m>3</m> by
         <me>
           \sigma = \left(\begin{array}{ccc}1\amp 2\amp 3\\ 2\amp 1\amp 3
           \end{array} \right),
@@ -79,10 +79,10 @@
     </statement>
   </definition>
 
-  <example>
+  <example xml:id="tr">
     <statement>
       <p>
-        {tr} The permutation <m>\tau</m> in <m>S_3</m> that sends <m>1</m> to <m>3</m>, <m>2</m> to <m>1</m>, and <m>3</m> to <m>2</m> is a cycle. It can be denoted by <m>\tau =(132)</m>.
+        The permutation <m>\tau</m> in <m>S_3</m> that sends <m>1</m> to <m>3</m>, <m>2</m> to <m>1</m>, and <m>3</m> to <m>2</m> is a cycle. It can be denoted by <m>\tau =(132)</m>.
         Similarly, the cycle <m>\rho</m> in <m>S_3</m> swapping <m>1</m> and <m>3</m> can be denoted by <m>\rho=(13)</m>. On the other hand, the permutation in <m>S_4</m> that swaps <m>1</m> with <m>2</m> and <m>3</m> with <m>4</m> is
         <em>not</em> a cycle.
       </p>
@@ -195,10 +195,10 @@
     </statement>
   </example>
 
-  <example>
+  <example xml:id="s9ex">
     <statement>
       <p>
-        {s9ex} In <m>S_9</m>, let <m>\sigma=(134)</m>, <m>\tau=(26)(17)</m>, and <m>\rho=(358)(12)</m>. Find the following, writing your answers using disjoint cycle notation.
+        In <m>S_9</m>, let <m>\sigma=(134)</m>, <m>\tau=(26)(17)</m>, and <m>\rho=(358)(12)</m>. Find the following, writing your answers using disjoint cycle notation.
       </p>
       <tabular>
         <row>

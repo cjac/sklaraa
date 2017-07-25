@@ -155,10 +155,10 @@
     </p>
   </remark>
 
-  <example>
+  <example xml:id="s3_ex">
     <statement>
       <p>
-        {s3.ex} Find the left and right cosets of <m>H=\langle (12)\rangle</m> in
+        Find the left and right cosets of <m>H=\langle (12)\rangle</m> in
         <m>S_3</m>.
         <me>
           \begin{array}{l|l|l}
@@ -181,10 +181,10 @@
     </statement>
   </example>
 
-  <example>
+  <example xml:id="d4_ex">
     <statement>
       <p>
-        {d4.ex} Find the left and right cosets of <m>H=\langle f\rangle</m> in
+        Find the left and right cosets of <m>H=\langle f\rangle</m> in
         <m>D_4</m>.
       </p>
 
@@ -319,10 +319,10 @@
     </statement>
   </example>
 
-  <example>
+  <example xml:id="z6_ex">
     <statement>
       <p>
-        {z6.ex} Find the cosets of <m>H=\langle 4\rangle</m> in <m>\Z_{12}</m>.
+        Find the cosets of <m>H=\langle 4\rangle</m> in <m>\Z_{12}</m>.
       </p>
 
       <p>

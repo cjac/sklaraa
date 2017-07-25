@@ -37,10 +37,9 @@
     </p>
   </remark>
 
-  <example>
+  <example xml:id="homos">
     <statement>
       <p>
-        {homos}
         For each of the following, decide whether or not the given function
         <m>\phi</m> from one binary structure to another is a homomorphism, and,
         if so, if it is an isomorphism. Prove or disprove your answers! For

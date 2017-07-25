@@ -231,10 +231,10 @@
     homomorphism from <m>G</m> to another group.
   </p>
 
-  <example>
+  <example xml:id="slnormgl">
     <statement>
       <p>
-        {slnormgl} Let <m>n\in \Z^+</m>. Here is a rather elegant proof of the fact that
+        Let <m>n\in \Z^+</m>. Here is a rather elegant proof of the fact that
         <m>SL(n,\fatr)</m> is a normal subgroup of <m>GL(n,\fatr)</m>: Define <m>\phi:
         GL(n,\fatr) \to \fatr^*</m> by <m>\phi(A)=\det A</m>. Clearly, <m>\phi</m> is a
         homomorphism, and since the identity element of <m>\fatr^*</m> is 1,
