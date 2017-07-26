@@ -88,13 +88,13 @@
     <statement>
       <p>
         Let <m>S</m> be a set. Then a <term>relation</term> on <m>S</m> is a
-        subset <m>\R</m> of <m>S\times S</m>.<fn>More generally, if <m>S</m> and
+        subset <m>?</m> of <m>S\times S</m>.<fn>More generally, if <m>S</m> and
         <m>T</m> are sets, a <em>relation between <m>S</m> and <m>T</m></em> is a subset
         of <m>S \times T</m>. We will not, however, in our class consider
-        the cases in which <m>S</m> and <m>T</m> are different sets.</fn>If <m>\R</m> is
-        a relation on <m>S</m> and <m>x,y\in S</m>, then we say <m>x</m> is <term>related to</term> <m>y</m>, and write <m>x\R y</m>, if <m>(x,y)\in \R</m>;
+        the cases in which <m>S</m> and <m>T</m> are different sets.</fn>If <m>R</m> is
+        a relation on <m>S</m> and <m>x,y\in S</m>, then we say <m>x</m> is <term>related to</term> <m>y</m>, and write <m>x\R y</m>, if <m>(x,y)\in R</m>;
         otherwise, we say that <m>x</m> is <term>not related</term> to <m>y</m>, and
-        write <m>x \not {\ \R} y</m>.
+        write <m>x \not {\ R} y</m>.
       </p>
     </statement>
   </definition>
@@ -103,7 +103,7 @@
     <p>
       If there is a conventional notation used to denote
       a particular relation on a set, we will usually use that notation,
-      rather than <m>\R</m>, to denote the relation.
+      rather than <m>R</m>, to denote the relation.
     </p>
   </remark>
 
@@ -135,10 +135,10 @@
 
         <li>
           <p>
-            We can define a relation <m>\D</m> on <m>C^1</m> (the set of
+            We can define a relation <m>R</m> on <m>C^1</m> (the set of
             all differentiable functions from <m>\fatr</m> to <m>\fatr</m>
             whose derivatives are continuous) by declaring that
-            <m>(f,g)\in C^1 \times C^1</m> is in <m>\D</m> if and only if
+            <m>(f,g)\in C^1 \times C^1</m> is in <m>R</m> if and only if
             <m>f'=g'</m>.
           </p>
         </li>
@@ -149,7 +149,7 @@
   <definition>
     <statement>
       <p>
-        Let <m>\R</m> be a relation on a set <m>S</m>. Then <m>\R</m> is said to
+        Let <m>R</m> be a relation on a set <m>S</m>. Then <m>R</m> is said to
         be:
       </p>
 
@@ -192,7 +192,7 @@
         <p>
           If we know, or plan to prove, that a relation is an equivalence
           relation, by convention we will often denote the relation by <m>\sim</m>,
-          rather than by <m>\R</m>.
+          rather than by <m>R</m>.
         </p>
       </li>
     </ol>
@@ -217,7 +217,7 @@
 
         <li>
           <p>
-            The relation <m>\D</m> on <m>C^1</m> discussed above (that
+            The relation <m>R</m> on <m>C^1</m> discussed above (that
             <m>f\D\, g</m> iff <m>f'=g'</m>) <em>is</em> an equivalence relation
             on <m>C^1</m>.
           </p>
@@ -232,13 +232,13 @@
 
         <li>
           <p>
-            Define relation <m>\R</m> on <m>\Z</m> by <m>x\R y</m> if and only if <m>xy
-            \geq 0</m>.  Is <m>\R</m> an equivalence relation on <m>\Z</m>?  Well, for every
-            <m>x\in \Z</m>, <m>x^2\geq 0</m>, so <m>\R</m> is reflexive.  Moreover, if <m>x,y\in
-            \Z</m> with <m>xy \geq 0</m>, then <m>yx \geq 0</m>; so <m>\R</m> is symmetric.  But
-            <m>\R</m> is <em>not</em> transitive: indeed, <m>3,0,-4\in \Z</m> with <m>3(0)=0
-            \geq 0</m> and <m>0(-4)=0\geq 0</m>, so <m>3\R 0</m> and <m>0 \R -4</m>; but
-            <m>3(-4)=-12 \not \geq 0</m>.  So <m>\R</m> isn't transitive, and hence is
+            Define relation <m>R</m> on <m>\Z</m> by <m>x\R y</m> if and only if <m>xy
+            \geq 0</m>.  Is <m>R</m> an equivalence relation on <m>\Z</m>?  Well, for every
+            <m>x\in \Z</m>, <m>x^2\geq 0</m>, so <m>R</m> is reflexive.  Moreover, if <m>x,y\in
+            \Z</m> with <m>xy \geq 0</m>, then <m>yx \geq 0</m>; so <m>R</m> is symmetric.  But
+            <m>R</m> is <em>not</em> transitive: indeed, <m>3,0,-4\in \Z</m> with <m>3(0)=0
+            \geq 0</m> and <m>0(-4)=0\geq 0</m>, so <m>3\R 0</m> and <m>0 R -4</m>; but
+            <m>3(-4)=-12 \not \geq 0</m>.  So <m>R</m> isn't transitive, and hence is
             <em>not</em> an equivalence relation.
           </p>
         </li>
@@ -337,7 +337,7 @@
 
         <li>
           <p>
-            For <m>f\in C^1</m>, the equivalence class of <m>f</m> under <m>\D</m>
+            For <m>f\in C^1</m>, the equivalence class of <m>f</m> under <m>R</m>
             (defined above)
             is
             the set of all functions in <m>C^1</m> of the
