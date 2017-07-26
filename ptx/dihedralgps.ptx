@@ -5,9 +5,9 @@
     Dihedral groups are groups of symmetries of regular <m>n</m>-gons. We start with an example.
   </p>
 
-  <example>
+  <example xml:id="D3">
     <p>
-      {D3} Consider a regular triangle <m>T</m>, with vertices labeled <m>1</m>, <m>2</m>, and <m>3</m>. We show <m>T</m> below, also using dotted lines to indicate a vertical line of symmetry of <m>T</m> and a rotation of <m>T</m>.
+      Consider a regular triangle <m>T</m>, with vertices labeled <m>1</m>, <m>2</m>, and <m>3</m>. We show <m>T</m> below, also using dotted lines to indicate a vertical line of symmetry of <m>T</m> and a rotation of <m>T</m>.
     </p>
     <image source="images/b50c1bb2439484680b8b510a03e8baafdb6dce06.png"/>
     <p>

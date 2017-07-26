@@ -59,7 +59,6 @@
   <example>
     <statement>
       <p>
-        \
         In <m>S_3</m>, the permutations <m>e</m>, <m>(123)=(13)(12)</m>, and <m>(132)=(12)(13)</m> are even, while the permutations <m>(12)</m>, <m>(13)</m>, and <m>(23)</m> are odd.
       </p>
     </statement>
@@ -68,7 +67,6 @@
   <example>
     <statement>
       <p>
-        \
         List all of the even [resp., odd] permutations in <m>S_4</m>.
       </p>
     </statement>

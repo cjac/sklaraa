@@ -2,7 +2,6 @@
 <section>
   <title>Exercises, Part I</title>
   <exercise>
-    <title>ID=2B</title>
     <statement>
       <p>
         For each of the following, write Y if the given <q>operation</q> is a well-defined binary operation on the given set; otherwise, write N. In each case in which it <em>isn't</em> a well-defined binary operation on the set, provide a <em>brief</em> explanations. You do not need to prove or explain anything in the cases in which it <em>is</em> a binary operation.
@@ -63,7 +62,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=2D</title>
     <statement>
       <p>
         Define <m>*</m> on <m>\fatq</m> by <m>p*q=pq+1</m>. Prove or disprove that <m>*</m> is (a) commutative; (b) associative.
@@ -87,7 +85,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=2E</title>
     <statement>
       <p>
         Prove that matrix multiplication is not commutative on <m>\M_2(\fatr)</m>.
@@ -115,7 +112,6 @@
     </p>
   </solution>
   <exercise>
-    <title>ID=2G</title>
     <statement>
       <p>
         Prove or disprove each of the following statements.
@@ -210,7 +206,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=2H</title>
     <statement>
       <p>
         Let <m>*</m> be an associative and commutative binary operation on a set <m>S</m>. An element <m>u\in S</m> is said to be an <em>idempotent</em> in <m>S</m> if <m>u*u=u</m>. Let <m>H</m> be the set of all idempotents in <m>S</m>. Prove that <m>H</m> is closed under <m>*</m>.

@@ -35,10 +35,10 @@
     </statement>
   </example>
 
-  <example>
+  <example xml:id="indices_ex">
     <statement>
       <p>
-        {indices.ex} Referring to our previous examples, we have:
+        Referring to our previous examples, we have:
         <me>
           \begin{array}{cl} \amp (S_3:\langle (12)\rangle )=3,\\
           \amp (D_4:\langle f\rangle )=4, \\

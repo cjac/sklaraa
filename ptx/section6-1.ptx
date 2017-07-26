@@ -11,10 +11,10 @@
     </statement>
   </definition>
 
-  <example>
+  <example xml:id="stperm">
     <statement>
       <p>
-        {stperm} Let <m>A</m> be the set <m>A=\{\Delta, \star, \dollar\}</m>. Then the functions <m>\sigma : A\to A</m> defined by
+        Let <m>A</m> be the set <m>A=\{\Delta, \star, \dollar\}</m>. Then the functions <m>\sigma : A\to A</m> defined by
         <me>
           \sigma(\Delta)=\star,
           \sigma(\star)=\Delta,  \mbox{and }  \sigma(\dollar)=\dollar

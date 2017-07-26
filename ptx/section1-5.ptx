@@ -2,7 +2,6 @@
 <section>
   <title>Exercises</title>
   <exercise>
-    <title>ID=1A</title>
     <statement>
       <p>
         Yes/No. For each of the following, write Y if the object described is a well-defined set; otherwise, write N. You do NOT need to provide explanations or show work for this problem.
@@ -63,7 +62,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=1B</title>
     <statement>
       <p>
         List the elements in the following sets, writing your answers as sets.
@@ -129,7 +127,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=1C</title>
     <statement>
       <p>
         Let <m>S</m> be a set with cardinality <m>n\in \fatn</m>. Use the cardinalities of <m>P(\{a,b\})</m> and <m>P(\{a,b,c\})</m> to make a conjecture about the cardinality of <m>P(S)</m>. You do not need to prove that your conjecture is correct (but you should try to ensure it is correct).
@@ -143,7 +140,6 @@
     </p>
   </solution>
   <exercise>
-    <title>ID=1D</title>
     <statement>
       <p>
         Let <m>f: \Z^2 \to \fatr</m> be defined by <m>f(a,b)=ab</m>. (Note: technically, we should write <m>f((a,b))</m>, not <m>f(a,b)</m>, since <m>f</m> is being applied to an ordered pair, but this is one of those cases in which mathematicians abuse notation in the interest of concision.)
@@ -246,7 +242,6 @@
     </ol>
   </solution>
   <exercise>
-    <title>ID=1F</title>
     <statement>
       <p>
         Let <m>S</m>, <m>T</m>, and <m>U</m> be sets, and let <m>f: S\to T</m> and <m>g: T\to U</m> be onto. Prove that <m>g \circ f</m> is onto.
