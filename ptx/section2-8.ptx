@@ -59,7 +59,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <ol type="a">
       <li>
         <p>
@@ -118,7 +117,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <p>
       Let <m>f,g\in G</m>. Then for every <m>x\in \Z</m>,
       <me>
@@ -161,7 +159,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <ol>
     <li>
       <p>
@@ -215,7 +212,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <p>
       <m>\Z_{711}</m>. (Other answers are possible.)
     </p>
@@ -228,7 +224,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <p>
       We know from <xref ref="nz">Theorem</xref> that <m>\langle n\Z,+\rangle</m> is a binary structure.
       <ol>
@@ -275,7 +270,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <p>
       We know from <xref ref="glsl">Theorem</xref> that <m>\langle SL(n,\fatr),\cdot\rangle</m> is a binary structure.
       <ol>
@@ -371,7 +365,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <ol>
       <li>
         <p>
@@ -406,7 +399,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <p>
       Let <m>a,b\in G</m>. Then
       <md>
@@ -435,7 +427,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <p>
       Let <m>z_1, z_2\in Z(G)</m>. Let <m>z=z_1z_2</m>; we want to
       show that <m>z</m> is in <m>H</m>: that is, we want to show that for every <m>g\in G</m>,
