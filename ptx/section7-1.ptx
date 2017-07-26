@@ -88,7 +88,7 @@
     <statement>
       <p>
         Let <m>S</m> be a set. Then a <term>relation</term> on <m>S</m> is a
-        subset <m>?</m> of <m>S\times S</m>.<fn>More generally, if <m>S</m> and
+        subset <m>R</m> of <m>S\times S</m>.<fn>More generally, if <m>S</m> and
         <m>T</m> are sets, a <em>relation between <m>S</m> and <m>T</m></em> is a subset
         of <m>S \times T</m>. We will not, however, in our class consider
         the cases in which <m>S</m> and <m>T</m> are different sets.</fn>If <m>R</m> is
