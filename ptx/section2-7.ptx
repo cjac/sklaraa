@@ -5,7 +5,6 @@
     When you see the following identified as groups, you should
     assume they are equipped with the following operations, unless
     otherwise. Throughout, assume <m>m,n\in \Z^+</m>.
-    \begin{threeparttable}
   </p>
   <tabular>
     <row bottom="minor">
@@ -37,7 +36,7 @@
     <row>
       <cell><m>n\Z</m></cell>
       <cell>addition of numbers</cell>
-      <cell>countably infinite; abelian\tnote{*}</cell>
+      <cell>countably infinite; abelian (unless <m>m=0</m>)</cell>
     </row>
     <row bottom="minor">
       <cell></cell>
@@ -87,7 +86,7 @@
     <row>
       <cell><m>GL(n,\fatr), SL(n,\fatr)</m></cell>
       <cell>matrix multiplication</cell>
-      <cell>uncountable; nonabelian\tnote{<m>\dagger</m>}</cell>
+      <cell>uncountable; nonabelian (unless <m>n=1</m>)</cell>
     </row>
     <row bottom="minor">
       <cell></cell>
@@ -135,11 +134,5 @@
       <cell></cell>
     </row>
   </tabular>
-  <p>
-    \begin{tablenotes}
-    \item[*] Unless <m>n=0</m>.
-    \item[<m>\dagger</m>] Unless <m>n=1</m>.
-    \end{tablenotes}
-    \end{threeparttable}
-  </p>
+
 </section>
