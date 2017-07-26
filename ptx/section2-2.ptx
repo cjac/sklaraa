@@ -208,10 +208,21 @@
       </p>
     </statement>
   </exercise>
-  <p>
-    <image width="73%" source="images/zippy.png" />
-    { &#169;  Bill Griffith. Reprinted with permission.}
-  </p>
+
+
+
+
+
+<figure xml:id="zip">
+                <caption>&#169;  Bill Griffith. Reprinted with permission.</caption>
+                <image width="100%" source="zippy.png">
+                    <description>A Zippy the Pinhead comic strip about idempotents</description>
+                </image>
+            </figure>
+
+
+
+
   <solution>
         <p>
       Let <m>u,v\in H</m>. To show <m>u*v\in H</m>, we need to show that <m>(u*v)*(u*v)=u*v</m>. Now,
