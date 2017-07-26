@@ -67,28 +67,25 @@
         A <term>group</term> is a set <m>G</m>, equipped with a binary
         operation <m>*</m>, that satisfies the following three <term>group
         axioms</term>:
-        <ol>
+        <ul>
           <li>
-            <title>invalidlabel</title>
             <p>
-              <m>*</m> is associative on <m>G</m>;
+              <m>*</m> is associative on <m>G</m> (we call this axiom <m>\G_1</m>)
             </p>
           </li>
 
           <li>
-            <title>invalidlabel</title>
             <p>
-              There exists an identity element for <m>*</m> in <m>G</m>;
+              There exists an identity element for <m>*</m> in <m>G</m> (axiom <m>\G_2</m>)
             </p>
           </li>
 
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              Every element <m>a\in G</m> has an inverse in <m>G</m>.
+          <li> <p>
+              Every element <m>a\in G</m> has an inverse in <m>G</m>(axiom <m>\G_3</m>)
+
             </p>
           </li>
-        </ol>
+        </ul>
       </p>
 
       <p>
@@ -101,13 +98,10 @@
     </statement>
   </definition>
 
-  <p>
-    \fbox{
-  </p>
-
-  <sidebyside>
-    <em>
-    IMPORTANT NOTE</em>When proving/disproving that a set <m>G</m> is/is
+ 
+ <remark>
+<p>
+  When proving/disproving that a set <m>G</m> is/is
     not a group under an (apparent) operation <m>*</m>:
     <ul>
       <li>
@@ -127,6 +121,6 @@
           identity element under <m>*</m>.
         </p>
       </li>
-    </ul>
-  </sidebyside>
+    </ul></p>
+</remark>
 </section>

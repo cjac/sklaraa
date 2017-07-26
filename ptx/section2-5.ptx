@@ -1,4 +1,3 @@
-
 <section>
   <title>Group conventions and properties</title>
   <introduction>
@@ -81,7 +80,7 @@
             additive inverses of <m>a</m> and <m>na</m>, respectively); we can therefore
             unambiguously use the notation <m>-na</m> for this element.
             Using this notation, note that for <m>m\in \Z</m>, <m>na+ma=(n+m)a</m> and <m>n(ma)=(nm)a</m>.
-
+<p>
             <warning>
               <p>
                 Be careful to always know where an element
@@ -92,71 +91,40 @@
                 additive inverse 2 of the number 4 in <m>\Z_6</m>, or even something
                 completely unrelated to numbers.
               </p>
-            </warning>
+            </warning></p>
 
-            We summarize multiplicative versus addition notation in the following table, where <m>a,b</m> are elements of a group <m>G</m>.
+          <p>  We summarize multiplicative versus addition notation in the following table, where <m>a,b</m> are elements of a group <m>G</m>. </p>
+
+<p>
+<remark><p>
+Multiplicative notation can be used when working with any arbitary group, while additive notation should be used only when working with an abelian group.</p>
+</remark>
+</p>
+
+<me>\begin{array}{l|c|c}
+\amp \text{Multiplicative notation}\amp \text{Additive notation}\\ \hline
+
+\text{Operation notation}\amp \cdot \amp + \\
+a \text{ operated with } b \amp ab \amp a+b\\
+\text{Identity element}\amp 1\ (\text{or }e \text{ or }e_G) \amp 0\ (\text{or }e \text{ or }e_G)\\\
+\text{Inverse of }a \amp a^{-1} \amp -a
+\end{array}</me>
 
 
-            \begin{threeparttable}
-            <tabular>
-              <row bottom="minor">
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-              </row>
-              <row>
-                <cell></cell>
-                <cell><em>Multiplicative notation\tnote{*}</em></cell>
-                <cell><em>Additive notation\tnote{<m>\dagger</m>}</em></cell>
-              </row>
-              <row bottom="minor">
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-              </row>
-              <row>
-                <cell>Operation notation</cell>
-                <cell><m>\cdot</m></cell>
-                <cell>+</cell>
-              </row>
-              <row>
-                <cell><m>a</m> operated with <m>b</m></cell>
-                <cell>product <m>ab</m></cell>
-                <cell>sum <m>a+b</m></cell>
-              </row>
-              <row>
-                <cell>Identity element</cell>
-                <cell>1 (or <m>e</m> or <m>e_G</m>)</cell>
-                <cell>0 (or <m>e</m> or <m>e_G</m>)</cell>
-              </row>
-              <row>
-                <cell>Inverse of <m>a</m></cell>
-                <cell><m>a^{-1}</m></cell>
-                <cell><m>-a</m></cell>
-              </row>
-              <row bottom="minor">
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-              </row>
-            </tabular>
-            \begin{tablenotes}
-          </p>
-        </li>
 
-        <li>
-          <title>*</title>
-          <p>
-            Used in an arbitrary group.
-          </p>
-        </li>
 
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            Used only in abelian groups.
-            \end{tablenotes}
-            \end{threeparttable}
+
+
+
+
+
+
+
+
+
+
+
+
           </p>
         </li>
 
