@@ -12,10 +12,10 @@
       </p>
 
       <p>
-        <m>\begin{array}{c||c|c|c|c}
+        <me>\begin{array}{c||c|c|c|c}
         +\amp 0\amp 1\amp 2\amp 3\\ \hline\hline 0\amp 0\amp 1\amp 2\amp 3\\ \hline
         1\amp 1\amp 2\amp 3\amp 0\\ \hline 2\amp 2\amp 3\amp 0\amp 1\\ \hline 3\amp 3\amp 0\amp 1\amp 2
-        \end{array}</m>
+        \end{array}</me>
       </p>
     </statement>
   </example>
@@ -45,10 +45,10 @@
   </p>
 
   <p>
-    <m>\begin{array}{c||c|c}
+    <me>\begin{array}{c||c|c}
     *\amp e\amp a\\ \hline\hline e\amp e\amp a\\ \hline
     a\amp a\amp e
-    \end{array}</m>
+    \end{array}</me>
   </p>
 
   <p>
@@ -60,10 +60,10 @@
   </p>
 
   <p>
-    <m>\begin{array}{c||c|c|c}
+    <me>\begin{array}{c||c|c|c}
     *\amp e\amp a\amp b\\ \hline \hline e\amp \amp \amp \\ \hline
     a\amp \amp \amp \\ \hline b\amp \amp \amp 
-    \end{array}</m>
+    \end{array}</me>
   </p>
 
   <p>
