@@ -2,8 +2,7 @@
 <section>
   <title>Notation</title>
   <p>
-    To start, we begin learning and/or reviewing some notation. Here is a table of frequently used symbols and abbreviations we will use, along with their meanings.
-    \begin{threeparttable}
+    To start, we begin learning and/or reviewing some notation. Here is a table of frequently used symbols and abbreviations you may see in this book or in class, along with their meanings.
   </p>
   <tabular>
     <row bottom="minor">
@@ -35,14 +34,6 @@
       <cell></cell>
     </row>
     <row>
-      <cell>s.t.</cell>
-      <cell>such that\tnote{*}</cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
       <cell><m>\therefore</m></cell>
       <cell>therefore</cell>
     </row>
@@ -52,7 +43,7 @@
     </row>
     <row>
       <cell>WLOG or wolog</cell>
-      <cell>without loss of generality\tnote{<m>\dagger</m>}</cell>
+      <cell>without loss of generality<m>^*</m></cell>
     </row>
     <row bottom="minor">
       <cell></cell>
@@ -62,18 +53,12 @@
       <cell>WTS</cell>
       <cell>want to show</cell>
     </row>
+    
     <row bottom="minor">
       <cell></cell>
       <cell></cell>
     </row>
-    <row>
-      <cell>!</cell>
-      <cell>unique (also used to denote factorials)</cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
+
     <row>
       <cell><m>\Rightarrow</m></cell>
       <cell>implies; also the <q>if</q> direction in proofs</cell>
@@ -98,29 +83,9 @@
       <cell></cell>
       <cell></cell>
     </row>
-    <row>
-      <cell>w/</cell>
-      <cell>with</cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell>o.w.</cell>
-      <cell>otherwise</cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-  </tabular>
+      </tabular>
   <p>
-    \begin{tablenotes}
-    \item[*] You can also use <m>\ni</m> to denote <q>such that,</q> but we will avoid this convention as it can be confused with the notation <m>\in</m>, meaning <q>is an element of.</q>
-    \item[<m>\dagger</m>] We will discuss what this means in greater detail as it arises in our work.
-    \end{tablenotes}
-    \end{threeparttable}
+<m>^*</m>We will discuss what this means in greater detail as it arises in our work.
   </p>
 
   <p>

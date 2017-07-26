@@ -51,9 +51,6 @@
     We refer to some sets so frequently in mathematics that we have special notation for them. Common examples are:
   </p>
 
-  <p>
-    \begin{threeparttable}
-  </p>
   <tabular>
     <row bottom="minor">
       <cell></cell>
@@ -101,7 +98,7 @@
     </row>
     <row>
       <cell><m>\fatn</m></cell>
-      <cell>the set of all natural numbers (that is, the set <m>\{0, 1, 2, \ldots\}</m>)\tnote{*}</cell>
+      <cell>the set of all natural numbers (that is, the set <m>\{0, 1, 2, \ldots\}</m>)<m>^*</m></cell>
     </row>
     <row bottom="minor">
       <cell></cell>
@@ -125,22 +122,15 @@
     </row>
     <row>
       <cell><m>\Z^-</m>/<m>\fatq^-</m>/<m>\fatr^-</m>/<m>\fatc^*</m></cell>
-      <cell>\pbox{20cm}{the set of all nonzero integers/rational numbers/real numbers/</cell>
-    </row>
-    <row>
-      <cell>complex numbers}</cell>
-    </row>
+      <cell>the set of all nonzero integers/rational numbers/real numbers</cell>
+     </row>
     <row bottom="minor">
       <cell></cell>
       <cell></cell>
     </row>
   </tabular>
   <p>
-    \begin{tablenotes}
-    \item[*] Be aware that many books/mathematicians do not include 0 in the set of natural numbers.
-    \end{tablenotes}
-    \end{threeparttable}
-  </p>
+    <m>^*</m><small> Be aware that many books/mathematicians do not include 0 in the set of natural numbers. </small> </p>
 
   <p>
     We also provide notation for commonly considered sets of matrices:
