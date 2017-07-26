@@ -5,14 +5,19 @@
 \usepackage{textcomp} %enables use of copyright character
 \usepackage{paralist} %allows enumeration/itemization within paragraphs
 \usepackage{fancyhdr} %allows specification of GFDL headings
-\usepackage[hidelinks]{hyperref} %allows hyperlinks
+%\usepackage[hidelinks]{hyperref} %allows hyperlinks
+
+\usepackage[x11names]{xcolor}
+\definecolor{BlueLUH}{cmyk}{1.0,0.7,0,0}
+\usepackage[colorlinks=true, linkcolor=BlueLUH, urlcolor=BlueLUH]{hyperref}
+
 %\usepackage{appendix}
 \usepackage{pbox} %allows use of parboxes
 \usepackage{verbatim} %allows comment environment
 \usepackage{graphicx} %allows inclusion of images
 \usepackage{pdfpages} %allows inclusion of GFDL PDF
 \usepackage{threeparttable} %allows footnote references in tables, etc.
-\usepackage{color} %allows use of color
+%\usepackage{color} %allows use of color
 \usepackage[inline]{enumitem} %allows control of enumeration/itemization layout
 \usepackage[all]{xy} %to create (di)graphs
 %\usepackage{sectsty}
@@ -148,13 +153,14 @@ license is included in the section entitled ``GNU Free Documentation License."
 
 \bigskip
 \noindent
-Thank you to Jennifer Nordstrom of Linfield College for introducing me to the American Institute of Mathematics (AIM) Open Textbook Initiative (\url{https://aimath.org/textbooks/}); to Rob Beezer at the University of Puget Sound for encouraging my engagement with this initiative and for helping me make connections within the community; and to David Farmer at AIM for typesetting this book in MathBook XML (\url{http://mathbook.pugetsound.edu}).
+Thank you to Jennifer Nordstrom of Linfield College for introducing me to the American Institute of Mathematics (AIM) Open Textbook Initiative (\url{https://aimath.org/textbooks/}); to Rob Beezer at the University of Puget Sound for encouraging my engagement with this initiative and for helping me make connections within the community; and to David Farmer at AIM for typesetting this book in \href{http://mathbook.pugetsound.edu}{PreTeXt} (formerly MathBook XML).
 
 \vfill \vfill \vfill
 
-
-\tableofcontents
-
+%{
+%  \hypersetup{linkcolor=black}
+  \tableofcontents
+%}
 \mainmatter
 
 \include{introd}
@@ -209,8 +215,7 @@ Thus, $S_0$ contains exactly one element, and hence is the trivial group.
 \bibitem{F} John B. Fraleigh, \textit{A First Course in Abstract Algebra (7th ed.)}, Addison Wesley, 2002.
 
 \bibitem{J} Thomas W. Judson, \textit{Abstract Algebra: Theory and Applications}. Revised edition published under the GNU Free
-Documentation License, 1997 (revised 2016). \url{
-http://abstract.pugetsound.edu/}
+Documentation License, 1997 (revised 2016). \url{http://abstract.pugetsound.edu/aata/}
 
 \bibitem{NZM} Ivan Niven, Herbert S. Zuckerman, and Hugh L.
 Montgomery. \textit{An Introduction to the Theory of Numbers (5th
