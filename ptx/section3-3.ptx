@@ -124,35 +124,22 @@
     </p>
   </proof>
 
-  <p>
-    \begin{threeparttable}
-  </p>
-  <tabular>
-    <row bottom="minor">
-      <cell></cell>
-    </row>
-    <row>
-      <cell>To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do three things:</cell>
-    </row>
-    <row>
-      <cell>1. <em>Define</em> a function <m>\phi</m> from <m>G</m> to <m>G'</m> (or from <m>G'</m> to <m>G</m>, as we have <xref ref="groupisoequiv">Theorem</xref>);</cell>
-    </row>
-    <row>
-      <cell>2. Prove that <m>\phi</m> is a homomorphism; and</cell>
-    </row>
-    <row>
-      <cell>3. Prove that <m>\phi</m> is a bijection.\tnote{*}</cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-    </row>
-  </tabular>
-  <p>
-    \begin{tablenotes}
-    \item[*] Remember, you can show that <m>\phi</m> is a bijection by proving that it's one-to-one and onto, <em>or</em> by showing that it has an inverse.
-    \end{tablenotes}
-    \end{threeparttable}
-  </p>
+
+  <remark><p>
+To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do three things:
+
+<ol>
+<li><p> <em>Define</em> a function <m>\phi</m> from <m>G</m> to <m>G'</m> (or from <m>G'</m> to <m>G</m>, as we have <xref ref="groupisoequiv">Theorem</xref>).</p></li>
+<li><p>Prove that <m>\phi</m> is a homomorphism.</p></li>
+<li><p>Prove that <m>\phi</m> is a bijection.</p></li>
+</ol></p>
+</remark>
+
+
+
+<note>
+<p>Remember, you can show that <m>\phi</m> is a bijection by proving that it's one-to-one and onto, <em>or</em> by showing that it has an inverse.</p>
+</note>
 
   <warning>
     <p>
