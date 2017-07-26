@@ -166,31 +166,16 @@
       </p>
     </li>
 
+
+
+
+
+
+
     <li>
-      <ol>
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            Matrix multiplication is always associative.
-          </p>
-        </li>
+     <p>Matrix multiplication is always associative, and the zero matrix in <m>\M_2(\fatr)</m> acts as an additive identity element.            Finally, let <m>A\in \M_2(\fatr)</m>.  Then <m>-A\in \M_2(\fatr)</m> is an inverse for <m>A</m> under addition. Thus, <m>\M_2(\fatr)</m> is a group under addition.</p>
 
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            The zero matrix in <m>\M_2(\fatr)</m> acts as an additive identity element.
-          </p>
-        </li>
-
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            Let <m>A\in \M_2(\fatr)</m>.  Then <m>-A\in \M_2(\fatr)</m> is an inverse for <m>A</m> under addition.
-          </p>
-        </li>
-      </ol>
-      Thus, <m>\M_2(\fatr)</m> is a group under addition.</li>
-
+</li>
     <li>
       <p>
         <m>\M_2(\fatr)</m> isn't a group under multiplication since the zero matrix has no inverse.
@@ -225,37 +210,21 @@
   </exercise>
   <solution>
     <p>
-      We know from <xref ref="nz">Theorem</xref> that <m>\langle n\Z,+\rangle</m> is a binary structure.
-      <ol>
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            <m>+</m> is
+      We know from <xref ref="nz">Theorem</xref> that <m>\langle n\Z,+\rangle</m> is a binary structure.</p>
+<p> Next, <m>+</m> is
             associative on <m>n</m>, since it's associative on
             <m>\Z</m>, and <m>n\Z \subseteq \Z</m>.
           </p>
-        </li>
-
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            Notice that
+        <p>            Notice that
             <m>0\in n\Z</m> (since <m>0=n(0)</m>); 0 then clearly acts as
             an identity element for <m>+</m> in <m>n\Z</m>.
           </p>
-        </li>
-
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            Let <m>x\in n\Z</m>, then <m>x=nm</m> for some <m>m\in \Z</m>, so
+        <p>Finally, let <m>x\in n\Z</m>, then <m>x=nm</m> for some <m>m\in \Z</m>, so
             <m>-x=n(-m)</m> for <m>m\in \Z</m>, implying <m>-x\in n\Z</m>;
             and clearly <m>-x</m> acts as an inverse for <m>x</m> in
             <m>n\Z</m>.
           </p>
-        </li>
-      </ol>
-    </p>
+   
 
     <p>
       Thus, <m>\langle n\Z, +\rangle</m> is a group.
@@ -271,35 +240,12 @@
   </exercise>
   <solution>
     <p>
-      We know from <xref ref="glsl">Theorem</xref> that <m>\langle SL(n,\fatr),\cdot\rangle</m> is a binary structure.
-      <ol>
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            Matrix multiplication is always associative.
-          </p>
-        </li>
-
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            Since <m>\det I_n=1</m>, <m>I_n</m> is in <m>SL(n,\fatr)</m>, and clearly acts as an identity element in <m>SL(n,\fatr)</m>.
-          </p>
-        </li>
-
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            Let <m>A\in SL(n,\fatr)</m>.  Since <m>\det A=1\neq 0</m>, <m>A</m> has an inverse matrix <m>A^{-1}</m> in <m>GL(n, \fatr)</m>.  <m>A^{-1}</m> is in <m>SL(n,\fatr)</m> since
+      We know from <xref ref="glsl">Theorem</xref> that <m>\langle SL(n,\fatr),\cdot\rangle</m> is a binary structure,and we know that matrix multiplication is always associative. Next, since <m>\det I_n=1</m>, <m>I_n</m> is in <m>SL(n,\fatr)</m>, and clearly acts as an identity element in <m>SL(n,\fatr)</m>. Finally, let <m>A\in SL(n,\fatr)</m>.  Since <m>\det A=1\neq 0</m>, <m>A</m> has an inverse matrix <m>A^{-1}</m> in <m>GL(n, \fatr)</m>.  <m>A^{-1}</m> is in <m>SL(n,\fatr)</m> since
             <me>
               \det(A^{-1})=\frac{1}{\det A}=1/1=1.
             </me>
             So <m>A</m> has an inverse in <m>SL(n,\fatr)</m>.
           </p>
-        </li>
-      </ol>
-    </p>
-
     <p>
       Thus, our proof is complete.
     </p>

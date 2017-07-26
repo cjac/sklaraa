@@ -127,19 +127,7 @@
     <proof>
       <p>
         Let <m>G:=GL(n,\fatr)</m>. We show that <m>G</m>, under matrix multiplication, satisfies
-        the three group axioms.
-        <ol>
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              Matrix multiplication is always associative.
-            </p>
-          </li>
-
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              The <m>n\times n</m> identity matrix
+        the three group axioms. First, we know that matrix multiplication is always associative. Next, the <m>n\times n</m> identity matrix
               <me>
                 I_n:=\begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \amp  0 \\
                 0 \amp  1 \amp  0 \amp  \cdots \amp  0 \\
@@ -154,21 +142,13 @@
               </me>
               for all <m>A\in G</m>.
             </p>
-          </li>
-
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              Let <m>A\in G</m>.  Since <m>\det A\neq 0</m>, <m>A</m> has
+        <p> Finally, let <m>A\in G</m>.  Since <m>\det A\neq 0</m>, <m>A</m> has
               (matrix multiplicative) inverse <m>A^{-1}</m> in
               <m>\M_2(\fatr)</m>. But we need to verify that <m>A^{-1}</m> is in
               <m>G</m>. This is in fact the case, however, since
               <m>A^{-1}</m> is invertible (it has inverse <m>A</m>), hence <m>\det
               A^{-1} \neq 0</m>.  Thus, <m>A^{-1}</m> is also in <m>G</m>.
             </p>
-          </li>
-        </ol>
-      </p>
 
       <p>
         So <m>G</m> is a group under multiplication.
@@ -212,40 +192,23 @@
         Next, we check that <m>\fatq^*</m> under <m>*</m> satisfies the group
         axioms. Since multiplication is commutative on <m>\fatq</m>, <m>*</m> is
         clearly commutative on <m>\fatq^*</m>, and so our work to show
-        <m>\G_2</m> and <m>\G_3</m> is marginally reduced.
-        <ol>
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              Associativity of <m>*</m> on <m>\fatq^*</m> is inherited
-              from associativity of multiplication on <m>\fatq^*</m>.
-            </p>
-          </li>
-
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              Notice that the perhaps <q>obvious</q> choice, 1, is
+        <m>\G_2</m> and <m>\G_3</m> is marginally reduced.</p>
+<p>
+       First, associativity of <m>*</m> on <m>\fatq^*</m> is inherited
+              from associativity of multiplication on <m>\fatq^*</m>.</p>
+<p> Notice that the perhaps <q>obvious</q> choice, 1, is
               <em>not</em> an identity element for <m>\fatq^*</m> under
               <m>*</m>: for instance, <m>1*3=3/2 \neq 3</m>. Rather, <m>e</m> is such an
               identity element if and only if for all <m>a\in \fatq</m> we
               have <m>a=e*a=(ea)/2</m>. We clearly have <m>a=(2a)/2</m> for all
               <m>a\in \fatq^*</m>; so <m>2</m> acts as an identity element for
               <m>\fatq^*</m> under <m>*</m>.
-            </p>
-          </li>
-
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              Let <m>a\in \fatq^*</m>.  Since <m>a\neq 0</m>, it makes
+            </p>            <p>
+              Finally, let <m>a\in \fatq^*</m>.  Since <m>a\neq 0</m>, it makes
               sense to divide by <m>a</m>; then <m>4/a\in \fatq^*</m>, with
               <m>a*(4/a)=(a(4/a))/2=2</m>.
             </p>
-          </li>
-        </ol>
-      </p>
-
+        
       <p>
         Thus, <m>\langle \fatq^*,*\rangle</m> is a group.
       </p>
