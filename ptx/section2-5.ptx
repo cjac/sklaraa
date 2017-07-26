@@ -35,11 +35,13 @@
           typically omit the <m>\cdot</m> . That is, for <m>a,b\in G</m>, we write the
           product <m>a\cdot b</m> as <m>ab</m>. We call this the <q>product</q> of <m>a</m> and <m>b</m>. We will generally use <m>e</m>
           or <m>e_G</m> as our default notation for an identity element of group,<fn>Many mathematicians denote a group's identity element by 1, rather than <m>e</m>.</fn>and <m>a^{-1}</m> to denote the inverse of element <m>a</m> in <m>G</m>.
-
+</p>
+</li>
+</ul>
           <warning>
             <p>
-              Although it is what we call <em>multiplicative
-              notation</em> for an inverse, do <em>not</em> assume <m>a^{-1}</m> is what we usually think of as a
+              Although it is written in what we call  <em>multiplicative
+              notation</em>, do <em>not</em> assume <m>a^{-1}</m> is what we usually think of as a
               multiplicative inverse for <m>a</m>; remember, we don't even know if
               elements of a group are numbers! The type of inverse that <m>a^{-1}</m>
               is (a multiplicative inverse for a real number? an additive inverse
@@ -49,9 +51,8 @@
             </p>
           </warning>
 
-        </p>
-      </li>
-
+       
+<ul>
       <li>
         <p>
           For every element <m>a</m> in a group <m>\Gdot</m> and <m>n\in \Z^+</m>, we use the expression <m>a^n</m> to denote  the product
