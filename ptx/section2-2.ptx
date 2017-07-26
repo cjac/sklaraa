@@ -34,7 +34,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <ol>
       <li>
         <p>
@@ -69,8 +68,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
-    <ol>
+        <ol>
       <li>
         <p>
           Let <m>p,q\in \fatq</m>.  Then <m>p*q=pq+1=qp+1</m> (since multiplication is commutative on <m>\fatq</m>), which equals <m>q*p</m>.  So <m>*</m> is commutative.
@@ -92,8 +90,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
-    <p>
+        <p>
       Let
       <me>
         A=\left[
@@ -147,8 +144,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
-    <ol>
+        <ol>
       <li>
         <p>
           Let <m>x, y\in 2\Z</m>. Then there exist <m>a,b\in \Z</m> such that <m>x=2a</m> and <m>y=2b</m>.  Then
@@ -214,11 +210,10 @@
   </exercise>
   <p>
     <image width="73%" source="images/zippy.png" />
-    { &copy; Bill Griffith. Reprinted with permission.}
+    { &#169;  Bill Griffith. Reprinted with permission.}
   </p>
   <solution>
-    <title>print=false</title>
-    <p>
+        <p>
       Let <m>u,v\in H</m>. To show <m>u*v\in H</m>, we need to show that <m>(u*v)*(u*v)=u*v</m>. Now,
       <md>
         <mrow>(u*v)*(u*v)\amp =u*(v*u)*v \amp \amp \text{ (since \(*\) is associative) }</mrow>

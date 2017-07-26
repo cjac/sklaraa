@@ -71,7 +71,7 @@
     </statement>
   </definition>
 
-  <theorem xml:id="x[a]">
+  <theorem xml:id="equivca">
     <statement>
       <p>
         Let <m>a\in G</m>. Then under <m>\siml</m>, <m>[a]=aH</m> while
