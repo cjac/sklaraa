@@ -11,22 +11,19 @@
         <m>P=\{S_i\}_{i\in I}</m> is a partition of <m>S</m> if and only if:
         <ol>
           <li>
-            <title>(i)</title>
+       
             <p>
               each <m>S_i\neq \emptyset</m>;
             </p>
           </li>
 
-          <li>
-            <title>(ii)</title>
-            <p>
+          <li>            <p>
               the <m>S_i</m> are mutually disjoint (that is, <m>S_i\cap S_j =
               \emptyset</m> for <m>i\neq j \in I</m>); and
             </p>
           </li>
 
           <li>
-            <title>(iii)</title>
             <p>
               <m>\d{S=\bigcup_{i\in I}S_i}</m>.
             </p>
@@ -92,9 +89,9 @@
         <m>T</m> are sets, a <em>relation between <m>S</m> and <m>T</m></em> is a subset
         of <m>S \times T</m>. We will not, however, in our class consider
         the cases in which <m>S</m> and <m>T</m> are different sets.</fn>If <m>R</m> is
-        a relation on <m>S</m> and <m>x,y\in S</m>, then we say <m>x</m> is <term>related to</term> <m>y</m>, and write <m>x\R y</m>, if <m>(x,y)\in R</m>;
+        a relation on <m>S</m> and <m>x,y\in S</m>, then we say <m>x</m> is <term>related to</term> <m>y</m>, and write <m>x R y</m>, if <m>(x,y)\in R</m>;
         otherwise, we say that <m>x</m> is <term>not related</term> to <m>y</m>, and
-        write <m>x \not {\ R} y</m>.
+        write <m>x \not R y</m>.
       </p>
     </statement>
   </definition>
@@ -154,17 +151,17 @@
       </p>
 
       <p>
-        <term>reflexive on <m>S</m></term> if <m>x\R x</m> for every <m>x\in S</m>;
+        <term>reflexive on <m>S</m></term> if <m>xR x</m> for every <m>x\in S</m>;
       </p>
 
       <p>
-        <term>symmetric on <m>S</m></term> if whenever <m>x,y\in S</m> with <m>x\R y</m>
-        we also have <m>y\R x</m>; and
+        <term>symmetric on <m>S</m></term> if whenever <m>x,y\in S</m> with <m>xR y</m>
+        we also have <m>yR x</m>; and
       </p>
 
       <p>
         <term>transitive on <m>S</m></term> if
-        whenever <m>x,y,z\in S</m> with <m>x\R y</m> and <m>y\R z</m> we also have <m>x\R z</m>.
+        whenever <m>x,y,z\in S</m> with <m>xR y</m> and <m>yR z</m> we also have <m>xR z</m>.
       </p>
 
       <p>
@@ -232,7 +229,7 @@
 
         <li>
           <p>
-            Define relation <m>R</m> on <m>\Z</m> by <m>x\R y</m> if and only if <m>xy
+            Define relation <m>R</m> on <m>\Z</m> by <m>xR y</m> if and only if <m>xy
             \geq 0</m>.  Is <m>R</m> an equivalence relation on <m>\Z</m>?  Well, for every
             <m>x\in \Z</m>, <m>x^2\geq 0</m>, so <m>R</m> is reflexive.  Moreover, if <m>x,y\in
             \Z</m> with <m>xy \geq 0</m>, then <m>yx \geq 0</m>; so <m>R</m> is symmetric.  But
@@ -280,22 +277,19 @@
     <statement>
       <p>
         Let <m>\sim</m> be an equivalence relation on set <m>S</m>. Then for <m>x,y\in S</m>, the following are equivalent:
-        (i) <m>y\in [x]</m>;
-      </p>
-
-      <p>
-        (ii) <m>[x]=[y]</m>;
-      </p>
-
-      <p>
-        (iii) <m>x\in [y]</m>.
-      </p>
+<p>
+<ol>
+<li><p><m>y\in [x]</m>;</p></li>
+<li><p><m>[x]=[y]</m>;</p></li>
+<li><p><m>x\in [y]</m>.</p></li>
+</ol>
+     </p></p>
     </statement>
   </lemma>
 
   <proof>
     <p>
-      For (i) <m>\Leftrightarrow</m> (ii): Let <m>x, y\in S</m>. If <m>y\in
+      To prove that the first and second statements are equivalent: Let <m>x, y\in S</m>. If <m>y\in
       [x]</m>, then <m>y \sim x</m>, so for every <m>z\in [y]</m> (that is, for every
       <m>z</m> in <m>S</m> with <m>z\sim y</m>), we have, by transitivity, <m>z\sim x</m>, so
       <m>z\in [x]</m>. On the other hand, by the symmetry of <m>\sim</m> we have
@@ -305,19 +299,23 @@
     </p>
 
     <p>
-      The proof of (ii) <m>\Leftrightarrow</m> (iii) is nearly
+      The proof that the second and third statements are equivalent is nearly
       identical.
     </p>
   </proof>
 
-  <p>
-    \begin{df}{Remark and definition.} In many cases there are
+<!-- FIX: BELOW IS A REMK AND DEF -->
+<definition>
+    <statement>
+      <p>
+    In many cases there are
     many distinct elements <m>x,y\in S</m> with <m>[x]=[y]</m>; thus, there
     are usually many different ways we could denote a particular
     equivalence class of <m>S</m> under <m>\sim</m>. Element <m>y\in S</m> is
-    called a <em>representative</em> of class <m>X</m> if <m>y\in X</m>.\end{df}
-  </p>
-
+    called a <em>representative</em> of class <m>X</m> if <m>y\in X</m>.
+      </p>
+   </statement>
+</definition>
   <example>
     <statement>
       <ol>
@@ -388,7 +386,6 @@
         Let <m>S</m> be a set. Then:
         <ol>
           <li>
-            <title>(i)</title>
             <p>
               If <m>\sim</m> is an equivalence relation on <m>S</m>,
               then the set of all equivalence classes of <m>S</m> under
@@ -397,7 +394,6 @@
           </li>
 
           <li>
-            <title>(ii)</title>
             <p>
               If <m>P</m> is a partition of <m>S</m>, then the relation on <m>S</m>
               defined by
@@ -418,7 +414,7 @@
 
   <proof>
     <p>
-      For (i): Let <m>\sim</m> be an equivalence relation on <m>S</m>.
+      To prove the first statement: Let <m>\sim</m> be an equivalence relation on <m>S</m>.
       Clearly, the equivalence classes of <m>S</m> under <m>\sim</m> are
       nonempty sets whose union is <m>S</m>. Thus, it suffices to show <m>X
       \cap Y =\emptyset</m> for each pair of equivalence classes <m>X\neq
@@ -430,7 +426,7 @@
     </p>
 
     <p>
-      For (ii), it is straightforward (almost silly!) to prove that
+      Finally, it is straightforward (almost silly!) to prove that
       <m>\sim</m> is reflexive, symmetric, and transitive.
     </p>
   </proof>
