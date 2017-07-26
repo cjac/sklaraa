@@ -310,8 +310,8 @@
   <definition>
     <statement>
       <p>
-        Let <m>A</m> and <m>B</m> be sets. Then the <term>(direct)
-        product</term> <m>A\times B</m> of <m>A</m> and <m>B</m> is the set
+        Let <m>A</m> and <m>B</m> be sets. Then the <term>direct product</term> (or <term>Cartesian 
+        product</term>) <m>A\times B</m> of <m>A</m> and <m>B</m> is the set
         <me>
           A\times B =
           \{(a,b): \mbox{\(a\in A\), \(b\in B\)} \}.
@@ -325,8 +325,8 @@
         <term>product</term> of the <m>A_i</m> is
         <me>
           A_1\times A_2 \times \cdots
-          \times A_n=\{(a_1, a_2, \ldots, a_n): a_i \in A_i \mbox{ for
-          each } i\};
+          \times A_n=\{(a_1, a_2 \ldots, a_n): a_i \in A_i \text{ for
+          } i=1,2, \ldots, n\}; 
         </me>
         the elements <m>(a_1,a_2,\ldots,a_n)</m> of this
         product are called <m>n</m>-tuples (or triples, if <m>n=3</m>).<fn>You can also have products of infinitely many sets, but we will
