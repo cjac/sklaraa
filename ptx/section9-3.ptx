@@ -19,7 +19,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+
     <p>
       Define <m>\Phi:F\rightarrow \fatr</m> by
       <m>\Phi(f)=f\left(\frac{1}{4}\right)</m>, for every <m>f\in F</m>. We have
@@ -56,7 +56,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+ 
     <p>
       Define <m>\Phi: \fatr^* \rightarrow \fatr^+</m> by
       <m>\Phi(x)=|x|</m>. We know that <m>\Phi</m> is a homomorphism, since
@@ -83,7 +83,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+   
     <p>
       Define <m>\Phi:GL(n,\fatr)\to \fatr^+</m> by
       <m>\Phi(A)=|\det A|</m>. We have that <m>\Phi</m> is an epimorphism since for
@@ -109,7 +109,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+
     <p>
       The statement is false. Indeed, using the preceding two problems, we see that <m>\fatr^*/\{1,-1\}</m> and <m>GL(2,\fatr)/H</m>,
       where <m>H=\{A\in GL(2,\fatr):\det A =\pm 1\}</m>, are both isomorphic
@@ -117,28 +117,4 @@
       <m>\fatr^* \not\simeq GL(2,\fatr)</m>.
     </p>
   </solution>
-  <p>
-    \appendix
-  </p>
-
-  <p>
-    \lhead
-    \chead
-    \rhead{\thepage}
-    \lfoot
-    \cfoot
-    \rfoot
-  </p>
-
-  <p>
-    \phantomsection
-  </p>
-
-  <p>
-    \includepdf[pages={1-10}, pagecommand=]{gfdl.pdf}
-  </p>
-
-  <p>
-    \printsolutionstype{exercise}
-  </p>
 </section>
