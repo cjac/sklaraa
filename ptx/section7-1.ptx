@@ -149,20 +149,20 @@
         Let <m>R</m> be a relation on a set <m>S</m>. Then <m>R</m> is said to
         be:
       </p>
-
+<ul><li>
       <p>
         <term>reflexive on <m>S</m></term> if <m>xR x</m> for every <m>x\in S</m>;
-      </p>
-
+      </p></li>
+<li>
       <p>
         <term>symmetric on <m>S</m></term> if whenever <m>x,y\in S</m> with <m>xR y</m>
-        we also have <m>yR x</m>; and
-      </p>
-
+        we also have <m>yR x</m>; and</p></li>
+<li>
       <p>
         <term>transitive on <m>S</m></term> if
         whenever <m>x,y,z\in S</m> with <m>xR y</m> and <m>yR z</m> we also have <m>xR z</m>.
-      </p>
+      </p></li>
+</ul>
 
       <p>
         A relation that is reflexive,
