@@ -178,22 +178,58 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
 
         <li>
           <p>
-            Let <m>G</m> be a group with <m>|G|=2</m>.  Then <m>G</m> must consist of an identity element <m>e</m> and a nonidentity element <m>a</m>, and have the following group table. Compare the group tables of <m>G</m> and the specific two-element group <m>\Z_2</m>.
-            <tabular>
-              <row>
-                <cell><m>\begin{array}{c||c|c}
-                *\amp e\amp a\\ \hline\hline e\amp e\amp a\\ \hline
-                a\amp a\amp e
-                \end{array}</m></cell>
-                <cell><m>\begin{array}{c||c|c}
-                +\amp 0\amp 1\\ \hline\hline
-                0\amp 0\amp 1\\
-                \hline
-                1\amp 1\amp 0
-                \end{array}</m></cell>
-              </row>
-            </tabular>
-            Note that the first table looks exactly like the second table if we
+            Let <m>G</m> be a group with <m>|G|=2</m>.  Then <m>G</m> must consist of an identity element <m>e</m> and a nonidentity element <m>a</m>, and have the following group table. Compare the group tables for <m>G</m> and for the specific two-element group <m>\Z_2</m>.
+
+
+     <table xml:id="twoetable">
+
+<tabular halign="left">
+	 <row bottom="medium">
+		<cell right="medium"><m>*</m></cell>
+		<cell><m>e</m></cell>
+		<cell><m>a</m></cell>
+			</row>
+	<row >
+		<cell right="medium"><m>e</m></cell>
+		<cell><m>e</m></cell>
+		<cell><m>a</m></cell>
+	</row>	
+	<row >
+		<cell right="medium"><m>a</m></cell>
+		<cell><m>a</m></cell>
+		<cell><m>e</m></cell>
+	</row>
+</tabular>
+		<caption>Group table for an arbitrary two-element group <m>G</m></caption>
+			</table>    
+
+
+
+    <table xml:id="z2table">
+
+<tabular halign="left">
+	 <row bottom="medium">
+		<cell right="medium"><m>+</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+			</row>
+	<row >
+		<cell right="medium"><m>0</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		</row>	
+	<row >
+		<cell right="medium"><m>1</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>0</m></cell>
+	</row>
+</tabular>
+		<caption>Group table for <m>\Z_2</m></caption>
+			</table>    
+
+
+
+Note that the first table looks exactly like the second table if we
             replace <m>*</m> with <m>+</m>, each <m>e</m> with <m>0</m>, and each <m>a</m> with <m>1</m>. This
             shows that groups <m>G</m> and <m>\Z_2</m> have identical structures; more
             precisely, it shows that the function <m>\phi</m> from <m>G</m> to <m>\Z_2</m>
