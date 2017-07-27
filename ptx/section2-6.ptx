@@ -65,14 +65,18 @@
     but direct interested readers to for, instance, p. 5 in<nbsp /><xref ref="NZM" />.
   </p>
 
-  <p>
-    \begin{df}{The Division Algorithm} Let <m>n\in \Z^+</m> and let <m>a</m> be any
+  <theorem>
+<statement><p> (The Division Algorithm)
+
+Let <m>n\in \Z^+</m> and let <m>a</m> be any
     integer. Then there exist unique integers <m>q</m> and <m>r</m>, with <m>0\leq
     r \lt n</m>, such that <m>a=qn+r</m>.<fn>This is actually a special case
     of a more general theorem, which states that given any integers <m>n</m>
     and <m>a</m>, there exist unique integers <m>q</m> and <m>r</m>, with <m>0\leq
-    r\lt |n|</m>, such that <m>a=qn+r</m>.</fn>\end{df}
+    r\lt |n|</m>, such that <m>a=qn+r</m>.</fn>
   </p>
+</statement>
+</theorem>
 
   <p>
     It follows that for each positive integer <m>n</m> and integer <m>a</m>,
