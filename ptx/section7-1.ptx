@@ -25,7 +25,7 @@
 
           <li>
             <p>
-              <m>\d{S=\bigcup_{i\in I}S_i}</m>.
+              <m>S=\bigcup_{i\in I}S_i</m>.
             </p>
           </li>
         </ol>
@@ -214,8 +214,7 @@
 
         <li>
           <p>
-            The relation <m>R</m> on <m>C^1</m> discussed above (that
-            <m>f\D\, g</m> iff <m>f'=g'</m>) <em>is</em> an equivalence relation
+            The relation <m>R</m> on <m>C^1</m> discussed above (<m>fR  g</m> iff <m>f'=g'</m>) <em>is</em> an equivalence relation
             on <m>C^1</m>.
           </p>
         </li>
