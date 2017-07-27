@@ -1,0 +1,317 @@
+<section>
+  <title>Group conventions and properties</title>
+  <introduction>
+    <p>
+      Before we discuss more examples, we present a theorem and look at some conventions we follow and notation we use when discussing groups in general; we also discuss some properties of groups.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>Some group conventions</title>
+    <theorem>
+      <statement>
+        <p>
+          The identity element of a group is
+          unique (by <xref ref="uniqueid">Theorem</xref>), and given any element <m>a</m>
+          of a group <m>G</m>, the inverse of <m>a</m> in <m>G</m> is unique (by <xref ref="uniqueinverse">Theorem</xref>).
+        </p>
+      </statement>
+    </theorem>
+
+    <ul>
+      <li>
+        <p>
+          We usually <em>don't</em> use the notation <m>*</m> when describing group
+          operations. Instead, we use the multiplication symbol <m>\cdot</m> for
+          the operation in an arbitrary group, and  call
+          applying the operation <q>multiplying</q><mdash />even though the operation may
+          not be <q>multiplication</q> in the non-abstract, traditional sense! It may
+          actually be addition of real numbers, composition of
+          functions, etc.
+
+
+          Moreover, when actually operating in a group <m>\langle G, \cdot\,\rangle</m>, we
+          typically omit the <m>\cdot</m> . That is, for <m>a,b\in G</m>, we write the
+          product <m>a\cdot b</m> as <m>ab</m>. We call this the <q>product</q> of <m>a</m> and <m>b</m>. We will generally use <m>e</m>
+          or <m>e_G</m> as our default notation for an identity element of group,<fn>Many mathematicians denote a group's identity element by 1, rather than <m>e</m>.</fn>and <m>a^{-1}</m> to denote the inverse of element <m>a</m> in <m>G</m>.
+</p>
+</li>
+</ul>
+          <warning>
+            <p>
+              Although it is written in what we call  <em>multiplicative
+              notation</em>, do <em>not</em> assume <m>a^{-1}</m> is what we usually think of as a
+              multiplicative inverse for <m>a</m>; remember, we don't even know if
+              elements of a group are numbers! The type of inverse that <m>a^{-1}</m>
+              is (a multiplicative inverse for a real number? an additive inverse
+              for a real number? a multiplicative inverse for a matrix? an inverse
+              function for a function from <m>\fatr</m> to <m>\fatr</m>?) depends on both
+              <m>G</m>'s elements and its operation.
+            </p>
+          </warning>
+
+       
+<ul>
+      <li>
+        <p>
+          For every element <m>a</m> in a group <m>\Gdot</m> and <m>n\in \Z^+</m>, we use the expression <m>a^n</m> to denote  the product <me>a \times a \times \cdots \times a</me> of <m>n</m> copies of <m>a</m>, 
+      and <m>a^{-n}</m> to denote <m>(a^{-1})^n</m> (that is, the product of <m>n</m> copies of <m>a^{-1}</m>).
+          Finally, we define <m>a^0</m> to be <m>e</m>.  Note that our <q>usual</q> rules for exponents then hold in an arbitrary group: that is, if <m>a</m> is in group <m>\langle G, \cdot\,\rangle</m>
+          and <m>m,n\in \Z</m>, then <m>a^m a^n = a^{m+n}</m> and <m>(a^m)^n=a^{mn}=(a^n)^m</m>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      There are exceptions to these conventions:
+      <ul>
+        <li>
+          <p>
+            When working with an operation that is known to be commutative, we typically
+            continue to use additive notation (<m>+</m> for the group operation, <m>-a</m>
+            for the inverse of element <m>a</m> in the group) and call the operation
+            <q>addition,</q> though using <m>\cdot</m> is also valid in these cases. When
+            we use additive notation, we do <em>not</em> omit the <m>+</m> when
+            operating in a group <m>\langle G,+\rangle</m>, and we call <m>a+b</m> a <em>sum</em> rather
+            than a product.<fn>Also, when working with an operation that is known to be commutative, the identity element may be denoted by 0 rather than by <m>e</m>, <m>e_G</m>, or 1.</fn>For <m>n\in \Z^+</m>, we write <m>na</m> instead of <m>a^n</m>; we also write <m>0a</m> instead of <m>a^0</m>. Finally, note that
+            <m>(-n)a=n(-a)=-(na)</m> (where <m>-a</m> and <m>-(na)</m> indicate the
+            additive inverses of <m>a</m> and <m>na</m>, respectively); we can therefore
+            unambiguously use the notation <m>-na</m> for this element.
+            Using this notation, note that for <m>m\in \Z</m>, <m>na+ma=(n+m)a</m> and <m>n(ma)=(nm)a</m>.
+<p>
+            <warning>
+              <p>
+                Be careful to always know where an element
+                you are working with lives! For instance, if, as above, <m>n\in
+                \Z^+</m> and <m>a</m> is a group element, <m>-n</m> and <m>-a</m> look similar but
+                may mean very different things. While <m>-n</m> is a negative integer,
+                <m>-a</m> may be the additive inverse of a matrix in <m>\M_2(\fatr)</m>, the
+                additive inverse 2 of the number 4 in <m>\Z_6</m>, or even something
+                completely unrelated to numbers.
+              </p>
+            </warning></p>
+
+          <p>  We summarize multiplicative versus addition notation in the following table, where <m>a,b</m> are elements of a group <m>G</m>. </p>
+
+<p>
+<remark><p>
+Multiplicative notation can be used when working with any arbitary group, while additive notation should be used only when working with an abelian group.</p>
+</remark>
+</p>
+
+<me>\begin{array}{l|c|c}
+\amp \text{Multiplicative notation}\amp \text{Additive notation}\\ \hline
+
+\text{Operation notation}\amp \cdot \amp + \\
+a \text{ operated with } b \amp ab \amp a+b\\
+\text{Identity element}\amp 1\ (\text{or }e \text{ or }e_G) \amp 0\ (\text{or }e \text{ or }e_G)\\\
+\text{Inverse of }a \amp a^{-1} \amp -a
+\end{array}</me>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </p>
+        </li>
+
+        <li>
+          <p>
+            We <em>do</em> use the notation
+            <m>*</m> when using multiplicative or additive notation would lead to
+            confusion. For instance, if we want to define an operation on
+            <m>\fatq^*</m> that assigns to pair <m>(a,b)</m> the quantity <m>ab/2</m>, it would
+            be unwise to use multiplicative or additive notation for this
+            operation since we already have conventional meanings of <m>ab</m> and
+            <m>a+b</m>. Similarly, we would not denote the identity element of
+            <m>\fatq^*</m> under this operation by <m>0</m> or <m>1</m>, since the identity
+            element in this group is the rational number <m>2</m>, and writing <m>0=2</m>
+            or <m>1=2</m> would look weird.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            If there is a default notation for a particular
+            operation (say, <m>\circ</m> for composition of functions) or identity
+            element (say, <m>I_n</m> in <m>GL(n,\fatr)</m>) we usually use that notation
+            instead.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Some group properties</title>
+    <p>
+      While we don't need to worry about <q>order</q> when multiplying a group element <m>a</m> by itself, we <em>do</em> need to worry about it in general.
+    </p>
+
+    <warning>
+      <p>
+        Group operations need <em>not</em> be commutative!
+      </p>
+    </warning>
+
+    <definition>
+      <statement>
+        <p>
+          A group <m>\langle G, \cdot\,\rangle</m> is said to be <term>abelian</term><fn>The word <q>abelian</q> is derived from the surname of
+          mathematician Niels Henrik Abel.</fn>if <m>ab=ba</m> for all <m>a,b\in
+          G</m>. Otherwise, <m>G</m> is <term>nonabelian</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>
+        If we know that a binary operation <m>\cdot</m>
+        on a set <m>G</m> is commutative, then in checking to see if axioms
+        <m>\G_2</m> and <m>\G_3</m> hold we need only verify that there exists
+        <m>e\in G</m> such that <m>ae=a</m> (we don't need to check that
+        <m>ea=a</m>) for all <m>a\in G</m> and that for each <m>a\in G</m> there
+        exists <m>b\in G</m> such that <m>ab=e</m> (we don't need to check that
+        <m>ba=e</m>).
+      </p>
+    </remark>
+
+    <remark>
+      <p>
+        If <m>G</m> is not known to be abelian, we
+        must be careful when multiplying elements of <m>G</m> by one
+        another: multiplying on the left is, in general, not the same
+        as multiplying on the right!
+      </p>
+    </remark>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>G</m> is a group, then the cardinality <m>|G|</m> of <m>G</m> is
+          called the <term>order of <m>G</m></term>. If <m>|G|</m> is finite, then <m>G</m> is
+          said to be a <term>finite group</term>; otherwise, it's an <term>infinite group</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Of the groups we've discussed, which are abelian? Which are infinite/finite?
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      We have already seen that identity elements of groups are unique,
+      and that each element <m>a</m> of a group <m>G</m> has a unique inverse
+      <m>a^{-1}\in G</m>. Here are some other basic properties of groups.
+    </p>
+
+    <theorem xml:id="cancel">
+      <statement>
+        <p>
+          If <m>\Gdot</m> is a group, then <em><em>left and right cancellation laws</em></em> hold in <m>G</m>. That is, if <m>a,b,c\in G</m>, then
+          <ol>
+            <li>
+              <p>
+                If <m>ab=ac</m>, we have <m>b=c</m> (the left cancellation law); and
+              </p>
+            </li>
+
+            <li>
+              <p>
+                If <m>ba=ca</m>, we have <m>b=c</m> (the right cancellation law).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+      <p>
+        Let <m>a,b,c\in G</m> and assume that <m>ab=ac</m>. Multiplying
+        both equation sides on the left by <m>a^{-1}</m>, we obtain
+        <md>
+          <mrow>{2}
+          \amp \amp  a^{-1}(ab)\amp =a^{-1}(ac)</mrow>
+          <mrow>\amp \Rightarrow
+          \amp (a^{-1}a)b\amp =(a^{-1}a)c</mrow>
+          <mrow>\amp \Rightarrow
+          \amp eb\amp =ec</mrow>
+          <mrow>\amp \Rightarrow
+          \amp b\amp =c</mrow>
+        </md>
+      </p>
+
+      <p>
+        This proves that the left cancellation law holds. A similar proof shows that the right cancellation law holds.
+      </p>
+    </proof>
+
+    <theorem xml:id="uniquesols">
+      <statement>
+        <p>
+          Let <m>\Gdot</m> be a group and let <m>a,b\in G</m>. Then there exist <em><em>unique</em></em> elements <m>x,y\in G</m> such that <m>ax=b</m> and <m>ya=b</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+      <p>
+        If <m>x=a^{-1}b</m> and <m>y=ba^{-1}</m>, then
+        <m>ax=a(a^{-1}b)=(aa^{-1})b=eb=b</m> and
+        <m>ya=(ba^{-1})a=b(a^{-1}a)=be=b</m>. So such elements <m>x</m> and <m>y</m>
+        exist. The fact that they are unique follows from the cancellation
+        laws: if <m>ax=b</m> and <m>ax'=b</m> then <m>x=x'</m> by left cancellation, and
+        if <m>ya=b</m> and <m>y'a=b</m> then <m>y=y'</m> by right cancellation.
+      </p>
+    </proof>
+
+    <warning>
+      <p>
+        We only of necessity have <m>(ab)^{-1}=a^{-1}b^{-1}</m> if <m>G</m> is known to be abelian!
+      </p>
+    </warning>
+
+    <p>
+      However, we do have the following:
+    </p>
+
+    <theorem xml:id="invofprod">
+      <statement>
+        <p>
+          If <m>a</m> and <m>b</m> are elements of a group <m>\Gdot</m>, then
+          <me>
+            (ab)^{-1}=b^{-1}a^{-1}.
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+      <p>
+        We have that
+        <me>
+          (ab)(b^{-1}a^{-1})=a(bb^{-1})a^{-1}=aea^{-1}=aa^{-1}=e.
+        </me>
+      </p>
+
+      <p>
+        Similarly, <m>(b^{-1}a^{-1})(ab)=e</m>.
+      </p>
+    </proof>
+  </subsection>
+</section>
