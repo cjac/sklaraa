@@ -103,7 +103,8 @@
   </theorem>
 
   <proof>
-    <p>
+   
+<ol><li><p>
       Let <m>\sigma, \tau \in S_A</m>. Since a composition of
       bijections is a bijection (see <xref ref="compbij">Theorem</xref>), <m>\sigma
       \tau</m> is a bijection from <m>A</m> to <m>A</m>, hence is in <m>S_A</m>. So
@@ -124,13 +125,13 @@
           </p>
     <p>
       So <m>S_A</m> is a group.
-    </p>
-  </proof>
-
+    </p></li>
+<li>
   <p>
     Clearly <m>|S_A|=\infty</m> when <m>|A|=\infty</m>, and a straightforward
     combinatorial argument yields that when <m>|A|=n \in \Z^+</m>, we have
-    <m>|S_A|=n!</m>. Finally, if <m>|A|=1</m> or <m>2</m>, then <m>|S_A|=1!=1</m> or
+    <m>|S_A|=n!</m>.</p></li>
+<li><p>Finally, if <m>|A|=1</m> or <m>2</m>, then <m>|S_A|=1!=1</m> or
     <m>|S_A|=2!=2</m> so <m>S_A</m> must be abelian (as it's a group of order 1 or
     2). On the other hand, suppose <m>|A|>2</m>. Then <m>A</m> contains at least
     three distinct elements, say <m>x</m>, <m>y</m>, and <m>z</m>. Let <m>\sigma</m> be the
@@ -138,7 +139,9 @@
     element of <m>A</m>, and let <m>\tau</m> be the permutation of <m>A</m> swapping
     <m>y</m> and <m>z</m> and fixing every other element of <m>A</m>. Then <m>\sigma
     \tau(x)=y</m> while <m>\tau \sigma(x)=z</m>, so <m>\sigma \tau \neq \tau
-    \sigma</m>, and hence <m>S_A</m> is nonabelian.
+    \sigma</m>, and hence <m>S_A</m> is nonabelian.</p></li></ol>
+</proof>
+<p>
     We will in the future use language provided by the following
     definition:
   </p>
