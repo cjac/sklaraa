@@ -35,7 +35,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol type="a">
       <li>
         <p>
@@ -92,7 +92,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
     <li>
       <ol>
@@ -190,7 +190,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
       <li>
         <p>
@@ -239,7 +239,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       The group tables of <m>\Z_4</m> and <m>\Z_8^{\times}</m> are, respectively,</p>
 
@@ -344,7 +344,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Define <m>\phi\,:\,\Z \rightarrow n\Z</m>
       by <m>\phi(x)=nx</m>, for all <m>x\in \Z</m>. Clearly, <m>\phi</m>
@@ -377,7 +377,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
       <li>
         <p>
@@ -408,7 +408,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <note>
 
     <p>

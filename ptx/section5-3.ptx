@@ -41,7 +41,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol type="a">
       <li>
         <p>
@@ -113,7 +113,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       (Other answers are possible.)
       <ol>
@@ -188,7 +188,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
       <li>
         <p>
@@ -266,7 +266,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol type="a">
       <li>
         <p>
@@ -352,7 +352,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
       <li>
         <p>
@@ -423,7 +423,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Solutions for (a)<ndash />(c) are shown below.
       <me>
@@ -439,7 +439,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Let <m>e</m> be the identity
       element of <m>G</m>. If <m>G=\{e\}</m>, then <m>G</m> is clearly

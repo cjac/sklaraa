@@ -35,7 +35,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol type="a">
       <li>
         <p>
@@ -95,7 +95,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       (Other answers are possible.)
       <ol>
@@ -150,7 +150,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
       <li>
         <p>
@@ -221,7 +221,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
       <li>
         <p>
@@ -274,7 +274,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Let <m>x,y\in \phi(H)</m>. Then <m>x=\phi(a)</m> and <m>y=\phi(b)</m> for some <m>a,b\in H</m>. So <m>xy=\phi(a)\phi(b)=\phi(ab)</m> (since <m>\phi</m> is a homomorphism). Since <m>H\leq G</m>, <m>ab\in H</m>. Thus, <m>xy\in \phi(H)</m>. Next, <m>e_G\in H</m>, so <m>e_{G'}=\phi(e_G)\in \phi(H)</m>. Finally, since <m>H\leq G</m> and <m>a\in H</m>, <m>a^{-1}\in H</m>; so <m>x^{-1}=\phi(a)^{-1}=\phi(a^{-1}) \in \phi(H)</m>. Thus, <m>\phi(H)\leq G'</m>.
     </p>
@@ -287,7 +287,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Clearly, <m>e\in H</m>, so <m>H\neq \emptyset</m>. Next, let <m>u,v\in H</m>. Then
       <md>
