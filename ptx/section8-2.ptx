@@ -119,14 +119,18 @@
     We consider two other very significant examples.
   </p>
 
-  <p>
-    \begin{df}{Definition, notation, and terminology} Let <m>G</m>
+  
+ <definition>
+ <statement>
+ <p> Let <m>G</m>
     be a group. We let
     <me>
       Z(G)=\{z\in G\,:\, az=za \mbox{ for all } a\in
       G\}.
     </me>
   </p>
+</statement>
+</definition>
 
   <p>
     <m>Z(G)</m> is called the <em>center</em> of <m>G</m>.<fn>The center of a group was originally introduced in the Exercises of <xref ref="gps">Chapter</xref>. The Z stands for <q>zentrum,</q> the German word for <q>center.</q></fn>\end{df}

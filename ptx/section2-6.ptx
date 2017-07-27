@@ -9,6 +9,7 @@
       </me>
       that is, <m>n\Z</m> is the set of all (integer) multiples of <m>n</m>.
     </p>
+ </example>
 
     <theorem xml:id="nz">
       <statement>
@@ -24,7 +25,7 @@
       </p>
     </proof>
 
-  </example>
+  
 
   <remark>
     <p>
@@ -166,12 +167,11 @@
         <m>\Z_n</m> is inherited from the commutativity of addition on <m>\Z</m>.
         One nice result of this is that since <m>+_n</m> is commutative on
         <m>\Z_n</m>, we have less to check when verifying group axioms
-        <m>\G_2</m> and <m>\G_3</m>.
-        <ol>
-          <li>
-            <title>invalidlabel</title>
+        <m>\G_2</m> and <m>\G_3</m>.</p>
+
+
             <p>
-              Let <m>a,b,c\in \Z_n</m>.  We want to show that
+              Now, let <m>a,b,c\in \Z_n</m>.  We want to show that
               <m>(a+_n b)+_n c = a +_n(b+_n c)</m>. Now,
               <md>
                 <mrow>(a+_n b)+_n c\amp =R_n(a+b)+_n c\amp \amp</mrow>
@@ -185,12 +185,8 @@
               both of these values are in <m>\{0,1,\ldots, n-1\}</m>, this implies that
               they are equal, as desired.
             </p>
-          </li>
-
-          <li>
-            <title>invalidlabel</title>
             <p>
-              Clearly, <m>0\in \Z_n</m> acts as an identity element
+              Next, clearly, <m>0\in \Z_n</m> acts as an identity element
               under <m>+_n</m>, since
               <me>
                 0+_n a =R_n(0+a)=R_n(a)
@@ -198,24 +194,18 @@
               for each
               <m>a\in \Z_n</m>.
             </p>
-          </li>
-
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              Let <m>a\in \Z_n</m>.  If <m>a=0</m>, then clearly <m>a</m> has
+          <p>Finally, let <m>a\in \Z_n</m>.  If <m>a=0</m>, then clearly <m>a</m> has
               inverse <m>0\in \Z_n</m> since <m>0+_n 0 = 0</m>. If <m>a\neq 0</m>, then
               the element <m>n-a\in \Z_n</m> is an inverse for <m>a</m> since
               <me>
                 a+_n(n-a)=R_n(a+(n-a))=R_n(n)=0.
               </me>
             </p>
-          </li>
-        </ol>
-      </p>
 
       <p>
-        Since <m>+_n</m> is commutative on <m>\Z_n</m>, <m>\Z_n</m> is an abelian group under <m>+_n</m>. Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
+        Since <m>+_n</m> is commutative on <m>\Z_n</m>, <m>\Z_n</m> is an abelian group under <m>+_n</m>. </p>
+<p>
+Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       </p>
     </proof>
 
