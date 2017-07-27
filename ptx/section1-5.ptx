@@ -34,7 +34,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol type="a">
       <li>
         <p>
@@ -98,7 +98,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
       <li>
         <p>
@@ -134,7 +134,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       <m>|P(\{a,b\})|=4=2^2</m> and <m>|P(\{a,b,c\})|=8=2^3</m>; we may conjecture that when <m>|S|=n</m>, <m>|P(S)|=2^n</m>.
     </p>
@@ -191,7 +191,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
     <li>
       <p>
@@ -249,7 +249,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Let <m>u\in U</m>. We want to show there is an element of <m>S</m> that gets mapped to <m>u</m> by <m>g\circ f</m>. Since <m>g:T\to U</m> is onto, there is an element <m>t\in T</m> such that <m>g(t)=u</m>; next, since <m>f:S\to T</m> is onto, there is an element <m>s\in S</m> such that <m>f(s)=t</m>. Then <m>(g\circ f)(s)=g(f(s))=g(t)=u</m>. Thus, <m>g\circ f</m> is onto.
     </p>
@@ -262,7 +262,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       We can list the elements of <m>A</m> and <m>B</m> as so:
       <me>
@@ -272,15 +272,39 @@
 
     <p>
       Consider the table
-      <me>
-        \begin{array}{cccc}
-        (a_1,b_1) \amp  (a_1,b_2) \amp  \cdots \amp  (a_1,b_m) \\
-        (a_2,b_1) \amp  (a_2,b_2) \amp  \cdots \amp  (a_2,b_m)\\
-        \vdots \amp  \vdots  \amp  \ddots \amp  \vdots\\
-        (a_n,b_1) \amp  (a_n,b_2) \amp  \cdots \amp   (a_n,b_m).
-        \end{array}
-      </me>
-    </p>
+	</p>
+
+     <table xml:id="cardmn">
+
+<tabular halign="center">
+<row>
+		<cell><m>(a_1,b_1)</m></cell>
+		<cell><m>(a_1,b_2)</m></cell>
+		<cell><m>\cdots</m></cell>
+		<cell><m>(a_1,b_m)</m></cell>
+	</row>
+
+	<row>
+		<cell><m>(a_2,b_1)</m></cell>
+		<cell><m>(a_2,b_2)</m></cell>
+		<cell><m>\cdots</m></cell>
+		<cell><m>(a_2,b_m)</m></cell>
+	</row>
+	<row>
+		<cell><m>\vdots</m></cell>
+		<cell><m>\vdots</m></cell>
+		<cell><m>\ddots</m></cell>
+		<cell><m>\vdots</m></cell>
+	</row>
+	<row>
+		<cell><m>(a_n,b_1)</m></cell>
+		<cell><m>(a_n,b_2)</m></cell>
+		<cell><m>\cdots</m></cell>
+		<cell><m>(a_n,b_m)</m></cell>
+	</row>
+	</tabular>
+	<caption>Elements of <m>A\times B</m> when <m>|A|=n</m> and <m>|B|=m</m></caption>
+			</table>
 
     <p>
       Clearly this table contains <m>mn</m> elements, and contains each element of <m>A\times B</m> exactly once. Therefore, <m>|A\times B|=mn</m>.

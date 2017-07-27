@@ -193,7 +193,7 @@
 
      <table xml:id="prodctb">
 
-<tabular halign="left">
+<tabular halign="center">
 	 <row >
 		<cell ><m>(a_1,b_1)</m></cell>
 		<cell><m>(a_1,b_2)</m></cell>
