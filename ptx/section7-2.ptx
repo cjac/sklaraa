@@ -109,14 +109,14 @@
           <li>
             <p>
               <me>
-                b\in aH \lra aH=bH \lra  a\in bH
+                b\in aH \Leftrightarrow aH=bH \Leftrightarrow  a\in bH
               </me>
               and
               <me>
-                b\in Ha \lra  Ha=Hb \lra  a\in
+                b\in Ha \Leftrightarrow  Ha=Hb \Leftrightarrow  a\in
                 Hb.
               </me>
-              In particular, <m>a\in H \lra aH=H \lra Ha=H</m>.
+              In particular, <m>a\in H \Leftrightarrow aH=H \Leftrightarrow Ha=H</m>.
             </p>
           </li>
 
