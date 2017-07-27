@@ -21,10 +21,7 @@
 \def\siml{\sim_L}
 \def\simr{\sim_R}
 \def\cont{\subseteq}
-\def\epsilon{\varepsilon}
 \def\lra{\Leftrightarrow}
-\def\tf{True/False. For each of the following, write T if the statement is
-true; otherwise, write F. You do NOT need to provide explanations or show work for this problem.}
 </macros>
 
 <latex-image-preamble>
