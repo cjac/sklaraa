@@ -12,6 +12,7 @@
 \def\N{\mathbb{N}}
 \def\M{\mathbb{M}}
 \def\S{\mathbb{S}}
+\def\G{\mathcal{G}}
 \def\0{\mathbf 0}
 \def\Gdot{\langle G, \cdot\,\rangle}
 \def\phibar{\overline{\phi}}
@@ -24,7 +25,6 @@
 \def\lra{\Leftrightarrow}
 \def\tf{True/False. For each of the following, write T if the statement is
 true; otherwise, write F. You do NOT need to provide explanations or show work for this problem.}
-\renewcommand{\d}{\displaystyle}
 </macros>
 
 <latex-image-preamble>
