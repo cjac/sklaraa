@@ -12,8 +12,8 @@
       that in some cases<mdash />in particular, when <m>G</m> is cyclic<ndash />it is not
       too hard to identify the structure of a factor group of <m>G</m>. But
       what about when <m>G</m> and <m>N</m> are more complicated? For instance, we
-      have seen that <m>SL(5,\fatr)</m> is a normal subgroup of <m>GL(5,\fatr)</m>.
-      What is the structure of <m>GL(5,\fatr)/SL(5,\fatr)</m>? That is not so
+      have seen that <m>SL(5,\R)</m> is a normal subgroup of <m>GL(5,\R)</m>.
+      What is the structure of <m>GL(5,\R)/SL(5,\R)</m>? That is not so
       easy to figure out by looking directly at left coset multiplication
       in the factor group.
     </p>

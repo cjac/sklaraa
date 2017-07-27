@@ -26,7 +26,7 @@
 
           <li>
             <p>
-              <m>\fatr</m>, <m>\fatr^*</m>, <m>\M_2(\fatr)</m>, and <m>GL(2,\fatr)</m> are uncountable and hence can't be cyclic.
+              <m>\R</m>, <m>\R^*</m>, <m>\M_2(\R)</m>, and <m>GL(2,\R)</m> are uncountable and hence can't be cyclic.
             </p>
           </li>
 
@@ -38,8 +38,8 @@
 
           <li>
             <p>
-              <m>\fatq</m> isn't cyclic. If it were cyclic it would have to be isomorphic to <m>\Z</m>, since <m>\fatq</m>
-              is an infinite group (so can't be isomorphic to <m>\Z_n</m> for any <m>n</m>). But we showed in <xref ref="zq">Example</xref> that <m>\fatq \not\simeq \Z</m>.
+              <m>\Q</m> isn't cyclic. If it were cyclic it would have to be isomorphic to <m>\Z</m>, since <m>\Q</m>
+              is an infinite group (so can't be isomorphic to <m>\Z_n</m> for any <m>n</m>). But we showed in <xref ref="zq">Example</xref> that <m>\Q \not\simeq \Z</m>.
             </p>
           </li>
         </ol>
@@ -64,7 +64,7 @@
 
   <proof>
     <p>
-      Since <m>\Z</m> and each <m>\Z_n</m> are abelian, every cyclic group is abelian. But, for instance, <m>\fatr</m> is an abelian noncyclic group (it can't be cyclic because it is uncountable).
+      Since <m>\Z</m> and each <m>\Z_n</m> are abelian, every cyclic group is abelian. But, for instance, <m>\R</m> is an abelian noncyclic group (it can't be cyclic because it is uncountable).
     </p>
   </proof>
 
@@ -114,7 +114,7 @@
 
   <proof>
   <p>
-    <em>Case 1.</em> There is no positive integer <m>k</m> with <m>a^k=e</m>. In this case, we claim <m>\langle a\rangle \simeq \Z</m>. Indeed: Let <m>\phi:\Z\to \langle a\rangle</m> be defined by <m>\phi(i)=a^i</m>. Clearly, <m>\phi</m> is a homomorphism that is onto. So to show that <m>\phi</m> is an isomorphism, it suffices to show that <m>\phi</m> is one-to-one. Let <m>i,j\in \Z</m> with <m>\phi(i)=\phi(j)</m>. Then <m>a^i=a^j</m>. Without loss of generality, we may assume <m>i\geq j</m>. Then, multiplying both sides of the equation by <m>a^{-j}</m> (on the right or on the left) we obtain <m>a^{i-j}=e</m>. Since <m>i-j\in \fatn</m> and there is no positive integer <m>k</m> with <m>a^k=e</m>, we must have <m>i-j=0</m>, so <m>i=j</m>. Thus, <m>\phi</m> is an isomorphism from <m>\Z</m> to <m>\langle a\rangle</m>.
+    <em>Case 1.</em> There is no positive integer <m>k</m> with <m>a^k=e</m>. In this case, we claim <m>\langle a\rangle \simeq \Z</m>. Indeed: Let <m>\phi:\Z\to \langle a\rangle</m> be defined by <m>\phi(i)=a^i</m>. Clearly, <m>\phi</m> is a homomorphism that is onto. So to show that <m>\phi</m> is an isomorphism, it suffices to show that <m>\phi</m> is one-to-one. Let <m>i,j\in \Z</m> with <m>\phi(i)=\phi(j)</m>. Then <m>a^i=a^j</m>. Without loss of generality, we may assume <m>i\geq j</m>. Then, multiplying both sides of the equation by <m>a^{-j}</m> (on the right or on the left) we obtain <m>a^{i-j}=e</m>. Since <m>i-j\in \N</m> and there is no positive integer <m>k</m> with <m>a^k=e</m>, we must have <m>i-j=0</m>, so <m>i=j</m>. Thus, <m>\phi</m> is an isomorphism from <m>\Z</m> to <m>\langle a\rangle</m>.
   </p>
 
   <p>
@@ -221,19 +221,19 @@
 
         <li>
           <p>
-            In <m>\fatr</m>, <m>\langle \pi\rangle =\pi\Z</m>, so <m>o(\pi)=\infty</m>.
+            In <m>\R</m>, <m>\langle \pi\rangle =\pi\Z</m>, so <m>o(\pi)=\infty</m>.
           </p>
         </li>
 
         <li>
           <p>
-            In <m>\fatr^*</m>, <m>\langle \pi\rangle =\{\pi^n:n\in \Z\}</m>. Again, <m>o(\pi)=\infty</m>.
+            In <m>\R^*</m>, <m>\langle \pi\rangle =\{\pi^n:n\in \Z\}</m>. Again, <m>o(\pi)=\infty</m>.
           </p>
         </li>
 
         <li>
           <p>
-            In <m>\M_2(\fatr)</m>,
+            In <m>\M_2(\R)</m>,
             <me>
               \left\langle \left[
               \begin{array}{cc}
@@ -280,7 +280,7 @@
 
         <li>
           <p>
-            In <m>GL(2,\fatr)</m>, <m>\left[
+            In <m>GL(2,\R)</m>, <m>\left[
             \begin{array}{cr}
             0 \amp  -1 \\
             1 \amp  0
@@ -291,7 +291,7 @@
 
         <li>
           <p>
-            In <m>GL(2,\fatr)</m>, <m>\left[
+            In <m>GL(2,\R)</m>, <m>\left[
             \begin{array}{cc}
             1 \amp  1 \\
             0 \amp  1
@@ -435,7 +435,7 @@
 
   <warning>
     <p>
-      Note, however, that just because the orders of elements of two groups <q>match up</q> the groups need not be isomorphic. For example, every element of <m>\Z</m> has infinite order, except for its identity element, which has order 1; the same is true for the group <m>\fatq</m>. However, we have previously proven that these groups are not isomorphic.
+      Note, however, that just because the orders of elements of two groups <q>match up</q> the groups need not be isomorphic. For example, every element of <m>\Z</m> has infinite order, except for its identity element, which has order 1; the same is true for the group <m>\Q</m>. However, we have previously proven that these groups are not isomorphic.
     </p>
   </warning>
 </section>

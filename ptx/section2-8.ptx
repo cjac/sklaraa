@@ -112,7 +112,7 @@
   <exercise>
     <statement>
       <p>
-        Let <m>G</m> be the set of all functions from <m>\Z</m> to <m>\fatr</m>. Prove that pointwise multiplication on <m>G</m> is commutative. (<em>Note.</em> To prove that two functions, <m>h</m> and <m>j</m>, sharing the same domain <m>D</m> are equal, you need to show that <m>h(x)=j(x)</m> for every <m>x\in D</m>.)
+        Let <m>G</m> be the set of all functions from <m>\Z</m> to <m>\R</m>. Prove that pointwise multiplication on <m>G</m> is commutative. (<em>Note.</em> To prove that two functions, <m>h</m> and <m>j</m>, sharing the same domain <m>D</m> are equal, you need to show that <m>h(x)=j(x)</m> for every <m>x\in D</m>.)
       </p>
     </statement>
   </exercise>
@@ -122,7 +122,7 @@
       <me>
         (fg)(x)=f(x)g(x)=g(x)f(x),
       </me>
-      since <m>f(x), g(x)\in \fatr</m> and multiplication of real numbers is commutative. Since <m>g(x)f(x)=(gf)(x)</m>,
+      since <m>f(x), g(x)\in \R</m> and multiplication of real numbers is commutative. Since <m>g(x)f(x)=(gf)(x)</m>,
       <m>fg=gf</m>, and so pointwise multiplication on <m>G</m> is commutative.
     </p>
   </solution>
@@ -133,25 +133,25 @@
         <ol>
           <li>
             <p>
-              <m>\fatq</m> under multiplication
+              <m>\Q</m> under multiplication
             </p>
           </li>
 
           <li>
             <p>
-              <m>\M_2(\fatr)</m> under addition
+              <m>\M_2(\R)</m> under addition
             </p>
           </li>
 
           <li>
             <p>
-              <m>\M_2(\fatr)</m> under multiplication
+              <m>\M_2(\R)</m> under multiplication
             </p>
           </li>
 
           <li>
             <p>
-              <m>\fatr^+</m> under <m>*</m>, defined by <m>a*b=\sqrt{ab}</m> for all <m>a,b\in \fatr^+</m>
+              <m>\R^+</m> under <m>*</m>, defined by <m>a*b=\sqrt{ab}</m> for all <m>a,b\in \R^+</m>
             </p>
           </li>
         </ol>
@@ -162,7 +162,7 @@
     <ol>
     <li>
       <p>
-        <m>\fatq</m> isn't a group under multiplication since <m>0\in \fatq</m> has no inverse.
+        <m>\Q</m> isn't a group under multiplication since <m>0\in \Q</m> has no inverse.
       </p>
     </li>
 
@@ -173,18 +173,18 @@
 
 
     <li>
-     <p>Matrix multiplication is always associative, and the zero matrix in <m>\M_2(\fatr)</m> acts as an additive identity element.            Finally, let <m>A\in \M_2(\fatr)</m>.  Then <m>-A\in \M_2(\fatr)</m> is an inverse for <m>A</m> under addition. Thus, <m>\M_2(\fatr)</m> is a group under addition.</p>
+     <p>Matrix multiplication is always associative, and the zero matrix in <m>\M_2(\R)</m> acts as an additive identity element.            Finally, let <m>A\in \M_2(\R)</m>.  Then <m>-A\in \M_2(\R)</m> is an inverse for <m>A</m> under addition. Thus, <m>\M_2(\R)</m> is a group under addition.</p>
 
 </li>
     <li>
       <p>
-        <m>\M_2(\fatr)</m> isn't a group under multiplication since the zero matrix has no inverse.
+        <m>\M_2(\R)</m> isn't a group under multiplication since the zero matrix has no inverse.
       </p>
     </li>
 
     <li>
       <p>
-        <m>1*(4*9)=1*6=\sqrt{6}</m> while <m>(1*4)*9=2*9=\sqrt{18}</m>, so <m>*</m> isn't associative.  Thus, <m>\fatr^+</m> isn't a group under <m>*</m>.
+        <m>1*(4*9)=1*6=\sqrt{6}</m> while <m>(1*4)*9=2*9=\sqrt{18}</m>, so <m>*</m> isn't associative.  Thus, <m>\R^+</m> isn't a group under <m>*</m>.
       </p>
     </li>
     </ol>
@@ -233,18 +233,18 @@
   <exercise>
     <statement>
       <p>
-        Let <m>n\in \Z^+</m>. Prove that <m>SL(n,\fatr)</m> is a group under matrix multiplication.
-        <em>Note:</em> You may use the fact that <m>\langle SL(n\fatr),\cdot\rangle</m> is a binary structure if you provide a reference for this fact.
+        Let <m>n\in \Z^+</m>. Prove that <m>SL(n,\R)</m> is a group under matrix multiplication.
+        <em>Note:</em> You may use the fact that <m>\langle SL(n\R),\cdot\rangle</m> is a binary structure if you provide a reference for this fact.
       </p>
     </statement>
   </exercise>
   <solution>
     <p>
-      We know from <xref ref="glsl">Theorem</xref> that <m>\langle SL(n,\fatr),\cdot\rangle</m> is a binary structure,and we know that matrix multiplication is always associative. Next, since <m>\det I_n=1</m>, <m>I_n</m> is in <m>SL(n,\fatr)</m>, and clearly acts as an identity element in <m>SL(n,\fatr)</m>. Finally, let <m>A\in SL(n,\fatr)</m>.  Since <m>\det A=1\neq 0</m>, <m>A</m> has an inverse matrix <m>A^{-1}</m> in <m>GL(n, \fatr)</m>.  <m>A^{-1}</m> is in <m>SL(n,\fatr)</m> since
+      We know from <xref ref="glsl">Theorem</xref> that <m>\langle SL(n,\R),\cdot\rangle</m> is a binary structure,and we know that matrix multiplication is always associative. Next, since <m>\det I_n=1</m>, <m>I_n</m> is in <m>SL(n,\R)</m>, and clearly acts as an identity element in <m>SL(n,\R)</m>. Finally, let <m>A\in SL(n,\R)</m>.  Since <m>\det A=1\neq 0</m>, <m>A</m> has an inverse matrix <m>A^{-1}</m> in <m>GL(n, \R)</m>.  <m>A^{-1}</m> is in <m>SL(n,\R)</m> since
             <me>
               \det(A^{-1})=\frac{1}{\det A}=1/1=1.
             </me>
-            So <m>A</m> has an inverse in <m>SL(n,\fatr)</m>.
+            So <m>A</m> has an inverse in <m>SL(n,\R)</m>.
           </p>
     <p>
       Thus, our proof is complete.
@@ -277,7 +277,7 @@
 
             <li>
               <p>
-                <m>4+5</m> in <m>\fatq</m>;
+                <m>4+5</m> in <m>\Q</m>;
               </p>
             </li>
 

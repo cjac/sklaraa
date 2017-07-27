@@ -44,8 +44,8 @@
         <m>\phi</m> from one binary structure to another is a homomorphism, and,
         if so, if it is an isomorphism. Prove or disprove your answers! For
         Parts 6 and 7, <m>C^0</m> is the set of all continuous functions from
-        <m>\fatr</m> to <m>\fatr</m>; <m>C^1</m> is the set of all differentiable functions
-        from <m>\fatr</m> to <m>\fatr</m> whose derivatives are continuous; and each
+        <m>\R</m> to <m>\R</m>; <m>C^1</m> is the set of all differentiable functions
+        from <m>\R</m> to <m>\R</m> whose derivatives are continuous; and each
         <m>+</m> indicates pointwise addition on <m>C^0</m> and <m>C^1</m>. (Note that
         <m>C^1</m> and <m>C^0</m> are not groups, since elements of them will not have
         inverses unless they are bijections.)
@@ -70,13 +70,13 @@
 
           <li>
             <p>
-              <m>\phi:\langle \fatr,+\rangle \to \langle \fatr^+,\cdot\,\rangle</m> defined by <m>\phi(x)=e^x</m>;
+              <m>\phi:\langle \R,+\rangle \to \langle \R^+,\cdot\,\rangle</m> defined by <m>\phi(x)=e^x</m>;
             </p>
           </li>
 
           <li>
             <p>
-              <m>\phi:\langle \fatr,+\rangle \to \langle \fatr^*,\cdot\,\rangle</m> defined by <m>\phi(x)=e^x</m>;
+              <m>\phi:\langle \R,+\rangle \to \langle \R^*,\cdot\,\rangle</m> defined by <m>\phi(x)=e^x</m>;
             </p>
           </li>
 
@@ -90,7 +90,7 @@
           <li>
             <title>7.</title>
             <p>
-              <m>\phi:\langle C^0,+\rangle \to \langle \fatr,+\rangle</m> defined by <m>\phi(f)=\displaystyle{\int_0^1 f(x)\, dx}</m>.
+              <m>\phi:\langle C^0,+\rangle \to \langle \R,+\rangle</m> defined by <m>\phi(f)=\displaystyle{\int_0^1 f(x)\, dx}</m>.
             </p>
           </li>
         </ol>

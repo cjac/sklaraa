@@ -45,7 +45,7 @@
               elements of a group are numbers! The type of inverse that <m>a^{-1}</m>
               is (a multiplicative inverse for a real number? an additive inverse
               for a real number? a multiplicative inverse for a matrix? an inverse
-              function for a function from <m>\fatr</m> to <m>\fatr</m>?) depends on both
+              function for a function from <m>\R</m> to <m>\R</m>?) depends on both
               <m>G</m>'s elements and its operation.
             </p>
           </warning>
@@ -84,7 +84,7 @@
                 you are working with lives! For instance, if, as above, <m>n\in
                 \Z^+</m> and <m>a</m> is a group element, <m>-n</m> and <m>-a</m> look similar but
                 may mean very different things. While <m>-n</m> is a negative integer,
-                <m>-a</m> may be the additive inverse of a matrix in <m>\M_2(\fatr)</m>, the
+                <m>-a</m> may be the additive inverse of a matrix in <m>\M_2(\R)</m>, the
                 additive inverse 2 of the number 4 in <m>\Z_6</m>, or even something
                 completely unrelated to numbers.
               </p>
@@ -130,11 +130,11 @@ a \text{ operated with } b \amp ab \amp a+b\\
             We <em>do</em> use the notation
             <m>*</m> when using multiplicative or additive notation would lead to
             confusion. For instance, if we want to define an operation on
-            <m>\fatq^*</m> that assigns to pair <m>(a,b)</m> the quantity <m>ab/2</m>, it would
+            <m>\Q^*</m> that assigns to pair <m>(a,b)</m> the quantity <m>ab/2</m>, it would
             be unwise to use multiplicative or additive notation for this
             operation since we already have conventional meanings of <m>ab</m> and
             <m>a+b</m>. Similarly, we would not denote the identity element of
-            <m>\fatq^*</m> under this operation by <m>0</m> or <m>1</m>, since the identity
+            <m>\Q^*</m> under this operation by <m>0</m> or <m>1</m>, since the identity
             element in this group is the rational number <m>2</m>, and writing <m>0=2</m>
             or <m>1=2</m> would look weird.
           </p>
@@ -144,7 +144,7 @@ a \text{ operated with } b \amp ab \amp a+b\\
           <p>
             If there is a default notation for a particular
             operation (say, <m>\circ</m> for composition of functions) or identity
-            element (say, <m>I_n</m> in <m>GL(n,\fatr)</m>) we usually use that notation
+            element (say, <m>I_n</m> in <m>GL(n,\R)</m>) we usually use that notation
             instead.
           </p>
         </li>

@@ -8,25 +8,25 @@
         <ol>
           <li>
             <p>
-              <m>+</m> on <m>\fatc^*</m>
+              <m>+</m> on <m>\C^*</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>*</m> on <m>\fatr^+</m> defined by <m>x*y=\log_x y</m>
+              <m>*</m> on <m>\R^+</m> defined by <m>x*y=\log_x y</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>*</m> on <m>\M_2(\fatr)</m> defined by <m>A*B=AB^{-1}</m>
+              <m>*</m> on <m>\M_2(\R)</m> defined by <m>A*B=AB^{-1}</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>*</m> on <m>\fatq^*</m> defined by <m>z*w=z/w</m>
+              <m>*</m> on <m>\Q^*</m> defined by <m>z*w=z/w</m>
             </p>
           </li>
         </ol>
@@ -43,13 +43,13 @@
 
       <li>
         <p>
-          N; for instance, <m>10*1=\log_{10}0.1=-1\not\in\fatr^+</m>.
+          N; for instance, <m>10*1=\log_{10}0.1=-1\not\in\R^+</m>.
         </p>
       </li>
 
       <li>
         <p>
-          N; for instance, the zero matrix, <m>\0</m>, in <m>\M_2(\fatr)</m> is not invertible, so <m>A*\0</m> is undefined for every <m>A\in\M_2(\fatr)</m>.
+          N; for instance, the zero matrix, <m>\0</m>, in <m>\M_2(\R)</m> is not invertible, so <m>A*\0</m> is undefined for every <m>A\in\M_2(\R)</m>.
         </p>
       </li>
 
@@ -63,7 +63,7 @@
   <exercise>
     <statement>
       <p>
-        Define <m>*</m> on <m>\fatq</m> by <m>p*q=pq+1</m>. Prove or disprove that <m>*</m> is (a) commutative; (b) associative.
+        Define <m>*</m> on <m>\Q</m> by <m>p*q=pq+1</m>. Prove or disprove that <m>*</m> is (a) commutative; (b) associative.
       </p>
     </statement>
   </exercise>
@@ -71,13 +71,13 @@
         <ol>
       <li>
         <p>
-          Let <m>p,q\in \fatq</m>.  Then <m>p*q=pq+1=qp+1</m> (since multiplication is commutative on <m>\fatq</m>), which equals <m>q*p</m>.  So <m>*</m> is commutative.
+          Let <m>p,q\in \Q</m>.  Then <m>p*q=pq+1=qp+1</m> (since multiplication is commutative on <m>\Q</m>), which equals <m>q*p</m>.  So <m>*</m> is commutative.
         </p>
       </li>
 
       <li>
         <p>
-          <m>*</m> is not associative: for instance, <m>1,2,3\in \fatq</m> and <m>1*(2*3)=1*7=8</m>, while <m>(1*2)*3=3*3=10\neq 8</m>.
+          <m>*</m> is not associative: for instance, <m>1,2,3\in \Q</m> and <m>1*(2*3)=1*7=8</m>, while <m>(1*2)*3=3*3=10\neq 8</m>.
         </p>
       </li>
     </ol>
@@ -85,7 +85,7 @@
   <exercise>
     <statement>
       <p>
-        Prove that matrix multiplication is not commutative on <m>\M_2(\fatr)</m>.
+        Prove that matrix multiplication is not commutative on <m>\M_2(\R)</m>.
       </p>
     </statement>
   </exercise>
@@ -105,7 +105,7 @@
         \end{array} 
         \right]
       </me>
-      in <m>\M_2(\fatr)</m>. Then <m>AB=B</m> while <m>BA</m> is the zero matrix. Since <m>AB\neq BA</m>, matrix multiplication isn't commutative on <m>\M_2(\fatr)</m>.
+      in <m>\M_2(\R)</m>. Then <m>AB=B</m> while <m>BA</m> is the zero matrix. Since <m>AB\neq BA</m>, matrix multiplication isn't commutative on <m>\M_2(\R)</m>.
     </p>
   </solution>
   <exercise>
@@ -121,7 +121,7 @@
 
           <li>
             <p>
-              The set <m>S=\{1,2,3\}</m> is closed under multiplication in <m>\fatr</m>.
+              The set <m>S=\{1,2,3\}</m> is closed under multiplication in <m>\R</m>.
             </p>
           </li>
 
@@ -134,9 +134,9 @@
                 a \amp  b \\
                 0 \amp  c
                 \end{array} 
-                \right]\,:\, a,b,c\in \fatr \right\}
+                \right]\,:\, a,b,c\in \R \right\}
               </me>
-              is closed under multiplication in <m>\M_2(\fatr)</m>. (Recall that <m>U</m> is  the set of <em>upper-triangular matrices</em> in <m>\M_2(\fatr)</m>.)
+              is closed under multiplication in <m>\M_2(\R)</m>. (Recall that <m>U</m> is  the set of <em>upper-triangular matrices</em> in <m>\M_2(\R)</m>.)
             </p>
           </li>
         </ol>

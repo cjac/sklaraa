@@ -106,7 +106,7 @@
 
   <p>
     We are already familiar with some relations on
-    <m>\fatr</m>. Common such relations are <m>=</m>, <m>\neq</m>, <m>\lt</m>, <m>\leq</m>, <m>></m>,
+    <m>\R</m>. Common such relations are <m>=</m>, <m>\neq</m>, <m>\lt</m>, <m>\leq</m>, <m>></m>,
     and <m>\geq</m>; they contain exactly the elements we'd expect them to
     contain.
   </p>
@@ -116,8 +116,8 @@
       <ol>
         <li>
           <p>
-            <m>\lt</m> is a relation on <m>\fatr</m> that contains, for instance, <m>(3,4)</m> but not
-            <m>(3,3)</m> or <m>(4,3)</m>; <m>\leq</m> is a relation on <m>\fatr</m> that contains
+            <m>\lt</m> is a relation on <m>\R</m> that contains, for instance, <m>(3,4)</m> but not
+            <m>(3,3)</m> or <m>(4,3)</m>; <m>\leq</m> is a relation on <m>\R</m> that contains
             <m>(3,4)</m> <em>and</em> <m>(3,3)</m> but not <m>(4,3)</m>.
           </p>
         </li>
@@ -133,7 +133,7 @@
         <li>
           <p>
             We can define a relation <m>R</m> on <m>C^1</m> (the set of
-            all differentiable functions from <m>\fatr</m> to <m>\fatr</m>
+            all differentiable functions from <m>\R</m> to <m>\R</m>
             whose derivatives are continuous) by declaring that
             <m>(f,g)\in C^1 \times C^1</m> is in <m>R</m> if and only if
             <m>f'=g'</m>.
@@ -200,8 +200,8 @@
       <ol>
         <li>
           <p>
-            <m>\lt</m> is <em>not</em> an equivalence relation on <m>\fatr</m> because
-            it is not reflexive: for instance, <m>3\not\lt  3</m>. <m>\leq</m> is also <em>not</em> an equivalence relation on <m>\fatr</m>, since even though it is
+            <m>\lt</m> is <em>not</em> an equivalence relation on <m>\R</m> because
+            it is not reflexive: for instance, <m>3\not\lt  3</m>. <m>\leq</m> is also <em>not</em> an equivalence relation on <m>\R</m>, since even though it is
             reflexive, it's not symmetric: indeed, <m>3\leq 4</m> but <m>4\not\leq 3</m>.
           </p>
         </li>
@@ -339,7 +339,7 @@
             (defined above)
             is
             the set of all functions in <m>C^1</m> of the
-            form <m>g(x)=f(x)+c</m>, where <m>c\in \fatr</m>.
+            form <m>g(x)=f(x)+c</m>, where <m>c\in \R</m>.
           </p>
         </li>
 

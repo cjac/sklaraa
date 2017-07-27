@@ -32,16 +32,16 @@
       <ol>
         <li>
           <p>
-            Consider the subset <m>\Z</m> of the group <m>\fatq</m>, assuming that <m>\fatq</m> is equipped with the usual addition of real numbers (as we indicated above that we would assume, by default).  Since we already know that <m>\Z</m> is a group under this operation, <m>\Z</m> is not just a subset but in fact a subgroup of <m>\fatq</m> (under addition).
+            Consider the subset <m>\Z</m> of the group <m>\Q</m>, assuming that <m>\Q</m> is equipped with the usual addition of real numbers (as we indicated above that we would assume, by default).  Since we already know that <m>\Z</m> is a group under this operation, <m>\Z</m> is not just a subset but in fact a subgroup of <m>\Q</m> (under addition).
           </p>
         </li>
 
         <li>
           <p>
-            Instead, consider the subset <m>\fatq^+</m> of the group <m>\fatq</m>.  This
-            subset is <em>not</em> a group under <m>\fatq</m>'s operation <m>+</m>,
+            Instead, consider the subset <m>\Q^+</m> of the group <m>\Q</m>.  This
+            subset is <em>not</em> a group under <m>\Q</m>'s operation <m>+</m>,
             since it does not contain an identity element for <m>+</m>.  Therefore,
-            <m>\fatq^+</m> is a subset but not a subgroup of <m>\fatq</m>.
+            <m>\Q^+</m> is a subset but not a subgroup of <m>\Q</m>.
           </p>
         </li>
 
@@ -49,33 +49,33 @@
           <p>
             Let <m>I</m> be the subset
             <me>
-              I=\fatr-\fatq=\{x\in \fatr: x
+              I=\R-\Q=\{x\in \R: x
               \mbox{ is irrational} \}
             </me>
-            of the group <m>\fatr</m>. The set
-            <m>I</m> is <em>not</em> a group under <m>\fatr</m>'s
+            of the group <m>\R</m>. The set
+            <m>I</m> is <em>not</em> a group under <m>\R</m>'s
             operation <m>+</m> since it is not closed under addition:
             for instance, <m>\pi, -\pi \in I</m>, but
             <m>\pi+(-\pi)=0\not\in I</m>.  So <m>I</m> is a subset but not a
-            subgroup of <m>\fatr</m>.
+            subgroup of <m>\R</m>.
           </p>
         </li>
 
         <li>
           <p>
-            Consider the subset <m>\Z^+</m> of the group <m>\fatr^+</m>.
+            Consider the subset <m>\Z^+</m> of the group <m>\R^+</m>.
             The set <m>\Z^+</m> is closed under multiplication, multiplication is
             associative on <m>\Z^+</m>, and <m>\Z^+</m> does contain an identity element
             (namely, 1).  However, most elements of <m>\Z^+</m> do not have inverses
             in <m>\Z^+</m> under multiplication: for instance, the inverse of <m>3</m>
             would have to be <m>1/3</m>, but <m>1/3\not\in \Z^+</m>.  Therefore, <m>\Z^+</m> is
-            a subset but not a subgroup of <m>\fatr^+</m>.
+            a subset but not a subgroup of <m>\R^+</m>.
           </p>
         </li>
 
         <li>
           <p>
-            Consider the subset <m>GL(n,\fatr)</m> of <m>\M_n(\fatr)</m>.  We know that <m>GL(n,\fatr)</m> is a group, so it might be tempting to say that it is a subgroup of <m>\M_n(\fatr)</m>; to be a subgroup of <m>\M_n(\fatr)</m>, <m>GL(n,\fatr)</m> must be a group under <m>\M_n(\fatr)</m>'s operation, which is matrix addition.  While <m>GL(n,\fatr)</m> is a group under matrix multiplication, it is not a group under matrix addition: for instance, it is not closed under matrix addition, since <m>I_n, -I_n\in GL(n,\fatr)</m> but <m>I_n+(-I_n)</m> is the matrix consisting of all zeros, which is not in <m>GL(n,\fatr)</m>. So <m>GL(n,\fatr)</m> is a subset but not a subgroup of <m>\M_n(\fatr)</m>.
+            Consider the subset <m>GL(n,\R)</m> of <m>\M_n(\R)</m>.  We know that <m>GL(n,\R)</m> is a group, so it might be tempting to say that it is a subgroup of <m>\M_n(\R)</m>; to be a subgroup of <m>\M_n(\R)</m>, <m>GL(n,\R)</m> must be a group under <m>\M_n(\R)</m>'s operation, which is matrix addition.  While <m>GL(n,\R)</m> is a group under matrix multiplication, it is not a group under matrix addition: for instance, it is not closed under matrix addition, since <m>I_n, -I_n\in GL(n,\R)</m> but <m>I_n+(-I_n)</m> is the matrix consisting of all zeros, which is not in <m>GL(n,\R)</m>. So <m>GL(n,\R)</m> is a subset but not a subgroup of <m>\M_n(\R)</m>.
           </p>
         </li>
 

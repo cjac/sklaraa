@@ -40,7 +40,7 @@
           For <m>*</m> to be a binary operation on <m>S</m>, <m>a*b</m> must be
           <em>well defined</em> and <em>in</em> <m>\mathbf{S}</m> for each <m>a,b\in S</m>.
           For instance, we cannot define a binary operation on
-          <m>\fatr</m> by
+          <m>\R</m> by
           <me>
             a*b=\mbox{ the greatest number less than
             \(a+b\)}
@@ -53,7 +53,7 @@
 
       <li>
         <p>
-          Not every binary operation is denoted by <m>*</m>.  In fact, many already have common notations: for instance, <m>+</m> on <m>\Z</m> or <m>\circ</m> on the set of functions from <m>\fatr</m> to <m>\fatr</m>. We will assume these common notations represent the <q>usual</q> binary operations we know them to mean, unless otherwise noted.
+          Not every binary operation is denoted by <m>*</m>.  In fact, many already have common notations: for instance, <m>+</m> on <m>\Z</m> or <m>\circ</m> on the set of functions from <m>\R</m> to <m>\R</m>. We will assume these common notations represent the <q>usual</q> binary operations we know them to mean, unless otherwise noted.
         </p>
       </li>
 
@@ -61,7 +61,7 @@
         <p>
           Do not mix up the <m>*</m> that indicates a binary operation and the
           superscript <m>^*</m> that indicates that we are only considering the
-          nonzero elements of a given set (e.g., <m>\fatr^*</m>). You should be
+          nonzero elements of a given set (e.g., <m>\R^*</m>). You should be
           able to tell which type of <m>*</m> we are using from context and
           placement. Also, make sure you correctly place these symbols!
         </p>

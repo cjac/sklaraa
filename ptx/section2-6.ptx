@@ -280,24 +280,24 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
   <example>
     <statement>
       <p>
-        Let <m>F</m> be the set of all functions from <m>\fatr</m> to <m>\fatr</m>, and define <em>pointwise addition</em> <m>+</m> on <m>F</m> by
+        Let <m>F</m> be the set of all functions from <m>\R</m> to <m>\R</m>, and define <em>pointwise addition</em> <m>+</m> on <m>F</m> by
         <me>
           (f+g)(x)=f(x)+g(x)
         </me>
-        for all <m>f,g\in F</m> and <m>x\in \fatr</m>. We claim that <m>F</m> is a group under pointwise
+        for all <m>f,g\in F</m> and <m>x\in \R</m>. We claim that <m>F</m> is a group under pointwise
         addition. (For variety, in this proof we don't explicitly refer
         to <m>\G_1</m><ndash /><m>\G_3</m>, though we certainly do verify they hold.)
         Indeed, if <m>f,g\in F</m> then clearly <m>f+g</m> is also a function
-        from <m>\fatr</m> to <m>\fatr</m>, so <m>F</m> is closed under <m>+</m>.
+        from <m>\R</m> to <m>\R</m>, so <m>F</m> is closed under <m>+</m>.
       </p>
 
       <p>
-        Next, let <m>f,g,h\in F</m>. Then for all <m>x\in \fatr</m>,
+        Next, let <m>f,g,h\in F</m>. Then for all <m>x\in \R</m>,
         <md>
           <mrow>((f+g)+h)(x)\amp =(f+g)(x)+h(x)\amp \amp</mrow>
           <mrow>\amp =((f(x)+g(x))+h(x)\amp \amp</mrow>
           <mrow>\amp =f(x)+(g(x)+h(x))\amp \amp \text{ (since addition is associative on
-          \(\fatr\)) }</mrow>
+          \(\R\)) }</mrow>
           <mrow>\amp =f(x)+(g+h)(x)\amp \amp</mrow>
           <mrow>\amp =(f+(g+h))(x)\amp \amp .</mrow>
         </md>
@@ -306,14 +306,14 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <p>
         Note
         that the key fact used in this argument is that <m>f(x)</m>, <m>g(x)</m> and
-        <m>h(x)</m> all lie in <m>\fatr</m>, and addition is associative on <m>\fatr</m>.
+        <m>h(x)</m> all lie in <m>\R</m>, and addition is associative on <m>\R</m>.
         When you get used to such arguments, it is sufficient to say that
         associativity of <m>+</m> on <m>F</m> is <em>inherited</em> from the
-        associativity of addition on <m>\fatr</m>.
+        associativity of addition on <m>\R</m>.
       </p>
 
       <p>
-        Next, let <m>z:\fatr\to\fatr</m> be the function <m>z(x)=0</m> for all <m>x</m>. Then for all <m>f\in F</m> and <m>x\in \fatr</m>,
+        Next, let <m>z:\R\to\R</m> be the function <m>z(x)=0</m> for all <m>x</m>. Then for all <m>f\in F</m> and <m>x\in \R</m>,
         <me>
           (f+z)(x)=f(x)+z(x)=f(x)+0=f(x)=0+f(x)=z(x)+f(x)=(z+f)(x).
         </me>
@@ -324,7 +324,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       </p>
 
       <p>
-        Finally, let <m>f\in F</m>, and define <m>g\in F</m> by <m>g(x)=-f(x)</m> for all <m>x\in \fatr</m>. It is easy then to see that <m>g</m> is an inverse for <m>f</m> in <m>F</m>.
+        Finally, let <m>f\in F</m>, and define <m>g\in F</m> by <m>g(x)=-f(x)</m> for all <m>x\in \R</m>. It is easy then to see that <m>g</m> is an inverse for <m>f</m> in <m>F</m>.
       </p>
 
       <p>
@@ -336,7 +336,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
   <example>
     <statement>
       <p>
-        The set <m>F</m> is <em>not</em> a group under function composition (do you see why?). But if we define <m>B</m> to be the set of all <em>bijections</em> from <m>\fatr</m> to <m>\fatr</m>, then <m>B</m> is a group under function composition. (Prove it!) <m>B</m> is uncountably infinite and nonabelian.
+        The set <m>F</m> is <em>not</em> a group under function composition (do you see why?). But if we define <m>B</m> to be the set of all <em>bijections</em> from <m>\R</m> to <m>\R</m>, then <m>B</m> is a group under function composition. (Prove it!) <m>B</m> is uncountably infinite and nonabelian.
       </p>
     </statement>
   </example>
@@ -356,7 +356,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       </p>
 
       <p>
-        For instance, considering multiplication on <m>\fatr^*</m>, matrix multiplication on <m>GL(2,\fatr)</m>, and addition modulo <m>6</m> on <m>\Z_6</m>, we have that <m>\langle \fatr^*\times GL(2,\fatr) \times \Z_6,*\rangle</m> is a group in which, for instance,
+        For instance, considering multiplication on <m>\R^*</m>, matrix multiplication on <m>GL(2,\R)</m>, and addition modulo <m>6</m> on <m>\Z_6</m>, we have that <m>\langle \R^*\times GL(2,\R) \times \Z_6,*\rangle</m> is a group in which, for instance,
         <me>
           \left(-1, \left[
           \begin{array}{cr}

@@ -10,19 +10,19 @@
 \renewcommand{\arraystretch}{1.3}
 \def\znc{\mathbb{Z}_n^\times}
 \renewcommand{\arraystretch}{1.3}
-\def\fatr{\mathbb{R}}
+\def\R{\mathbb{R}}
 \renewcommand{\arraystretch}{1.3}
-\def\fatq{\mathbb{Q}}
+\def\Q{\mathbb{Q}}
 \renewcommand{\arraystretch}{1.3}
-\def\fatc{\mathbb{C}}
+\def\C{\mathbb{C}}
 \renewcommand{\arraystretch}{1.3}
-\def\fatn{\mathbb{N}}
+\def\N{\mathbb{N}}
 \renewcommand{\arraystretch}{1.3}
 \def\M{\mathbb{M}}
 \renewcommand{\arraystretch}{1.3}
 \def\S{\mathbb{S}}
 \renewcommand{\arraystretch}{1.3}
-\def\G{\mbox{\curly G}}
+\def\mathcal{G}{\mbox{\curly G}}
 \renewcommand{\arraystretch}{1.3}
 \def\R{\mbox{\curly R}}
 \renewcommand{\arraystretch}{1.3}

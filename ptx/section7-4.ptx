@@ -388,7 +388,7 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
 
         <li>
           <p>
-            <m>G=GL(2,\fatr)</m>, <m>H=\{\pm I_2\}</m>.
+            <m>G=GL(2,\R)</m>, <m>H=\{\pm I_2\}</m>.
           </p>
         </li>
       </ol>

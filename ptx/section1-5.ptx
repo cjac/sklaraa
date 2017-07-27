@@ -8,19 +8,19 @@
         <ol>
           <li>
             <p>
-              <m>\{z \in \fatc \,:\, |z|=1\}</m>
+              <m>\{z \in \C \,:\, |z|=1\}</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>\{\epsilon \in \fatr^+\,:\, \epsilon \mbox{ is sufficiently small} \}</m>
+              <m>\{\epsilon \in \R^+\,:\, \epsilon \mbox{ is sufficiently small} \}</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>\{q\in \fatq \,:\, q \mbox{ can be written  with denominator } 4\}</m>
+              <m>\{q\in \Q \,:\, q \mbox{ can be written  with denominator } 4\}</m>
             </p>
           </li>
 
@@ -68,11 +68,11 @@
       </p>
 
       <p>
-        <em>Example:</em> <m>\{z\in \fatc\,:\,z^4=1\}</m> <em>Solution:</em> <m>\{\pm 1, \pm i\}</m>
+        <em>Example:</em> <m>\{z\in \C\,:\,z^4=1\}</m> <em>Solution:</em> <m>\{\pm 1, \pm i\}</m>
         <ol>
           <li>
             <p>
-              <m>\{z\in \fatr\,:\, z^2=5\}</m>
+              <m>\{z\in \R\,:\, z^2=5\}</m>
             </p>
           </li>
 
@@ -129,7 +129,7 @@
   <exercise>
     <statement>
       <p>
-        Let <m>S</m> be a set with cardinality <m>n\in \fatn</m>. Use the cardinalities of <m>P(\{a,b\})</m> and <m>P(\{a,b,c\})</m> to make a conjecture about the cardinality of <m>P(S)</m>. You do not need to prove that your conjecture is correct (but you should try to ensure it is correct).
+        Let <m>S</m> be a set with cardinality <m>n\in \N</m>. Use the cardinalities of <m>P(\{a,b\})</m> and <m>P(\{a,b,c\})</m> to make a conjecture about the cardinality of <m>P(S)</m>. You do not need to prove that your conjecture is correct (but you should try to ensure it is correct).
       </p>
     </statement>
   </exercise>
@@ -142,7 +142,7 @@
   <exercise>
     <statement>
       <p>
-        Let <m>f: \Z^2 \to \fatr</m> be defined by <m>f(a,b)=ab</m>. (Note: technically, we should write <m>f((a,b))</m>, not <m>f(a,b)</m>, since <m>f</m> is being applied to an ordered pair, but this is one of those cases in which mathematicians abuse notation in the interest of concision.)
+        Let <m>f: \Z^2 \to \R</m> be defined by <m>f(a,b)=ab</m>. (Note: technically, we should write <m>f((a,b))</m>, not <m>f(a,b)</m>, since <m>f</m> is being applied to an ordered pair, but this is one of those cases in which mathematicians abuse notation in the interest of concision.)
       </p>
       <ol>
       <li>
@@ -195,7 +195,7 @@
     <ol>
     <li>
       <p>
-        <m>f</m>'s domain, codomain, and range are, respectively, <m>\Z^2</m>, <m>\fatr</m>, and <m>\Z</m>.
+        <m>f</m>'s domain, codomain, and range are, respectively, <m>\Z^2</m>, <m>\R</m>, and <m>\Z</m>.
       </p>
     </li>
 
@@ -203,7 +203,7 @@
       <ol>
         <li>
           <p>
-            <m>f</m> is not onto, since, for instance, <m>1/2\in \fatr-\Z</m>.
+            <m>f</m> is not onto, since, for instance, <m>1/2\in \R-\Z</m>.
           </p>
         </li>
 

@@ -94,7 +94,7 @@
         We first show that <m>D_3</m> is closed under composition. As
         noted above, <m>rf=fr^2</m>. So any map of the form <m>f^ir^jf^kr^l</m>
         (<m>i,k=0,1</m>, <m>j,l=0,1,2</m>) can be written in the form <m>f^sr^t</m>
-        for some <m>s,t \in \fatn</m>. Finally, let <m>R_2(s)</m> and <m>R_3(t)</m> be
+        for some <m>s,t \in \N</m>. Finally, let <m>R_2(s)</m> and <m>R_3(t)</m> be
         the remainders when you divide <m>s</m> by <m>2</m> and <m>t</m> by <m>3</m>; then
         <m>f^sr^t=f^{R_2(s)}r^{R_3(t)} \in D_3</m>. So <m>D_3</m> is closed under
         composition.
@@ -336,11 +336,11 @@
           \begin{array}{lllllll}
 
           \Z \amp \amp  \Z_6 \amp \amp  \Z_2\amp \amp  S_6\\
-          \Z_4 \amp \amp  \fatq \amp \amp  3\Z \amp \amp  \fatr\\
-          S_2\amp \amp  \fatr^* \amp \amp  S_3 \amp \amp  \fatq^*\\
-          \fatc^* \amp \amp  \langle \pi\rangle  \mbox{ in }  \fatr^* \amp \amp   D_6 \amp \amp \langle (134)(25)\rangle 
+          \Z_4 \amp \amp  \Q \amp \amp  3\Z \amp \amp  \R\\
+          S_2\amp \amp  \R^* \amp \amp  S_3 \amp \amp  \Q^*\\
+          \C^* \amp \amp  \langle \pi\rangle  \mbox{ in }  \R^* \amp \amp   D_6 \amp \amp \langle (134)(25)\rangle 
           \mbox{ in }  S_5\\
-          \fatr^+ \amp \amp  D_3 \amp \amp  \langle r\rangle  \mbox{ in }  D_4 \amp \amp 17\Z \
+          \R^+ \amp \amp  D_3 \amp \amp  \langle r\rangle  \mbox{ in }  D_4 \amp \amp 17\Z \
           \end{array}
         </me>
       </p>

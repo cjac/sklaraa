@@ -113,13 +113,13 @@
 
         <li>
           <p>
-            <m>G=GL(2,\fatr)</m>, <m>H=\{\pm I_2\}</m>
+            <m>G=GL(2,\R)</m>, <m>H=\{\pm I_2\}</m>
           </p>
         </li>
 
         <li>
           <p>
-            <m>G=\fatr^*, H=\{\pm 1\}</m>.
+            <m>G=\R^*, H=\{\pm 1\}</m>.
           </p>
         </li>
       </ol>
@@ -138,7 +138,7 @@
 
           <li>
             <p>
-              Prove that the set <m>H=\{A\in \M_n(\fatr)\,:\,\det A=\pm 1\}</m> is a subgroup of <m>GL(n,\fatr)</m>.
+              Prove that the set <m>H=\{A\in \M_n(\R)\,:\,\det A=\pm 1\}</m> is a subgroup of <m>GL(n,\R)</m>.
             </p>
           </li>
         </ol>
@@ -160,12 +160,12 @@
 
       <li>
         <p>
-          Clearly, <m>H</m> is a nonempty subset of <m>GL(n,\fatr)</m> (for instance, <m>I_n\in H</m>).  Next, let <m>A,B\in H</m>.
+          Clearly, <m>H</m> is a nonempty subset of <m>GL(n,\R)</m> (for instance, <m>I_n\in H</m>).  Next, let <m>A,B\in H</m>.
           Then
           <me>
             \det(AB^{-1})=(\det A)(\det (B^{-1}))=(\pm 1)\left(\frac{1}{\pm 1}\right)=\pm 1,
           </me>
-          so <m>AB^{-1}\in H</m>.  Thus, <m>H\leq GL(n,\fatr)</m> by the Two-Step Subgroup Test.
+          so <m>AB^{-1}\in H</m>.  Thus, <m>H\leq GL(n,\R)</m> by the Two-Step Subgroup Test.
         </p>
       </li>
     </ol>
@@ -177,7 +177,7 @@
         <ol>
           <li>
             <p>
-              <m>G=\Z</m>, <m>H=\fatr</m>
+              <m>G=\Z</m>, <m>H=\R</m>
             </p>
           </li>
 
@@ -195,25 +195,25 @@
 
           <li>
             <p>
-              <m>G=\fatc</m>, <m>H=\fatr^*</m>
+              <m>G=\C</m>, <m>H=\R^*</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>G=\fatc^*</m>, <m>H=\{1,i,-1,-i\}</m>
+              <m>G=\C^*</m>, <m>H=\{1,i,-1,-i\}</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>G=\M_n(\fatr)</m>, <m>H=GL(n,\fatr)</m>
+              <m>G=\M_n(\R)</m>, <m>H=GL(n,\R)</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>G=GL(n,\fatr)</m>, <m>H=\{A\in \M_n(\fatr)\,:\,\det A = -1\}</m>
+              <m>G=GL(n,\R)</m>, <m>H=\{A\in \M_n(\R)\,:\,\det A = -1\}</m>
             </p>
           </li>
         </ol>

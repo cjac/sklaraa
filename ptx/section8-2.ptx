@@ -239,17 +239,17 @@
     <statement>
       <p>
         Let <m>n\in \Z^+</m>. Here is a rather elegant proof of the fact that
-        <m>SL(n,\fatr)</m> is a normal subgroup of <m>GL(n,\fatr)</m>: Define <m>\phi:
-        GL(n,\fatr) \to \fatr^*</m> by <m>\phi(A)=\det A</m>. Clearly, <m>\phi</m> is a
-        homomorphism, and since the identity element of <m>\fatr^*</m> is 1,
+        <m>SL(n,\R)</m> is a normal subgroup of <m>GL(n,\R)</m>: Define <m>\phi:
+        GL(n,\R) \to \R^*</m> by <m>\phi(A)=\det A</m>. Clearly, <m>\phi</m> is a
+        homomorphism, and since the identity element of <m>\R^*</m> is 1,
         <me>
-          \Ker \phi=\{A\in GL(n,\fatr)\,:\,\det A= 1\}=SL(n,\fatr).
+          \Ker \phi=\{A\in GL(n,\R)\,:\,\det A= 1\}=SL(n,\R).
         </me>
       </p>
 
       <p>
         So
-        <m>SL(n,\fatr)\unlhd GL(n,\fatr)</m>.
+        <m>SL(n,\R)\unlhd GL(n,\R)</m>.
       </p>
     </statement>
   </example>

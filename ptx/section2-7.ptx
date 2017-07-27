@@ -23,7 +23,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\Z</m>, <m>\fatq</m></cell>
+      <cell><m>\Z</m>, <m>\Q</m></cell>
       <cell>addition of numbers</cell>
       <cell>countably
       infinite; abelian</cell>
@@ -44,7 +44,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\fatr</m>, <m>\fatc</m></cell>
+      <cell><m>\R</m>, <m>\C</m></cell>
       <cell>addition of numbers</cell>
       <cell>uncountable; abelian</cell>
     </row>
@@ -54,7 +54,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\fatq^*</m>, <m>\fatq^+</m></cell>
+      <cell><m>\Q^*</m>, <m>\Q^+</m></cell>
       <cell>multiplication of  numbers</cell>
       <cell>countably infinite; abelian</cell>
     </row>
@@ -64,7 +64,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\fatr^*</m>, <m>\fatr^+</m>, <m>\fatc^*</m></cell>
+      <cell><m>\R^*</m>, <m>\R^+</m>, <m>\C^*</m></cell>
       <cell>multiplication of  numbers</cell>
       <cell>uncountable; abelian</cell>
     </row>
@@ -74,7 +74,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\M_{m\times n}(\fatr), \M_n(\fatr)</m></cell>
+      <cell><m>\M_{m\times n}(\R), \M_n(\R)</m></cell>
       <cell>matrix addition</cell>
       <cell>uncountable; abelian</cell>
     </row>
@@ -84,7 +84,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>GL(n,\fatr), SL(n,\fatr)</m></cell>
+      <cell><m>GL(n,\R), SL(n,\R)</m></cell>
       <cell>matrix multiplication</cell>
       <cell>uncountable; nonabelian (unless <m>n=1</m>)</cell>
     </row>

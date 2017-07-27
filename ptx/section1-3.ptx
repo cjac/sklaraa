@@ -4,7 +4,7 @@
   <p>
     You have probably encountered functions before. In introductory
     calculus, for instance, you typically deal with functions from
-    <m>\fatr</m> to <m>\fatr</m> (e.g., the function <m>f(x)=x^2</m>). More generally,
+    <m>\R</m> to <m>\R</m> (e.g., the function <m>f(x)=x^2</m>). More generally,
     functions <q>send</q> elements of one set to elements of another set;
     these sets may or may not be sets of real numbers. We provide below
     a <q>good enough for government work</q> definition of a function.
@@ -42,11 +42,11 @@
   <example>
     <statement>
       <p>
-        Consider the function <m>f: \Z \to \fatr</m> defined by <m>f(x)=x^2</m>.
-        The domain of <m>f</m> is <m>\Z</m> and the codomain of <m>f</m> is <m>\fatr</m>; the
+        Consider the function <m>f: \Z \to \R</m> defined by <m>f(x)=x^2</m>.
+        The domain of <m>f</m> is <m>\Z</m> and the codomain of <m>f</m> is <m>\R</m>; the
         range of <m>f</m> is <m>\{x^2\,:\,x\in \Z\}=\{0,1,4,9,\ldots\}</m>. The image
         of <m>\{-2,-1,1,2\}</m> under <m>f</m> is the two-element set <m>\{1,4\} \cont
-        \fatr</m>, and the preimage of <m>\{4,25,\pi\}</m> under <m>f</m> is the set
+        \R</m>, and the preimage of <m>\{4,25,\pi\}</m> under <m>f</m> is the set
         <m>\{\pm 2, \pm 5\}</m>. (Do you see why <m>\pm \sqrt{\pi}</m> are not in this
         preimage?) What is the preimage of just <m>\{\pi\}</m> under <m>f</m>?
       </p>
@@ -117,10 +117,10 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
   <example>
     <statement>
       <p>
-        Consider the function <m>f: \fatr^* \to \fatr^+</m> defined by <m>f(x)=x^2</m>. Function <m>f</m> is <em>not</em> one-to-one: indeed,
-        <m>-1</m> and <m>1</m> are in <m>\fatr^*</m> with <m>f(-1)=1=f(1)</m> in <m>\fatr^+</m>.
-        However, <m>f</m> <em>is</em> onto: indeed, let <m>t\in \fatr^+</m>. Then
-        <m>\sqrt{t} \in \fatr^*</m> with <m>t=f(\sqrt{t})</m>, so we're done.
+        Consider the function <m>f: \R^* \to \R^+</m> defined by <m>f(x)=x^2</m>. Function <m>f</m> is <em>not</em> one-to-one: indeed,
+        <m>-1</m> and <m>1</m> are in <m>\R^*</m> with <m>f(-1)=1=f(1)</m> in <m>\R^+</m>.
+        However, <m>f</m> <em>is</em> onto: indeed, let <m>t\in \R^+</m>. Then
+        <m>\sqrt{t} \in \R^*</m> with <m>t=f(\sqrt{t})</m>, so we're done.
       </p>
     </statement>
   </example>
@@ -128,8 +128,8 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
   <example>
     <statement>
       <p>
-        Consider the function <m>f: \Z^+ \to \fatr</m> defined by <m>f(x)=x/2</m>. Function <m>f</m> <em>is</em> one-to-one: indeed, let <m>s_1, s_2 \in \Z^+</m> with <m>f(s_1)=f(s_2)</m>.
-        Then <m>s_1/2=f(s_1)=f(s_2)=s_2/2</m>; multiplying both sides of the equation <m>s_1/2=s_2/2</m> by 2, we obtain <m>s_1=s_2</m>. However, <m>f</m> is <em>not</em> onto: for example, <m>\pi\in \fatr</m>
+        Consider the function <m>f: \Z^+ \to \R</m> defined by <m>f(x)=x/2</m>. Function <m>f</m> <em>is</em> one-to-one: indeed, let <m>s_1, s_2 \in \Z^+</m> with <m>f(s_1)=f(s_2)</m>.
+        Then <m>s_1/2=f(s_1)=f(s_2)=s_2/2</m>; multiplying both sides of the equation <m>s_1/2=s_2/2</m> by 2, we obtain <m>s_1=s_2</m>. However, <m>f</m> is <em>not</em> onto: for example, <m>\pi\in \R</m>
         but there is no positive integer <m>s</m> for which <m>f(s)=s/2=\pi</m>.
       </p>
     </statement>
