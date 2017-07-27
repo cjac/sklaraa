@@ -1,9 +1,10 @@
 
 <section>
   <title>Exercises</title>
-  <p>
-    \fbox{Throughout these exercises, write all of your permutations using disjoint cycle notation.}
-  </p>
+
+<p>
+Throughout, write all permutations using <em>disjoint cycle notation</em>, and write all dihedral group elements using <em>standard form</em>.</p>
+
   <exercise>
     <statement>
       <p>
@@ -61,7 +62,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <ol>
       <li>
         <p>
@@ -120,8 +120,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
-    <p>
+        <p>
       Let <m>\sigma=(a_1a_2\cdots a_k)\in S_n</m>. Then <m>\sigma=(a_1a_k)(a_1a_{k-1})\cdots (a_1a_3)(a_1a_2)</m>, so is a product of <m>k-1</m> transpositions. Thus, <m>\sigma</m> is even if <m>k-1</m> is even, that is, if <m>k</m> is odd, and odd if <m>k-1</m> is odd, that is, if <m>k</m> is even.
     </p>
   </solution>
@@ -133,7 +132,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <p>
       Since <m>e\in A_n</m>, <m>A_n\neq \emptyset</m>. Next, let <m>\sigma, \tau \in A_n</m>. Then <m>\sigma</m> can be written as a product of <m>k</m> transpositions and <m>\tau</m> can be written as <m>\tau=\tau_1\tau_2\cdots \tau_m</m>, where <m>k</m> and <m>m</m> are even and the <m>\tau_i</m> are transpositions. Since each <m>\tau_i</m> is a transposition, each <m>\tau_i</m> is its own inverse; so
       <me>
@@ -153,8 +151,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
-    <p>
+        <p>
       This set is <em>not</em> a subgroup of <m>S_n</m> because, for instance, it doesn't contain <m>e</m>.
     </p>
   </solution>
@@ -179,7 +176,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <ol>
       <li>
         <p>
@@ -202,7 +198,6 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <p>
       In <m>D_5</m>, <m>frfr=(fr)^2=e</m> and <m>rf=fr^{-1}</m>, so
       <me>
@@ -218,15 +213,13 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
-    <p>
+        <p>
       <m>|D_6|=2(6)=12</m> while <m>|S_6|=720</m>, so <m>D_6\not\simeq S_6</m>.
     </p>
   </solution>
   <exercise>
     <statement>
-      <p>
-        Which elements of <m>D_4</m> (if any)
+      <p> Which elements of <m>D_4</m> (if any)
         <ol>
           <li>
             <p>
@@ -241,15 +234,9 @@
           </li>
         </ol>
       </p>
-
-      <p>
-        \fbox{Write all your elements
-        in standard form.}
-      </p>
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
     <p>
       We know <m>o(fr^i)=2</m> for every <m>i</m>, and <m>o(e)=1</m>. Moreover, since <m>4</m> is even, <m>r^{4/2}=r^2</m> has order 2. Finally, <m>o(r)=o(r^{-1})=4</m>. So (a) the elements of order 2 in <m>D_4</m> are <m>f</m>, <m>fr</m>, <m>fr^2</m>, <m>fr^3</m>, and <m>r^2</m>, and (b) <m>D_4</m> contains no elements of order 3.
     </p>
@@ -262,7 +249,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Clearly, <m>r^{n/2}</m> commutes with every <m>r^k</m> for <m>0\leq k\leq n</m>. Moreover, by the first statement of <xref ref="diords">Theorem</xref>,
       <me>

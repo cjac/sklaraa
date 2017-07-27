@@ -367,19 +367,17 @@
     </statement>
   </example>
 
-  <p>
-    \fbox{
-  </p>
-
-  <sidebyside>
-    Notice that the complete set
+<remark>
+<p>Notice that the  
+complete set
     <m>\{E,O\}</m> of distinct equivalence classes of <m>\Z</m> under
     <m>\equiv_n</m> is a partition of <m>\Z</m>, and the complete set
     <m>\{[\emptyset],[\{a\}],[\{a,b\}],[A]\}</m> of distinct equivalence
     classes of <m>P(A)</m> under <m>\sim</m> is a partition of <m>P(A)</m>. This
     is not a coincidence! It turns out that equivalence relations
-    and partitions go hand in hand.
-  </sidebyside>
+    and partitions go hand in hand.</p>
+</remark>
+
   <theorem xml:id="part_quiv">
     <statement>
       <p>

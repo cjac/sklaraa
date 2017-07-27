@@ -13,7 +13,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       There are 15 distinct partitions of the set <m>\{a,b,c,d\}</m>:
       <me>
@@ -56,7 +56,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
       <li>
         <p>
@@ -102,7 +102,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       First, let <m>a\in G</m>. Then <m>aa^{-1}=e\in H</m>,
       so <m>a\simr a</m>. Thus, <m>\simr</m> is reflexive.
@@ -133,14 +133,10 @@
         For each subgroup <m>H</m> of group <m>G</m>, (i) find the left and the right cosets of <m>H</m> in <m>G</m>, (ii) decide whether or not <m>H</m> is normal in <m>G</m>, and (iii) find <m>(G:H)</m>.
       </p>
 
-      <p>
-        \fbox{
-      </p>
-
-      <sidebyside>
-        Write all permutations using disjoint cycle notation, and write all dihedral group elements in standard form.
-      </sidebyside>
-      <ol>
+<p>
+Write all permutations using <em>disjoint cycle notation</em>, and write all dihedral group elements using <em>standard form</em>.</p>
+      
+            <ol>
         <li>
           <p>
             <m>H=6\Z</m> in <m>G=2\Z</m>
@@ -174,7 +170,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
     <li>
       <ol>
@@ -344,7 +340,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       (Other answers are possible.)
       <ol>
@@ -456,7 +452,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol type="a">
       <li>
         <p>
@@ -540,7 +536,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
       <li>
         <p>
@@ -577,7 +573,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       By Lagrange's Theorem, <m>|H|</m> divides <m>pq</m>, and since <m>H</m> is proper, <m>|H|\neq  pq</m>.
       Thus, <m>|H|=1,p</m>, or <m>q</m>. Since the order of <m>H</m> is
@@ -592,7 +588,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Since <m>|G|</m> is prime, <m>|G|>1</m>, so there exists <m>a\in G</m>
       with <m>a\neq e</m>. Then <m>\langle a\rangle</m> is a subgroup of <m>G</m>, so by
