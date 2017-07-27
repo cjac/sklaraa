@@ -25,16 +25,16 @@
   <exercise>
     <statement>
       <p>
-        Let <m>H=\{A\in GL(n,\fatr)\,:\,\det A=\pm 1\}</m>. Prove that <m>H\unlhd GL(n,\fatr)</m>.
+        Let <m>H=\{A\in GL(n,\R)\,:\,\det A=\pm 1\}</m>. Prove that <m>H\unlhd GL(n,\R)</m>.
       </p>
     </statement>
   </exercise>
   <solution>
     <title>print=false</title>
     <p>
-      Consider the function <m>\phi \,:\,GL(n, \fatr)\to \fatr^*</m> defined by
+      Consider the function <m>\phi \,:\,GL(n, \R)\to \R^*</m> defined by
       <m>\phi(A)=|\det A|</m>. The map <m>\phi</m> is a
-      homomorphism, since if <m>A,B\in GL(n,\fatr)</m>, then
+      homomorphism, since if <m>A,B\in GL(n,\R)</m>, then
       <me>
         \phi(AB)=|\det(AB)|=|\det A||\det B|=\phi(A)\phi(B).
       </me>
@@ -43,18 +43,18 @@
     <p>
       Further,
       <md>
-        <mrow>\Ker \phi\amp =\{A\in GL(n,\fatr)\,:\,
+        <mrow>\Ker \phi\amp =\{A\in GL(n,\R)\,:\,
         \phi(A)=1\}</mrow>
-        <mrow>\amp =\{A\in GL(n,\fatr)\,:\, |\det A|=1\}</mrow>
+        <mrow>\amp =\{A\in GL(n,\R)\,:\, |\det A|=1\}</mrow>
         <mrow>\amp =\{A\in
-        GL(n,\fatr)\,:\, \det A=\pm 1\}</mrow>
+        GL(n,\R)\,:\, \det A=\pm 1\}</mrow>
         <mrow>\amp =H.</mrow>
       </md>
     </p>
 
     <p>
       Since <m>H</m> is
-      the kernel of a homomorphism from <m>GL(n,\fatr)</m> to another group, it must be a
+      the kernel of a homomorphism from <m>GL(n,\R)</m> to another group, it must be a
       normal subgroup of <m>G</m>.
     </p>
   </solution>
@@ -152,7 +152,7 @@
   <exercise>
     <statement>
       <p>
-        Let <m>G=4\Z \times \M_2(\fatr)</m>, <m>H=\langle 2\rangle \times \langle I_2\rangle  \leq G</m>, and <m>K=\langle (23)\rangle \leq S_3</m>.
+        Let <m>G=4\Z \times \M_2(\R)</m>, <m>H=\langle 2\rangle \times \langle I_2\rangle  \leq G</m>, and <m>K=\langle (23)\rangle \leq S_3</m>.
         Explain how you know that the set <m>G/H</m> is a group under left coset multiplication, while the set <m>S_3/K</m> is not.
       </p>
     </statement>

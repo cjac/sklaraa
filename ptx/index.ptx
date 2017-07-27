@@ -3,50 +3,29 @@
 <docinfo>
 <macros>
 \renewcommand{\bibname}{References and Supplemental Resources}
-\renewcommand{\arraystretch}{1.3}
 \def\Z{\mathbb{Z}}
-\renewcommand{\arraystretch}{1.3}
 \def\zn{\mathbb{Z}_n}
-\renewcommand{\arraystretch}{1.3}
 \def\znc{\mathbb{Z}_n^\times}
-\renewcommand{\arraystretch}{1.3}
-\def\fatr{\mathbb{R}}
-\renewcommand{\arraystretch}{1.3}
-\def\fatq{\mathbb{Q}}
-\renewcommand{\arraystretch}{1.3}
-\def\fatc{\mathbb{C}}
-\renewcommand{\arraystretch}{1.3}
-\def\fatn{\mathbb{N}}
-\renewcommand{\arraystretch}{1.3}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\N{\mathbb{N}}
 \def\M{\mathbb{M}}
-\renewcommand{\arraystretch}{1.3}
 \def\S{\mathbb{S}}
-\renewcommand{\arraystretch}{1.3}
-\def\G{\mbox{\curly G}}
-\renewcommand{\arraystretch}{1.3}
 \def\R{\mbox{\curly R}}
-\renewcommand{\arraystretch}{1.3}
 \def\D{\mbox{\curly D}}
-\renewcommand{\arraystretch}{1.3}
 \def\0{\mathbf 0}
-\renewcommand{\arraystretch}{1.3}
 \def\Gdot{\langle G, \cdot\,\rangle}
-\renewcommand{\arraystretch}{2}
 \def\phibar{\overline{\phi}}
-\renewcommand{\arraystretch}{1.3}
 \DeclareMathOperator{\lcm}{lcm}
-\renewcommand{\arraystretch}{1.3}
 \DeclareMathOperator{\Ker}{Ker}
-\renewcommand{\arraystretch}{1.3}
 \def\siml{\sim_L}
-\renewcommand{\headrulewidth}{0pt}
 \def\simr{\sim_R}
 \def\cont{\subseteq}
 \def\epsilon{\varepsilon}
 \def\lra{\Leftrightarrow}
 \def\tf{True/False. For each of the following, write T if the statement is
 true; otherwise, write F. You do NOT need to provide explanations or show work for this problem.}
-\newcommand{\red}[1]{\textcolor[rgb]{1.00,0.00,0.00}{#1}}
 \renewcommand{\d}{\displaystyle}
 </macros>
 

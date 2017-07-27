@@ -214,13 +214,13 @@
     <statement>
       <p>
         Letting <m>n\in \Z^+</m>, let's identify a familiar group to which
-        <m>GL(n,\fatr)/SL(n,\fatr)</m> is isomorphic. As in <xref ref="slnormgl">Example</xref>, the map <m>\phi:GL(n,\fatr)\to \fatr^*</m> defined by
-        <m>\phi(A)</m> is a homomorphism with kernel <m>SL(n,\fatr)</m>. Moreover,
-        <m>Phi</m> clearly maps onto <m>\fatr^*</m>: indeed, given <m>\lambda \in
-        \fatr^*</m>, the diagonal matrix having <m>\lambda</m> in the uppermost left
+        <m>GL(n,\R)/SL(n,\R)</m> is isomorphic. As in <xref ref="slnormgl">Example</xref>, the map <m>\phi:GL(n,\R)\to \R^*</m> defined by
+        <m>\phi(A)</m> is a homomorphism with kernel <m>SL(n,\R)</m>. Moreover,
+        <m>Phi</m> clearly maps onto <m>\R^*</m>: indeed, given <m>\lambda \in
+        \R^*</m>, the diagonal matrix having <m>\lambda</m> in the uppermost left
         position and 1's elsewhere down the diagonal gets sent to <m>\lambda</m>
         by <m>\phi</m>. So by the First Isomorphism Theorem, we have
-        <m>GL(n,\fatr)/SL(n,\fatr) \simeq \fatr^*</m>.
+        <m>GL(n,\R)/SL(n,\R) \simeq \R^*</m>.
       </p>
     </statement>
   </example>
@@ -257,36 +257,36 @@
 
   <p>
     We provide one more cool example of using the First Isomorphism
-    Theorem. Clearly, since <m>\fatr</m> is abelian, <m>\Z</m> is a normal
-    subgroup of <m>\fatr</m>. What is the structure of <m>\fatr/\Z</m>? Well, in
-    modding <m>\fatr</m> out by <m>\Z</m> we have essentially identified together
+    Theorem. Clearly, since <m>\R</m> is abelian, <m>\Z</m> is a normal
+    subgroup of <m>\R</m>. What is the structure of <m>\R/\Z</m>? Well, in
+    modding <m>\R</m> out by <m>\Z</m> we have essentially identified together
     all real numbers that are an integer distance apart. So we can
-    think of the canonical epimorphism from <m>\fatr</m> to <m>\fatr/\Z</m> as
-    wrapping up <m>\fatr</m> like a garden hose! Thus, one might guess that
-    <m>\fatr/\Z</m> has some circle-like structure<mdash />but if we want to think
+    think of the canonical epimorphism from <m>\R</m> to <m>\R/\Z</m> as
+    wrapping up <m>\R</m> like a garden hose! Thus, one might guess that
+    <m>\R/\Z</m> has some circle-like structure<mdash />but if we want to think
     of it as a group, we have to figure out what the group structure on
     such a <q>circle</q> would be!
   </p>
 
   <p>
-    We leave, for a moment, our group <m>\fatr/\Z</m>, and look at how we can
+    We leave, for a moment, our group <m>\R/\Z</m>, and look at how we can
     consider a circle to be a group.
   </p>
 <!--..GO-->
   <notation>
 
   <p>
-    Recall that for every <m>\theta \in \fatr</m>,
+    Recall that for every <m>\theta \in \R</m>,
     <m>e^{i\theta}</m> is defined to be <m>\cos \theta + i\sin \theta</m>. It
     is clear then that the set <m>\{e^{i\theta} \,:\, \theta\in
-    \fatr\}</m> is the unit circle in the complex plane; we denote
+    \R\}</m> is the unit circle in the complex plane; we denote
     this set by <m>S^1</m>.</p>
 
   </notation>
 
   <remark>
     <p>
-      Note that if <m>\theta_1, \theta_2\in \fatr</m>, then
+      Note that if <m>\theta_1, \theta_2\in \R</m>, then
       <m>e^{i\theta_1}=e^{i\theta_2}</m> if and only if <m>\theta_1-\theta_2
       \in 2\pi \Z</m>.
     </p>
@@ -305,7 +305,7 @@
     <p>
       The tricky part is showing that the operation is well
       defined. Suppose <m>\theta_1, \theta_2, t_1</m>, and <m>t_2</m> are in
-      <m>\fatr</m>, with <m>e^{i\theta_1}=e^{it_1}</m> and
+      <m>\R</m>, with <m>e^{i\theta_1}=e^{it_1}</m> and
       <m>e^{i\theta_2}=e^{it_2}</m>. We want to show that
       <me>
         e^{i\theta_1}e^{i\theta_2}=e^{it_1}e^{it_2},
@@ -335,11 +335,11 @@
     <p>
       Next, <m>S^1</m> is clearly closed under the operation, and
       associativity follows from associativity of addition in
-      <m>\fatr</m>. Moreover, <m>e^{i0}=1</m> clearly acts as an identity
+      <m>\R</m>. Moreover, <m>e^{i0}=1</m> clearly acts as an identity
       element in <m>S^1</m>, and if <m>e^{i\theta}\in S^1</m>, then
       <m>e^{i\theta}</m> has inverse <m>e^{i(-\theta)} \in S^1</m>. So <m>S^1</m>
       is a group under the described operation.
-      Beautifully, it turns out that our group <m>\fatr/\Z</m> is
+      Beautifully, it turns out that our group <m>\R/\Z</m> is
       isomorphic to <m>S^1</m>.
     </p>
   </proof>
@@ -347,21 +347,21 @@
   <theorem>
     <statement>
       <p>
-        <m>\fatr/\Z \simeq S^1</m>.
+        <m>\R/\Z \simeq S^1</m>.
       </p>
     </statement>
   </theorem>
 
   <proof>
     <p>
-      We will define an epimorphism <m>\phi</m> from <m>\fatr</m> to <m>S^1</m>
-      with <m>\Ker \phi=\Z</m>; then we'll have <m>\fatr/\Z \simeq S^1</m>,
+      We will define an epimorphism <m>\phi</m> from <m>\R</m> to <m>S^1</m>
+      with <m>\Ker \phi=\Z</m>; then we'll have <m>\R/\Z \simeq S^1</m>,
       by the First Isomorphism Theorem.
     </p>
 
     <p>
-      Define <m>\phi:\fatr \to S^1</m> by <m>\phi(r)=e^{i2\pi r}</m>. We have
-      that <m>\phi</m> is a homomorphism, since for every <m>r,s\in \fatr</m>,
+      Define <m>\phi:\R \to S^1</m> by <m>\phi(r)=e^{i2\pi r}</m>. We have
+      that <m>\phi</m> is a homomorphism, since for every <m>r,s\in \R</m>,
       we have
       <me>
         \phi(r+s)=e^{i2\pi (r+s)}=e^{i2\pi r+i2\pi s}=e^{i2\pi
@@ -389,7 +389,7 @@
     </p>
 
     <p>
-      Thus, <m>\Ker \phi = \Z</m>, and hence <m>\fatr/\Z\simeq S^1</m>, as
+      Thus, <m>\Ker \phi = \Z</m>, and hence <m>\R/\Z\simeq S^1</m>, as
       desired.
     </p>
   </proof>

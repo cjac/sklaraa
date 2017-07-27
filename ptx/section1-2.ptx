@@ -79,7 +79,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\fatq</m></cell>
+      <cell><m>\Q</m></cell>
       <cell>the set of all rational numbers</cell>
     </row>
     <row bottom="minor">
@@ -87,7 +87,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\fatr</m></cell>
+      <cell><m>\R</m></cell>
       <cell>the set of all real numbers</cell>
     </row>
     <row bottom="minor">
@@ -95,7 +95,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\fatc</m></cell>
+      <cell><m>\C</m></cell>
       <cell>the set of all complex numbers</cell>
     </row>
     <row bottom="minor">
@@ -103,7 +103,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\fatn</m></cell>
+      <cell><m>\N</m></cell>
       <cell>the set of all natural numbers (that is, the set <m>\{0, 1, 2, \ldots\}</m>)<fn>Be aware that many books/mathematicians do not include 0 in the set of natural numbers.</fn></cell>
     </row>
     <row bottom="minor">
@@ -111,7 +111,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\Z^+</m>/<m>\fatq^+</m>/<m>\fatr^+</m></cell>
+      <cell><m>\Z^+</m>/<m>\Q^+</m>/<m>\R^+</m></cell>
       <cell>the set of all positive integers/rational numbers/real numbers</cell>
     </row>
     <row bottom="minor">
@@ -119,7 +119,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\Z^-</m>/<m>\fatq^-</m>/<m>\fatr^-</m></cell>
+      <cell><m>\Z^-</m>/<m>\Q^-</m>/<m>\R^-</m></cell>
       <cell>the set of all negative integers/rational numbers/real numbers</cell>
     </row>
     <row bottom="minor">
@@ -127,7 +127,7 @@
       <cell></cell>
     </row>
     <row>
-      <cell><m>\Z^-</m>/<m>\fatq^-</m>/<m>\fatr^-</m>/<m>\fatc^*</m></cell>
+      <cell><m>\Z^-</m>/<m>\Q^-</m>/<m>\R^-</m>/<m>\C^*</m></cell>
       <cell>the set of all nonzero integers/rational numbers/real numbers</cell>
      </row>
     <row bottom="minor">
@@ -165,7 +165,7 @@
     </me>
     is the set <m>\{5, 6, 7, \ldots\}</m>, while
     <me>
-      \{z\in \fatc : |z|=1\}
+      \{z\in \C : |z|=1\}
     </me>
     is the set of all complex numbers at
     distance 1 from the origin in the complex plane.
@@ -179,7 +179,7 @@
     integers greater than 4, or the set of all real numbers greater
     than 4, or something else. When one can, it is better to
     identify the named element(s) as a member (members) of a known
-    set, such as <m>\fatr</m> or <m>\Z</m>, whenever possible.
+    set, such as <m>\R</m> or <m>\Z</m>, whenever possible.
   </p>
 
   </note>
@@ -211,7 +211,7 @@
   <example>
     <statement>
       <p>
-        We have the following: <m>\Z^+ \subseteq \Z \subseteq \fatq \subseteq \fatr \subseteq \fatc</m>.
+        We have the following: <m>\Z^+ \subseteq \Z \subseteq \Q \subseteq \R \subseteq \C</m>.
       </p>
     </statement>
   </example>
@@ -334,7 +334,7 @@
   <example>
     <statement>
       <p>
-        For example, the Cartesian plane is the set <m>\fatr^2</m>, and the set <m>\Z \times \fatr</m> consists of exactly the points in the plane with integer <m>x</m>-coordinates
+        For example, the Cartesian plane is the set <m>\R^2</m>, and the set <m>\Z \times \R</m> consists of exactly the points in the plane with integer <m>x</m>-coordinates
         (that is, the points that lie on vertical lines intersecting the <m>x</m>-axis at integer values).
       </p>
     </statement>

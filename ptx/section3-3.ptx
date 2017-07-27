@@ -221,13 +221,13 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
   <example>
     <statement>
       <p>
-        The groups <m>\langle \fatr,+\rangle</m> and <m>\langle \fatr^+, \cdot\rangle</m> are isomorphic.
+        The groups <m>\langle \R,+\rangle</m> and <m>\langle \R^+, \cdot\rangle</m> are isomorphic.
       </p>
     </statement>
     <proof>
       <p>
-        Define <m>\phi:\fatr\to \fatr^+</m> by <m>\phi(x)=e^x</m>. Our map
-        <m>\phi</m> is a homomorphism since for every <m>x,y\in \fatr</m>, we have
+        Define <m>\phi:\R\to \R^+</m> by <m>\phi(x)=e^x</m>. Our map
+        <m>\phi</m> is a homomorphism since for every <m>x,y\in \R</m>, we have
         <me>
           \phi(x+y)=e^{x+y}=e^xe^y=\phi(x)\phi(y).
         </me>
@@ -235,8 +235,8 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
 
       <p>
         Moreover, <m>\phi</m> is a
-        bijection, since it has inverse function <m>\ln x: \fatr^+\to \fatr</m>.
-        Hence, <m>\fatr \simeq \fatr^+</m> via isomorphism <m>\phi</m>.
+        bijection, since it has inverse function <m>\ln x: \R^+\to \R</m>.
+        Hence, <m>\R \simeq \R^+</m> via isomorphism <m>\phi</m>.
       </p>
     </proof>
 
@@ -254,9 +254,9 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
     We have now seen examples in which we have proved that two groups
     are isomorphic. How, though, do we prove that two groups are <em>not</em> isomorphic? It is usually wildly impractical, if not
     impossible, to check that no function from one group to the other is
-    an isomorphism. For instance, it turns out that <m>\fatr^*</m> is not
-    isomorphic to <m>GL(2,\fatr)</m> (see <xref ref="rgl">Example</xref>), but there are
-    infinitely many bijections from <m>\fatr^*</m> to <m>GL(2,\fatr)</m><mdash />it is
+    an isomorphism. For instance, it turns out that <m>\R^*</m> is not
+    isomorphic to <m>GL(2,\R)</m> (see <xref ref="rgl">Example</xref>), but there are
+    infinitely many bijections from <m>\R^*</m> to <m>GL(2,\R)</m><mdash />it is
     impossible to check that each one is not an isomorphism. Instead, we
     use <em>group invariants</em>.
   </p>
@@ -294,13 +294,13 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
   </p>
 
   <p>
-    A <em>nonexample</em> of a group invariant is the property of being a subset of <m>\fatr</m>.
+    A <em>nonexample</em> of a group invariant is the property of being a subset of <m>\R</m>.
   </p>
 
   <example xml:id="rgl">
     <statement>
       <p>
-        The group <m>\fatr</m> cannot be isomorphic to the group <m>GL(2,\fatr)</m> since the former group is abelian and the latter nonabelian.
+        The group <m>\R</m> cannot be isomorphic to the group <m>GL(2,\R)</m> since the former group is abelian and the latter nonabelian.
       </p>
     </statement>
   </example>
@@ -308,7 +308,7 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
   <example>
     <statement>
       <p>
-        The groups <m>\fatr</m> and <m>\fatq</m> cannot be isomorphic since the former group is uncountable and the latter countable.
+        The groups <m>\R</m> and <m>\Q</m> cannot be isomorphic since the former group is uncountable and the latter countable.
       </p>
     </statement>
   </example>
@@ -320,17 +320,17 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
   <example xml:id="zq">
     <statement>
       <p>
-        The groups <m>\Z</m> and <m>\fatq</m> are not isomorphic. We use contradiction to prove this. Suppose that <m>\Z</m> and <m>\fatq</m> are isomorphic via isomorphism
-        <m>\phi :\fatq \to \Z</m>. Let <m>a\in \fatq</m>. Then <m>a/2 \in \fatq</m> with
+        The groups <m>\Z</m> and <m>\Q</m> are not isomorphic. We use contradiction to prove this. Suppose that <m>\Z</m> and <m>\Q</m> are isomorphic via isomorphism
+        <m>\phi :\Q \to \Z</m>. Let <m>a\in \Q</m>. Then <m>a/2 \in \Q</m> with
         <m>a/2 + a/2 =a</m>. Then
         <me>
           \phi(a/2)+\phi(a/2)=
           \phi(a/2+a/2)=\phi(a);
         </me>
         since <m>\phi(a/2)</m> is in <m>\Z</m>, <m>\phi(a)</m>
-        must be evenly divisible by 2. But <m>a</m> was arbitrary in <m>\fatq</m> and
+        must be evenly divisible by 2. But <m>a</m> was arbitrary in <m>\Q</m> and
         <m>\phi</m> is onto, so this means every element of <m>\Z</m> must be evenly
-        divisible by 2, which is clearly false. Thus, <m>\Z\not\simeq \fatq</m>.
+        divisible by 2, which is clearly false. Thus, <m>\Z\not\simeq \Q</m>.
       </p>
     </statement>
   </example>

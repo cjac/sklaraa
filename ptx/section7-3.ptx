@@ -18,9 +18,9 @@
   <example>
     <statement>
       <p>
-        If <m>(\fatr:\Z)</m> were finite, then we'd be able to
-        write <m>\fatr</m> as a finite union of countable sets, implying that
-        <m>\fatr</m> is countable<mdash />which it isn't. Thus, <m>(\fatr:\Z)=\infty</m>.
+        If <m>(\R:\Z)</m> were finite, then we'd be able to
+        write <m>\R</m> as a finite union of countable sets, implying that
+        <m>\R</m> is countable<mdash />which it isn't. Thus, <m>(\R:\Z)=\infty</m>.
       </p>
     </statement>
   </example>

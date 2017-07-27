@@ -89,7 +89,7 @@
     <statement>
       <p>
         We claim that <m>\Z^+</m> is countably infinite. Indeed, consider the function <m>f:\Z^+ \to \Z</m> defined by <m>f(n)=(-1)^n \lfloor n/2 \rfloor</m>, where <m>\lfloor x \rfloor</m>
-        denotes the greatest integer less than or equal to <m>x</m>, for each <m>x\in \fatr</m>. The fact that <m>f</m> is a bijection is demonstrated (though not proven) by the following visual representation,
+        denotes the greatest integer less than or equal to <m>x</m>, for each <m>x\in \R</m>. The fact that <m>f</m> is a bijection is demonstrated (though not proven) by the following visual representation,
         where each number maps via <m>f</m> to the value directly below it:
         <me>
           \begin{array}{llrrrrrrr}
@@ -110,19 +110,19 @@
   <p>
     We summarize here examples of countably and uncountably
     infinite sets. (On pp. 5<ndash />6 of<nbsp /><xref ref="F" />, Fraleigh sketches proofs of the
-    facts that <m>\fatq</m> is countable and that the interval <m>(0,1)</m>
-    in <m>\fatr</m> is uncountable. The proof then that <m>\fatr</m> is
+    facts that <m>\Q</m> is countable and that the interval <m>(0,1)</m>
+    in <m>\R</m> is uncountable. The proof then that <m>\R</m> is
     uncountable follows from <xref ref="cardthm">Theorem</xref>, which
     follows.)
   </p>
-<p>Countably infinite sets: <m>\Z</m>, <m>\Z^+</m>, <m>\Z^-</m>, <m>\Z^*</m>, <m>\fatq</m>, <m>\fatq^+</m>, <m>\fatq^-</m>, <m>\fatq^*</m>, <m>\fatn</m></p>
-<p>Uncountably infinite sets: <m>\fatr</m>, <m>\fatr^+</m>, <m>\fatr^-</m>, <m>\fatr^*</m>, <m>\fatc</m>, <m>\fatc^*</m>,  the interval <m>(0,1)</m> in <m>\fatr</m></p>     
+<p>Countably infinite sets: <m>\Z</m>, <m>\Z^+</m>, <m>\Z^-</m>, <m>\Z^*</m>, <m>\Q</m>, <m>\Q^+</m>, <m>\Q^-</m>, <m>\Q^*</m>, <m>\N</m></p>
+<p>Uncountably infinite sets: <m>\R</m>, <m>\R^+</m>, <m>\R^-</m>, <m>\R^*</m>, <m>\C</m>, <m>\C^*</m>,  the interval <m>(0,1)</m> in <m>\R</m></p>     
 
   <p>
     The key idea here for us is that if two sets are
     essentially <q>the same,</q> then they must have the same <q>size.</q>
     Thus, we see that there is some fundamental difference between
-    the sets <m>\Z</m> and <m>\fatr</m> (in fact, there are many such
+    the sets <m>\Z</m> and <m>\R</m> (in fact, there are many such
     differences). On the other hand, cardinality alone won't allow
     us to distinguish structurally between the sets <m>\Z</m> and
     <m>\Z^+</m>.

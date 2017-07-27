@@ -119,13 +119,13 @@
       <ol>
         <li>
           <p>
-            <m>G=\fatr</m>, <m>H=\Z</m>
+            <m>G=\R</m>, <m>H=\Z</m>
           </p>
         </li>
 
         <li>
           <p>
-            <m>G=GL(n,\fatr)</m>, <m>H=\{\pm I_2\}</m>
+            <m>G=GL(n,\R)</m>, <m>H=\{\pm I_2\}</m>
           </p>
         </li>
 
@@ -162,19 +162,19 @@
 
           <li>
             <p>
-              <m>-i\in \fatc^*</m>
+              <m>-i\in \C^*</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>-I_2\in GL(2,\fatr)</m>
+              <m>-I_2\in GL(2,\R)</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>-I_2\in \M_2(\fatr)</m>
+              <m>-I_2\in \M_2(\R)</m>
             </p>
           </li>
 
@@ -240,13 +240,13 @@
 
           <li>
             <p>
-              <m>\fatr</m>
+              <m>\R</m>
             </p>
           </li>
 
           <li>
             <p>
-              <m>\langle \pi\rangle</m> in <m>\fatr</m>
+              <m>\langle \pi\rangle</m> in <m>\R</m>
             </p>
           </li>
 
@@ -258,7 +258,7 @@
 
           <li>
             <p>
-              <m>\langle 8\rangle</m> in <m>\fatq^*</m>
+              <m>\langle 8\rangle</m> in <m>\Q^*</m>
             </p>
           </li>
         </ol>
@@ -328,7 +328,7 @@
               1 \amp  0 \\
               0 \amp  0
               \end{array} 
-              \right]\in \M_2(\fatr)</m>
+              \right]\in \M_2(\R)</m>
             </p>
           </li>
 
@@ -344,7 +344,7 @@
               1 \amp  1\\
               0 \amp  1
               \end{array} 
-              \right]\in GL(2,\fatr)</m>
+              \right]\in GL(2,\R)</m>
             </p>
           </li>
         </ol>

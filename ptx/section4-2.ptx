@@ -52,13 +52,13 @@
 
           <li>
             <p>
-              <m>H=\fatr^*</m>, <m>G=\fatr</m>;
+              <m>H=\R^*</m>, <m>G=\R</m>;
             </p>
           </li>
 
           <li>
             <p>
-              <m>H=\{(0,x,y,z):x,y,z\in \fatr\}</m>, <m>G=\fatr^4</m>.
+              <m>H=\{(0,x,y,z):x,y,z\in \R\}</m>, <m>G=\R^4</m>.
             </p>
           </li>
         </ol>
@@ -77,7 +77,7 @@
   <example xml:id="FHKL">
     <statement>
       <p>
-        Consider the group <m>\langle F,+\rangle</m>, where <m>F</m> is the set of all functions from <m>\fatr</m> to <m>\fatr</m> and <m>+</m> is pointwise addition. Which of the following are subgroups of <m>F</m>?
+        Consider the group <m>\langle F,+\rangle</m>, where <m>F</m> is the set of all functions from <m>\R</m> to <m>\R</m> and <m>+</m> is pointwise addition. Which of the following are subgroups of <m>F</m>?
         <ol>
           <li class="custom-list-style-type" label="" >
 
@@ -156,7 +156,7 @@
 
         <li>
           <p>
-            Use the Two-Step Subgroup Test to prove that <m>SL(n,\fatr)</m> is a subgroup of <m>GL(n,\fatr)</m>.
+            Use the Two-Step Subgroup Test to prove that <m>SL(n,\R)</m> is a subgroup of <m>GL(n,\R)</m>.
           </p>
         </li>
       </ol>
@@ -198,7 +198,7 @@
     <statement>
       <p>
         Indicate the subgroup relationships between the following groups:
-        <m>\Z</m>, <m>12\Z</m>, <m>\fatq^+</m>, <m>\fatr</m>, <m>6\Z</m>, <m>\fatr^+</m>, <m>3\Z</m>, <m>G=\langle \{\pi^n:n\in \Z\},\cdot\,\rangle</m>
+        <m>\Z</m>, <m>12\Z</m>, <m>\Q^+</m>, <m>\R</m>, <m>6\Z</m>, <m>\R^+</m>, <m>3\Z</m>, <m>G=\langle \{\pi^n:n\in \Z\},\cdot\,\rangle</m>
         and
         <m>J=\langle \{6^n:n\in \Z\},\cdot\,\rangle .</m>
       </p>

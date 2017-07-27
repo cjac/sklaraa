@@ -4,8 +4,8 @@
   <introduction>
     <p>
       We have already been introduced to two important classes of
-      nonabelian groups: namely, the matrix groups <m>GL(n,\fatr)</m> and
-      <m>SL(n,\fatr)</m> for <m>n\geq 2</m>. We now consider a more general class of
+      nonabelian groups: namely, the matrix groups <m>GL(n,\R)</m> and
+      <m>SL(n,\R)</m> for <m>n\geq 2</m>. We now consider a more general class of
       (mostly) nonabelian groups: permutation groups.
     </p>
   </introduction>
