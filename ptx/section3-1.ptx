@@ -11,12 +11,48 @@
         Consider the group <m>\Z_4</m> under addition modulo 4. Ordering the elements of <m>\Z_4</m> as <m>1,2,3,4</m>, we have the following group table for <m>\langle \Z_4,+\rangle</m>:
       </p>
 
-      <p>
-        <me>\begin{array}{c||c|c|c|c}
-        +\amp 0\amp 1\amp 2\amp 3\\ \hline\hline 0\amp 0\amp 1\amp 2\amp 3\\ \hline
-        1\amp 1\amp 2\amp 3\amp 0\\ \hline 2\amp 2\amp 3\amp 0\amp 1\\ \hline 3\amp 3\amp 0\amp 1\amp 2
-        \end{array}</me>
-      </p>
+     <table xml:id="z4-Cayley">
+
+<tabular halign="left">
+	 <row bottom="medium">
+		<cell right="medium"><m>+</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>0</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>1</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>0</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>2</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+	</row>
+	<row>
+		<cell right="medium"><m>3</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+	</row>
+	</tabular>
+			<caption>Group table for <m>\Z_4</m></caption>
+			</table>    
+
     </statement>
   </example>
 
@@ -44,12 +80,27 @@
     Next suppose that group <m>\Gdot</m> has order 2. Then <m>G</m> must contain an identity element, <m>e</m>, and a non-identity element, <m>a</m>. Since <m>e</m> is its own inverse, and inverses are unique, <m>a</m> must be its own inverse as well. So <m>G</m> must have the following table.
   </p>
 
-  <p>
-    <me>\begin{array}{c||c|c}
-    *\amp e\amp a\\ \hline\hline e\amp e\amp a\\ \hline
-    a\amp a\amp e
-    \end{array}</me>
-  </p>
+<table xml:id="Cayley2">
+
+<tabular halign="left">
+	 <row bottom="medium">
+		<cell right="medium"><m>*</m></cell>
+		<cell><m>e</m></cell>
+		<cell><m>a</m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>e</m></cell>
+		<cell><m>e</m></cell>
+		<cell><m>a</m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>a</m></cell>
+		<cell><m>a</m></cell>
+		<cell><m>e</m></cell>
+			</row>
+		</tabular>
+			<caption>Group table for a group of order <m>2</m></caption>
+			</table>    
 
   <p>
     It is straightforward to show that such a structure does satisfy all the group axioms (the only one we really need to check is associativity).
@@ -59,12 +110,36 @@
     Now, what if group <m>\Gdot</m> has order 3? Note that <em>you can't have any entry appear more than once in the same row or same column</em> (excluding of course the labels outside the grid we're filling in), given <xref ref="uniquesols">Theorem</xref>. Is there only one way of filling in the table for a group of order 3? (Hint: consider what element must be the second row, third column entry.)
   </p>
 
-  <p>
-    <me>\begin{array}{c||c|c|c}
-    *\amp e\amp a\amp b\\ \hline \hline e\amp \amp \amp \\ \hline
-    a\amp \amp \amp \\ \hline b\amp \amp \amp 
-    \end{array}</me>
-  </p>
+<table xml:id="Cayley3">
+
+<tabular halign="left">
+	 <row bottom="medium">
+		<cell right="medium"><m>*</m></cell>
+		<cell><m>e</m></cell>
+		<cell><m>a</m></cell>
+		<cell><m>b</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>e</m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>a</m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>b</m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		</row>
+	</tabular>
+			<caption>Incomplete group table for a group of order <m>3</m></caption>
+			</table>    
 
   <p>
     Finally, what if group <m>\Gdot</m> has order 4? It turns out in this case there are <em>two</em> valid ways of filling in a group table!
