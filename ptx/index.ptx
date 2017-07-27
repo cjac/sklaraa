@@ -12,7 +12,6 @@
 \def\N{\mathbb{N}}
 \def\M{\mathbb{M}}
 \def\S{\mathbb{S}}
-\def\R{R}
 \def\0{\mathbf 0}
 \def\Gdot{\langle G, \cdot\,\rangle}
 \def\phibar{\overline{\phi}}
