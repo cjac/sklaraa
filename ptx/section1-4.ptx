@@ -115,28 +115,9 @@
     uncountable follows from <xref ref="cardthm">Theorem</xref>, which
     follows.)
   </p>
-  <tabular>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell>Countably infinite sets:</cell>
-      <cell><m>\Z</m>, <m>\Z^+</m>, <m>\Z^-</m>, <m>\Z^*</m>, <m>\fatq</m>, <m>\fatq^+</m>, <m>\fatq^-</m>, <m>\fatq^*</m>, <m>\fatn</m></cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell>Uncountably infinite sets:</cell>
-      <cell><m>\fatr</m>, <m>\fatr^+</m>, <m>\fatr^-</m>, <m>\fatr^*</m>, <m>\fatc</m>, <m>\fatc^*</m>,  the interval <m>(0,1)</m> in <m>\fatr</m></cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-  </tabular>
+<p>Countably infinite sets: <m>\Z</m>, <m>\Z^+</m>, <m>\Z^-</m>, <m>\Z^*</m>, <m>\fatq</m>, <m>\fatq^+</m>, <m>\fatq^-</m>, <m>\fatq^*</m>, <m>\fatn</m></p>
+<p>Uncountably infinite sets: <m>\fatr</m>, <m>\fatr^+</m>, <m>\fatr^-</m>, <m>\fatr^*</m>, <m>\fatc</m>, <m>\fatc^*</m>,  the interval <m>(0,1)</m> in <m>\fatr</m></p>     
+
   <p>
     The key idea here for us is that if two sets are
     essentially <q>the same,</q> then they must have the same <q>size.</q>

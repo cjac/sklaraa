@@ -85,47 +85,34 @@
     </statement>
   </definition>
 
-  <p>
+  <remark><p>
     We will often have to show functions are one-to-one or onto. Given a function <m>f:S\to T</m>, the following methods are recommended.
-  </p>
-  <tabular>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell><em>To prove that <m>f</m> is one-to-one</em></cell>
-      <cell>Let <m>s_1,s_2 \in S</m> with <m>f(s_1)=f(s_2)</m> and prove that then <m>s_1=s_2</m>.  <em>WARNING:</em> It is <em>not</em> sufficient to prove that if <m>s_1=s_2</m> in <m>S</m> then <m>f(s_1)=f(s_2)</m>; that is true for any function from <m>S</m> to <m>T</m>!  Be careful to <em>assume</em> and <em>prove</em> the correct facts.</cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell><em>To prove that <m>f</m> is <em>not</em> one-to-one</em></cell>
-      <cell>Identify two elements <m>s_1 \neq s_2</m> of <m>S</m> such that <m>f(s_1)=f(s_2)</m>.</cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell><em>To prove that <m>f</m> is onto</em></cell>
-      <cell>Let <m>t\in T</m> and prove that there exists an element <m>s\in S</m> with <m>f(s)=t</m>. <em>WARNING:</em> It is <em>not</em> sufficient to prove that if <m>s\in S</m> then <m>f(s)</m> is in <m>T</m>; that is true for any function from <m>S</m> to <m>T</m>!  Again, be careful to <em>assume</em> and <em>prove</em> the correct facts.</cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell><em>To prove that <m>f</m> is <em>not</em> onto</em></cell>
-      <cell>Identify an element <m>t\in T</m> for which there is no <m>s\in S</m> with <m>f(s)=t</m>.</cell>
-    </row>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-    </row>
-  </tabular>
+</p>
+<ul>
+<li>
+<p>
+To prove that <m>f</m> is one-to-one: Let <m>s_1,s_2 \in S</m> with <m>f(s_1)=f(s_2)</m> and prove that then <m>s_1=s_2</m>.</p>
+
+<p><em>WARNING:</em> It is <em>not</em> sufficient to prove that if <m>s_1=s_2</m> in <m>S</m> then <m>f(s_1)=f(s_2)</m>; that is true for any function from <m>S</m> to <m>T</m>!  Be careful to <em>assume</em> and <em>prove</em> the correct facts.</p>
+</li>
+<li>
+<p>
+To prove that <m>f</m> is <em>not</em> one-to-one: Identify two elements <m>s_1 \neq s_2</m> of <m>S</m> such that <m>f(s_1)=f(s_2)</m>.
+</p>
+</li>
+<li>
+<p>
+To prove that <m>f</m> is onto: Let <m>t\in T</m> and prove that there exists an element <m>s\in S</m> with <m>f(s)=t</m>.</p>
+
+<p><em>WARNING:</em> It is <em>not</em> sufficient to prove that if <m>s\in S</m> then <m>f(s)</m> is in <m>T</m>; that is true for any function from <m>S</m> to <m>T</m>!  Again, be careful to <em>assume</em> and <em>prove</em> the correct facts.</p>
+</li>
+<li>
+<p>
+To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> for which there is no <m>s\in S</m> with <m>f(s)=t</m>.
+</p>
+</li>
+</ul>
+</remark>
 
   <example>
     <statement>
