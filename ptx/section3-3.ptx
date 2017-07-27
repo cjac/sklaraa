@@ -183,7 +183,7 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
 
      <table xml:id="twoetable">
 
-<tabular halign="left">
+<tabular halign="center">
 	 <row bottom="medium">
 		<cell right="medium"><m>*</m></cell>
 		<cell><m>e</m></cell>
@@ -207,7 +207,7 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
 
     <table xml:id="z2table">
 
-<tabular halign="left">
+<tabular halign="center">
 	 <row bottom="medium">
 		<cell right="medium"><m>+</m></cell>
 		<cell><m>0</m></cell>

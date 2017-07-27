@@ -88,7 +88,7 @@
      <table xml:id="z3-Cayley">
 
 <tabular halign="left">
-	 <row bottom="medium">
+	 <row halign="center" bottom="medium">
 		<cell right="medium"><m>+</m></cell>
 		<cell><m>0+N</m></cell>
 		<cell><m>1+N</m></cell>
@@ -126,7 +126,7 @@
 
      <table xml:id="z3-Cayley2">
 
-<tabular halign="left">
+<tabular halign="center">
 	 <row bottom="medium">
 		<cell right="medium"><m>+</m></cell>
 		<cell><m>0</m></cell>

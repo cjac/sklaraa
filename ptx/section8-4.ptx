@@ -10,7 +10,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Since <m>(G:H)=2</m>, there are exactly two left
       cosets of <m>H</m> in <m>G</m>. One of these left cosets is
@@ -30,7 +30,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Consider the function <m>\phi \,:\,GL(n, \R)\to \R^*</m> defined by
       <m>\phi(A)=|\det A|</m>. The map <m>\phi</m> is a
@@ -66,7 +66,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Note that <m>|G|=6(14)=84</m>, and since <m>\langle 2\rangle =\{2,4,0\}</m> and <m>\langle 4\rangle =\{4,8,12,2,6,10,0\}</m>, <m>|H|=3(7)=21</m>. So <m>|G/H|=|G|/|H|=84/21=4</m>.
     </p>
@@ -111,7 +111,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Note that in <m>\Z</m>, <m>\langle 18\rangle =18\Z</m>, so we may denote <m>\langle 18\rangle</m> by <m>18\Z</m> throughout this problem.
     </p>
@@ -158,7 +158,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Since <m>G</m> is abelian, <m>H</m> is normal in <m>G</m>, so <m>G/H</m> is a group under left coset multiplication. Since <m>K</m> isn't normal in <m>S_3</m> (for instance, <m>(12)K=\{(23),(13)\}</m> while <m>K(12)=\{(12),(13)\}</m>), <m>S_3/K</m> isn't a group under left coset multiplication.
     </p>
@@ -203,7 +203,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <ol>
     <li>
       <p>
@@ -216,26 +216,61 @@
         <li>
           <p>
             The left cosets of <m>H</m> in <m>D_4</m> are
-            <me>
-              \begin{array}{rclcl}
-              H\amp =\amp \{e,r^2\}\amp =\amp r^2H,\\
-              rH\amp =\amp \{r,r^3\}\amp =\amp r^3H,\\
-              fH\amp =\amp \{f, fr^2\}\amp =\amp fr^2H,\\
-              \mbox{and \,} frH\amp =\amp \{fr,fr^3\}\amp =\amp fr^3H.
-              \end{array}
-            </me>
-          </p>
+			<me>H= \{e,r^2\} = r^2H,</me>
+			<me>rH=\{r,r^3\} = r^3H,</me>
+              	<me>fH = \{f, fr^2\} = fr^2H,</me>
+                 <me>\text{and }frH = \{fr,fr^3\} = fr^3H.</me>	          		</p>
         </li>
 
         <li>
           <p>
-            <me>
-              \begin{array}{r||r|r|r|r}
-              \cdot \amp H\amp rH\amp fH\amp frH\\ \hline\hline H \amp H\amp rH\amp fH\amp frH\\ \hline
-              rH\amp rH\amp H\amp frH\amp fH\\ \hline fH\amp fH\amp frH\amp H\amp rH\\ \hline frH\amp frH\amp fH\amp rH\amp H
-              \end{array}
-            </me>
-          </p>
+
+
+
+
+
+
+     <table xml:id="d4mh-Cayley">
+
+<tabular halign="right">
+	 <row bottom="medium">
+		<cell halign="center" right="medium"><m>\cdot</m></cell>
+		<cell><m>H</m></cell>
+		<cell><m>rH</m></cell>
+		<cell><m>fH</m></cell>
+		<cell><m>frH</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>H</m></cell>
+		<cell><m>H</m></cell>
+		<cell><m>rH</m></cell>
+		<cell><m>fH</m></cell>
+		<cell><m>frH</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>rH</m></cell>
+		<cell><m>rH</m></cell>
+		<cell><m>H</m></cell>
+		<cell><m>frH</m></cell>
+		<cell><m>fH</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>fH</m></cell>
+		<cell><m>fH</m></cell>
+		<cell><m>frH</m></cell>
+		<cell><m>H</m></cell>
+		<cell><m>rH</m></cell>
+	</row>
+	<row>
+		<cell right="medium"><m>frH</m></cell>
+		<cell><m>frH</m></cell>
+		<cell><m>fH</m></cell>
+		<cell><m>rH</m></cell>
+		<cell><m>H</m></cell>
+	</row>
+	</tabular>
+			<caption>Group table for <m>D_4/H</m></caption>
+			</table>              </p>
         </li>
 
         <li>
@@ -255,7 +290,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Let <m>aN, bN\in G/N</m>. Then <m>(aN)(bN)=abN=baN=(bN)(aN)</m> (the first and last equalities follow from the definition of left coset multiplication, and the second equality holds because <m>G</m> is abelian). So <m>G/N</m> is abelian.
     </p>
@@ -268,7 +303,7 @@
     </statement>
   </exercise>
   <solution>
-    <title>print=false</title>
+    
     <p>
       Since <m>m=(G:N)</m>, <m>|G/N|=m</m>. The element
       <m>aN\in G/N</m> has an order, call it <m>d</m>, that must divide <m>|G/N|=m</m>.

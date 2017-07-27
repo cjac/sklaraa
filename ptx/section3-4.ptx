@@ -247,7 +247,7 @@
 
      <table xml:id="z4-Cayley2">
 
-<tabular halign="left">
+<tabular halign="center">
 	 <row bottom="medium">
 		<cell right="medium"><m>+</m></cell>
 		<cell><m>0</m></cell>
@@ -291,7 +291,7 @@
 
      <table xml:id="z8cross-Cayley">
 
-<tabular halign="left">
+<tabular halign="center">
 	 <row bottom="medium">
 		<cell right="medium"><m>\cdot_8</m></cell>
 		<cell><m>1</m></cell>
