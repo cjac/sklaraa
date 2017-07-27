@@ -328,10 +328,14 @@
   <proof>
     <p>
       Let <m>G</m> be cyclic. Suppose <m>|G|=\infty</m>. Then there is an isomorphism <m>\phi: \Z\to G</m>. Note that <m>\Z=\langle 1\rangle</m>. So
-      <me>
-        G=\phi(\Z)=\{\phi(a)\,:\,a\in \Z\}=\{\phi(a(1))\,:\,a\in \Z\}=\{a\phi(1)\,:\,a\in \Z\}=\langle \phi(1)\rangle .
-      </me>
-    </p>
+
+<md>
+<mrow> G \amp =\phi(\Z)</mrow>
+<mrow>\amp =\{\phi(a)\,:\,a\in \Z\}</mrow>
+<mrow>\amp =\{\phi(a(1))\,:\,a\in \Z\}</mrow>
+<mrow>\amp =\{a\phi(1)\,:\,a\in \Z\}</mrow>
+<mrow>\amp =\langle \phi(1)\rangle.</mrow>
+</md></p>
 
     <p>
       A similar argument shows that there exists <m>a\in G</m> such that <m>G=\langle a\rangle</m> when <m>|G|\lt \infty</m>.
