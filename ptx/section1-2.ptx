@@ -27,6 +27,12 @@
     above.
   </p>
 
+<!--FIX NOTATION:
+<notation><usage>a \in A</usage><description><m>a</m> is in the set <m>A</m></description></notation></p>
+
+			<todo>Make notation table</todo>
+-->
+
   <definition>
     <statement>
       <p>
@@ -98,7 +104,7 @@
     </row>
     <row>
       <cell><m>\fatn</m></cell>
-      <cell>the set of all natural numbers (that is, the set <m>\{0, 1, 2, \ldots\}</m>)<m>^*</m></cell>
+      <cell>the set of all natural numbers (that is, the set <m>\{0, 1, 2, \ldots\}</m>)<fn>Be aware that many books/mathematicians do not include 0 in the set of natural numbers.</fn></cell>
     </row>
     <row bottom="minor">
       <cell></cell>
@@ -129,23 +135,16 @@
       <cell></cell>
     </row>
   </tabular>
-  <p>
-    <m>^*</m><small> Be aware that many books/mathematicians do not include 0 in the set of natural numbers. </small> </p>
 
   <p>
     We also provide notation for commonly considered sets of matrices:
   </p>
 
-  <notation>
-
-  <p>
-    Given <m>m,n\in \Z^+</m> and a set <m>S</m>, we define <m>\M_{m\times n}(S)</m> to
+  <emph>Notation.</emph> 
+ Given <m>m,n\in \Z^+</m> and a set <m>S</m>, we define <m>\M_{m\times n}(S)</m> to
     be the set of all <m>m\times n</m> matrices over <m>S</m> (that is, of all <m>m\times n</m> matrices with entries in <m>S</m>). We use the
     shorthand notation <m>\M_n(S)</m> for the set <m>\M_{n\times n}(S)</m>.
-  </p>
-
-  </notation>
-
+  
   <p>
     One common way of describing a set is to list its elements in
     curly braces, separated by commas; you can use ellipses to

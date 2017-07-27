@@ -1,9 +1,12 @@
 
 <section>
+
+
   <title>Notation</title>
   <p>
     To start, we begin learning and/or reviewing some notation. Here is a table of frequently used symbols and abbreviations you may see in this book or in class, along with their meanings.
   </p>
+
   <tabular>
     <row bottom="minor">
       <cell></cell>
@@ -43,7 +46,7 @@
     </row>
     <row>
       <cell>WLOG or wolog</cell>
-      <cell>without loss of generality<m>^*</m></cell>
+      <cell>without loss of generality<fn>We will discuss what this means in greater detail as it arises in our work.</fn></cell>
     </row>
     <row bottom="minor">
       <cell></cell>
@@ -84,9 +87,6 @@
       <cell></cell>
     </row>
       </tabular>
-  <p>
-<m>^*</m>We will discuss what this means in greater detail as it arises in our work.
-  </p>
 
   <p>
     Finally, the notation <m>:=</m> means we are assigning a definition. E.g., writing <q>Let <m>S:=\{1,2,3\}</m></q> means we are defining <m>S</m> to be the set <m>\{1,2,3\}</m>. We often omit the colon and simply write <m>=</m> in these cases, but we may include it to emphasize the fact that we are defining something.
