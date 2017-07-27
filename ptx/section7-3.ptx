@@ -38,26 +38,20 @@
   <example xml:id="indices_ex">
     <statement>
       <p>
-        Referring to our previous examples, we have:
-        <me>
-          \begin{array}{cl} \amp (S_3:\langle (12)\rangle )=3,\\
-          \amp (D_4:\langle f\rangle )=4, \\
-          \amp (\Z:5\Z)=5,\\
-          \amp (4\Z:12\Z)=3,\\
-          \mbox{and } \amp  (\Z_{12}:\langle 4\rangle )=4.
-          \end{array}
-        </me>
-      </p>
+        Referring to our previous examples, we have: 
 
-      <p>
-        Letting <m>d,n\in \Z^+</m> with <m>d</m> dividing <m>n</m>, we can generalize
-        the some of the above examples, obtaining:
-        <me>
-          \begin{array}{cl}
-          \amp  (d\Z:n\Z)=n/d \mbox{\  (special case: }  (\Z:n\Z)=n)\\
-          \mbox{and }  \amp  (\Z_n:\langle d\rangle )=d.
-          \end{array}
-        </me>
+<!-- <m>(S_3:\langle (12)\rangle )=3, 
+	(D_4:\langle f\rangle )=4,
+	(\Z:5\Z)=5,
+	(4\Z:12\Z)=3,</m>
+      and <m>(\Z_{12}:\langle 4\rangle )=4.</m>-->
+
+
+	<me>(S_3:\langle (12)\rangle )=3,</me>
+	<me>(D_4:\langle f\rangle )=4,</me>
+	<me>(\Z:5\Z)=5,</me>
+	<me>(4\Z:12\Z)=3,</me>
+      <me>\text{and }(\Z_{12}:\langle 4\rangle )=4.</me>
       </p>
     </statement>
   </example>
