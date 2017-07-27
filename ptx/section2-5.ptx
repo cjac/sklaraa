@@ -56,9 +56,11 @@
         <p>
           For every element <m>a</m> in a group <m>\Gdot</m> and <m>n\in \Z^+</m>, we use the expression <m>a^n</m> to denote  the product
           <me>
-            \stackrel{\underbrace{a\cdot a \cdot \,\cdots \,\cdot a}}{n \mathrm{ times}}
-          </me>
-          and <m>a^{-n}</m> to denote <m>(a^{-1})^n</m> (that is, the product of <m>n</m> copies of <m>a^{-1}</m>).
+\underbrace{a\cdot a \cdot \,\cdots \,\cdot a}_{n \text{ times} }
+</me>
+
+
+          <!--  \stackrel{\underbrace{a\cdot a \cdot \,\cdots \,\cdot a}}{n \mathrm{ times}}-->          and <m>a^{-n}</m> to denote <m>(a^{-1})^n</m> (that is, the product of <m>n</m> copies of <m>a^{-1}</m>).
           Finally, we define <m>a^0</m> to be <m>e</m>.  Note that our <q>usual</q> rules for exponents then hold in an arbitrary group: that is, if <m>a</m> is in group <m>\langle G, \cdot\,\rangle</m>
           and <m>m,n\in \Z</m>, then <m>a^m a^n = a^{m+n}</m> and <m>(a^m)^n=a^{mn}=(a^n)^m</m>.
         </p>
