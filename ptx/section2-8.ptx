@@ -346,15 +346,14 @@
   </exercise>
   <solution>
     <p>
-      Let <m>a,b\in G</m>. Then
+      Let <m>a,b\in G</m>. Then</p>
       <md>
         <mrow>ab\amp =(ab)^{-1}\amp \amp \text{ (since \(ab\)
         is its own inverse) }</mrow>
         <mrow>\amp =b^{-1}a^{-1}\amp \amp</mrow>
-        <mrow>\amp =ba \amp \amp \text{ (since \(b\) and \(a\) are their own
-        inverses) } .</mrow>
-      </md>
-    </p>
+        <mrow>\amp =ba, \amp</mrow>
+      </md> <p>since <m>a</m>, <m>b</m> are their own inverses.</p>
+    
 
     <p>
       So <m>G</m> is abelian.
