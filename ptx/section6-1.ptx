@@ -14,15 +14,15 @@
   <example xml:id="stperm">
     <statement>
       <p>
-        Let <m>A</m> be the set <m>A=\{\Delta, \star, \dollar\}</m>. Then the functions <m>\sigma : A\to A</m> defined by
+        Let <m>A</m> be the set <m>A=\{\Delta, \star, &#36;\}</m>. Then the functions <m>\sigma : A\to A</m> defined by
         <me>
           \sigma(\Delta)=\star,
-          \sigma(\star)=\Delta,  \mbox{and }  \sigma(\dollar)=\dollar
+          \sigma(\star)=\Delta,  \mbox{and }  \sigma(&#36;)=&#36;
         </me>
         and <m>\tau : A\to A</m> defined by
         <me>
-          \tau(\Delta)=\dollar, 
-          \tau(\star)=\Delta,  \mbox{and }  \tau(\dollar)=\star
+          \tau(\Delta)=&#36;, 
+          \tau(\star)=\Delta,  \mbox{and }  \tau(&#36;)=\star
         </me>
         are
         both permutations on <m>A</m>.
@@ -58,12 +58,12 @@
         Let <m>A</m>, <m>\sigma</m>, and <m>\tau</m> be as in <xref ref="stperm">Example</xref>.
         Then <m>\sigma \tau</m> is the function from <m>A</m> to <m>A</m> defined by
         <me>
-          \sigma \tau(\Delta)=\dollar,  \sigma \tau(\star)=\star,  \mbox{and }  \sigma \tau(\dollar)=\Delta,
+          \sigma \tau(\Delta)=&#36;,  \sigma \tau(\star)=\star,  \mbox{and }  \sigma \tau(&#36;)=\Delta,
         </me>
         while <m>\tau \sigma</m> is
         the function from <m>A</m> to <m>A</m> defined by
         <me>
-          \tau \sigma (\Delta)=\Delta,  \tau \sigma (\star)=\dollar,  \mbox{and }  \tau \sigma(\dollar)=\star
+          \tau \sigma (\Delta)=\Delta,  \tau \sigma (\star)=&#36;,  \mbox{and }  \tau \sigma(&#36;)=\star
         </me>
       </p>
     </statement>
@@ -83,23 +83,17 @@
       <p>
         Given a set <m>A</m>:
         <ol>
-          <li>
-            <title>invalidlabel</title>
-            <p>
+          <li>            <p>
               <m>S_A</m> is a group under permutation multiplication.
             </p>
           </li>
 
-          <li>
-            <title>invalidlabel</title>
-            <p>
+          <li>            <p>
               If <m>A</m> has finite cardinality <m>n</m>, then <m>|S_A|=n!</m> (if <m>|A|=\infty</m> then <m>|S_A|</m> is also <m>\infty</m>).
             </p>
           </li>
 
-          <li>
-            <title>invalidlabel</title>
-            <p>
+          <li>            <p>
               <m>S_A</m> is abelian if <m>|A|=1</m> or <m>2</m>, and nonabelian otherwise.
             </p>
           </li>
@@ -113,19 +107,7 @@
       Let <m>\sigma, \tau \in S_A</m>. Since a composition of
       bijections is a bijection (see <xref ref="compbij">Theorem</xref>), <m>\sigma
       \tau</m> is a bijection from <m>A</m> to <m>A</m>, hence is in <m>S_A</m>. So
-      <m>S_A</m> is closed under composition.
-      <ol>
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            Function composition is always associative.
-          </p>
-        </li>
-
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            The identity function <m>1_A : A\to A</m> defined by
+      <m>S_A</m> is closed under composition.</p> <p>Next,            function composition is always associative.</p><p> The identity function <m>1_A : A\to A</m> defined by
             <me>
               1_A(a)=a \mbox{ for all \(a\in A\)}
             </me>
@@ -133,21 +115,13 @@
             identity element in <m>S_A</m>. Henceforth, we will denote <m>1_A</m>
             by <m>e</m>.
           </p>
-        </li>
-
-        <li>
-          <title>invalidlabel</title>
-          <p>
-            Let <m>\sigma \in S_A</m>.  Since <m>\sigma</m> is a
+        <p>
+            Finally, let <m>\sigma \in S_A</m>.  Since <m>\sigma</m> is a
             bijection, <m>\sigma</m> has an inverse function <m>\sigma^{-1}</m>
             that is also a bijection from <m>A</m> to <m>A</m> (<xref ref="invbij">Theorem</xref>). Since <m>\sigma^{-1}\in S_A</m> with <m>\sigma
             \sigma^{-1}= \sigma^{-1} \sigma=1_A</m>, every element of
             <m>S_A</m> has an inverse element in <m>S_A</m>.
           </p>
-        </li>
-      </ol>
-    </p>
-
     <p>
       So <m>S_A</m> is a group.
     </p>
