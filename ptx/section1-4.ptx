@@ -139,13 +139,13 @@
         <ol>
           <li>
             <p>
-              If <m>A\cont B</m> and <m>A</m> is infinite [uncountable] then so is <m>B</m>.
+              If <m>A\subseteq B</m> and <m>A</m> is infinite [uncountable] then so is <m>B</m>.
             </p>
           </li>
 
           <li>
             <p>
-              If <m>A\cont B</m> and <m>B</m> is finite [countable] then so is <m>A</m>.
+              If <m>A\subseteq B</m> and <m>B</m> is finite [countable] then so is <m>A</m>.
             </p>
           </li>
 

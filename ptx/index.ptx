@@ -11,7 +11,6 @@
 \def\C{\mathbb{C}}
 \def\N{\mathbb{N}}
 \def\M{\mathbb{M}}
-\def\S{\mathbb{S}}
 \def\G{\mathcal{G}}
 \def\0{\mathbf 0}
 \def\Gdot{\langle G, \cdot\,\rangle}
@@ -20,8 +19,6 @@
 \DeclareMathOperator{\Ker}{Ker}
 \def\siml{\sim_L}
 \def\simr{\sim_R}
-\def\cont{\subseteq}
-\def\lra{\Leftrightarrow}
 </macros>
 
 <latex-image-preamble>

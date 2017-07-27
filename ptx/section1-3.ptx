@@ -19,19 +19,19 @@
         we write <m>f: S \to T</m>, and call <m>S</m> the <term>domain</term> of <m>f</m> and
         <m>T</m> the <term>codomain</term> of <m>f</m>. The <term>range</term> of <m>f</m> is
         <me>
-          f(S)=\{f(s) \in T : s \in S\} \cont T.
+          f(S)=\{f(s) \in T : s \in S\} \subseteq T.
         </me>
       </p>
 
       <p>
-        More generally, if <m>U \cont S</m>, the <term>image of <m>U</m> in <m>T</m> under <m>f</m></term> is
+        More generally, if <m>U \subseteq S</m>, the <term>image of <m>U</m> in <m>T</m> under <m>f</m></term> is
         <me>
           f(U)=\{f(u)\in T : u\in U\}.
         </me>
       </p>
 
       <p>
-        If <m>V\cont T</m>, the <term>preimage of <m>V</m> in <m>S</m> under <m>f</m></term> is the set
+        If <m>V\subseteq T</m>, the <term>preimage of <m>V</m> in <m>S</m> under <m>f</m></term> is the set
         <me>
           f^{\leftarrow}(V)=\{s\in S: f(s)\in V\}.
         </me>
@@ -45,7 +45,7 @@
         Consider the function <m>f: \Z \to \R</m> defined by <m>f(x)=x^2</m>.
         The domain of <m>f</m> is <m>\Z</m> and the codomain of <m>f</m> is <m>\R</m>; the
         range of <m>f</m> is <m>\{x^2\,:\,x\in \Z\}=\{0,1,4,9,\ldots\}</m>. The image
-        of <m>\{-2,-1,1,2\}</m> under <m>f</m> is the two-element set <m>\{1,4\} \cont
+        of <m>\{-2,-1,1,2\}</m> under <m>f</m> is the two-element set <m>\{1,4\} \subseteq
         \R</m>, and the preimage of <m>\{4,25,\pi\}</m> under <m>f</m> is the set
         <m>\{\pm 2, \pm 5\}</m>. (Do you see why <m>\pm \sqrt{\pi}</m> are not in this
         preimage?) What is the preimage of just <m>\{\pi\}</m> under <m>f</m>?

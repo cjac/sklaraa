@@ -204,7 +204,7 @@
   <remark>
     <p>
       One often proves that two sets <m>A</m> and
-      <m>B</m> are equal by proving that <m>A\cont B</m> and <m>B\cont A</m>.
+      <m>B</m> are equal by proving that <m>A\subseteq B</m> and <m>B\subseteq A</m>.
     </p>
   </remark>
 
@@ -288,8 +288,8 @@
   </definition>
 
   <p>
-    Notice that for any sets <m>A</m> and <m>B</m>, <m>A\cap B \cont A \cont A\cup B</m> and
-    <m>A\cap B \cont B \cont A\cup B</m>. Also note that if sets <m>A_i</m> (<m>i \in I</m>) are mutually disjoint then they are also disjoint, but they may be disjoint without being mutually disjoint. For example, the sets <m>\{i, i+1\}</m> for <m>i\in \Z</m> are disjoint but not mutually disjoint. (Do you see why?)
+    Notice that for any sets <m>A</m> and <m>B</m>, <m>A\cap B \subseteq A \subseteq A\cup B</m> and
+    <m>A\cap B \subseteq B \subseteq A\cup B</m>. Also note that if sets <m>A_i</m> (<m>i \in I</m>) are mutually disjoint then they are also disjoint, but they may be disjoint without being mutually disjoint. For example, the sets <m>\{i, i+1\}</m> for <m>i\in \Z</m> are disjoint but not mutually disjoint. (Do you see why?)
   </p>
 
   <p>
