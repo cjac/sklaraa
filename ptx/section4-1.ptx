@@ -10,7 +10,7 @@
       <p>
         A <term>subgroup</term> of a group <m>G</m> is a subset of <m>G</m> that
         is also a group under <m>G</m>'s operation. If <m>H</m> is a subgroup of
-        <m>G</m>, we write <m>H \leq G</m>; if <m>H\cont G</m> is not a subgroup of
+        <m>G</m>, we write <m>H \leq G</m>; if <m>H\subseteq G</m> is not a subgroup of
         <m>G</m>, we write <m>H\not\leq G</m>.
       </p>
     </statement>
@@ -113,7 +113,7 @@
     they were not closed under the groups' operations; because they did not contain identity elements; or because they didn't contain an
     inverse for each of their elements. None, however, failed because the relevant group's operation was not associative on them.
     This is not a coincidence: rather, since any element of a subset of a group <m>G</m> also lives in <m>G</m>, any associative operation on <m>G</m> is of
-    necessity associative on any closed subset of <m>G</m>. Therefore, when we are checking to see if <m>H\cont G</m> is a subgroup of group <m>G</m>, we need only check for
+    necessity associative on any closed subset of <m>G</m>. Therefore, when we are checking to see if <m>H\subseteq G</m> is a subgroup of group <m>G</m>, we need only check for
     closure, an identity element, and inverses.
   </p>
 

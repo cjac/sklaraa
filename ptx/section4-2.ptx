@@ -110,7 +110,7 @@
 
   <p>
     In fact, we can narrow down the number of facts we need to
-    check to prove a subset <m>H\cont G</m> is a subgroup of <m>G</m> to only
+    check to prove a subset <m>H\subseteq G</m> is a subgroup of <m>G</m> to only
     two.
   </p>
 
@@ -118,7 +118,7 @@
     <statement>
       <p>
         <em>Two-Step Subgroup Test.</em> Let <m>G</m> be
-        a group and <m>H\cont G</m>. Then <m>H</m> is a subgroup of <m>G</m> if
+        a group and <m>H\subseteq G</m>. Then <m>H</m> is a subgroup of <m>G</m> if
       </p>
       <tabular>
         <row>
