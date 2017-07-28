@@ -192,7 +192,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
         If <m>f</m> and <m>g</m> are both 1-1 [onto], then so is <m>g\circ f: S\to U</m>.
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
     <p>
@@ -202,9 +202,10 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
       <m>f(s_1)=f(s_2)</m>. Then since <m>f</m> is one-to-one (since <m>f</m> is also a
       bijection), we must have <m>s_1=s_2</m>. Thus, <m>g\circ f</m> is one-to-one.
     </p>
-  </proof>
-
   <p>
     The proof that <m>g\circ f</m> is onto if <m>f</m> and <m>g</m> are onto is left as an exercise for the reader.
   </p>
+  </proof>
+</theorem>
+
 </section>

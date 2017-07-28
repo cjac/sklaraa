@@ -171,13 +171,12 @@
         </ol>
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
     <p>
       We omit proofs of the statements in Parts 1 and 2. The proof of the statement in Part 3 is left as an exercise for the reader.
     </p>
-  </proof>
 
   <p>
     For Part 4: Let <m>A</m> and <m>B</m> be countable sets. Assume that <m>A</m> and <m>B</m> are both countably infinite. Since <m>\Z^+</m> is countably infinite, we can index the elements of <m>A</m> and of <m>B</m> by <m>\Z^+</m>, writing
@@ -236,6 +235,9 @@
   <p>
     The proof in the case that one or both of sets <m>A</m> and <m>B</m> are finite is similar; the corresponding table in that case will simply have either only finitely many rows or finitely many columns, or both.
   </p>
+
+  </proof>
+</theorem>
 
   <corollary>
     <statement>
