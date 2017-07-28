@@ -163,19 +163,9 @@
       <p>
         Find the left and right cosets of <m>H=\langle (12)\rangle</m> in
         <m>S_3</m>.
-        <me>
-          \begin{array}{l|l|l}
-          a\amp  aH \amp  Ha\\ \hline
-          e\amp H\amp H\\
-          (12)\amp H\amp H\\
-          (13)\amp \{(13)e,(13)(12)\}=\{(13),(123)\}\amp \{e(13),(12)(13)\}=\{(13),(132)\}\\
-          (23)\amp \{(23)e,(23)(12)\}=\{(23),(132)\}\amp \{e(23),(12)(23)\}=\{(23),(123)\}\\
-          (123)\amp \{(13),(123)\} \mbox{ (since } (123)\in (13)H)\amp \{(23),(123)\} \mbox{ (since }  (123)\in H(23))\\
-          (132)\amp \{(23),(132)\} \mbox{ (since }  (132)\in(23)H)\amp \{(13),(132)\} \mbox{ (since }  (132)\in H(13))
-          \end{array}
-        </me>
       </p>
-
+      <p>The left cosets are <me>eH=H=(12)H,</me><me>(13)H=\{(13),(123)\}=(123)H,</me><me>\text{ and } (23)H=\{(23),(132)\}=(132)H,</me> and the 
+      right cosets are <me>He=H=H(12),</me><me> H(13)=\{(13),(132)\}=H(132),</me><me>\text{ and } H(23)=\{(23),(123)\}=H(123).</me></p>
       <p>
         Thus, <m>\siml</m> partitions <m>S_3</m> into <m>\{H,\{(13),(123)\},\{(23),
         (132)\}\}</m> and <m>\simr</m> partitions <m>S_3</m> into
