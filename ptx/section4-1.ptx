@@ -137,7 +137,6 @@
         </ol>
       </p>
     </statement>
-  </lemma>
 
   <proof>
     <p>
@@ -151,6 +150,8 @@
       Next, for Part 2, let <m>b</m> be the inverse of <m>a</m> in <m>H</m>. Then using Part 1 of this lemma and the definition of an inverse, <m>ab=e_H=e_G=aa^{-1}</m>. By left cancellation, then, we have that <m>b=a^{-1}</m>.
     </p>
   </proof>
+  </lemma>
+
 
   <corollary>
     <statement>

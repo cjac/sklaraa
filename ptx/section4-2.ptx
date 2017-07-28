@@ -69,8 +69,10 @@
   <example>
     <statement>
       <p>
-        Generalizing Part 1 of the above theorem, we have <m>n\Z\leq \Z</m> for every <m>n\in \Z^+</m>. The proof of this is left as an exercise for the reader.
-      </p>
+        Generalizing Part 1 of the above theorem, we have <m>n\Z\leq \Z</m> for every <m>n\in \Z^+</m>.</p> 
+<p> The proof of this is left as an exercise for the reader.
+</p>
+      
     </statement>
   </example>
 
@@ -120,18 +122,11 @@
         <em>Two-Step Subgroup Test.</em> Let <m>G</m> be
         a group and <m>H\subseteq G</m>. Then <m>H</m> is a subgroup of <m>G</m> if
       </p>
-      <tabular>
-        <row>
-          <cell>1.</cell>
-          <cell><m>H\neq \emptyset</m>; and</cell>
-        </row>
-        <row>
-          <cell>2.</cell>
-          <cell>For each <m>a,b\in H</m>, <m>ab^{-1}\in H</m>.</cell>
-        </row>
-      </tabular>
-    </statement>
-  </theorem>
+      <ol>
+<li><p>         <m>H\neq \emptyset</m>; and</p></li>
+<li><p>        For each <m>a,b\in H</m>, <m>ab^{-1}\in H</m>.</p></li>
+</ol>
+            </statement>
 
   <proof>
     <p>
@@ -144,6 +139,7 @@
       property. Thus, <m>H\leq G</m>.
     </p>
   </proof>
+</theorem>
 
   <example>
     <statement>
@@ -215,16 +211,12 @@
       <p>
         Let <m>G</m> and <m>G'</m> be groups, let <m>\phi</m> a homomorphism from <m>G</m> to <m>G'</m>, and let <m>H</m> a subgroup of <m>G</m>. Then <m>\phi(H)</m> is a subgroup of <m>G'</m>.
       </p>
-    </statement>
-  </theorem>
-
-  <proof>
-    <p>
-      This proof is left as an exercise for the reader.
+      <p><em>The proof is left as an exercise for the reader.</em>
     </p>
-  </proof>
+</statement>
+  </theorem>  
 
-  <corollary>
+<corollary>
     <statement>
       <p>
         If <m>G\simeq G'</m> and <m>G</m> contains exactly <m>n</m> subgroups (<m>n\in \Z^+</m>), then so does <m>G'</m>.
