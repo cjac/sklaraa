@@ -238,7 +238,6 @@ a \text{ operated with } b \amp ab \amp a+b\\
           </ol>
         </p>
       </statement>
-    </theorem>
 
     <proof>
       <p>
@@ -261,13 +260,15 @@ a \text{ operated with } b \amp ab \amp a+b\\
       </p>
     </proof>
 
+    </theorem>
+
     <theorem xml:id="uniquesols">
       <statement>
         <p>
           Let <m>\Gdot</m> be a group and let <m>a,b\in G</m>. Then there exist <em><em>unique</em></em> elements <m>x,y\in G</m> such that <m>ax=b</m> and <m>ya=b</m>.
         </p>
       </statement>
-    </theorem>
+    
 
     <proof>
       <p>
@@ -279,6 +280,7 @@ a \text{ operated with } b \amp ab \amp a+b\\
         if <m>ya=b</m> and <m>y'a=b</m> then <m>y=y'</m> by right cancellation.
       </p>
     </proof>
+</theorem>
 
     <warning>
       <p>
@@ -299,7 +301,6 @@ a \text{ operated with } b \amp ab \amp a+b\\
           </me>
         </p>
       </statement>
-    </theorem>
 
     <proof>
       <p>
@@ -313,5 +314,6 @@ a \text{ operated with } b \amp ab \amp a+b\\
         Similarly, <m>(b^{-1}a^{-1})(ab)=e</m>.
       </p>
     </proof>
+</theorem>
   </subsection>
 </section>

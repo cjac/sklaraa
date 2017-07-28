@@ -122,7 +122,7 @@
 
   <warning>
     <p>
-      Not every binary structure contains an identity element! (Ex: <m>\langle \Z,-\rangle</m>)
+      Not every binary structure contains an identity element! (Ex: <m>\langle \Z,-\rangle</m>.)
     </p>
   </warning>
 
@@ -137,13 +137,14 @@
         A binary structure <m>\langle S, *\rangle</m> has <em>at most one</em> identity element. That is, identity elements in binary structures, when they exist, are unique.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
       Assume that <m>e</m> and <m>f</m> are identity elements of <m>S</m>. Then since <m>e</m> is an identity element, <m>e*f=f</m> and since <m>f</m> is an identity element, <m>e*f=e</m>. Thus, <m>e=f</m>.
     </p>
   </proof>
+  </theorem>
+
 
   <definition>
     <statement>
@@ -188,11 +189,12 @@
         Let <m>\langle S, *\rangle</m> be a binary structure with an identity element, where <m>*</m> is associative. Let <m>a\in S</m>. If <m>a</m> has an inverse, then its inverse is unique.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
       Let <m>e</m> be the identity element of <m>S</m>. Suppose <m>a</m> has inverses <m>b</m> and <m>c</m>. Then <m>a*b=e</m> so, multiplying both sides of the equation by <m>c</m> on the left, we have <m>c*(a*b)=c*e=c</m>. But since <m>*</m> is associative, we have <m>c*(a*b)=(c*a)*b=e*b=b</m>. But <m>b=c</m>. Thus, <m>a</m>'s inverse is unique.
     </p>
   </proof>
+  </theorem>
+
 </section>

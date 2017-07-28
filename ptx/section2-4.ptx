@@ -109,7 +109,6 @@
         <m>GL(n,\R)</m> and <m>SL(n,\R)</m> are closed under matrix multiplication (so <m>\langle GL(n,\R),\cdot\rangle</m> and <m>\langle SL(n,\R),\cdot\rangle</m> are binary structures).
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -117,7 +116,9 @@
     </p>
   </proof>
 
-  <example>
+  </theorem>
+
+  <theorem>
     <statement>
       <p>
         The binary structures
@@ -159,7 +160,7 @@
       </p>
     </proof>
 
-  </example>
+  </theorem>
 
   <p>
     These groups are very important in many areas of mathematics, including linear algebra and geometry. Because of this, we have special names for them (which give rise to the <q>GL</q> and <q>SL</q> in their names).
@@ -213,6 +214,7 @@
         Thus, <m>\langle \Q^*,*\rangle</m> is a group.
       </p>
     </proof>
+
 
   </example>
 </section>
