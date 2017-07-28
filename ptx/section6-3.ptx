@@ -79,9 +79,7 @@
 
   <definition>
     <statement>
-      <p>
-        The set of all even permutations in <m>S_n</m> is a subgroup of <m>S_n</m>, called the <term>alternating group on <m>n</m> letters</term>, and denoted by <m>A_n</m>.
-      </p>
+      <p>The <term>alternating group on <m>n</m> letters</term> is the subgroup <m>A_n</m> of <m>S_n</m> consisting of all of the  even permutations in <m>S_n</m>.      </p>
     </statement>
   </definition>
 
