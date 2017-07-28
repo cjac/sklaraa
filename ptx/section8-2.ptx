@@ -43,7 +43,7 @@
         </ol>
       </p>
     </statement>
-  </theorem>
+
 
   <proof>
     <p>
@@ -59,6 +59,7 @@
       bHb^{-1}</m>, those two sets are equal. Thus, Statement 2 is proven.
     </p>
   </proof>
+  </theorem>
 
   <p>
     We now consider some examples and nonexamples of normal subgroups of
@@ -142,7 +143,6 @@
         Let <m>G</m> be a group. Then <m>Z(G)</m> is a subgroup of <m>G</m>.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -157,6 +157,8 @@
     </p>
   </proof>
 
+  </theorem>
+
   <theorem xml:id="znorm">
     <statement>
       <p>
@@ -164,8 +166,7 @@
         subgroup of <m>G</m>.
       </p>
     </statement>
-  </theorem>
-
+  
   <proof>
     <p>
       Let <m>a\in G</m>.
@@ -174,6 +175,7 @@
       <m>H\unlhd G</m>.
     </p>
   </proof>
+</theorem>
 
   <p>
     The next definition is profoundly important for us.
@@ -182,7 +184,7 @@
   <definition>
     <statement>
       <p>
-        Let <m>G</m> and <m>G'</m> be groups and let <m>\phi</m> be a
+        Let <m>G</m> and <m>G'</m> be groups and let <m>\phi</m> a
         homomorphism from <m>G</m> to <m>G'</m>. Letting <m>e'</m> be the identity
         element of <m>G'</m>, we define the <term>kernel of <m>\phi</m></term>, <m>\Ker
         \phi</m>, by

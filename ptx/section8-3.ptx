@@ -26,7 +26,6 @@
         particular, if <m>|G|\lt \infty</m>, then <m>|G/N|=|G|/|N|</m>).
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -63,6 +62,8 @@
       is, by definition, the cardinality of <m>G/N</m>, we're done.
     </p>
   </proof>
+  </theorem>
+
 
   <definition>
     <statement>
@@ -192,7 +193,6 @@
         </ol>
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <ol>
@@ -225,6 +225,8 @@
       </li>
     </ol>
   </proof>
+
+  </theorem>
 
   <example>
     <statement>
@@ -272,7 +274,6 @@
         </ol>
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <ol>
@@ -295,11 +296,13 @@
           <me>
             \langle aN\rangle =\{(aN)^i\,:\,i\in \Z\}=\{a^iN\,:\,i\in \Z\}.
           </me>
-          But every element of <m>G</m> is an integer power of <m>a</m>, so this set equals <m>\{xN\,:x\in G\}</m>, that is, it equals <m>G/N</m>. \qedhere
-        </p>
+          But every element of <m>G</m> is an integer power of <m>a</m>, so this set equals <m>\{xN\,:x\in G\}</m>, that is, it equals <m>G/N</m>.
+</p>
       </li>
     </ol>
   </proof>
+
+  </theorem>
 
   <warning>
     <p>

@@ -69,7 +69,7 @@
         <m>G/H</m> is well defined if and only if <m>H \unlhd G</m>.
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
     <p>
@@ -108,6 +108,7 @@
       <m>aH\subseteq Ha</m>. The proof that <m>Ha\subseteq aH</m> is similar.
     </p>
   </proof>
+</theorem>
 
   <definition>
     <statement>
