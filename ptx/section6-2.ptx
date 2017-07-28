@@ -200,20 +200,16 @@
       <p>
         In <m>S_9</m>, let <m>\sigma=(134)</m>, <m>\tau=(26)(17)</m>, and <m>\rho=(358)(12)</m>. Find the following, writing your answers using disjoint cycle notation.
       </p>
-      <tabular>
-        <row>
-          <cell><m>\sigma^{-1}</m></cell>
-          <cell><m>\sigma^{-1}\tau\sigma</m></cell>
-          <cell><m>\sigma^2</m></cell>
-          <cell><m>\sigma^3</m></cell>
-        </row>
-        <row>
-          <cell><m>\rho^2</m></cell>
-          <cell><m>\rho^{-2}</m></cell>
-          <cell><m>\sigma \tau</m></cell>
-          <cell><m>\sigma \rho</m></cell>
-        </row>
-      </tabular>
+<ol>
+<li><p><m>\sigma^{-1}</m></p></li>
+<li><p><m>\sigma^{-1}\tau\sigma</m></p></li>
+<li><p><m>\sigma^2</m></p></li>
+<li><p><m>\sigma^3</m></p></li>
+<li><p><m>\rho^2</m></p></li>
+<li><p><m>\rho^{-2}</m></p></li>
+<li><p><m>\sigma \tau</m></p></li>
+<li><p><m>\sigma \rho</m></p></li>
+</ol>
     </statement>
   </example>
 
