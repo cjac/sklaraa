@@ -73,7 +73,6 @@
         </ol>
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -123,7 +122,7 @@
       Thus, <m>\theta</m> is a homomorphism, and hence, since it is also a bijection, an isomorphism.
     </p>
   </proof>
-
+</theorem>
 
   <remark><p>
 To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do three things:

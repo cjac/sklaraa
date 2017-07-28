@@ -148,7 +148,6 @@
         </ol>
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -165,4 +164,6 @@
       cancellation, <m>e'=\phi(e)</m>. The proof of Part 2 is left as an exercise for the reader.
     </p>
   </proof>
+
+  </theorem>
 </section>
