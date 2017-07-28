@@ -160,9 +160,14 @@
   </example>
 
   <p>
-    \begin{df} Note that if <m>H</m> is a subgroup of a group <m>G</m> and <m>K</m> is a subset of <m>H</m>, then <m>K</m> is a subgroup of
-    <m>H</m> if and only if it's a subgroup of <m>G</m>.\end{df}
+    It is straightforward to prove the following theorem.
+    </p>
+
+    <theorem>
+<p> If <m>H</m> is a subgroup of a group <m>G</m> and <m>K</m> is a subset of <m>H</m>, then <m>K</m> is a subgroup of
+    <m>H</m> if and only if it's a subgroup of <m>G</m>.
   </p>
+  </theorem>
 
   <p>
     It can be useful to look at how subgroups of a group relate to one
@@ -178,7 +183,9 @@
       <p>
         Consider the group <m>\Z_8</m>. We will see later that the subgroups of <m>\Z_8</m> are <m>\{0\}</m>, <m>\{0,2,4,6\}</m>, <m>\{0,4\}</m> and <m>\Z_8</m> itself. So <m>\Z_8</m> has the following subgroup lattice.
       </p>
-      <image source="images/b8831c406064d5ef67c570eaa7e051b320a7bfa1.png"/>
+      <p>MISSING IMAGE</p>
+      <!--
+      <image source="images/b8831c406064d5ef67c570eaa7e051b320a7bfa1.png"/>-->
     </statement>
   </example>
 
@@ -233,11 +240,13 @@
       <p>
         By inspection, <m>\Z_4</m> has subgroup lattice
       </p>
-      <image source="images/d9ac3f951f645cfd2f17f429a80d38102a50ac7c.png"/>
+ <p>MISSING IMAGE</p>
+ <!--      <image source="images/d9ac3f951f645cfd2f17f429a80d38102a50ac7c.png"/>-->
       <p>
         and <m>\Z_2^2</m> has subgroup lattice
       </p>
-      <image source="images/e48de41dca39e2d5cb604267b6262ef2db11fc9e.png"/>
+       <p>MISSING IMAGE</p>
+      <!--<image source="images/e48de41dca39e2d5cb604267b6262ef2db11fc9e.png"/>-->
       <p>
         Since <m>\Z_4</m> contains exactly 3 subgroups and <m>\Z_2^2</m> exactly 5, we have
         that <m>\Z_4\not\simeq V</m>.

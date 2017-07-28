@@ -30,13 +30,22 @@
   </p>
 
   <p>
-    We provide the following theorem without proof.
+    We provide the following theorems without proof.
   </p>
 
   <theorem xml:id="znsubgps">
     <statement>
       <p>
-        The nontrivial subgroups of <m>\Z_n</m> are exactly those of the form <m>\langle d\rangle</m>, where <m>d</m> is a positive divisor of <m>n</m>. Note that <m>|\langle d\rangle |=n/d</m> for each such <m>d</m>.<fn><em>Remark.</em> It turns out that for each <m>0\neq a\in \Z_n</m>, <m>\d{\langle a\rangle =\left\langle \frac{n}{\gcd(n,a)}\right\rangle }</m>. Note that it follows that <m>|\langle a\rangle |=n/\gcd(n,a)</m> for every <m>0\neq a \in \Z_n</m>.</fn></p>
+        The nontrivial subgroups of <m>\Z_n</m> are exactly those of the form <m>\langle d\rangle</m>, where <m>d</m> is a positive divisor of <m>n</m>. Note that <me>|\langle d\rangle |=n/d</me> for each such <m>d</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem>
+    <statement>
+      <p>
+        For each <m>0\neq a\in \Z_n</m>, 
+        <me>\langle a\rangle =\left\langle \frac{n}{\gcd(n,a)}\right\rangle.</me> It follows that for each <m>0\neq a \in \Z_n,</m> <me>|\langle a\rangle |=\frac{n}{\gcd(n,a)}.</me></p>
     </statement>
   </theorem>
 
@@ -76,7 +85,7 @@
         <m>\Z_{12}</m>'s subgroups are of the form <m>\langle 1\rangle</m>, <m>\langle 2\rangle</m>, etc. So
         <m>\Z_{12}</m> has the following subgroup lattice.
       </p>
-      <image source="images/1b979754dca7c6b01279c99ad0c0b07e343c78e1.png"/>
+ <p>MISSING IMAGE</p><!--      <image source="images/1b979754dca7c6b01279c99ad0c0b07e343c78e1.png"/>-->
     </statement>
   </example>
 </section>
