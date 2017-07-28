@@ -100,7 +100,7 @@
         </ol>
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
    
@@ -141,6 +141,8 @@
     \tau(x)=y</m> while <m>\tau \sigma(x)=z</m>, so <m>\sigma \tau \neq \tau
     \sigma</m>, and hence <m>S_A</m> is nonabelian.</p></li></ol>
 </proof>
+</theorem>
+
 <p>
     We will in the future use language provided by the following
     definition:

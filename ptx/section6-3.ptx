@@ -34,7 +34,6 @@
         Every permutation in <m>S_n</m> is even or odd, but not both.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -42,19 +41,16 @@
     </p>
   </proof>
 
+  </theorem>
+
   <lemma xml:id="evenodd">
     <statement>
       <p>
         For each <m>2\leq k\leq n</m>, then a <m>k</m>-cycle is even if <m>k</m> is odd, and odd if <m>k</m> is even.
       </p>
+<p>The proof of this is left as an exercise for the reader.</p>
     </statement>
-  </lemma>
-
-  <proof>
-    <p>
-      This proof is left as an exercise for the reader.
-    </p>
-  </proof>
+</lemma>
 
   <example>
     <statement>
@@ -72,9 +68,14 @@
     </statement>
   </example>
 
-  <p>
-    It turns out that the set of all even permutations in <m>S_n</m> is a subgroup of <m>S_n</m>. The proof of this is left as an exercise for the reader.
+  <p>We have the following theorem, whose proof is left as an exercise for the reader.</p>
+
+<theorem>
+<statement><p>
+ The set of all even permutations in <m>S_n</m> is a subgroup of <m>S_n</m>. 
   </p>
+</statement>
+</theorem>
 
   <definition>
     <statement>
