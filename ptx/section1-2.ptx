@@ -2,16 +2,15 @@
 <section>
   <title>Sets</title>
   <p>
-    Now we provide a <q>definition</q> of a basic mathematical object to which we will soon add bells and whistles.
+    Now we provide a <q>definition</q> of a basic mathematical object to which we will soon add bells and whistles. The word is in quotes because what follows doesn't have the precision we usually require when defining a mathematical object.
   </p>
 
-  <p>
-    \begin{df}{<q>Sort of</q> definition} A <em>set</em> is an (unordered)
-    collection of objects.\end{df}
-  </p>
+  <definition> <p> A <term>set</term> is an (unordered)
+    collection of objects.
+  </p></definition>
 
   <p>
-    We say this is a <q>sort of</q> definition because it is not a
+    This is only sort of  a <q>definition</q> because it is not a
     rigorous definition of a set. For instance, what do we mean by a
     <q>collection</q> of objects? This <q>definition</q> will be sufficient for
     our course, but be warned that defining a set in this vague way can
