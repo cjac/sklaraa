@@ -13,7 +13,7 @@
     <image>
     <latex-image-code>
     <me>
-    \xymatrix{&amp;1\ar@{-}[ldd]\ar@{-}[rdd]\ar@{--}[dd]_{\begin{array}{cc}f&amp; \end{array}}\\ &amp;\longleftrightarrow &amp;
+  \xymatrix{&amp;1\ar@{-}[ldd]\ar@{-}[rdd]\ar@{--}[dd]\\ &amp;\stackrel{\longleftrightarrow}{\hspace{-10pt}f} &amp;
 \\ 3\ar@{-}[rr]&amp;&amp;2\ar@{-->}@/^{15pt}/[ll]^{\begin{array}{ccc}&amp;r&amp; \end{array}}}</me>
  </latex-image-code>
   </image>
@@ -139,13 +139,14 @@
     The group <m>D_3</m> is an example of class of groups called <em>dihedral groups</em>.
   </p>
 
+
   <definition>
     <statement>
       <p>
         Let <m>n</m> be an integer greater than or equal to <m>3</m>. We
         let <m>D_n</m> be the collection of symmetries of the regular
         <m>n</m>-gon. It turns out that <m>D_n</m> is a group (see below), called
-        the <term>dihedral group of order <m>2n</m></term> (Note: Some books and
+        the <term>dihedral group of order <m>2n</m></term>. (Note: Some books and
         mathematicians instead denote the group of symmetries of the
         regular <m>n</m>-gon by <m>D_{2n}</m><mdash />so, for instance, our <m>D_3</m>,
         above, would instead be called <m>D_6</m>. Make sure you are aware
