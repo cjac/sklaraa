@@ -80,8 +80,8 @@
       <p>
         In other
         words, <m>G</m> is the set of all invertible <m>n\times n</m> matrices
-        over <m>\R</m>. We also define subset <m>SL(n,\R)</m> of
-        <m>GL(n,\R)</m>, by
+        over <m>\R</m>.</p><p> We  define subset <m>SL(n,\R)</m> by
+        <m>GL(n,\R)</m> to be the set
         <me>
           SL(n,\R):=\{M\in \M_n(\R):\det M =1\}.
         </me>
