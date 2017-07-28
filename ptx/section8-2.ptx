@@ -129,13 +129,15 @@
       Z(G)=\{z\in G\,:\, az=za \mbox{ for all } a\in
       G\}.
     </me>
-  </p>
+    <m>Z(G)</m> is called the <term>center</term> of <m>G</m>.
+ </p>
 </statement>
 </definition>
 
-  <p>
-    <m>Z(G)</m> is called the <em>center</em> of <m>G</m>.<fn>The center of a group was originally introduced in the Exercises of <xref ref="gps">Chapter</xref>. The Z stands for <q>zentrum,</q> the German word for <q>center.</q></fn>\end{df}
-  </p>
+<remark>
+  <p>The center of a group was originally introduced in the Exercises of <xref ref="gps">Chapter</xref>. The Z stands for <q>zentrum,</q> the German word for <q>center.</q>
+</p>
+</remark>
 
   <theorem>
     <statement>
