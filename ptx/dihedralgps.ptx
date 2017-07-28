@@ -9,7 +9,8 @@
     <p>
       Consider a regular triangle <m>T</m>, with vertices labeled <m>1</m>, <m>2</m>, and <m>3</m>. We show <m>T</m> below, also using dotted lines to indicate a vertical line of symmetry of <m>T</m> and a rotation of <m>T</m>.
     </p>
-    <image source="images/b50c1bb2439484680b8b510a03e8baafdb6dce06.png"/>
+
+<!-- GGH-->
     <p>
       Note that if we reflect <m>T</m> over the vertical dotted line (indicated in the picture by <m>f</m>), <m>T</m> maps onto itself, with <m>1</m> mapping to <m>1</m>, and <m>2</m> and <m>3</m> mapping to each other. Similarly, if we rotate <m>T</m> clockwise by <m>120^{\circ}</m> (indicated in the picture by <m>r</m>), <m>T</m> again maps onto itself, this time with <m>1</m> mapping to <m>2</m>, <m>2</m> mapping to <m>3</m>, and <m>3</m> mapping to <m>1</m>. Both of these maps are called <em>symmetries</em> of <m>T</m>; <m>f</m> is a <em>reflection</em> or <em>flip</em> and <m>r</m> is a <em>rotation</em>.
     </p>
@@ -74,7 +75,7 @@
       </me>
       is the collection of all symmetries of <m>T</m>.
     </p>
-
+</example>
     <remark>
       <p>
         Notice that <m>rf=fr^2</m> and that <m>f^2=r^3=e</m>.
@@ -87,7 +88,6 @@
           <m>D_3</m> is a group under composition.
         </p>
       </statement>
-    </theorem>
 
     <proof>
       <p>
@@ -101,39 +101,15 @@
       </p>
 
       <p>
-        Next:
-        <ol>
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              Function composition is always associative.
-            </p>
-          </li>
-
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              The function <m>e</m> clearly acts as identity
+        Next, function composition is always associative, and the function <m>e</m> clearly acts as identity
               element
               in <m>D_3</m>.
-            </p>
-          </li>
-
-          <li>
-            <title>invalidlabel</title>
-            <p>
-              Let <m>x=f^ir^j\in D_3</m>. Then <m>y=r^{3-j}f^{2-i}</m>
+         Finally, let <m>x=f^ir^j\in D_3</m>. Then <m>y=r^{3-j}f^{2-i}</m>
               is
-              in <m>D_3</m> (since <m>D_3</m> is closed under composition) with <m>xy=yx=e</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-
-      <p>
-        So <m>D_3</m> is a group.
+              in <m>D_3</m> (since <m>D_3</m> is closed under composition) with <m>xy=yx=e</m>. So <m>D_3</m> is a group.
       </p>
     </proof>
+   </theorem>
 
     <p>
       Let us look at <m>D_3</m> another way. Note that each map in <m>D_3</m> can be uniquely described by how it permutes the vertices <m>1,2,3</m> of <m>T</m>: that is, each map in <m>D_3</m> can be uniquely identified with a unique element of <m>S_3</m>. For instance, <m>f</m> corresponds to the permutation <m>(23)</m> in <m>S_3</m>, while <m>fr</m> corresponds to the permutation <m>(13)</m>. In turns out that <m>D_3 \simeq S_3</m>, via the following correspondence
@@ -148,8 +124,6 @@
         \end{array}
       </me>
     </p>
-  </example>
-
   <p>
     The group <m>D_3</m> is an example of class of groups called <em>dihedral groups</em>.
   </p>
@@ -186,13 +160,14 @@
         The dihedral group <m>D_n</m> is a nonabelian group of order <m>2n</m>.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
       The proof that <m>D_n</m> is a group parallels the proof, above, that <m>D_3</m> is a group. It is clear that <m>D_n</m> is nonabelian (e.g., <m>rf=fr^{n-1}\neq fr</m>) and has order <m>2n</m>.
     </p>
   </proof>
+
+  </theorem>
 
   <remark>
     <p>
@@ -217,12 +192,14 @@
         Each <m>D_n</m> is isomorphic to a subgroup of <m>S_n</m>.
       </p>
     </statement>
-  </theorem>
 
-  <p>
-    <em>Sketch of proof.</em> We described above how <m>D_3</m> is isomorphic to a subgroup
+  <proof> 
+<p> We provide here a sketch of a proof; the details are left as an exercise for the reader. We described above how <m>D_3</m> is isomorphic to a subgroup
     (namely, the improper subgroup) of <m>S_3</m>. One can show that each <m>D_n</m> is isomorphic to a subgroup of <m>S_n</m> by similarly labeling the vertices of the regular <m>n</m>-gon <m>1,2,\ldots, n</m> and determining how these vertices are permuted by each element of <m>D_n</m>.
   </p>
+</proof>  
+</theorem>
+
 
   <warning>
     <p>
@@ -266,7 +243,6 @@
         </ol>
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <ol>
@@ -296,11 +272,13 @@
 
       <li>
         <p>
-          The proof of this statement is left as an exercise for the reader. \qedhere
+          The proof of this statement is left as an exercise for the reader. 
         </p>
       </li>
     </ol>
   </proof>
+
+  </theorem>
 
   <example>
     <statement>
