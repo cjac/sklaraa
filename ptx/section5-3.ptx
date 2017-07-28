@@ -324,11 +324,11 @@
 
           <li>
             <p>
-              <m>\langle A\rangle</m>, for <m>A=\left[ \begin{array}{cc}
+              <m>\langle A\rangle</m>, for <m>A=\begin{bmatrix}
               1 \amp  0 \\
               0 \amp  0
-              \end{array} 
-              \right]\in \M_2(\R)</m>
+              \end{bmatrix} 
+             \in \M_2(\R)</m>
             </p>
           </li>
 
@@ -340,11 +340,11 @@
 
           <li>
             <p>
-              <m>\langle B\rangle</m>, for <m>B=\left[ \begin{array}{cc}
+              <m>\langle B\rangle</m>, for <m>B=\begin{bmatrix}
               1 \amp  1\\
               0 \amp  1
-              \end{array} 
-              \right]\in GL(2,\R)</m>
+              \end{bmatrix} 
+             \in GL(2,\R)</m>
             </p>
           </li>
         </ol>
@@ -368,12 +368,11 @@
 
       <li>
         <p>
-          <m>\left\{\left[
-          \begin{array}{cc}
+          <m>\left\{
+          \begin{bmatrix}
           k \amp  0 \\
           0 \amp  0
-          \end{array} 
-          \right]\,:\,k\in \Z
+          \end{bmatrix} \,:\,k\in \Z
           \right\}</m>
         </p>
       </li>
@@ -386,12 +385,12 @@
 
       <li>
         <p>
-          <m>\left\{\left[
-          \begin{array}{cc}
+          <m>\left\{
+          \begin{bmatrix}
           1 \amp  k \\
           0 \amp  1
-          \end{array} 
-          \right]\,:\,k\in \Z\right\}</m>
+          \end{bmatrix} 
+          \,:\,k\in \Z\right\}</m>
         </p>
       </li>
     </ol>
