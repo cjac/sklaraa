@@ -14,15 +14,15 @@
   <example xml:id="stperm">
     <statement>
       <p>
-        Let <m>A</m> be the set <m>A=\{\Delta, \star, &#36;\}</m>. Then the functions <m>\sigma : A\to A</m> defined by
+        Let <m>A</m> be the set <m>A=\{\Delta, \star, 4\}</m>. Then the functions <m>\sigma : A\to A</m> defined by
         <me>
           \sigma(\Delta)=\star,
-          \sigma(\star)=\Delta,  \mbox{and }  \sigma(&#36;)=&#36;
+          \sigma(\star)=\Delta,  \mbox{and }  \sigma(4)=4;
         </me>
         and <m>\tau : A\to A</m> defined by
         <me>
-          \tau(\Delta)=&#36;, 
-          \tau(\star)=\Delta,  \mbox{and }  \tau(&#36;)=\star
+          \tau(\Delta)=4, 
+          \tau(\star)=\Delta,  \mbox{and }  \tau(4)=\star
         </me>
         are
         both permutations on <m>A</m>.
@@ -58,12 +58,12 @@
         Let <m>A</m>, <m>\sigma</m>, and <m>\tau</m> be as in <xref ref="stperm">Example</xref>.
         Then <m>\sigma \tau</m> is the function from <m>A</m> to <m>A</m> defined by
         <me>
-          \sigma \tau(\Delta)=&#36;,  \sigma \tau(\star)=\star,  \mbox{and }  \sigma \tau(&#36;)=\Delta,
+          \sigma \tau(\Delta)=4,  \sigma \tau(\star)=\star,  \mbox{and }  \sigma \tau(4)=\Delta,
         </me>
         while <m>\tau \sigma</m> is
         the function from <m>A</m> to <m>A</m> defined by
         <me>
-          \tau \sigma (\Delta)=\Delta,  \tau \sigma (\star)=&#36;,  \mbox{and }  \tau \sigma(&#36;)=\star
+          \tau \sigma (\Delta)=\Delta,  \tau \sigma (\star)=4,  \mbox{and }  \tau \sigma(4)=\star
         </me>
       </p>
     </statement>
