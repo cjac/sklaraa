@@ -86,16 +86,11 @@
           SL(n,\R):=\{M\in \M_n(\R):\det M =1\}.
         </me>
       </p>
+        <p>
+    We denote a zero matrix by  <m>\0</m> and the  <m>n\times n</m> identity matrix by  <m>I_n</m>.
+  </p>
     </statement>
   </definition>
-
-  <notation>
-
-  <p>
-    We may use the notation <m>\0</m> to denote a zero matrix and <m>I_n</m> to denote an <m>n\times n</m> identity matrix.
-  </p>
-
-  </notation>
 
   <remark>
     <p>
