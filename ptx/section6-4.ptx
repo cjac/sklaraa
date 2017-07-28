@@ -39,7 +39,6 @@
         </ol>
       </p>
     </statement>
-  </lemma>
 
   <proof>
     <p>
@@ -52,6 +51,8 @@
       <m>c_a</m> are similar.
     </p>
   </proof>
+  </lemma>
+
    
 <definition>
 <statement>
@@ -72,12 +73,12 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
   <theorem>
     <statement>
       <p>
-        <em>(Cayley's Theorem)</em> Let <m>G</m> be a group. Then <m>G</m>
+        (Cayley's Theorem) Let <m>G</m> be a group. Then <m>G</m>
         is isomorphic to a subgroup of <m>S_G</m>. Thus, every group can be
         thought of as a group of permutations.
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
     <p>
@@ -117,8 +118,9 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
       from <m>G</m> to the subgroup <m>\phi(G)</m> of <m>S_G</m>.
     </p>
   </proof>
-
-  <note>
+</theorem>
+ 
+ <remark>
 
   <p>
     In general, <m>\phi(G) \neq S_G</m>, so we cannot
@@ -127,7 +129,7 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
     <m>S_G</m>.
   </p>
 
-  </note>
+  </remark>
 
   <remark>
     <p>
