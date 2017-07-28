@@ -7,10 +7,21 @@
 
   <example xml:id="D3">
     <p>
-      Consider a regular triangle <m>T</m>, with vertices labeled <m>1</m>, <m>2</m>, and <m>3</m>. We show <m>T</m> below, also using dotted lines to indicate a vertical line of symmetry of <m>T</m> and a rotation of <m>T</m>.
-    </p>
+      Consider a regular triangle <m>T</m>, with vertices labeled <m>1</m>, <m>2</m>, and <m>3</m>. We show <m>T</m> below, also using dotted lines to indicate a vertical line of symmetry of <m>T</m> and a rotation of <m>T</m>.</p>
 
-<!-- GGH-->
+ <figure>
+    <image>
+    <latex-image-code>
+    <me>
+    \xymatrix{&amp;1\ar@{-}[ldd]\ar@{-}[rdd]\ar@{--}[dd]_{\begin{array}{cc}f&amp; \end{array}}\\ &amp;\longleftrightarrow &amp;
+\\ 3\ar@{-}[rr]&amp;&amp;2\ar@{-->}@/^{15pt}/[ll]^{\begin{array}{ccc}&amp;r&amp; \end{array}}}</me>
+ </latex-image-code>
+  </image>
+  <caption>Symmetries of the triangle</caption>
+
+  </figure>
+
+
     <p>
       Note that if we reflect <m>T</m> over the vertical dotted line (indicated in the picture by <m>f</m>), <m>T</m> maps onto itself, with <m>1</m> mapping to <m>1</m>, and <m>2</m> and <m>3</m> mapping to each other. Similarly, if we rotate <m>T</m> clockwise by <m>120^{\circ}</m> (indicated in the picture by <m>r</m>), <m>T</m> again maps onto itself, this time with <m>1</m> mapping to <m>2</m>, <m>2</m> mapping to <m>3</m>, and <m>3</m> mapping to <m>1</m>. Both of these maps are called <em>symmetries</em> of <m>T</m>; <m>f</m> is a <em>reflection</em> or <em>flip</em> and <m>r</m> is a <em>rotation</em>.
     </p>
