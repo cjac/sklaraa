@@ -17,14 +17,13 @@
           <m>n\Z</m> is a group under <m>+</m> (the usual addition of integers).
         </p>
       </statement>
-    </theorem>
 
     <proof>
       <p>
         Let <m>x, y\in n\Z</m>. Then there exist <m>a,b\in \Z</m> such that <m>x=na</m> and <m>y=nb</m>. Then <m>x+y=na+nb=n(a+b)\in n\Z</m>. So <m>\langle n\Z,+\rangle</m> is a binary structure. The remainder of the proof is left as an exercise for the reader.
       </p>
     </proof>
-
+  </theorem>
   
 
   <remark>
@@ -89,7 +88,7 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
   <definition>
     <statement>
       <p>
-        <m>R_n(a)</m> is the <term>remainder</term> when we divide <m>a</m> by <m>n</m>. (Note: You were probably already familiar with the remainder when you divide a <term>positive</term> integer by <m>n</m>.)
+        <m>R_n(a)</m> is the <term>remainder</term> when we divide <m>a</m> by <m>n</m>. (Note: You were probably already familiar with the remainder when you divide a positive integer by <m>n</m>.)
       </p>
     </statement>
   </definition>
@@ -119,13 +118,13 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
     special notation.
   </p>
 
-  <notation>
+  <definition>
 
   <p>
-    We denote by <m>\Z_n</m> the set <m>\{0,1,2,\ldots,n-1\}</m>.
+    We define <m>\Z_n</m> to be the set <m>\{0,1,2,\ldots,n-1\}</m>.
   </p>
 
-  </notation>
+  </definition>
 
   <p>
     Throughout this course, if we are discussing a set <m>\Z_n</m>, you
@@ -260,7 +259,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
     <statement>
       <p>
         For <m>n\in \Z^+</m>,
-        let <m>\Z_n^{\times} = \{a\in \Z_n\,:\,\gcd(a,n)=1\}</m>.
+        we define <m>\Z_n^{\times}</m> to be the set <me>\{a\in \Z_n\,:\,\gcd(a,n)=1\}</me>.
       </p>
     </statement>
   </definition>
@@ -274,7 +273,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
   </example>
 
   <p>
-    We end by considering a few more examples.
+    We end this section by considering a few more examples.
   </p>
 
   <example>
