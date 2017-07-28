@@ -1,0 +1,169 @@
+
+<section>
+  <title>Introduction to homomorphisms and isomorphisms</title>
+  <definition>
+    <statement>
+      <p>
+        Let <m>\langle S,*\rangle</m> and <m>\langle S',*'\rangle</m> be binary structures. A
+        function <m>\phi</m> from <m>S</m> to <m>S'</m> is a <term>homomorphism</term> if
+        <me>
+          \phi(a* b)=\phi(a)*'\phi(b)
+        </me>
+        for all <m>a,b\in S</m>. An <term>isomorphism</term> is a homomorphism that is also a bijection.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Intuitively, you can think of a homomorphism <m>\phi</m> as a
+    <q>structure-preserving</q> map: if you multiply and then apply <m>\phi</m>,
+    you get the same result as when you first apply <m>\phi</m> and then
+    multiply. Isomorphisms, then, are both structure-preserving and
+    cardinality-preserving.
+  </p>
+
+  <note>
+
+  <p>
+    We may omit the <m>*</m> and <m>*'</m>, as per our group conventions, but we include them here to emphasize that the operations in the structures may be distinct from one another. When we omit them and write <m>\phi(st)=\phi(s)\phi(t)</m>, then it is the writers' and readers' responsibility to keep in mind that <m>s</m> and <m>t</m> are being operated together using the operation in <m>S</m>, while <m>\phi(s)</m> and <m>\phi(t)</m> are being operated together using the operation in <m>S'</m>.
+  </p>
+
+  </note>
+
+  <remark>
+    <p>
+      There may be more than one homomorphism
+      [isomorphism] from one binary structure to another (see <xref ref="homos">Example</xref>).
+    </p>
+  </remark>
+
+  <example xml:id="homos">
+    <statement>
+      <p>
+        For each of the following, decide whether or not the given function
+        <m>\phi</m> from one binary structure to another is a homomorphism, and,
+        if so, if it is an isomorphism. Prove or disprove your answers! For
+        Parts 6 and 7, <m>C^0</m> is the set of all continuous functions from
+        <m>\R</m> to <m>\R</m>; <m>C^1</m> is the set of all differentiable functions
+        from <m>\R</m> to <m>\R</m> whose derivatives are continuous; and each
+        <m>+</m> indicates pointwise addition on <m>C^0</m> and <m>C^1</m>. (Note that
+        <m>C^1</m> and <m>C^0</m> are not groups, since elements of them will not have
+        inverses unless they are bijections.)
+        <ol>
+          <li>
+            <p>
+              <m>\phi:\langle \Z,+\rangle \to \langle \Z,+\rangle</m> defined by <m>\phi(x)=x</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle \Z,+\rangle \to \langle \Z,+\rangle</m> defined by <m>\phi(x)=-x</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle \Z,+\rangle \to \langle \Z,+\rangle</m> defined by <m>\phi(x)=2x</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle \R,+\rangle \to \langle \R^+,\cdot\,\rangle</m> defined by <m>\phi(x)=e^x</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle \R,+\rangle \to \langle \R^*,\cdot\,\rangle</m> defined by <m>\phi(x)=e^x</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle C^1,+\rangle \to \langle C^0,+\rangle</m> defined by <m>\phi(f)=f'</m> (the derivative of
+              <m>f</m>);
+            </p>
+          </li>
+
+          <li>
+            <title>7.</title>
+            <p>
+              <m>\phi:\langle C^0,+\rangle \to \langle \R,+\rangle</m> defined by <m>\phi(f)=\displaystyle{\int_0^1 f(x)\, dx}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>\Gdot</m> be a group and let <m>a\in G</m>. Then the
+        function <m>c_a</m> from <m>G</m> to <m>G</m> defined by <m>c_a(x)=axa^{-1}</m> (for
+        all <m>x\in G</m>) is a homomorphism. Indeed, let <m>x,y\in G</m>. Then
+        <md>
+          <mrow>c_a(xy)\amp =a(xy)a^{-1}</mrow>
+          <mrow>\amp =(ax)e(ya^{-1})</mrow>
+          <mrow>\amp =(ax)(a^{-1}a)(ya^{-1})</mrow>
+          <mrow>\amp =(axa^{-1})(aya^{-1})</mrow>
+          <mrow>\amp =c_a(x)c_a(y).</mrow>
+        </md>
+      </p>
+
+      <p>
+        The homomorphism <m>c_a</m> is called
+        <em>conjugation by <m>a</m></em>.<fn>Homomorphisms from a group <m>G</m> to
+        itself are called <em>automorphisms</em>. Thus, conjugation by any
+        element <m>a</m> in <m>G</m> is an automorphism of <m>G</m>. (Beware: Some texts
+        refer to the function <m>x\mapsto a^{-1}xa</m> as ``conjugation by
+        <m>a</m>." Either version of conjugation by <m>a</m> in group <m>G</m> is an
+        automorphism of <m>G</m>.)</fn></p>
+    </statement>
+  </example>
+
+  <p>
+    We end with a theorem stating basic facts about
+    homomorphisms from one group to another. (<em>Note.</em> This doesn't apply to arbitrary binary structures, which may or may not even have identity elements.)
+  </p>
+
+  <theorem xml:id="homoprops">
+    <statement>
+      <p>
+        Let <m>\langle G,\cdot\rangle</m> and <m>\langle G',\cdot'\rangle</m> be groups with identity elements <m>e</m> and <m>e'</m>, respectively, and let <m>\phi</m> be a homomorphism from <m>G</m> to <m>G'</m>. Then:
+        <ol>
+          <li>
+            <p>
+              <m>\phi(e)=e'</m>; and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              For every <m>a\in G</m>, <m>\phi(a)^{-1}=\phi(a^{-1})</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      For Part 1, note that
+      <md>
+        <mrow>\phi(e)\cdot'e'\amp =\phi(e)\amp \amp \text{ (by definition of \(e'\)) }</mrow>
+        <mrow>\amp =\phi(e\cdot e) \amp \amp \text{ (by definition of \(e\)) }</mrow>
+        <mrow>\amp =\phi(e)\cdot'\phi(e) \amp \amp \text{ (since \(\phi\) is a homomorphism). }</mrow>
+      </md>
+    </p>
+
+    <p>
+      Thus, by left
+      cancellation, <m>e'=\phi(e)</m>. The proof of Part 2 is left as an exercise for the reader.
+    </p>
+  </proof>
+
+  </theorem>
+</section>
