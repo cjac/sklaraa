@@ -104,7 +104,7 @@
         <m>a^{|G|}=e_G</m>.
       </p>
     </statement>
-  </corollary>
+  
 
   <proof>
     <p>
@@ -113,7 +113,9 @@
       <m>a^{|G|}=a^{dk}=(a^d)^k=(e_G)^k=e_G.</m>
     </p>
   </proof>
+</corollary>
 
+Finally, we have the following corollary, whose proof is left as an exercise for the reader.
   <corollary xml:id="pcyc">
     <statement>
       <p>
@@ -122,11 +124,5 @@
         group of order <m>p</m>, up to isomorphism.
       </p>
     </statement>
-  </corollary>
-
-  <proof>
-    <p>
-      This proof is left as an exercise for the reader.
-    </p>
-  </proof>
+</corollary>
 </section>

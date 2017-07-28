@@ -284,7 +284,6 @@
 </ol>
      </p></p>
     </statement>
-  </lemma>
 
   <proof>
     <p>
@@ -302,6 +301,8 @@
       identical.
     </p>
   </proof>
+  </lemma>
+
 
 <!-- FIX: BELOW IS A REMK AND DEF -->
 <definition>
@@ -407,7 +408,7 @@ complete set
         relation.
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
     <p>
@@ -427,6 +428,7 @@ complete set
       <m>\sim</m> is reflexive, symmetric, and transitive.
     </p>
   </proof>
+</theorem>
 
   <example>
     <statement>

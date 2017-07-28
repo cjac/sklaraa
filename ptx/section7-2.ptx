@@ -16,8 +16,7 @@
         <m>\siml</m> and <m>\simr</m> are equivalence relations on <m>G</m>.
       </p>
     </statement>
-  </theorem>
-
+  
   <proof>
     <p>
       First, let <m>a\in G</m>. Then <m>a^{-1}a=e\in H</m>,
@@ -43,6 +42,8 @@
       Thus, <m>\siml</m> is an equivalence relation on <m>G</m>. The proof that <m>\simr</m> is an equivalence relation is left as an exercise for the reader.
     </p>
   </proof>
+</theorem>
+
 
   <p>
     Now, as equivalence relations, each of <m>\siml</m> and <m>\simr</m>
@@ -78,7 +79,7 @@
         under <m>\simr</m>, <m>[a]=Ha</m>.
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
     <p>
@@ -89,6 +90,7 @@
       have <m>[a]=Ha</m>.
     </p>
   </proof>
+</theorem>
 
   <p>
     We next summarize some facts about the left and right cosets of
@@ -135,7 +137,7 @@
         </ol>
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
     <p>
@@ -146,6 +148,7 @@
       are mutually disjoint. For Statement 4: Define <m>f\,:\,H\to aH</m> by <m>f(h)=ah</m>. It is straightforward to show that <m>f</m> is a bijection, so <m>|H|=|aH|</m>. Similarly, <m>|Ha|=|H|</m>.
     </p>
   </proof>
+</theorem>
 
   <remark>
     <p>
