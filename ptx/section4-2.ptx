@@ -183,11 +183,32 @@
       <p>
         Consider the group <m>\Z_8</m>. We will see later that the subgroups of <m>\Z_8</m> are <m>\{0\}</m>, <m>\{0,2,4,6\}</m>, <m>\{0,4\}</m> and <m>\Z_8</m> itself. So <m>\Z_8</m> has the following subgroup lattice.
       </p>
-      <p>MISSING IMAGE</p>
-      <!--
-      <image source="images/b8831c406064d5ef67c570eaa7e051b320a7bfa1.png"/>-->
+
+
+    <figure>
+    <image>
+    <latex-image-code>
+
+\begin{tikzpicture}[scale=0.4]
+ \node (4) at (0,9) {$\Z_8$};
+
+ \node (3) at (0,6) {$\{0,2,4,6\}$};
+ \node (2) at (0,3) {$\{0,4\}$};
+ \node (1) at (0,0) {$\{0\}$};
+
+ \draw (4)--(3);
+ \draw (3)--(2);
+ \draw (2)--(1);
+ \end{tikzpicture}
+ </latex-image-code>
+  </image>
+  <caption>Subgroup diagram for <m>\Z_8</m></caption>
+
+  </figure>
+
     </statement>
-  </example>
+   </example>
+
 
   <example>
     <statement>
@@ -239,14 +260,58 @@
     <statement>
       <p>
         By inspection, <m>\Z_4</m> has subgroup lattice
-      </p>
- <p>MISSING IMAGE</p>
- <!--      <image source="images/d9ac3f951f645cfd2f17f429a80d38102a50ac7c.png"/>-->
-      <p>
+      
+ 
+
+ <figure>
+    <image>
+    <latex-image-code>
+\begin{tikzpicture}[scale=0.4]
+
+ \node (3) at (0,6) {$\Z_4$};
+ \node (2) at (0,3) {$\{0,2\}$};
+ \node (1) at (0,0) {$\{0\}$};
+
+ \draw (3)--(2);
+ \draw (2)--(1);
+ \end{tikzpicture}
+
+ </latex-image-code>
+  </image>
+  <caption>Subgroup diagram for <m>\Z_4</m></caption>
+
+  </figure>
+
+
         and <m>\Z_2^2</m> has subgroup lattice
-      </p>
-       <p>MISSING IMAGE</p>
-      <!--<image source="images/e48de41dca39e2d5cb604267b6262ef2db11fc9e.png"/>-->
+
+
+  <figure>
+    <image>
+  <latex-image-code>
+   \begin{tikzpicture}[scale=0.4]
+ \node (3) at (0,10) {$\Z_2^2$};
+
+ \node (2dot1) at (-8,5) {$\{(0,0),(1,0)\}$};
+ \node (2dot2) at (0,5) {$\{(0,0),(0,1)\}$};
+ \node (2dot3) at (8,5) {$\{(0,0),(1,1)\}$};
+
+ \node (1) at (0,0) {$\{0\}$};
+ 
+  \draw (3)--(2dot1);
+ \draw (3)--(2dot2);
+ \draw (3)--(2dot3);
+ 
+ \draw (1)--(2dot1);
+ \draw (1)--(2dot2);
+ \draw (1)--(2dot3);
+ \end{tikzpicture}
+ </latex-image-code>
+ </image>
+ <caption>Subgroup diagram for <m>\Z_2^2</m></caption>
+ </figure>
+    </p>   
+   
       <p>
         Since <m>\Z_4</m> contains exactly 3 subgroups and <m>\Z_2^2</m> exactly 5, we have
         that <m>\Z_4\not\simeq V</m>.
