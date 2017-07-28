@@ -249,22 +249,22 @@
       <ol>
         <li>
           <p>
-            If <m>A</m> and <m>B</m> are sets, then the <em>union</em> of <m>A</m> and <m>B</m>, denoted <m>A\cup B</m>, is the set
-            <m>A\cup B=\{x: x\in A \mbox{ or }  x\in B\};</m> the <em>intersection</em> of <m>A</m> and <m>B</m>, denoted <m>A\cap B</m>, is the set
-            <m>A\cap B=\{x: x\in A \mbox{ and }  x\in B\};</m> and the <em>difference</em> of <m>A</m> and <m>B</m>, denoted <m>A-B</m> (or <m>A\setminus B</m>), is the set
-            <m>A-B=\{x: x\in A \mbox{ and }  x\not\in B\}.</m>
+            If <m>A</m> and <m>B</m> are sets, then the <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A\cup B</m>, is the set
+            <m>A\cup B=\{x: x\in A \text{ or }  x\in B\};</m> the <term>intersection</term> of <m>A</m> and <m>B</m>, denoted <m>A\cap B</m>, is the set
+            <m>A\cap B=\{x: x\in A \text{ and }  x\in B\};</m> and the <term>difference</term> of <m>A</m> and <m>B</m>, denoted <m>A-B</m> (or <m>A\setminus B</m>), is the set
+            <m>A-B=\{x: x\in A \text{ and }  x\not\in B\}.</m>
           </p>
         </li>
 
         <li>
           <p>
-            More generally, given any collection of sets <m>A_i</m> (<m>i</m> in some index set <m>I</m>), the <em>union</em> of the <m>A_i</m> is
+            More generally, given any collection of sets <m>A_i</m> (<m>i</m> in some index set <m>I</m>), the <term>union</term> of the <m>A_i</m> is
             <me>
-              \bigcup_{i\in I}A_i=\{x: x\in A_i \mbox{ for some }  i\in I\},
+              \bigcup_{i\in I}A_i=\{x: x\in A_i \text{ for some }  i\in I\},
             </me>
-            and the <em>intersection</em> of the <m>A_i</m> is
+            and the <term>intersection</term> of the <m>A_i</m> is
             <me>
-              \bigcap_{i\in I}A_i=\{x: x\in A_i \mbox{ for every }  i\in I\}.
+              \bigcap_{i\in I}A_i=\{x: x\in A_i \text{ for every }  i\in I\}.
             </me>
           </p>
         </li>
@@ -302,7 +302,7 @@
         product</term>) <m>A\times B</m> of <m>A</m> and <m>B</m> is the set
         <me>
           A\times B =
-          \{(a,b): \mbox{\(a\in A\), \(b\in B\)} \}.
+          \{(a,b): \text{\(a\in A\), \(b\in B\)} \}.
         </me>
       </p>
 

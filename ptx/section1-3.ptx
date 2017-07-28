@@ -64,20 +64,20 @@
         <ol>
           <li>
             <p>
-              Function <m>f</m> is <em>one-to-one</em> (1-1) if whenever <m>s_1, s_2\in S</m> with <m>f(s_1)=f(s_2)</m>, we have <m>s_1=s_2</m>.  Equivalently, <m>f</m> is one-to-one if
+              Function <m>f</m> is <term>one-to-one</term> (1-1) if whenever <m>s_1, s_2\in S</m> with <m>f(s_1)=f(s_2)</m>, we have <m>s_1=s_2</m>.  Equivalently, <m>f</m> is one-to-one if
               whenever <m>s_1\neq s_2 \in S</m>, then <m>f(s_1)\neq f(s_2) \in T</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Function <m>f</m> is <em>onto</em> if for every <m>t\in T</m>, there exists an element <m>s\in S</m> such that <m>f(s)=t</m>.  Equivalently, <m>f</m> is onto if <m>f(S)=T</m>.
+              Function <m>f</m> is <term>onto</term> if for every <m>t\in T</m>, there exists an element <m>s\in S</m> such that <m>f(s)=t</m>.  Equivalently, <m>f</m> is onto if <m>f(S)=T</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Function <m>f</m> is a <em>bijection</em> if it is both one-to-one and onto.
+              Function <m>f</m> is a <term>bijection</term> if it is both one-to-one and onto.
             </p>
           </li>
         </ol>

@@ -31,6 +31,7 @@
     does that mean?
   </p>
 
+
   <definition>
     <statement>
       <p>
@@ -45,7 +46,7 @@
         must be infinite. If the cardinality of <m>S</m> is <m>\aleph_0</m>, we
         say <m>S</m> is <term>countably infinite</term>. If <m>S</m> is finite or
         countably infinite, we say it's <term>countable</term>. Finally, an
-        infinite set is <term>uncountably infinite</term>, or <term>uncountable</term>, if it is not countably infinite. In this class,
+        infinite set is <term>uncountably infinite</term>, or <term>uncountable</term>, if it is not countably infinite. In this text
         we don't discuss the cardinality of uncountably infinite sets,
         but simply note that an uncountable set cannot have the same
         cardinality as a countable one.
