@@ -324,11 +324,11 @@
 
           <li>
             <p>
-              <m>\langle A\rangle</m>, for <m>A=\begin{bmatrix}
+              <m>\langle A\rangle</m>, for <m>A=\left[ \begin{array}{cc}
               1 \amp  0 \\
               0 \amp  0
-              \end{bmatrix} 
-             \in \M_2(\R)</m>
+              \end{array} 
+              \right]\in \M_2(\R)</m>
             </p>
           </li>
 
@@ -340,11 +340,11 @@
 
           <li>
             <p>
-              <m>\langle B\rangle</m>, for <m>B=\begin{bmatrix}
+              <m>\langle B\rangle</m>, for <m>B=\left[ \begin{array}{cc}
               1 \amp  1\\
               0 \amp  1
-              \end{bmatrix} 
-             \in GL(2,\R)</m>
+              \end{array} 
+              \right]\in GL(2,\R)</m>
             </p>
           </li>
         </ol>
@@ -368,11 +368,12 @@
 
       <li>
         <p>
-          <m>\left\{
-          \begin{bmatrix}
+          <m>\left\{\left[
+          \begin{array}{cc}
           k \amp  0 \\
           0 \amp  0
-          \end{bmatrix} \,:\,k\in \Z
+          \end{array} 
+          \right]\,:\,k\in \Z
           \right\}</m>
         </p>
       </li>
@@ -385,12 +386,12 @@
 
       <li>
         <p>
-          <m>\left\{
-          \begin{bmatrix}
+          <m>\left\{\left[
+          \begin{array}{cc}
           1 \amp  k \\
           0 \amp  1
-          \end{bmatrix} 
-          \,:\,k\in \Z\right\}</m>
+          \end{array} 
+          \right]\,:\,k\in \Z\right\}</m>
         </p>
       </li>
     </ol>
@@ -425,10 +426,54 @@
     
     <p>
       Solutions for (a)<ndash />(c) are shown below.</p>
-       <p>MISSING IMAGE</p>
-<!--      <me>
-        <image source="images/f3161aecaab7ac2e87475f8d7205e49b1cafa325.png"/>
-      </me>-->
+     
+
+<figure>
+    <image>
+    <latex-image-code>
+\begin{tikzpicture}[scale=0.4]
+
+
+\node (3) at (0,6) {$\Z_6$};
+\node (2dot1) at (-3,3) {$\langle 2 \rangle$};
+\node (2dot2) at (3,3) {$\langle 3 \rangle$};
+\node (1) at (0,0) {$\langle 0 \rangle$};
+
+\draw (3)--(2dot1);
+\draw (3)--(2dot2);
+\draw (2dot1)--(1);
+\draw (2dot2)--(1);
+
+\end{tikzpicture}
+
+ </latex-image-code>
+  </image>
+  <caption>Subgroup diagram for <m>\Z_6</m></caption>
+
+  </figure>
+
+<figure>
+    <image>
+    <latex-image-code>
+\begin{tikzpicture}[scale=0.4]
+
+
+\node (2) at (0,3) {$\Z_{13}$};
+\node (1) at (0,0) {$\langle 0 \rangle$};
+
+\draw (2)--(1);
+
+\end{tikzpicture}
+ </latex-image-code>
+  </image>
+  <caption>Subgroup diagram for <m>\Z_{13}</m></caption>
+
+  </figure>
+
+
+
+
+      
   </solution>
   <exercise>
     <statement>
