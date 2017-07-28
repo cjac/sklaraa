@@ -60,13 +60,14 @@
         can be abelian but not cyclic.
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
     <p>
       Since <m>\Z</m> and each <m>\Z_n</m> are abelian, every cyclic group is abelian. But, for instance, <m>\R</m> is an abelian noncyclic group (it can't be cyclic because it is uncountable).
     </p>
   </proof>
+</theorem>
 
   <definition>
     <statement>
@@ -96,13 +97,30 @@
         Let <m>a</m> be an element of a group <m>G</m>. Then <m>\langle a\rangle \leq G</m>.
       </p>
     </statement>
-  </theorem>
+ 
 
   <proof>
     <p>
       Let <m>x,y\in \langle a\rangle</m>. Then <m>x=a^i</m>, <m>y=a^j</m> for some <m>i,j\in \Z</m>. So <m>xy=a^ia^j=a^{i+j}\in \langle a\rangle</m>. Next, <m>e_G=a^0\in H</m>. Finally, <m>(a^i)^{-1}=a^{-i}\in H</m>. So <m>\langle a\rangle</m> is a subgroup of <m>G</m>.
     </p>
   </proof>
+</theorem>
+
+
+
+<p>We next prove a lemma to which we will refer when proving the theorem which succeeds it.</p>
+
+<lemma> <statement><p>(Clock Lemma) Let <m>G</m> be a group and let <m>a \in G</m>. Suppose there is a positive power of <m>a</m> which equals the identity element <m>e</m> of <m>G</m>. Let <m>n</m> be the least such positive integer. Then for all <m>s,t\in \Z</m>, <m>a^s=a^t</m> if and only if <m>s</m> is congruent to <m>t</m> modulo <m>n</m>.
+    </p>
+    </statement>
+  
+  <proof>
+    <p>
+     Let <m>s,t\in \Z</m>. By the Division Algorithm, there exist <m>q\in \Z</m> and <m>r\in \Z_n</m> with <m>s-t=qn+r</m>. Then <m>a^{s-t}=a^{qn+r}=(a^n)^qa^r=e^qa^r=a^r</m>. Since <m>0\leq r\lt n</m>, be definition of <m>n</m> we have that <m>a^{s-t}=e</m> if and only if <m>r=0</m>; that is, <m>a^s=a^t</m> if and only if <m>s</m> and <m>t</m> are congruent modulo <m>n</m>.
+    </p>
+  </proof>
+</lemma>
+
 
   <theorem>
     <statement>
@@ -110,7 +128,6 @@
         Let <m>G</m> be a group with identity element <m>e</m>, and let <m>a\in G</m>. Then the group <m>\langle a\rangle</m> is cyclic.
       </p>
     </statement>
-  </theorem>
 
   <proof>
   <p>
@@ -118,28 +135,16 @@
   </p>
 
   <p>
-    <em>Case 2.</em> There is a positive integer <m>k</m> such that <m>a^k=e</m>. In this case, let <m>n</m> be the <em>least</em> such positive integer. In this case, we claim <m>\langle a\rangle \simeq \Z_n</m>. Indeed: Let <m>\phi:\Z_n\to \langle a\rangle</m> be defined by <m>\phi(i)=a^i</m>. We will find it useful to use the following, which holds in this context:
+    <em>Case 2.</em>  There is a positive integer <m>k</m> such that <m>a^k=e</m>. In this case, let <m>n</m> be the least such positive integer. Define <m>\phi:\Z_n\to \langle a\rangle</m> be defined by <m>\phi(i)=a^i</m>. We claim that <m>\phi</m> is an isomorphism.
   </p>
 
-  <lemma>
-    <statement>
-    <p>
-      <em>(Clock Lemma)</em> If <m>s,t\in \Z</m>, then <m>a^s=a^t</m> if and only if <m>s</m> is congruent to <m>t</m> modulo <m>n</m>.
-    </p>
-    </statement>
-  </lemma>
-
-  <proof>
-    <p>
-      By the Division Algorithm, there exist <m>q\in \Z</m> and <m>r\in \Z_n</m> with <m>s-t=qn+r</m>. Then <m>a^{s-t}=a^{qn+r}=(a^n)^qa^r=e^qa^r=a^r</m>. Since <m>0\leq r\lt n</m>, be definition of <m>n</m> we have that <m>a^{s-t}=e</m> if and only if <m>r=0</m>; that is, <m>a^s=a^t</m> if and only if <m>s</m> and <m>t</m> are congruent modulo <m>n</m>.
-    </p>
-  </proof>
-
-  <p>
-    Let <m>i,j\in \Z</m>. We want to show that <m>\phi(i+_nj)=\phi(i)\phi(j)</m>, that is, that <m>a^{i+_nj}=a^ia^j</m>. Since <m>i+j</m> is congruent to <m>i+_nj</m> modulo <m>n</m>, <m>a^ia^j=a^{i+j}=a^{i+_nj}</m>, by the Clock Lemma. So <m>\phi</m> is a homomorphism. Next we show that <m>\phi</m> is one-to-one. Let <m>i,j\in \Z_n</m> with <m>\phi(i)=\phi(j)</m>, so <m>a^i=a^j</m>. Then, by the Clock Lemma, <m>i</m> and <m>j</m> are congruent modulo <m>n</m>. Since they're both in <m>\Z_n</m>, they must be equal,
-    so <m>\phi</m> is one-to-one. Finally, we show that <m>\phi</m> is onto. let <m>x\in \langle a\rangle</m>. Then <m>x=a^i</m> for some <m>i\in \Z</m>. Letting <m>r</m> be the remainder when we divide <m>i</m> by <m>n</m>, we have <m>r\in \Z_n</m> with <m>i</m> congruent to <m>r</m> modulo <m>n</m>; so, again using the Clock Lemma, <m>x=a^i=a^r</m>. Since <m>r\in \Z_n</m>, <m>x=\phi(r)</m>. So <m>\phi</m> is onto. Thus, <m>\phi</m> is an isomorphism.
+<p> First, let <m>i,j\in \Z</m>. We want to show that <m>\phi(i+_nj)=\phi(i)\phi(j)</m>, that is, that <m>a^{i+_nj}=a^ia^j</m>. Since <m>i+j</m> is congruent to <m>i+_nj</m> modulo <m>n</m>, <m>a^ia^j=a^{i+j}=a^{i+_nj}</m>, by the Clock Lemma. So <m>\phi</m> is a homomorphism. Next we show that <m>\phi</m> is one-to-one. Let <m>i,j\in \Z_n</m> with <m>\phi(i)=\phi(j)</m>, so <m>a^i=a^j</m>. Then, by the Clock Lemma, <m>i</m> and <m>j</m> are congruent modulo <m>n</m>. Since they're both in <m>\Z_n</m>, they must be equal,
+    so <m>\phi</m> is one-to-one. Finally, we show that <m>\phi</m> is onto. let <m>x\in \langle a\rangle</m>. Then <m>x=a^i</m> for some <m>i\in \Z</m>. Letting <m>r</m> be the remainder when we divide <m>i</m> by <m>n</m>, we have <m>r\in \Z_n</m> with <m>i</m> congruent to <m>r</m> modulo <m>n</m>; so, again using the Clock Lemma, <m>x=a^i=a^r</m>. Since <m>r\in \Z_n</m>, <m>x=\phi(r)</m>. So <m>\phi</m> is onto.</p>
+<p>Thus, <m>\phi</m> is an isomorphism, and so in this case we have <m>\Z_n \simeq \langle a \rangle</m>.
   </p>
   </proof>
+  </theorem>
+  
 
   <definition>
     <statement>
@@ -169,7 +174,6 @@
         Let <m>a\in G</m>. Then <m>o(a)=o(a^{-1})</m>.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -184,6 +188,8 @@
       On the other hand, assume <m>o(a)= \infty</m>. Then <m>a^{-1}</m> must also have infinite order, since if it had finite order <m>m</m>, <m>a</m> would, by the above argument, have order less than or equal to <m>m</m>.
     </p>
   </proof>
+  </theorem>
+
 
   <p>
     Unfortunately, there's no formula one can simply use to compute the order
@@ -323,7 +329,6 @@
         Every cyclic group <m>G</m> is of the form <m>\langle a\rangle</m> for some <m>a\in G</m>.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -341,6 +346,7 @@
       A similar argument shows that there exists <m>a\in G</m> such that <m>G=\langle a\rangle</m> when <m>|G|\lt \infty</m>.
     </p>
   </proof>
+  </theorem>
 
   <definition>
     <statement>
@@ -409,13 +415,13 @@
         Let <m>\phi:G\to G'</m> be a group isomorphism and let <m>a\in G</m>. Then <m>o(\phi(a))=o(a)</m>.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
       This follows from the fact that <m>\phi(\langle a\rangle )=\langle \phi(a)\rangle</m>.
     </p>
   </proof>
+</theorem>
 
   <corollary>
     <statement>
