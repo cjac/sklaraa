@@ -115,14 +115,14 @@
   </proof>
 </corollary>
 
-Finally, we have the following corollary, whose proof is left as an exercise for the reader.
+<p>Finally, we have the following corollary, whose proof is left as an exercise for the reader.</p>
+
   <corollary xml:id="pcyc">
     <statement>
       <p>
         Let <m>G</m> be a group of prime order. Then <m>G</m> is
         cyclic. It follows that for every prime <m>p</m>, there exists a unique
-        group of order <m>p</m>, up to isomorphism.
-      </p>
-    </statement>
+        group of order <m>p</m>, up to isomorphism.</p>
+          </statement>
 </corollary>
 </section>
