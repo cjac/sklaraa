@@ -17,7 +17,6 @@
         <m>a,b\in G</m>, <m>aK=bK</m> if and only if <m>\phi(a)=\phi(b)</m>.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -33,6 +32,8 @@
       as desired.
     </p>
   </proof>
+  </theorem>
+
 
   <corollary xml:id="kerone">
     <statement>
@@ -42,7 +43,6 @@
         if <m>\Ker \phi=\{e_G\}</m>.
       </p>
     </statement>
-  </corollary>
 
   <proof>
     <p>
@@ -54,6 +54,8 @@
       one-to-one.
     </p>
   </proof>
+
+  </corollary>
 
   <p>
     We now prove a theorem that
@@ -72,7 +74,6 @@
         <m>\phibar \circ \Psi=\phi</m>.
       </p>
     </statement>
-  </theorem>
 
   <p>
     We can summarize this using the following picture:
@@ -108,6 +109,9 @@
       \Psi = \phi</m>, as desired.
     </p>
   </proof>
+</theorem>
+
+
 
   <p>
     Note that the above theorem does <em>not</em> state that
@@ -137,7 +141,7 @@
         </ol>
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
     <ol>
@@ -175,11 +179,12 @@
           </md>
           since we are given that
           <m>N\subseteq \Ker \phi</m>. Thus, <m>\phibar</m> is one-to-one
-          if and only if <m>N=\Ker\phi</m>, as desired. \qedhere
+          if and only if <m>N=\Ker\phi</m>, as desired. 
         </p>
       </li>
     </ol>
   </proof>
+</theorem>
 
   <p>
     We are now ready to state the all-important First Isomorphism
@@ -189,13 +194,12 @@
   <theorem>
     <statement>
       <p>
-        <em>(First Isomorphism Theorem)</em> Let <m>G</m> and <m>G'</m>
+       (First Isomorphism Theorem) Let <m>G</m> and <m>G'</m>
         be groups, with homomorphism <m>\phi:G \rightarrow G'</m>. Let <m>K=\Ker
         \phi</m>. Then <m>G/K \simeq \phi(G)</m>. In particular, if <m>\phi</m> is onto,
         then <m>G/K\simeq G'</m>.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -203,6 +207,8 @@
       <xref ref="epimono">Theorem</xref>.
     </p>
   </proof>
+  </theorem>
+
 
   <p>
     So to prove that a factor group <m>G/N</m> is isomorphic to a group
@@ -299,7 +305,7 @@
         <m>e^{i\theta_1}e^{i\theta_2}=e^{i(\theta_1+\theta_2)}</m>.
       </p>
     </statement>
-  </theorem>
+  
 
   <proof>
     <p>
@@ -343,6 +349,7 @@
       isomorphic to <m>S^1</m>.
     </p>
   </proof>
+</theorem>
 
   <theorem>
     <statement>
@@ -350,7 +357,6 @@
         <m>\R/\Z \simeq S^1</m>.
       </p>
     </statement>
-  </theorem>
 
   <proof>
     <p>
@@ -393,4 +399,6 @@
       desired.
     </p>
   </proof>
+  </theorem>
+
 </section>
