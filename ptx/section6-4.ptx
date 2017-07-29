@@ -58,7 +58,7 @@
 <statement>
 <p>
 We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
-    perform on <m>G</m>, respectively, <em>left multiplication by <m>a</m></em>, <em>right multiplication by <m>a</m></em>, and <em>conjugation by <m>a</m></em>. (Nota
+    perform on <m>G</m>, respectively, <term>left multiplication by <m>a</m></term>, <term>right multiplication by <m>a</m></term>, and <term>conjugation by <m>a</m></term>. (Nota
     bene: sometimes when people talk about conjugation by <m>a</m> they
     instead are referring to the permutation of <m>G</m> that sends each <m>x</m>
     to <m>a^{-1}xa</m>.)
