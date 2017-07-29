@@ -202,7 +202,7 @@
  \end{tikzpicture}
  </latex-image-code>
   </image>
-  <caption>Subgroup diagram for <m>\Z_8</m></caption>
+<!--  <caption>Subgroup diagram for <m>\Z_8</m></caption>-->
 
   </figure>
 
@@ -253,7 +253,7 @@
   </corollary>
 
   <p>
-    This is another way of, for instance, distinguishing between the groups <m>\Z_4</m> and the Klein 4-group <m>Z_2^2</m>.
+    This is another way of, for instance, distinguishing between the groups <m>\Z_4</m> and the Klein 4-group <m>\Z_2^2</m>.
   </p>
 
   <example>
@@ -314,7 +314,7 @@
    
       <p>
         Since <m>\Z_4</m> contains exactly 3 subgroups and <m>\Z_2^2</m> exactly 5, we have
-        that <m>\Z_4\not\simeq V</m>.
+        that <m>\Z_4\not\simeq \Z_2^2</m>.
       </p>
     </statement>
   </example>
