@@ -171,8 +171,8 @@
 
   <p>
     It can be useful to look at how subgroups of a group relate to one
-    another. One way of doing this is to consider <em>subgroup
-    lattices</em> (also known as <em>subgroup diagrams</em>. To draw a
+    another. One way of doing this is to consider <term>subgroup
+    lattices</term> (also known as <term>subgroup diagrams</term>. To draw a
     subgroup lattice for a group <m>G</m>, we list all the subgroups of <m>G</m>,
     writing a subgroup <m>K</m> below a subgroup <m>H</m>, and connecting them
     with a line, if <m>K</m> is a subgroup of <m>H</m>.
@@ -189,22 +189,15 @@
     <image>
     <latex-image-code>
 
-\begin{tikzpicture}[scale=0.4]
- \node (4) at (0,9) {$\Z_8$};
-
- \node (3) at (0,6) {$\{0,2,4,6\}$};
- \node (2) at (0,3) {$\{0,4\}$};
- \node (1) at (0,0) {$\{0\}$};
-
- \draw (4)--(3);
- \draw (3)--(2);
- \draw (2)--(1);
- \end{tikzpicture}
- </latex-image-code>
+    
+   \[\xymatrix{&amp;\Z_8 \ar@{-}[d]&amp;\\ &amp;\{0,2,4,6\}\ar@{-}[d]&amp;\\ &amp;\{0,4\} \ar@{-}[d]&amp;\\ &amp;\{0\} &amp;}\]
+ 
+</latex-image-code>
   </image>
-<!--  <caption>Subgroup diagram for <m>\Z_8</m></caption>-->
-
+<caption>Subgroup diagram for <m>\Z_8</m></caption>
   </figure>
+
+
 
     </statement>
    </example>
@@ -261,20 +254,10 @@
       <p>
         By inspection, <m>\Z_4</m> has subgroup lattice
       
- 
-
  <figure>
     <image>
     <latex-image-code>
-\begin{tikzpicture}[scale=0.4]
-
- \node (3) at (0,6) {$\Z_4$};
- \node (2) at (0,3) {$\{0,2\}$};
- \node (1) at (0,0) {$\{0\}$};
-
- \draw (3)--(2);
- \draw (2)--(1);
- \end{tikzpicture}
+\[\xymatrix{\Z_4 \ar@{-}[d]\\ \{0,2\}\ar@{-}[d]\\ \{0\}} \]
 
  </latex-image-code>
   </image>
@@ -289,23 +272,8 @@
   <figure>
     <image>
   <latex-image-code>
-   \begin{tikzpicture}[scale=0.4]
- \node (3) at (0,10) {$\Z_2^2$};
+  \[\xymatrix{&amp;\Z_2^2 \ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr]&amp;\\ \{(0,0),(1,0)\}\ar@{-}[dr]&amp;\{(0,0),(1,1)\}\ar@{-}[d]&amp;\{(0,0),(0,1)\}\ar@{-}[dl]\\ &amp;\{(0,0)\}. &amp;}\]
 
- \node (2dot1) at (-8,5) {$\{(0,0),(1,0)\}$};
- \node (2dot2) at (0,5) {$\{(0,0),(0,1)\}$};
- \node (2dot3) at (8,5) {$\{(0,0),(1,1)\}$};
-
- \node (1) at (0,0) {$\{0\}$};
- 
-  \draw (3)--(2dot1);
- \draw (3)--(2dot2);
- \draw (3)--(2dot3);
- 
- \draw (1)--(2dot1);
- \draw (1)--(2dot2);
- \draw (1)--(2dot3);
- \end{tikzpicture}
  </latex-image-code>
  </image>
  <caption>Subgroup diagram for <m>\Z_2^2</m></caption>
