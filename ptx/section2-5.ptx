@@ -76,8 +76,9 @@
             <m>(-n)a=n(-a)=-(na)</m> (where <m>-a</m> and <m>-(na)</m> indicate the
             additive inverses of <m>a</m> and <m>na</m>, respectively); we can therefore
             unambiguously use the notation <m>-na</m> for this element.
-            Using this notation, note that for <m>m\in \Z</m>, <m>na+ma=(n+m)a</m> and <m>n(ma)=(nm)a</m>.
-<p>
+            Using this notation, note that for <m>m\in \Z</m>, <m>na+ma=(n+m)a</m> and <m>n(ma)=(nm)a</m>.</p>
+
+            <p>
             <warning>
               <p>
                 Be careful to always know where an element
@@ -89,40 +90,47 @@
                 completely unrelated to numbers.
               </p>
             </warning></p>
+            
+            <p>
+            <remark>
+             <p>
+              Multiplicative notation can be used when working with any arbitary group, while additive notation should be used only when working with an abelian group.
+             </p>
+            </remark></p>
 
           <p>  We summarize multiplicative versus addition notation in the following table, where <m>a,b</m> are elements of a group <m>G</m>. </p>
 
 <p>
-<remark><p>
-Multiplicative notation can be used when working with any arbitary group, while additive notation should be used only when working with an abelian group.</p>
-</remark>
-</p>
+              <tabular>
+      <row halign="center" bottom="medium">
+                <cell></cell>
+                <cell>Multiplicative notation</cell>
+                <cell>Additive notation</cell>
+                
+      </row>
+             
+      <row halign="center">
+                 <cell halign="left">Operation notation</cell>
+                <cell><m>\cdot</m></cell>
+                <cell><m>+</m></cell>
+      </row>
+      <row halign="center">
+                <cell halign="left"><m>a</m> operated with <m>b</m></cell>
+                <cell><m>ab</m></cell>
+                <cell><m>a+b</m></cell>
+      </row>
+      <row halign="center">
+                <cell halign="left">Identity element</cell>
+                <cell><m>1</m> (or <m>e</m> or <m>e_G</m>)</cell>
+                <cell><m>0</m> (or <m>e</m> or <m>e_G</m>)</cell>
+      </row>
+      <row halign="center">
+                <cell halign="left">Inverse of <m>a</m></cell>
+                <cell><m>a^{-1}</m></cell>
+                <cell><m>-a</m></cell>
+      </row>
+</tabular></p>
 
-<me>\begin{array}{l|c|c}
-\amp \text{Multiplicative notation}\amp \text{Additive notation}\\ \hline
-
-\text{Operation notation}\amp \cdot \amp + \\
-a \text{ operated with } b \amp ab \amp a+b\\
-\text{Identity element}\amp 1\ (\text{or }e \text{ or }e_G) \amp 0\ (\text{or }e \text{ or }e_G)\\\
-\text{Inverse of }a \amp a^{-1} \amp -a
-\end{array}</me>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          </p>
         </li>
 
         <li>
