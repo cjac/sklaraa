@@ -12,8 +12,8 @@
  <figure>
     <image>
     <latex-image-code>
-  $$\xymatrix{&amp;1\ar@{-}[ldd]\ar@{-}[rdd]\ar@{--}[dd]\\ &amp;\stackrel{\longleftrightarrow}{\hspace{-10pt}f} &amp;
-\\ 3\ar@{-}[rr]&amp;&amp;2\ar@{-->}@/^{15pt}/[ll]^{\begin{array}{ccc}&amp;r&amp; \end{array}}}$$
+ \[\xymatrix{&amp;1\ar@{-}[ldd]\ar@{-}[rdd]\ar@{--}[dd]\\ &amp;\stackrel{\longleftrightarrow}{\hspace{-10pt}f} &amp;
+\\ 3\ar@{-}[rr]&amp;&amp;2\ar@{-->}@/^{15pt}/[ll]^{\begin{array}{ccc}&amp;r&amp; \end{array}}}\]
  </latex-image-code>
   </image>
   <caption>Symmetries of the triangle</caption>
