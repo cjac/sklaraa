@@ -434,8 +434,8 @@
 
  \[\xymatrix{\Z_{13}\ar@{-}[d]\\ \langle0\rangle}\]
 
-\[ \xymatrix{&amp;\Z_{18}&amp;&amp;\\ \langle2\rangle\ar@{-}[ur]\ar@{-}[dr]&amp;&amp;\langle3\rangle\ar@{-}[ul]\ar@{-}[dl]&amp;\\
-&amp;\langle6\rangle\ar@{-}[dr]\ar@{-}[ur]&amp;&amp;\langle9\rangle\ar@{-}[dl]\ar@{-}[ul]\\&amp;&amp;\langle0\rangle&amp;}\]
+\[ \xymatrix{&amp;\Z_{18}&amp;&amp;\\ \langle 2\rangle\ar@{-}[ur]\ar@{-}[dr]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\ar@{-}[dl]&amp;\\
+&amp;\langle 6 \rangle \ar@{-}[dr]\ar@{-}[ur]&amp;&amp; \langle 9 \rangle \ar@{-}[dl]\ar@{-}[ul]\\&amp;&amp; \langle 0 \rangle &amp;}\]
  </latex-image-code>
   </image>
   <caption>Subgroup diagrams for <m>\Z_6</m>,<m>\Z_{13}</m>, and <m>\Z_{18}</m></caption>
