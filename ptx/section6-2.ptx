@@ -62,18 +62,14 @@
         A permutation <m>\sigma</m> in <m>S_n</m> is called a <term><m>k</m>-cycle</term> or a <term>cycle of length <m>k</m></term> (or, less
         specifically, a <term>cycle</term>) if there exist elements <m>a_1,
         a_2,\ldots, a_k</m> in <m>\{1,2,\ldots,n\}</m> such that
-      </p>
-      <tabular>
-        <row>
-          <cell><m>\sigma(a_i)=a_{i+1}</m> for each <m>i=1,2,\ldots, k-1</m>;</cell>
-        </row>
-        <row>
-          <cell><m>\sigma(a_k)=a_1</m>; and</cell>
-        </row>
-        <row>
-          <cell><m>\sigma(x)=x</m> for every other element of <m>\{1,2,\ldots, n\}</m>.</cell>
-        </row>
-      </tabular>
+
+      <ul>
+      <li><p>
+        <m>\sigma(a_i)=a_{i+1}</m> for each <m>i=1,2,\ldots, k-1</m>;</p></li>
+<li><p><m>\sigma(a_k)=a_1</m>;</p></li>
+       <li><p><m>\sigma(x)=x</m> for every other element of <m>\{1,2,\ldots, n\}</m>.</p></li>
+        </ul>
+</p>
       <p>
         We use the <term>cycle notation</term> <m>\sigma = (a_1 a_2 \cdots a_k)</m> to describe such a cycle. A <m>2</m>-cycle is often called a <term>transposition</term>.
       </p>
