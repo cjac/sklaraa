@@ -312,7 +312,7 @@
     many distinct elements <m>x,y\in S</m> with <m>[x]=[y]</m>; thus, there
     are usually many different ways we could denote a particular
     equivalence class of <m>S</m> under <m>\sim</m>. Element <m>y\in S</m> is
-    called a <em>representative</em> of class <m>X</m> if <m>y\in X</m>.
+    called a <term>representative</term> of class <m>X</m> if <m>y\in X</m>.
       </p>
    </statement>
 </definition>
