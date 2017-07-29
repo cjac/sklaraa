@@ -72,7 +72,7 @@
   <definition>
     <statement>
       <p>
-        Given a set <m>A</m>, we let <m>S_A</m> be the set of all
+        Given a set <m>A</m>, we define <m>S_A</m> be the set of all
         permutations on <m>A</m>.
       </p>
     </statement>
