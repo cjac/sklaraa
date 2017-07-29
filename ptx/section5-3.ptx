@@ -400,7 +400,7 @@
     <statement>
       <p>
         Draw subgroup lattices for
-        <ol type="a">
+        <ol>
           <li>
             <p>
               <m>\Z_6</m>,
@@ -425,50 +425,32 @@
   <solution>
     
     <p>
-      Solutions for (a)<ndash />(c) are shown below.</p>
-     
+     The lattices are:</p>
 
 <figure>
     <image>
     <latex-image-code>
-\begin{tikzpicture}[scale=0.4]
+    \[\xymatrix{&amp;\Z_6&amp;\\ \langle 2\rangle \ar@{-}[ur]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\\&amp;\langle 0\rangle \ar@{-}[ul]\ar@{-}[ur]&amp;}\]
 
+ \[\xymatrix{\Z_{13}\ar@{-}[d]\\ \langle0\rangle}\]
 
-\node (3) at (0,6) {$\Z_6$};
-\node (2dot1) at (-3,3) {$\langle 2 \rangle$};
-\node (2dot2) at (3,3) {$\langle 3 \rangle$};
-\node (1) at (0,0) {$\langle 0 \rangle$};
-
-\draw (3)--(2dot1);
-\draw (3)--(2dot2);
-\draw (2dot1)--(1);
-\draw (2dot2)--(1);
-
-\end{tikzpicture}
-
+\[ \xymatrix{&amp;\Z_{18}&amp;&amp;\\ \langle2\rangle\ar@{-}[ur]\ar@{-}[dr]&amp;&amp;\langle3\rangle\ar@{-}[ul]\ar@{-}[dl]&amp;\\
+&amp;\langle6\rangle\ar@{-}[dr]\ar@{-}[ur]&amp;&amp;\langle9\rangle\ar@{-}[dl]\ar@{-}[ul]\\&amp;&amp;\langle0\rangle&amp;}\]
  </latex-image-code>
   </image>
-  <caption>Subgroup diagram for <m>\Z_6</m></caption>
+  <caption>Subgroup diagrams for <m>\Z_6</m>,<m>\Z_{13}</m>, and <m>\Z_{18}</m></caption>
 
   </figure>
 
-<figure>
+<!--<figure>
     <image>
     <latex-image-code>
-\begin{tikzpicture}[scale=0.4]
 
-
-\node (2) at (0,3) {$\Z_{13}$};
-\node (1) at (0,0) {$\langle 0 \rangle$};
-
-\draw (2)--(1);
-
-\end{tikzpicture}
  </latex-image-code>
   </image>
   <caption>Subgroup diagram for <m>\Z_{13}</m></caption>
 
-  </figure>
+  </figure>-->
 
 
 
