@@ -14,5 +14,5 @@
   <xi:include  href="section6-3.ptx" />
   <xi:include  href="section6-4.ptx" />
   <xi:include  href="section6-5.ptx" />
-  <xi:include  href="section6-6.ptx" />
+  <xi:include  href="permex.ptx" />
 </chapter>

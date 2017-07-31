@@ -3,5 +3,5 @@
   <title>Subgroups</title>
   <xi:include  href="section4-1.ptx" />
   <xi:include  href="section4-2.ptx" />
-  <xi:include  href="section4-3.ptx" />
+  <xi:include  href="exercises/subgpsex.ptx" />
 </chapter>
