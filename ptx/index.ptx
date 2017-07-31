@@ -2,7 +2,7 @@
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
 <docinfo>
 <macros>
-\renewcommand{\bibname}{References and Supplemental Resources}
+
 \def\Z{\mathbb{Z}}
 \def\zn{\mathbb{Z}_n}
 \def\znc{\mathbb{Z}_n^\times}
