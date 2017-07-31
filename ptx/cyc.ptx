@@ -3,5 +3,5 @@
   <title>Cyclic Groups</title>
   <xi:include  href="section5-1.ptx" />
   <xi:include  href="section5-2.ptx" />
-  <xi:include  href="cycexs.ptx" />
+  <xi:include  href="cycex.ptx" />
 </chapter>
