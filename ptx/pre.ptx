@@ -5,5 +5,5 @@
   <xi:include  href="section1-2.ptx" />
   <xi:include  href="section1-3.ptx" />
   <xi:include  href="section1-4.ptx" />
-  <xi:include  href="section1-5.ptx" />
+  <xi:include href="./exercises/preex.ptx" />
 </chapter>
