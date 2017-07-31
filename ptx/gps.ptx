@@ -8,5 +8,5 @@
   <xi:include  href="section2-5.ptx" />
   <xi:include  href="section2-6.ptx" />
   <xi:include  href="section2-7.ptx" />
-  <xi:include  href="gpsex2.ptx" />
+  <xi:include  href="./exercises/gpsex2.ptx" />
 </chapter>
